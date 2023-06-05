@@ -1,0 +1,802 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls
+ 10000   a2b       animals         cap      chap06    chapX   chapg             doc.lst     emp.lst     empn4.txt     'foo*'          instr.txt      ourbase.txt   son
+ OAP     a3b       beverages.txt   chap01   chap07    chapY   chaph             doc2.lst    emp1.lst    errflile       foo.txt        keywords.txt   rapgod        studentinfo.lst
+ OBP     a4b       bhap1           chap02   chap08    chapZ   cutlist1          done        emp1.txt    fewlines.txt   fruit          lmn            records.lst   sun
+ OCP     a5b       caaaap          chap03   chap09    chapd   cutlist2          dubba.lst   empn.lst    filelist.txt   fruits.txt     map            sedemp1.lst   veg
+ ODP     abc       caaap           chap04   chap10    chape   dlist             eelist      empn2.lst   filesys.txt    geekfile.txt   milltes.pdf    sedemp2.lst   vegetables.txt
+ a1b     allfile   caap            chap05   chap111   chapf  'dlist emp1 lst'   efg         empn3.txt   foo            hij            names.lst      shortlist
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat caap
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat cutlist
+cat: cutlist: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat cutlist1
+a.k. shukla      |g.m        
+jai sharma       |director   
+sumit chakrobarty|d.g.m      
+barun sengupta   |director   
+n.k. gupta       |chairman   
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat "This is cap" > cap  
+cat: 'This is cap': No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat "This is cap" > cap  
+cat: 'This is cap': No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat > cap
+This is cap
+new lineshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat cap
+This is cap
+new lineshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat -n geekfile.txt 
+     1	unix is great os. unix is opensource. unix is free os.
+     2	learn operating system.
+     3	unix linux which one you choose.
+     4	unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ nano cap
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat cap
+This is cap
+
+new line
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat -n cap
+     1	This is cap
+     2	
+     3	new line
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat -b cap
+     1	This is cap
+
+     2	new line
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ man echo
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo -e "hi\nthis is echo"
+hi
+this is echo
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo -n "message"
+messageshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "message"
+message
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ man echo
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "some"
+some
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo -E "some\nmessage"
+some\nmessage
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ man echo
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo cap
+cap
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo hi
+hi
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo -n hello world
+hello worldshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ touch demosfile
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sudo chown demo demosfile
+[sudo] password for shrivatsa: 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls -i
+5506796  10000  5407134  allfile        5514331  chap04   5514516  chapd            5525838  doc2.lst   5525238  empn4.txt     5518394  hij           5522265  sedemp2.lst
+5527673  OAP    5406753  animals        5514422  chap05   5514547  chape            5527660  done       5518824  errflile      5506153  instr.txt     5402495  shortlist
+5527674  OBP    5527670  beverages.txt  5514441  chap06   5514744  chapf            5526653  dubba.lst  5517550  fewlines.txt  5508257  keywords.txt  5510921  son
+5527675  OCP    5518320  bhap1          5514442  chap07   5514754  chapg            5520781  eelist     5527677  filelist.txt  5518396  lmn           5525736  studentinfo.lst
+5527676  ODP    5527666  caaaap         5514443  chap08   5514972  chaph            5518314  efg        5432490  filesys.txt   5527661  map           5527655  sun
+5508429  a1b    5527665  caaap          5514502  chap09   5402174  cutlist1         5396916  emp.lst    5518327  foo           5527671  milltes.pdf   5415980  veg
+5514314  a2b    5521521  caap           5515860  chap10   5515663  cutlist2         5397582  emp1.lst   5518330 'foo*'         5518323  names.lst     5527669  vegetables.txt
+5521524  a3b    5527662  cap            5518319  chap111  5522068  demosfile        5508292  emp1.txt   5514344  foo.txt       5446783  ourbase.txt
+5527664  a4b    5514181  chap01         5514550  chapX    5517307  dlist            5525233  empn.lst   5415195  fruit         5514303  rapgod
+5527672  a5b    5514317  chap02         5514687  chapY    5514758 'dlist emp1 lst'  5519078  empn2.lst  5527668  fruits.txt    5508294  records.lst
+5514050  abc    5514324  chap03         5518318  chapZ    5526630  doc.lst          5525237  empn3.txt  5514879  geekfile.txt  5518167  sedemp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls -il
+total 132
+5506796 -rw-rw-r-- 1 shrivatsa shrivatsa  383 May 11 12:00  10000
+5527673 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:13  OAP
+5527674 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:13  OBP
+5527675 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:13  OCP
+5527676 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:13  ODP
+5508429 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:07  a1b
+5514314 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:07  a2b
+5521524 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:07  a3b
+5527664 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:07  a4b
+5527672 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:07  a5b
+5514050 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 23:26  abc
+5407134 -rw-rw-r-- 1 shrivatsa shrivatsa   59 Mar 12 16:37  allfile
+5406753 -rwx-w---x 1 shrivatsa shrivatsa   35 Mar 12 16:34  animals
+5527670 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:46  beverages.txt
+5518320 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 09:47  bhap1
+5527666 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:02  caaaap
+5527665 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:02  caaap
+5521521 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:02  caap
+5527662 -rw-rw-r-- 1 shrivatsa shrivatsa   22 Jun  2 23:04  cap
+5514181 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap01
+5514317 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap02
+5514324 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap03
+5514331 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap04
+5514422 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap05
+5514441 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap06
+5514442 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap07
+5514443 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap08
+5514502 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap09
+5515860 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap10
+5518319 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap111
+5514550 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chapX
+5514687 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chapY
+5518318 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chapZ
+5514516 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:55  chapd
+5514547 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:55  chape
+5514744 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:55  chapf
+5514754 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:55  chapg
+5514972 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:55  chaph
+5402174 -rw-rw-r-- 1 shrivatsa shrivatsa  150 Apr  4 10:17  cutlist1
+5515663 -rw-rw-r-- 1 shrivatsa shrivatsa   85 Apr  4 10:17  cutlist2
+5522068 -rw-rw-r-- 1 demo      shrivatsa    0 Jun  2 23:18  demosfile
+5517307 -rw-rw-r-- 1 shrivatsa shrivatsa  252 Apr 18 13:05  dlist
+5514758 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 18 13:01 'dlist emp1 lst'
+5526630 -rw-rw-r-- 1 shrivatsa shrivatsa  737 Apr  5 10:46  doc.lst
+5525838 -rw-rw-r-- 1 shrivatsa shrivatsa  741 Apr  5 10:50  doc2.lst
+5527660 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:43  done
+5526653 -rw-rw-r-- 1 shrivatsa shrivatsa   16 Apr  4 12:59  dubba.lst
+5520781 -rw-rw-r-- 1 shrivatsa shrivatsa  127 Apr 18 13:05  eelist
+5518314 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 23:26  efg
+5396916 -rw-rw-r-- 1 shrivatsa shrivatsa  954 Mar 29 09:46  emp.lst
+5397582 -rw-rw-r-- 1 shrivatsa shrivatsa  950 May 11 12:12  emp1.lst
+5508292 -rw-rw-r-- 1 shrivatsa shrivatsa  950 Apr 22 12:52  emp1.txt
+5525233 -rw-rw-r-- 1 shrivatsa shrivatsa  775 Apr 25 12:55  empn.lst
+5519078 -rw-rw-r-- 1 shrivatsa shrivatsa  775 Apr 25 13:17  empn2.lst
+5525237 -rw-rw-r-- 1 shrivatsa shrivatsa 1128 Apr 25 13:32  empn3.txt
+5525238 -rw-rw-r-- 1 shrivatsa shrivatsa  768 Apr 25 13:38  empn4.txt
+5518824 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  5 09:50  errflile
+5517550 -rw-rw-r-- 1 shrivatsa shrivatsa  220 Apr 19 00:07  fewlines.txt
+5527677 -rw-rw-r-- 1 shrivatsa shrivatsa   31 Apr 10 12:16  filelist.txt
+5432490 -rw-rw-r-- 1 shrivatsa shrivatsa  325 Feb 28 12:33  filesys.txt
+5518327 -rw-rw-r-- 1 shrivatsa shrivatsa   12 Mar 21 10:28  foo
+5518330 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 10:32 'foo*'
+5514344 -rw-rw-r-- 1 shrivatsa shrivatsa   13 Apr  5 09:48  foo.txt
+5415195 -rw-rw-r-- 1 demo      group2      13 Mar 12 16:26  fruit
+5527668 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:46  fruits.txt
+5514879 -rw-rw-r-- 1 shrivatsa shrivatsa  189 Apr 22 11:08  geekfile.txt
+5518394 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 23:26  hij
+5506153 -rw-rw-r-- 1 shrivatsa shrivatsa   12 Apr 18 12:36  instr.txt
+5508257 -rw-rw-r-- 1 shrivatsa shrivatsa    4 Apr 10 03:11  keywords.txt
+5518396 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 23:26  lmn
+5527661 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:45  map
+5527671 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:46  milltes.pdf
+5518323 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 10:14  names.lst
+5446783 -rw-rw-r-- 1 shrivatsa shrivatsa 2459 Apr  8 23:46  ourbase.txt
+5514303 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:03  rapgod
+5508294 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 10:14  records.lst
+5518167 -rw-rw-r-- 1 shrivatsa shrivatsa  950 Apr 19 09:18  sedemp1.lst
+5522265 -rw-rw-r-- 1 shrivatsa shrivatsa  949 Apr 19 09:36  sedemp2.lst
+5402495 -rw-rw-r-- 1 shrivatsa shrivatsa  315 Apr  4 10:17  shortlist
+5510921 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:45  son
+5525736 -rw-rw-r-- 1 shrivatsa shrivatsa  116 Apr  4 11:43  studentinfo.lst
+5527655 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:45  sun
+5415980 -rw-rw-r-- 1 shrivatsa shrivatsa   11 Mar 12 16:19  veg
+5527669 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:46  vegetables.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sudo chgrp demo demofile
+chgrp: cannot access 'demofile': No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sudo chgrp demo demosfile
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls -il
+total 132
+5506796 -rw-rw-r-- 1 shrivatsa shrivatsa  383 May 11 12:00  10000
+5527673 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:13  OAP
+5527674 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:13  OBP
+5527675 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:13  OCP
+5527676 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:13  ODP
+5508429 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:07  a1b
+5514314 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:07  a2b
+5521524 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:07  a3b
+5527664 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:07  a4b
+5527672 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:07  a5b
+5514050 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 23:26  abc
+5407134 -rw-rw-r-- 1 shrivatsa shrivatsa   59 Mar 12 16:37  allfile
+5406753 -rwx-w---x 1 shrivatsa shrivatsa   35 Mar 12 16:34  animals
+5527670 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:46  beverages.txt
+5518320 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 09:47  bhap1
+5527666 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:02  caaaap
+5527665 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:02  caaap
+5521521 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 10 00:02  caap
+5527662 -rw-rw-r-- 1 shrivatsa shrivatsa   22 Jun  2 23:04  cap
+5514181 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap01
+5514317 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap02
+5514324 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap03
+5514331 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap04
+5514422 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap05
+5514441 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap06
+5514442 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap07
+5514443 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap08
+5514502 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:54  chap09
+5515860 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap10
+5518319 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap111
+5514550 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chapX
+5514687 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chapY
+5518318 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chapZ
+5514516 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:55  chapd
+5514547 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:55  chape
+5514744 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:55  chapf
+5514754 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:55  chapg
+5514972 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 22:55  chaph
+5402174 -rw-rw-r-- 1 shrivatsa shrivatsa  150 Apr  4 10:17  cutlist1
+5515663 -rw-rw-r-- 1 shrivatsa shrivatsa   85 Apr  4 10:17  cutlist2
+5522068 -rw-rw-r-- 1 demo      demo         0 Jun  2 23:18  demosfile
+5517307 -rw-rw-r-- 1 shrivatsa shrivatsa  252 Apr 18 13:05  dlist
+5514758 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr 18 13:01 'dlist emp1 lst'
+5526630 -rw-rw-r-- 1 shrivatsa shrivatsa  737 Apr  5 10:46  doc.lst
+5525838 -rw-rw-r-- 1 shrivatsa shrivatsa  741 Apr  5 10:50  doc2.lst
+5527660 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:43  done
+5526653 -rw-rw-r-- 1 shrivatsa shrivatsa   16 Apr  4 12:59  dubba.lst
+5520781 -rw-rw-r-- 1 shrivatsa shrivatsa  127 Apr 18 13:05  eelist
+5518314 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 23:26  efg
+5396916 -rw-rw-r-- 1 shrivatsa shrivatsa  954 Mar 29 09:46  emp.lst
+5397582 -rw-rw-r-- 1 shrivatsa shrivatsa  950 May 11 12:12  emp1.lst
+5508292 -rw-rw-r-- 1 shrivatsa shrivatsa  950 Apr 22 12:52  emp1.txt
+5525233 -rw-rw-r-- 1 shrivatsa shrivatsa  775 Apr 25 12:55  empn.lst
+5519078 -rw-rw-r-- 1 shrivatsa shrivatsa  775 Apr 25 13:17  empn2.lst
+5525237 -rw-rw-r-- 1 shrivatsa shrivatsa 1128 Apr 25 13:32  empn3.txt
+5525238 -rw-rw-r-- 1 shrivatsa shrivatsa  768 Apr 25 13:38  empn4.txt
+5518824 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  5 09:50  errflile
+5517550 -rw-rw-r-- 1 shrivatsa shrivatsa  220 Apr 19 00:07  fewlines.txt
+5527677 -rw-rw-r-- 1 shrivatsa shrivatsa   31 Apr 10 12:16  filelist.txt
+5432490 -rw-rw-r-- 1 shrivatsa shrivatsa  325 Feb 28 12:33  filesys.txt
+5518327 -rw-rw-r-- 1 shrivatsa shrivatsa   12 Mar 21 10:28  foo
+5518330 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 10:32 'foo*'
+5514344 -rw-rw-r-- 1 shrivatsa shrivatsa   13 Apr  5 09:48  foo.txt
+5415195 -rw-rw-r-- 1 demo      group2      13 Mar 12 16:26  fruit
+5527668 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:46  fruits.txt
+5514879 -rw-rw-r-- 1 shrivatsa shrivatsa  189 Apr 22 11:08  geekfile.txt
+5518394 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 23:26  hij
+5506153 -rw-rw-r-- 1 shrivatsa shrivatsa   12 Apr 18 12:36  instr.txt
+5508257 -rw-rw-r-- 1 shrivatsa shrivatsa    4 Apr 10 03:11  keywords.txt
+5518396 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  8 23:26  lmn
+5527661 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:45  map
+5527671 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:46  milltes.pdf
+5518323 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 10:14  names.lst
+5446783 -rw-rw-r-- 1 shrivatsa shrivatsa 2459 Apr  8 23:46  ourbase.txt
+5514303 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:03  rapgod
+5508294 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 10:14  records.lst
+5518167 -rw-rw-r-- 1 shrivatsa shrivatsa  950 Apr 19 09:18  sedemp1.lst
+5522265 -rw-rw-r-- 1 shrivatsa shrivatsa  949 Apr 19 09:36  sedemp2.lst
+5402495 -rw-rw-r-- 1 shrivatsa shrivatsa  315 Apr  4 10:17  shortlist
+5510921 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:45  son
+5525736 -rw-rw-r-- 1 shrivatsa shrivatsa  116 Apr  4 11:43  studentinfo.lst
+5527655 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:45  sun
+5415980 -rw-rw-r-- 1 shrivatsa shrivatsa   11 Mar 12 16:19  veg
+5527669 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Apr  9 23:46  vegetables.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echoo 2> errorlogs.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat errorlogs.txt 
+bash: echoo: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat 2> errorlogs.txt 
+hi
+hi
+
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat err
+errflile       errorlogs.txt  
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat errorlogs.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "ghftyf" 2> errorlogs.txt
+ghftyf
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat errorlogs.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echoo "ghftyf" 2> errorlogs.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat errorlogs.txt 
+bash: echoo: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls 1> outputlogs.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat outputlogs.txt 
+10000
+OAP
+OBP
+OCP
+ODP
+a1b
+a2b
+a3b
+a4b
+a5b
+abc
+allfile
+animals
+beverages.txt
+bhap1
+caaaap
+caaap
+caap
+cap
+chap01
+chap02
+chap03
+chap04
+chap05
+chap06
+chap07
+chap08
+chap09
+chap10
+chap111
+chapX
+chapY
+chapZ
+chapd
+chape
+chapf
+chapg
+chaph
+cutlist1
+cutlist2
+demosfile
+dlist
+dlist emp1 lst
+doc.lst
+doc2.lst
+done
+dubba.lst
+eelist
+efg
+emp.lst
+emp1.lst
+emp1.txt
+empn.lst
+empn2.lst
+empn3.txt
+empn4.txt
+errflile
+errorlogs.txt
+fewlines.txt
+filelist.txt
+filesys.txt
+foo
+foo*
+foo.txt
+fruit
+fruits.txt
+geekfile.txt
+hij
+instr.txt
+keywords.txt
+lmn
+map
+milltes.pdf
+names.lst
+ourbase.txt
+outputlogs.txt
+rapgod
+records.lst
+sedemp1.lst
+sedemp2.lst
+shortlist
+son
+studentinfo.lst
+sun
+veg
+vegetables.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ caat 1> outputlogs.txt 2> errorlogs.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat ou
+ourbase.txt     outputlogs.txt  
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat outputlogs.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls 1>> outputlogs.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat outputlogs.txt 
+10000
+OAP
+OBP
+OCP
+ODP
+a1b
+a2b
+a3b
+a4b
+a5b
+abc
+allfile
+animals
+beverages.txt
+bhap1
+caaaap
+caaap
+caap
+cap
+chap01
+chap02
+chap03
+chap04
+chap05
+chap06
+chap07
+chap08
+chap09
+chap10
+chap111
+chapX
+chapY
+chapZ
+chapd
+chape
+chapf
+chapg
+chaph
+cutlist1
+cutlist2
+demosfile
+dlist
+dlist emp1 lst
+doc.lst
+doc2.lst
+done
+dubba.lst
+eelist
+efg
+emp.lst
+emp1.lst
+emp1.txt
+empn.lst
+empn2.lst
+empn3.txt
+empn4.txt
+errflile
+errorlogs.txt
+fewlines.txt
+filelist.txt
+filesys.txt
+foo
+foo*
+foo.txt
+fruit
+fruits.txt
+geekfile.txt
+hij
+instr.txt
+keywords.txt
+lmn
+map
+milltes.pdf
+names.lst
+ourbase.txt
+outputlogs.txt
+rapgod
+records.lst
+sedemp1.lst
+sedemp2.lst
+shortlist
+son
+studentinfo.lst
+sun
+veg
+vegetables.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "Some output" 1>> outputlogs.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat outputlogs.txt 
+10000
+OAP
+OBP
+OCP
+ODP
+a1b
+a2b
+a3b
+a4b
+a5b
+abc
+allfile
+animals
+beverages.txt
+bhap1
+caaaap
+caaap
+caap
+cap
+chap01
+chap02
+chap03
+chap04
+chap05
+chap06
+chap07
+chap08
+chap09
+chap10
+chap111
+chapX
+chapY
+chapZ
+chapd
+chape
+chapf
+chapg
+chaph
+cutlist1
+cutlist2
+demosfile
+dlist
+dlist emp1 lst
+doc.lst
+doc2.lst
+done
+dubba.lst
+eelist
+efg
+emp.lst
+emp1.lst
+emp1.txt
+empn.lst
+empn2.lst
+empn3.txt
+empn4.txt
+errflile
+errorlogs.txt
+fewlines.txt
+filelist.txt
+filesys.txt
+foo
+foo*
+foo.txt
+fruit
+fruits.txt
+geekfile.txt
+hij
+instr.txt
+keywords.txt
+lmn
+map
+milltes.pdf
+names.lst
+ourbase.txt
+outputlogs.txt
+rapgod
+records.lst
+sedemp1.lst
+sedemp2.lst
+shortlist
+son
+studentinfo.lst
+sun
+veg
+vegetables.txt
+Some output
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "Some output" 1> outputlogs.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat outputlogs.txt 
+Some output
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ man cut
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -d "|" -f 2,3 emp1.txt 
+a.k. shukla      |g.m        
+jai sharma       |director   
+sumit chakrobarty|d.g.m      
+barun sengupta   |director   
+n.k. gupta       |chairman   
+chanchal singhvi |director   
+
+karuna ganguly   |g.m.       
+s.n. dasgupta    |manager    
+
+jayant Choudhury |executive  
+anil aggarwal    |manager    
+lalit chowdury   |director   
+shyam saksena    |d.g.m.     
+
+sudhir Agarwal   |executive  
+j.b. saxena      |g.m.       
+v.k agrawal      |g.m.       
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -c 1-5 emp1.txt 
+2233|
+9876|
+5678|
+2365|
+5423|
+1006|
+
+6213|
+1265|
+
+4290|
+2476|
+6521|
+3212|
+
+3564|
+2345|
+0110|
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -c 0-5 emp1.txt 
+cut: byte/character positions are numbered from 1
+Try 'cut --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -c 1-6 emp1.txt 
+2233|a
+9876|j
+5678|s
+2365|b
+5423|n
+1006|c
+
+6213|k
+1265|s
+
+4290|j
+2476|a
+6521|l
+3212|s
+
+3564|s
+2345|j
+0110|v
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat ourbase.txt 
+
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+
+
+
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|BSC
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|BCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|BCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|BSC 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|BSC 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MSC 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|BCA 
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls
+ 10000   a3b             bhap1    chap03   chap10    chapf      'dlist emp1 lst'   emp.lst     errflile        foo.txt        lmn              records.lst       veg
+ OAP     a4b             caaaap   chap04   chap111   chapg       doc.lst           emp1.lst    errorlogs.txt   fruit          map              sedemp1.lst       vegetables.txt
+ OBP     a5b             caaap    chap05   chapX     chaph       doc2.lst          emp1.txt    fewlines.txt    fruits.txt     milltes.pdf      sedemp2.lst
+ OCP     abc             caap     chap06   chapY     cutlist1    done              empn.lst    filelist.txt    geekfile.txt   names.lst        shortlist
+ ODP     allfile         cap      chap07   chapZ     cutlist2    dubba.lst         empn2.lst   filesys.txt     hij            ourbase.txt      son
+ a1b     animals         chap01   chap08   chapd     demosfile   eelist            empn3.txt   foo             instr.txt      outputlogs.txt   studentinfo.lst
+ a2b     beverages.txt   chap02   chap09   chape     dlist       efg               empn4.txt  'foo*'           keywords.txt   rapgod           sun
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat emp1.lst 
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k gupta        |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -d "|" -f 5 emp1.lst 
+12/12/52
+03/12/50
+04/19/43
+05/11/47
+08/30/56
+09/03/38
+
+06/05/62
+09/12/63
+
+09/07/50
+05/01/59
+09/26/45
+12/12/55
+
+07/06/47
+03/12/45
+12/31/40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -d "|" -f 5 emp1.lst | cut -d "/" -f 3
+52
+50
+43
+47
+56
+38
+
+62
+63
+
+50
+59
+45
+55
+
+47
+45
+40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -d "|" -f 5 emp1.lst | cut -c 7-8
+52
+50
+43
+47
+56
+38
+
+62
+63
+
+50
+59
+45
+55
+
+47
+45
+40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -d "|" -f 5 emp1.lst | cut -c 7,8
+52
+50
+43
+47
+56
+38
+
+62
+63
+
+50
+59
+45
+55
+
+47
+45
+40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -d "|" -f 5 emp1.lst | cut -c 1,2,7,8
+1252
+0350
+0443
+0547
+0856
+0938
+
+0662
+0963
+
+0950
+0559
+0945
+1255
+
+0747
+0345
+1240
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -d "|" -f 5 emp1.lst | cut -c 7,8 emp1.lst 
+.k
+ai
+um
+ar
+.k
+ha
+
+ar
+.n
+
+ay
+ni
+al
+hy
+
+ud
+.b
+.k
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -c 7,8 emp1.lst 
+.k
+ai
+um
+ar
+.k
+ha
+
+ar
+.n
+
+ay
+ni
+al
+hy
+
+ud
+.b
+.k
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cut -d "|" -f 5 emp1.lst | cut -d "/" -f 3 emp5.txt
+cut: emp5.txt: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ 
+

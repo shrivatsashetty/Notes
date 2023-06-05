@@ -1,0 +1,360 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ man sed
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/unix/linux' geekfile.txt
+sed: -e expression #1, char 8: extra characters after command
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux' geekfile.txt
+sed: -e expression #1, char 12: unterminated `s' command
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux/' geekfile.txt
+linux is great os. unix is opensource. unix is free os.
+learn operating system.
+linux linux which one you choose.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux/' geekfile.txt 
+linux is great os. unix is opensource. unix is free os.
+learn operating system.
+linux linux which one you choose.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux/'
+2 geekfile.txt
+2 geekfile.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux/3' geekfile.txt 
+unix is great os. unix is opensource. linux is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn linux .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux/2' geekfile.txt 
+unix is great os. linux is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.linux is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ gedit geekfile.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux/2,3'
+sed: -e expression #1, char 15: unknown option to `s'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux/2,3' geekfile.txt 
+sed: -e expression #1, char 15: unknown option to `s'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux/2' geekfile.txt 
+unix is great os. linux is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.linux is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux/*' geekfile.txt 
+sed: -e expression #1, char 14: unknown option to `s'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux*/' geekfile.txt 
+linux* is great os. unix is opensource. unix is free os.
+learn operating system.
+linux* linux which one you choose.
+linux* is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat  geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls
+ OAP   a4b             caaaap   chap04   chap111   chapg             doc2.lst    errflile       fruit          map           sedemp2.lst
+ OBP   a5b             caaap    chap05   chapX     chaph             done        fewlines.txt   fruits.txt     milltes.pdf   shortlist
+ OCP   abc             caap     chap06   chapY     cutlist1          dubba.lst   filelist.txt   geekfile.txt   names.lst     son
+ ODP   allfile         cap      chap07   chapZ     cutlist2          eelist      filesys.txt    hij            ourbase.txt   studentinfo.lst
+ a1b   animals         chap01   chap08   chapd     dlist             efg         foo            instr.txt      rapgod        sun
+ a2b   beverages.txt   chap02   chap09   chape    'dlist emp1 lst'   emp.lst    'foo*'          keywords.txt   records.lst   veg
+ a3b   bhap1           chap03   chap10   chapf     doc.lst           emp1.lst    foo.txt        lmn            sedemp1.lst   vegetables.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux*/g' geekfile.txt 
+linux* is great os. linux* is opensource. linux* is free os.
+learn operating system.
+linux* linux which one you choose.
+linux* is easy to learn.linux* is a multiuser os.Learn linux* .linux* is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/android/g' geekfile.txt 
+android is great os. android is opensource. android is free os.
+learn operating system.
+android linux which one you choose.
+android is easy to learn.android is a multiuser os.Learn android .android is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -i 's/unix/android/g' geekfile.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+android is great os. android is opensource. android is free os.
+learn operating system.
+android linux which one you choose.
+android is easy to learn.android is a multiuser os.Learn android .android is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -i 's/android/unix/g' geekfile.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/android/3g' geekfile.txt 
+unix is great os. unix is opensource. android is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn android .android is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/android/2g' geekfile.txt 
+unix is great os. android is opensource. android is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.android is a multiuser os.Learn android .android is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "Welcome To The Geek Stuff" | sed 's/\(\b[A-Z]\)/\(\1\)/g'
+(W)elcome (T)o (T)he (G)eek (S)tuff
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "Welcome To The Geek Stuff" | sed 's/\(\b[A-Z]\)/\(\1\)/'
+(W)elcome To The Geek Stuff
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "My Name Is Khan" | sed 's/(\b[a-h\])/\(\2\)/'
+sed: -e expression #1, char 20: invalid reference \2 on `s' command's RHS
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "My Name Is Khan" | sed 's/\(\b[a-h\])/\(\2\)/g'
+sed: -e expression #1, char 22: Unmatched ( or \(
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "My Name Is Khan" | sed 's/\(\b[a-h]\)/\(\2\)/g'
+sed: -e expression #1, char 22: invalid reference \2 on `s' command's RHS
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ echo "My Name Is Khan" | sed 's/\(\b[a-h]\)/\(\1\)/g'
+My Name Is Khan
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '2 s/unix/linux/' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '3 s/unix/linux/' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+linux linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '4 s/unix/linux/g' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+linux is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '4 s/unix/linux/2g' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '1,4 s/unix/linux/2g' geekfile.txt 
+unix is great os. linux is opensource. linux is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 'g s/unix/linux/2g' geekfile.txt 
+sed: -e expression #1, char 3: extra characters after command
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '1-4 s/unix/linux/2g' geekfile.txt 
+sed: -e expression #1, char 2: unknown command: `-'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '[1-4] s/unix/linux/2g' geekfile.txt 
+sed: -e expression #1, char 1: unknown command: `['
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '{1-4} s/unix/linux/2g' geekfile.txt 
+sed: -e expression #1, char 3: unknown command: `-'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '(1-4) s/unix/linux/2g' geekfile.txt 
+sed: -e expression #1, char 1: unknown command: `('
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/unix/linux/p' geekfile.txt 
+linux is great os. unix is opensource. unix is free os.
+linux is great os. unix is opensource. unix is free os.
+learn operating system.
+linux linux which one you choose.
+linux linux which one you choose.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -p 's/unix/linux/p' geekfile.txt 
+sed: invalid option -- 'p'
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -E, -r, --regexp-extended
+                 use extended regular expressions in the script
+                 (for portability use POSIX -E).
+  -s, --separate
+                 consider files as separate rather than as a single,
+                 continuous long stream.
+      --sandbox
+                 operate in sandbox mode (disable e/r/w commands).
+  -u, --unbuffered
+                 load minimal amounts of data from the input files and flush
+                 the output buffers more often
+  -z, --null-data
+                 separate lines by NUL characters
+      --help     display this help and exit
+      --version  output version information and exit
+
+If no -e, --expression, -f, or --file option is given, then the first
+non-option argument is taken as the sed script to interpret.  All
+remaining arguments are names of input files; if no input files are
+specified, then the standard input is read.
+
+GNU sed home page: <https://www.gnu.org/software/sed/>.
+General help using GNU software: <https://www.gnu.org/gethelp/>.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n 's/unix/linux/p' geekfile.txt 
+linux is great os. unix is opensource. unix is free os.
+linux linux which one you choose.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n 's/unix/linux/p' geekfile.txt
+linux is great os. unix is opensource. unix is free os.
+linux linux which one you choose.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '1 s/unix/linux/p' geekfile.txt 
+linux is great os. unix is opensource. unix is free os.
+linux is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '1,4 s/unix/linux/p' geekfile.txt 
+linux is great os. unix is opensource. unix is free os.
+linux is great os. unix is opensource. unix is free os.
+learn operating system.
+linux linux which one you choose.
+linux linux which one you choose.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n '1,4 s/unix/linux/p' geekfile.txt 
+linux is great os. unix is opensource. unix is free os.
+linux linux which one you choose.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n '1,4 s/unix/linux/gp' geekfile.txt 
+linux is great os. linux is opensource. linux is free os.
+linux linux which one you choose.
+linux is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '1,4 s/unix/linux/gp' geekfile.txt 
+linux is great os. linux is opensource. linux is free os.
+linux is great os. linux is opensource. linux is free os.
+learn operating system.
+linux linux which one you choose.
+linux linux which one you choose.
+linux is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
+linux is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n '1,4 s/unix/linux/gp' geekfile.txt 
+linux is great os. linux is opensource. linux is free os.
+linux linux which one you choose.
+linux is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n '2,$ s/unix/linux/gp' geekfile.txt 
+linux linux which one you choose.
+linux is easy to learn.linux is a multiuser os.Learn linux .linux is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n '2,$ s/unix/linux/p' geekfile.txt 
+linux linux which one you choose.
+linux is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n '^,3 s/unix/linux/p' geekfile.txt 
+sed: -e expression #1, char 1: unknown command: `^'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '1d' geekfile.txt 
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '*d' geekfile.txt 
+sed: -e expression #1, char 1: unknown command: `*'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '1,2d' geekfile.txt 
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '1,3d' geekfile.txt 
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '1,4d' geekfile.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '2,4d' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '$' geekfile.txt 
+sed: -e expression #1, char 1: missing command
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '$d' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '^d' geekfile.txt 
+sed: -e expression #1, char 1: unknown command: `^'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/unix/d' geekfile.txt 
+learn operating system.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/o/d' geekfile.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/u/d' geekfile.txt 
+learn operating system.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/lea*/d' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+unix linux which one you choose.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/learn*/d' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+unix linux which one you choose.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/l*/d' geekfile.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/li*/d' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/e$/d' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/$choose/d' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/powerful$/d' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/$powerful/d' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n '1,3p' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '1,3p' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+learn operating system.
+unix linux which one you choose.
+unix linux which one you choose.
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n '1,3p' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+learn operating system.
+unix linux which one you choose.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n '1p' geekfile.txt 
+unix is great os. unix is opensource. unix is free os.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed -n '4p' geekfile.txt 
+unix is easy to learn.unix is a multiuser os.Learn unix .unix is a powerful.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ 

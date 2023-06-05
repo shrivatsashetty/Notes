@@ -1,0 +1,312 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat emp.lst
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSshrivatsa@shrivatsa-Victus-by-HPshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cp emp1.lst sedemp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat sedemp1.lst 
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed 's/|/:/' sedemp1.lst
+2233:a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876:jai sharma       |director   |production |03/12/50|130000
+5678:sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365:barun sengupta   |director   |personnel  |05/11/47|120000
+5423:n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006:chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213:karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265:s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290:jayant Choudhury |executive  |production |09/07/50| 65000 
+2476:anil aggarwal    |manager    |sales      |05/01/59|110000
+6521:lalit chowdury   |director   |marketing  |09/26/45|125000
+3212:shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564:sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345:j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110:v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed '1 s/|/:/g' sedemp1.lst
+2233:a.k. shukla      :g.m        :sales      :12/12/52: 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed '1,s /|/:/g' sedemp1.lst
+sed: -e expression #1, char 3: unexpected `,'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed '1,4 s/|/:/g' sedemp1.lst
+2233:a.k. shukla      :g.m        :sales      :12/12/52: 90000
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 85000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed '1,7 s/|/:/g' sedemp1.lst
+2233:a.k. shukla      :g.m        :sales      :12/12/52: 90000
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 85000
+2365:barun sengupta   :director   :personnel  :05/11/47:120000
+5423:n.k. gupta       :chairman   :admin      :08/30/56:160000
+1006:chanchal singhvi :director   :sales      :09/03/38:140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed '1,3 s/|/:/g' sedemp1.lst
+2233:a.k. shukla      :g.m        :sales      :12/12/52: 90000
+9876:jai sharma       :director   :production :03/12/50:130000
+5678:sumit chakrobarty:d.g.m      :marketing  :04/19/43: 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed 's/director/member/' sedemp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |member   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |member   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |member   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |member   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed 's/director/member/g' sedemp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |member   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |member   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |member   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |member   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat sedemp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed 's/[Aa]gg*[ar][ar]wal/Agarwal/g' sedemp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil Agarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k Agarwal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cp emp1.lst sedemp2.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -i 's/[Aa]gg*[ar][ar]wal/Agarwal/g' sedemp2.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat sedemp2.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil Agarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k Agarwal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed 's/^/2024-/' sedemp1.lst
+2024-2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2024-9876|jai sharma       |director   |production |03/12/50|130000
+2024-5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2024-2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2024-5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+2024-1006|chanchal singhvi |director   |sales      |09/03/38|140000
+2024-
+2024-6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2024-1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2024-
+2024-4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2024-2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2024-6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2024-3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+2024-
+2024-3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2024-2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2024-0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed 's/ //g' sedemp1.lst
+2233|a.k.shukla|g.m|sales|12/12/52|90000
+9876|jaisharma|director|production|03/12/50|130000
+5678|sumitchakrobarty|d.g.m|marketing|04/19/43|85000
+2365|barunsengupta|director|personnel|05/11/47|120000
+5423|n.k.gupta|chairman|admin|08/30/56|160000
+1006|chanchalsinghvi|director|sales|09/03/38|140000
+
+6213|karunaganguly|g.m.|accounts|06/05/62|105000
+1265|s.n.dasgupta|manager|sales|09/12/63|90000
+
+4290|jayantChoudhury|executive|production|09/07/50|65000
+2476|anilaggarwal|manager|sales|05/01/59|110000
+6521|lalitchowdury|director|marketing|09/26/45|125000
+3212|shyamsaksena|d.g.m.|accounts|12/12/55|85000
+
+3564|sudhirAgarwal|executive|personnel|07/06/47|75000
+2345|j.b.saxena|g.m.|marketing|03/12/45|110000
+0110|v.kagrawal|g.m.|marketing|12/31/40|95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed 's/ *|/|/g' sedemp1.lst
+2233|a.k. shukla|g.m|sales|12/12/52| 90000
+9876|jai sharma|director|production|03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 85000
+2365|barun sengupta|director|personnel|05/11/47|120000
+5423|n.k. gupta|chairman|admin|08/30/56|160000
+1006|chanchal singhvi|director|sales|09/03/38|140000
+
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+1265|s.n. dasgupta|manager|sales|09/12/63| 90000
+
+4290|jayant Choudhury|executive|production|09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+6521|lalit chowdury|director|marketing|09/26/45|125000
+3212|shyam saksena|d.g.m.|accounts|12/12/55| 85000
+
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+2345|j.b. saxena|g.m.|marketing|03/12/45|110000
+0110|v.k agrawal|g.m.|marketing|12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ # above two commands are two ways to remove all ttrailing spaces
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSshrivatsa@shrivatsa-Victus-by-HPshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ man awk
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ man awk
+

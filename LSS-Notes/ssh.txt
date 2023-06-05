@@ -1,0 +1,97 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig 
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1395  bytes 135524 (135.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1395  bytes 135524 (135.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.232.205  netmask 255.255.255.0  broadcast 192.168.232.255
+        inet6 fe80::3819:fce9:313a:b234  prefixlen 64  scopeid 0x20<link>
+        inet6 2401:4900:3314:ffce:caee:f6f3:19b:aacb  prefixlen 64  scopeid 0x0<global>
+        inet6 2401:4900:3314:ffce:f87c:2a3e:d820:61bc  prefixlen 64  scopeid 0x0<global>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 115903  bytes 116852716 (116.8 MB)
+        RX errors 0  dropped 1294  overruns 0  frame 0
+        TX packets 21787  bytes 4445173 (4.4 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/shrivatsa/.ssh/id_rsa): surya
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in surya
+Your public key has been saved in surya.pub
+The key fingerprint is:
+SHA256:du8p4+8egrGTJ+BZQlqJF28vyIbVs8b1DANyGfwHLF8 shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx
+The key's randomart image is:
++---[RSA 3072]----+
+|      o.++       |
+|     . B+.o E    |
+|    . * =++o     |
+|     O + =o=.    |
+|    o * S o.o    |
+|     o B B .     |
+|      o * o o    |
+|         +oo o   |
+|         ..**    |
++----[SHA256]-----+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ scp ~/surya.pub shrivatsa@192.168.232.149:/home/shrivatsa
+The authenticity of host '192.168.232.149 (192.168.232.149)' can't be established.
+ED25519 key fingerprint is SHA256:fcYz/cXzmrcYM8NbiHgex0HENABWxu94Qnc8V/w8ftc.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.232.149' (ED25519) to the list of known hosts.
+shrivatsa@192.168.232.149's password: 
+Permission denied, please try again.
+shrivatsa@192.168.232.149's password: 
+Permission denied, please try again.
+shrivatsa@192.168.232.149's password: 
+shrivatsa@192.168.232.149: Permission denied (publickey,password).
+lost connection
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cat surya.pub >> ~/.ssh/authorized_keys
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cat .ssh/authorized_keys 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8ozIWiKZHtgplJRoZ6IhnDkFst+FSQqORH59HY64Oe6iFD9buopbxmWoKVHBQRN/xOt9FB2NHe5yLcEt8hfw4B7MkW4OV21b6WMyvyjTVzNr0Pz+b203bM4JJyDyNQPY+hb2BDb416F1p3Rps1kos0TL/3xAvE8ox0LX5Ip3I9hZLaKqbHsPismCrCE6dNYrz5JEX2QwjJqx8j9yeIPSiiAidUI4m2Utqip732/arfhOJkMhkfemBRwXG7HOCUTqk8KNRNSHeS+ch6HTWWnbu82ST3x07fUlTkLWcVj2z1RGDFjSBB1Xm0GCg0o5zqvpIVSW6HVJ+eO07YTiMnVYxiG4FN1QHZiW0qXvIVXLf1tZK2u6sOvMC8w/rVNzADpu6AOG7buE5d7OUInMnJwcDeZVlkNG81TcUZF+LKZMyv7acIgBNDWoHO7Q26SBtT+JRGG3xVdV3UDUa5w2ggHyCRggDIouxYC674pCpe2Z31hnKlY5MKXmdvprB+YQSmfk= shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ scp ~/surya.pub amith@192.168.232.149:/home/shrivatsa
+amith@192.168.232.149's password: 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ scp ~/surya.pub amith@192.168.232.149:/home/amith
+amith@192.168.232.149's password: 
+surya.pub                                                                                                             100%  602     4.1KB/s   00:00    
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -i ~/surya.pub amith@192.168.232.149
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '/home/shrivatsa/surya.pub' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/home/shrivatsa/surya.pub": bad permissions
+amith@192.168.232.149's password: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+51 updates can be applied immediately.
+11 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+13 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Wed Apr 12 23:23:07 2023 from 192.168.0.101
+amith@amith-Inspiron-3505:~$ 
+
+

@@ -1,0 +1,266 @@
+DIFF(1)                                                             User Commands                                                            DIFF(1)
+			
+NAME
+       diff - compare files line by line
+
+SYNOPSIS
+       diff [OPTION]... FILES
+
+DESCRIPTION
+       Compare FILES line by line.
+
+       Mandatory arguments to long options are mandatory for short options too.
+
+       --normal
+              output a normal diff (the default)
+
+       -q, --brief
+              report only when files differ
+
+       -s, --report-identical-files
+              report when two files are the same
+
+       -c, -C NUM, --context[=NUM]
+              output NUM (default 3) lines of copied context
+
+       -u, -U NUM, --unified[=NUM]
+              output NUM (default 3) lines of unified context
+
+       -e, --ed
+              output an ed script
+
+       -n, --rcs
+              output an RCS format diff
+
+       -y, --side-by-side
+              output in two columns
+SED(1)                                                              User Commands                                                             SED(1)
+
+NAME
+       sed - stream editor for filtering and transforming text
+
+SYNOPSIS
+       sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+DESCRIPTION
+       Sed  is a stream editor.  A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).
+       While in some ways similar to an editor which permits scripted edits (such as ed), sed works by making only one pass over the  input(s),  and
+       is consequently more efficient.  But it is sed's ability to filter text in a pipeline which particularly distinguishes it from other types of
+       editors.
+
+       -n, --quiet, --silent
+
+              suppress automatic printing of pattern space
+
+       --debug
+
+              annotate program execution
+
+       -e script, --expression=script
+
+              add the script to the commands to be executed
+
+       -f script-file, --file=script-file
+
+              add the contents of script-file to the commands to be executed
+
+       --follow-symlinks
+
+              follow symlinks when processing in place
+
+       -i[SUFFIX], --in-place[=SUFFIX]
+
+              edit files in place (makes backup if SUFFIX supplied)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '3p' emp1.lst
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '2,6p' emp1.lst
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '1,2p
+> 7,9p
+> $p' emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '2,$p' emp1.lst
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '2,$!p' emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '7,$p' emp1.lst
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '7,9p' emp1.lst
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '7-9p' emp1.lst
+sed: -e expression #1, char 2: unknown command: `-'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '(7,9p)' emp1.lst
+sed: -e expression #1, char 1: unknown command: `('
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '7;9p' emp1.lst
+sed: -e expression #1, char 2: unknown command: `;'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -e '1,2p' -e '7,9p' -e '$p' emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat > instr.sh
+1,2p
+7,9p 
+$pshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat instr.sh
+1,2p
+7,9p
+$pshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n -f instr.sh emp1.lst 
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ mv instr.sh instr.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ ls
+ OAP   a2b             bhap1   'chap*'   chap06   chap111    cutlist2    emp.lst       'foo*'        milltes.pdf   shortlist
+ OBP   a3b             caaaap   chap01   chap07   chapX      doc.lst     emp1.lst       foo.txt      names.lst     son
+ OCP   a4b             caaap    chap02   chap08   chapY      doc2.lst    errflile       fruits.txt   ourbase.txt   studentinfo.lst
+ ODP   a5b             caap     chap03   chap09   chapZ      done        filelist.txt   instr.txt    rapgod        sun
+ a1b   beverages.txt   cap      chap04   chap10   cutlist1   dubba.lst   foo            map          records.lst   vegetables.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '/director/p' emp1.lst
+9876|jai sharma       |director   |production |03/12/50|130000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '/dasgupta/,//p' emp1.lst
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '[aA]gg*[ar][][ar]]wal/p' emp1.lst
+sed: -e expression #1, char 1: unknown command: `['
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '/50/'p emp1
+sed: can't read emp1: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '[[aA]gg*[ar][][ar]]wal/p' emp1.lst
+sed: -e expression #1, char 1: unknown command: `['
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat emp1.last
+cat: emp1.last: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat emp1.last
+cat: emp1.last: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '/director/w'
+sed: -e expression #1, char 11: missing filename in r/R/w/W commands
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '/director/w dlist emp1 lst'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed -n '/director/w dlist' emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/march22/Bin$ sed '/executive/w eelist' emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+

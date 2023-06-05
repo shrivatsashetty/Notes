@@ -1,0 +1,260 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 240  bytes 22313 (22.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 240  bytes 22313 (22.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.10.217  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::bf8a:b74e:b4dd:1afc  prefixlen 64  scopeid 0x20<link>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 4303  bytes 2271874 (2.2 MB)
+        RX errors 0  dropped 167  overruns 0  frame 0
+        TX packets 1332  bytes 191810 (191.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ man ifconfig
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig -a
+eno1: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 240  bytes 22313 (22.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 240  bytes 22313 (22.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.10.217  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::bf8a:b74e:b4dd:1afc  prefixlen 64  scopeid 0x20<link>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 4424  bytes 2323901 (2.3 MB)
+        RX errors 0  dropped 175  overruns 0  frame 0
+        TX packets 1376  bytes 197836 (197.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl stop NetworkManager
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 252  bytes 23849 (23.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 252  bytes 23849 (23.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig eno1
+eno1: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig eno1 172.23.34.19 netmask 255.255.255.0 up
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig
+eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.23.34.19  netmask 255.255.255.0  broadcast 172.23.34.255
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 252  bytes 23849 (23.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 252  bytes 23849 (23.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig
+eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.23.34.19  netmask 255.255.255.0  broadcast 172.23.34.255
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 268  bytes 24985 (24.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 268  bytes 24985 (24.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl start NetworkManager
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig
+eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.23.34.19  netmask 255.255.255.0  broadcast 172.23.34.255
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 290  bytes 27259 (27.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 290  bytes 27259 (27.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.10.217  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::bf8a:b74e:b4dd:1afc  prefixlen 64  scopeid 0x20<link>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 4821  bytes 2496946 (2.4 MB)
+        RX errors 0  dropped 190  overruns 0  frame 0
+        TX packets 1554  bytes 226567 (226.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ man ifconfig 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig eno1 172.23.34.19 netmask 255.255.255.0 down
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 306  bytes 29014 (29.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 306  bytes 29014 (29.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 4936  bytes 2549532 (2.5 MB)
+        RX errors 0  dropped 193  overruns 0  frame 0
+        TX packets 1596  bytes 232428 (232.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig eno1 172.23.34.19 netmask 255.255.0.0 up
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig
+eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.23.34.19  netmask 255.255.0.0  broadcast 172.23.255.255
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 314  bytes 29983 (29.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 314  bytes 29983 (29.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.10.217  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::bf8a:b74e:b4dd:1afc  prefixlen 64  scopeid 0x20<link>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 5032  bytes 2565122 (2.5 MB)
+        RX errors 0  dropped 197  overruns 0  frame 0
+        TX packets 1674  bytes 247923 (247.9 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig eno1 172.23.34.19 netmask 255.0.0.0 up
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig
+eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.23.34.19  netmask 255.0.0.0  broadcast 172.255.255.255
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 340  bytes 33263 (33.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 340  bytes 33263 (33.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.10.217  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::bf8a:b74e:b4dd:1afc  prefixlen 64  scopeid 0x20<link>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 5819  bytes 2954298 (2.9 MB)
+        RX errors 0  dropped 223  overruns 0  frame 0
+        TX packets 1942  bytes 282732 (282.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig eno1 172.23.34.19 netmask 255.255.255.0 up
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig
+eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.23.34.19  netmask 255.255.255.0  broadcast 172.23.34.255
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 340  bytes 33263 (33.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 340  bytes 33263 (33.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.10.217  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::bf8a:b74e:b4dd:1afc  prefixlen 64  scopeid 0x20<link>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 5940  bytes 2970014 (2.9 MB)
+        RX errors 0  dropped 227  overruns 0  frame 0
+        TX packets 1942  bytes 282732 (282.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig
+eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.23.34.19  netmask 255.255.255.0  broadcast 172.23.34.255
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 340  bytes 33263 (33.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 340  bytes 33263 (33.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.10.217  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::bf8a:b74e:b4dd:1afc  prefixlen 64  scopeid 0x20<link>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 6039  bytes 2986551 (2.9 MB)
+        RX errors 0  dropped 237  overruns 0  frame 0
+        TX packets 1947  bytes 283368 (283.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+

@@ -1,0 +1,488 @@
+ 1941  nano ourbase.txt
+ 1942  cat ourbase.txt
+ 1943  sort -d "|" 5 
+ 1944  sort -d "|" -k 6 
+ 1945  cat sort -d "|" -k 6 ourbase.txt
+ 1946  cat sort -d "|" -k6 ourbase.txt
+ 1947  cat sort -t "|" -k6 ourbase.txt
+ 1948  sort -t "|" -k6 ourbase.txt
+ 1949  cat ourbase.txt | sort -t "|" -k6 ourbase.txt
+ 1950  sort -k -1
+ 1951  sort -k -1 ourbase.txt
+ 1952  cat ourbase.txt | sort -t "|" -k -1 ourbase.txt
+ 1953  cat ourbase.txt | sort -t "|" -k-1 ourbase.txt
+ 1954  sort -t "|" -k4 ourbase.txt| sort -t "|" -k12
+ 1955  cut -d "|" -k4 ourbase.txt | cut -k10 -k12
+ 1956  cut -d "|" -k4 ourbase.txt | cut -k10
+ 1957  cut -d "|" -f4 ourbase.txt | cut -c 10-11
+ 1958  cut -d "|" -f4 ourbase.txt | cut -c 11-12
+-1259  cut -d "|" -f4 ourbase.txt | cut -c 1
+ 1960  cut -d "|" -f4 ourbase.txt | cut -c 10-12
+ 1961  cut -d "|" -f2 ourbase.txt | cut -c 10-12
+ 1962  cut -d "|" -f4 ourbase.txt
+ 1963  cut -d "|" -f4 ourbase.txt | cut -c 9
+ 1964  cut -d "|" -f4 ourbase.txt | cut -c 9,12
+ 1965  cut -d "|" -f4 ourbase.txt | cut -c 9-12
+ 1966  cut -d "|" -f4 ourbase.txt | cut -c [9-12]
+ 1967  cut -d "|" -f4 ourbase.txt |  cut -d "|" -f4 ourbase.txt |
+ 1968  cut -d "|" -f4 ourbase.txt | cut -c 9-12
+ 1969  cut -d "|" -f4 ourbase.txt | cut -c 7-9
+ 1970  cut -d "|" -f4 ourbase.txt | cut -c -1--6
+ 1971  cut -d "|" -f4 ourbase.txt | cut -c -1
+ 1972  cut -d "|" -f4 ourbase.txt | cut -c -2
+ 1973  cut -d "|" -f4 ourbase.txt | cut -c -0
+ 1974  cut -d "|" -f4 ourbase.txt | cut -c -3
+ 1975  cut -d "|" -f2
+ 1976  cut -d "|" -f2 ourbase.txt
+ 1977  cut -d "|" -f2 ourbase.txt | sort -n
+ 1978  cut -d "|" -f2 ourbase.txt | sort | uniq
+ 1979  cut -d "|" -f2
+ 1980  cut -d "|" -f2 ourbase.txt | sort -n
+ 1981  cut -d "|" -f2 ourbase.txt | sort -n |uniq
+ 1982  cut -d "|" -f2 ourbase.txt | sort -r |uniq
+ 1983  sort -t "|" -k~ ourbase.txt | sort -r |uniq
+ 1984  sort -t "|" -k2 ourbase.txt | sort -r |uniq
+ 1985  sort -t "|" -k1 ourbase.txt | sort -r |uniq
+ 1986  sort -t "|" -k3 ourbase.txt | sort -r |uniq
+ 1987  sort -t "|" -k3 -k6 ourbase.txt | sort -r |uniq
+ 1988  sort -t "|" -k6 -k3 ourbase.txt | sort -r |uniq
+ 1989  sort -t "|" -k3 -k6 ourbase.txt | sort -r |uniq
+ 1990  sort -t "|" -k3 -k6 ourbase.txt | 
+ 1991  sort -t "|" -k3 -k6 ourbase.txt 
+ 1992  sort -t "|" -k3 -f ourbase.txt 
+ 1993  grep 'R' ourbase.txt
+ 1994  grep  ourbase.txt
+ 1995  sort -t "|" -k1 ourbase.txt | uniq 
+ 1996  sort -t "|" -k1 ourbase.txt | uniq | grep '@gmail.com'
+ 1997  sort -t "|" -k1 ourbase.txt | uniq | grep '@gmail.com'| uniq
+ 1998  cut -d "|" -f1 ourbase.txt 
+ 1999  cut -d "|" -f1 ourbase.txt |
+ 2000  history
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt
+
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+
+
+
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep "@gmail"
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep "@gmail" | uniq
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | uniq | grep "@gmail"
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | sort | uniq | grep "@gmail"
+Abhishek222@gmail.com           
+bharat111@gmail.com             
+BharatK444@gmail.com            
+Dhansh333@gmail.com             
+nandanbhat137@gmail.com         
+Prathamesh555@gmail.com         
+suhasms0143@gmail.com           
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt
+
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+
+
+
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep "@gmail"
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep "@gmail" | uniq
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | uniq | grep "@gmail"
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | sort | uniq | grep "@gmail"
+Abhishek222@gmail.com           
+bharat111@gmail.com             
+BharatK444@gmail.com            
+Dhansh333@gmail.com             
+nandanbhat137@gmail.com         
+Prathamesh555@gmail.com         
+suhasms0143@gmail.com           
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ man paste
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cat ourbase.txt
+
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|MCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|MCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|MCA 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|MCA 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MCA 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+
+
+
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+nandanbhat137@gmail.com         |9480278068|Nandan bhat    |RVCE22MCA008|Section A|McA
+suhasms0143@gmail.com           |6363108413|Suhas M S      |RVCE22MCA026|Section B|BSC
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+manojkk.mca22@rvce.edu.in       |8277218190|Manoj          |RVCE22MCA006|Section A|BCA
+abhishekjadhav.mca22@rvce.edu.in|7975236778|Abhishek Jadhav|RVCE22MCA019|Section A|MCA 
+bharat111@gmail.com             |9019515908|Ashwin PR      |RVCE22MCA011|Section A|BCA 
+Abhishek222@gmail.com           |7975236778|Abhishek J     |RVCE22MCA019|Section A|BSC 
+Dhansh333@gmail.com             |9964825250|Dhanush K      |RVCE22MCA034|Section A|MCA 
+BharatK444@gmail.com            |8073747379|Bharat K       |RVCE22MCA079|Section A|MCA 
+Prathamesh555@gmail.com         |9148025795|Prathamesh H   |RVCE22MCA094|Section B|BSC 
+BhratH666@gamil.com             |6360793500|Bharat H       |RVCE22MCA002|Section A|MCA 
+sushant777@gamil.com            |8431169904|Sushant H      |RVCE22MCA043|Section B|MSC 
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|BCA 
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ grep "hegde"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ grep "hegde" ourbase.txt
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ grep -i "hegde" ourbase.txt
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|MCA 
+ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+amit888@gamil.com               |9480411538|Amit Hegde     |RVCE22MCA039|Section A|BCA 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ grep -c "hegde" ourbase.txt
+4
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ grep -n "hegde" ourbase.txt
+2:ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+5:adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+19:ninadghegde.gmail.com           |9449136973|Ninad Hegde    |RVCE22MCA007|Section A|MCA
+22:adityahegde.mca22@rcve.edu.in   |6361181481|aditya hegde   |RVCE22MCA013|Section A|MCA
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ man grep
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt
+
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+
+
+
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep 1
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep 123456789
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep '1-9'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep "123456789"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep *[0-9]
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9]
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9] | grep -i "Ninad"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9] | grep "gmail"
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9], "gmail"
+grep: gmail: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9]  "gmail"
+grep: gmail: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9],"gmail"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9,"gmail"]
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9,"gmail."]
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9,^rvce]
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+ninadghegde.gmail.com           
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+adityahegde.mca22@rcve.edu.in   
+manojkk.mca22@rvce.edu.in       
+abhishekjadhav.mca22@rvce.edu.in
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+BhratH666@gamil.com             
+sushant777@gamil.com            
+amit888@gamil.com               
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9]|grep gmail.com
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+nandanbhat137@gmail.com         
+suhasms0143@gmail.com           
+bharat111@gmail.com             
+Abhishek222@gmail.com           
+Dhansh333@gmail.com             
+BharatK444@gmail.com            
+Prathamesh555@gmail.com         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cut -d "|" -f1 ourbase.txt | grep [0-9]|grep gmail.coms4

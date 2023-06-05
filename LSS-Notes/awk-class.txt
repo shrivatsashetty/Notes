@@ -1,0 +1,605 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls
+ OAP   a5b             caap     chap07    chapd     'dlist emp1 lst'   emp1.lst       foo.txt        map           shortlist
+ OBP   abc             cap      chap08    chape      doc.lst           emp1.txt       fruit          milltes.pdf   son
+ OCP   allfile         chap01   chap09    chapf      doc2.lst          errflile       fruits.txt     names.lst     studentinfo.lst
+ ODP   animals         chap02   chap10    chapg      done              fewlines.txt   geekfile.txt   ourbase.txt   sun
+ a1b   beverages.txt   chap03   chap111   chaph      dubba.lst         filelist.txt   hij            rapgod        veg
+ a2b   bhap1           chap04   chapX     cutlist1   eelist            filesys.txt    instr.txt      records.lst   vegetables.txt
+ a3b   caaaap          chap05   chapY     cutlist2   efg               foo            keywords.txt   sedemp1.lst
+ a4b   caaap           chap06   chapZ     dlist      emp.lst          'foo*'          lmn            sedemp2.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk
+Usage: mawk [Options] [Program] [file ...]
+
+Program:
+    The -f option value is the name of a file containing program text.
+    If no -f option is given, a "--" ends option processing; the following
+    parameters are the program text.
+
+Options:
+    -f program-file  Program  text is read from file instead of from the
+                     command-line.  Multiple -f options are accepted.
+    -F value         sets the field separator, FS, to value.
+    -v var=value     assigns value to program variable var.
+    --               unambiguous end of options.
+
+    Implementation-specific options are prefixed with "-W".  They can be
+    abbreviated:
+
+    -W version       show version information and exit.
+    -W dump          show assembler-like listing of program and exit.
+    -W help          show this message and exit.
+    -W interactive   set unbuffered output, line-buffered input.
+    -W exec file     use file as program as well as last option.
+    -W random=number set initial random seed.
+    -W sprintf=number adjust size of sprintf buffer.
+    -W posix_space   do not consider "\n" a space.
+    -W usage         show this message and exit.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ man awk
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk
+Usage: mawk [Options] [Program] [file ...]
+
+Program:
+    The -f option value is the name of a file containing program text.
+    If no -f option is given, a "--" ends option processing; the following
+    parameters are the program text.
+
+Options:
+    -f program-file  Program  text is read from file instead of from the
+                     command-line.  Multiple -f options are accepted.
+    -F value         sets the field separator, FS, to value.
+    -v var=value     assigns value to program variable var.
+    --               unambiguous end of options.
+
+    Implementation-specific options are prefixed with "-W".  They can be
+    abbreviated:
+
+    -W version       show version information and exit.
+    -W dump          show assembler-like listing of program and exit.
+    -W help          show this message and exit.
+    -W interactive   set unbuffered output, line-buffered input.
+    -W exec file     use file as program as well as last option.
+    -W random=number set initial random seed.
+    -W sprintf=number adjust size of sprintf buffer.
+    -W posix_space   do not consider "\n" a space.
+    -W usage         show this message and exit.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ man find
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find animals
+animals
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find emp1.lst
+emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find emp
+find: ‘emp’: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find nothing
+find: ‘nothing’: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find c*p
+caaaap
+caaap
+caap
+cap
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ touch nothing
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find nothing
+nothing
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ rm nothing
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find nothing
+find: ‘nothing’: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find b[a-z]p
+find: ‘b[a-z]p’: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find c[a-z]p
+cap
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find b[a-z][a-z]p
+find: ‘b[a-z][a-z]p’: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find b[a-z][a-z]p1
+bhap1
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find b[a-z][a-z]p[0-1]
+bhap1
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find b[a-z][a-z]p*
+bhap1
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ chap[01-09]
+bash: chap[01-09]: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ chap[1-9]
+bash: chap[1-9]: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find chap[01-09]
+find: ‘chap[01-09]’: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ find chap[1-9]
+find: ‘chap[1-9]’: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ gwak  '/directors/{print}' emp1.lst
+bash: gwak: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mwak  '/directors/{print}' emp1.lst
+bash: mwak: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk  '/directors/{print}' emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ gawk  '/directors/{print}' emp1.lst
+bash: gawk: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk  '/directors/ {print}' emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk  '/directors/ {print}' emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk  '/director/ {print}' emp1.lst
+9876|jai sharma       |director   |production |03/12/50|130000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk  '{print}' emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk emp1.lst
+mawk: 1: unexpected character '.'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk 'emp1.lst'
+mawk: 1: unexpected character '.'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk '{}' emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk '' emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk 'print' emp1.lst
+mawk: line 1: syntax error at or near print
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls
+ OAP   a5b             caap     chap07    chapd     'dlist emp1 lst'   emp1.lst       foo.txt        map           shortlist
+ OBP   abc             cap      chap08    chape      doc.lst           emp1.txt       fruit          milltes.pdf   son
+ OCP   allfile         chap01   chap09    chapf      doc2.lst          errflile       fruits.txt     names.lst     studentinfo.lst
+ ODP   animals         chap02   chap10    chapg      done              fewlines.txt   geekfile.txt   ourbase.txt   sun
+ a1b   beverages.txt   chap03   chap111   chaph      dubba.lst         filelist.txt   hij            rapgod        veg
+ a2b   bhap1           chap04   chapX     cutlist1   eelist            filesys.txt    instr.txt      records.lst   vegetables.txt
+ a3b   caaaap          chap05   chapY     cutlist2   efg               foo            keywords.txt   sedemp1.lst
+ a4b   caaap           chap06   chapZ     dlist      emp.lst          'foo*'          lmn            sedemp2.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk '' emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk '{print}' emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk --version
+awk: not an option: --version
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk --version
+mawk: not an option: --version
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ bash --version
+GNU bash, version 5.1.16(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2020 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ gwak -F "|"  '/sa[kx]s*ena/' emp1.lst
+bash: gwak: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mwak -F "|"  '/sa[kx]s*ena/' emp1.lst
+bash: mwak: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ gawk -F "|"  '/sa[kx]s*ena/' emp1.lst
+bash: gawk: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk -F "|"  '/sa[kx]s*ena/' emp1.lst
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSshrivatsa@shrivatsa-Victus-by-HPshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk -F "|" '/sales/ {print $2,$3,$4,$6}' emp1.lst 
+a.k. shukla       g.m         sales        90000
+chanchal singhvi  director    sales       140000
+s.n. dasgupta     manager     sales        90000
+anil aggarwal     manager     sales       110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ mawk -F "|" '/sales/ {print $2$3$4$6}' emp1.lst 
+a.k. shukla      g.m        sales       90000
+chanchal singhvi director   sales      140000
+s.n. dasgupta    manager    sales       90000
+anil aggarwal    manager    sales      110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls| grep empn.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls | grep empn.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/  *|/|/g' emp1.lst | tee empn.lst | had -n 3
+bash: had: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/  *|/|/g' emp1.lst | tee empn.lst | head -n 3
+2233|a.k. shukla|g.m|sales|12/12/52| 90000
+9876|jai sharma|director|production|03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat empn.lst 
+2233|a.k. shukla|g.m|sales|12/12/52| 90000
+9876|jai sharma|director|production|03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 85000
+2365|barun sengupta|director|personnel|05/11/47|120000
+5423|n.k. gupta|chairman|admin|08/30/56|160000
+1006|chanchal singhvi|director|sales|09/03/38|140000
+
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+1265|s.n. dasgupta|manager|sales|09/12/63| 90000
+
+4290|jayant Choudhury|executive|production|09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+6521|lalit chowdury|director|marketing|09/26/45|125000
+3212|shyam saksena|d.g.m.|accounts|12/12/55| 85000
+
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+2345|j.b. saxena|g.m.|marketing|03/12/45|110000
+0110|v.k agrawal|g.m.|marketing|12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ #above command remove alltrailing spaces and append to a new file
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F "|" 'NR=3,NR=6 {print NR,$2,$3,$6} empn.lst
+> 
+bash: unexpected EOF while looking for matching `''
+bash: syntax error: unexpected end of file
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F "|" 'NR=3,NR=6 {print NR,$2,$3,$6}' empn.lst
+6 a.k. shukla g.m  90000
+6 jai sharma director 130000
+6 sumit chakrobarty d.g.m  85000
+6 barun sengupta director 120000
+6 n.k. gupta chairman 160000
+6 chanchal singhvi director 140000
+6   
+6 karuna ganguly g.m. 105000 
+6 s.n. dasgupta manager  90000
+6   
+6 jayant Choudhury executive  65000 
+6 anil aggarwal manager 110000
+6 lalit chowdury director 125000
+6 shyam saksena d.g.m.  85000
+6   
+6 sudhir Agarwal executive  75000
+6 j.b. saxena g.m. 110000
+6 v.k agrawal g.m.  95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F "|" 'NR=3,NR=6 {print NR,$2,$3,$6}
+> empn.lst
+> 
+bash: unexpected EOF while looking for matching `''
+bash: syntax error: unexpected end of file
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F "|" 'NR==3,NR==6 {print NR,$2,$3,$6}' empn.lst
+3 sumit chakrobarty d.g.m  85000
+4 barun sengupta director 120000
+5 n.k. gupta chairman 160000
+6 chanchal singhvi director 140000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat empn.lst 
+2233|a.k. shukla|g.m|sales|12/12/52| 90000
+9876|jai sharma|director|production|03/12/50|130000
+5678|sumit chakrobarty|d.g.m|marketing|04/19/43| 85000
+2365|barun sengupta|director|personnel|05/11/47|120000
+5423|n.k. gupta|chairman|admin|08/30/56|160000
+1006|chanchal singhvi|director|sales|09/03/38|140000
+
+6213|karuna ganguly|g.m.|accounts|06/05/62|105000 
+1265|s.n. dasgupta|manager|sales|09/12/63| 90000
+
+4290|jayant Choudhury|executive|production|09/07/50| 65000 
+2476|anil aggarwal|manager|sales|05/01/59|110000
+6521|lalit chowdury|director|marketing|09/26/45|125000
+3212|shyam saksena|d.g.m.|accounts|12/12/55| 85000
+
+3564|sudhir Agarwal|executive|personnel|07/06/47| 75000
+2345|j.b. saxena|g.m.|marketing|03/12/45|110000
+0110|v.k agrawal|g.m.|marketing|12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/|//g' empn.lst
+sed: -e expression #1, char 4: unknown command: `/'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed '/|/ /g' empn.lst
+sed: -e expression #1, char 5: unknown command: `/'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/|/ /g' empn.lst
+2233 a.k. shukla g.m sales 12/12/52  90000
+9876 jai sharma director production 03/12/50 130000
+5678 sumit chakrobarty d.g.m marketing 04/19/43  85000
+2365 barun sengupta director personnel 05/11/47 120000
+5423 n.k. gupta chairman admin 08/30/56 160000
+1006 chanchal singhvi director sales 09/03/38 140000
+
+6213 karuna ganguly g.m. accounts 06/05/62 105000 
+1265 s.n. dasgupta manager sales 09/12/63  90000
+
+4290 jayant Choudhury executive production 09/07/50  65000 
+2476 anil aggarwal manager sales 05/01/59 110000
+6521 lalit chowdury director marketing 09/26/45 125000
+3212 shyam saksena d.g.m. accounts 12/12/55  85000
+
+3564 sudhir Agarwal executive personnel 07/06/47  75000
+2345 j.b. saxena g.m. marketing 03/12/45 110000
+0110 v.k agrawal g.m. marketing 12/31/40  95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/|/ /g' empn.lst | tee empn2.lst
+2233 a.k. shukla g.m sales 12/12/52  90000
+9876 jai sharma director production 03/12/50 130000
+5678 sumit chakrobarty d.g.m marketing 04/19/43  85000
+2365 barun sengupta director personnel 05/11/47 120000
+5423 n.k. gupta chairman admin 08/30/56 160000
+1006 chanchal singhvi director sales 09/03/38 140000
+
+6213 karuna ganguly g.m. accounts 06/05/62 105000 
+1265 s.n. dasgupta manager sales 09/12/63  90000
+
+4290 jayant Choudhury executive production 09/07/50  65000 
+2476 anil aggarwal manager sales 05/01/59 110000
+6521 lalit chowdury director marketing 09/26/45 125000
+3212 shyam saksena d.g.m. accounts 12/12/55  85000
+
+3564 sudhir Agarwal executive personnel 07/06/47  75000
+2345 j.b. saxena g.m. marketing 03/12/45 110000
+0110 v.k agrawal g.m. marketing 12/31/40  95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls | grep "emp2.lst"
+sedemp2.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls | grep "empn2.lst"
+empn2.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat empn2.lst 
+2233 a.k. shukla g.m sales 12/12/52  90000
+9876 jai sharma director production 03/12/50 130000
+5678 sumit chakrobarty d.g.m marketing 04/19/43  85000
+2365 barun sengupta director personnel 05/11/47 120000
+5423 n.k. gupta chairman admin 08/30/56 160000
+1006 chanchal singhvi director sales 09/03/38 140000
+
+6213 karuna ganguly g.m. accounts 06/05/62 105000 
+1265 s.n. dasgupta manager sales 09/12/63  90000
+
+4290 jayant Choudhury executive production 09/07/50  65000 
+2476 anil aggarwal manager sales 05/01/59 110000
+6521 lalit chowdury director marketing 09/26/45 125000
+3212 shyam saksena d.g.m. accounts 12/12/55  85000
+
+3564 sudhir Agarwal executive personnel 07/06/47  75000
+2345 j.b. saxena g.m. marketing 03/12/45 110000
+0110 v.k agrawal g.m. marketing 12/31/40  95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F 'NR==3,NR==6 {print NR,$2,$3,$6}' empn.lst
+awk: 1: unexpected character '.'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F " " 'NR==3,NR==6 {print NR,$2,$3,$6}' empn.lst
+3 chakrobarty|d.g.m|marketing|04/19/43| 85000 
+4 sengupta|director|personnel|05/11/47|120000  
+5 gupta|chairman|admin|08/30/56|160000  
+6 singhvi|director|sales|09/03/38|140000  
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F " " 'NR==3,NR==6 {print NR,$2,$3,$6}' empn2.lst
+3 sumit chakrobarty 04/19/43
+4 barun sengupta 05/11/47
+5 n.k. gupta 08/30/56
+6 chanchal singhvi 09/03/38
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F " " '{print NR,$2,$3,$6}' empn2.lst
+1 a.k. shukla 12/12/52
+2 jai sharma 03/12/50
+3 sumit chakrobarty 04/19/43
+4 barun sengupta 05/11/47
+5 n.k. gupta 08/30/56
+6 chanchal singhvi 09/03/38
+7   
+8 karuna ganguly 06/05/62
+9 s.n. dasgupta 09/12/63
+10   
+11 jayant Choudhury 09/07/50
+12 anil aggarwal 05/01/59
+13 lalit chowdury 09/26/45
+14 shyam saksena 12/12/55
+15   
+16 sudhir Agarwal 07/06/47
+17 j.b. saxena 03/12/45
+18 v.k agrawal 12/31/40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F  '{print NR,$2,$3,$6}' empn2.lst
+awk: 1: unexpected character '.'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F '{print NR,$2,$3,$6}' empn2.lst
+awk: 1: unexpected character '.'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk '{print NR,$2,$3,$6}' empn2.lst
+1 a.k. shukla 12/12/52
+2 jai sharma 03/12/50
+3 sumit chakrobarty 04/19/43
+4 barun sengupta 05/11/47
+5 n.k. gupta 08/30/56
+6 chanchal singhvi 09/03/38
+7   
+8 karuna ganguly 06/05/62
+9 s.n. dasgupta 09/12/63
+10   
+11 jayant Choudhury 09/07/50
+12 anil aggarwal 05/01/59
+13 lalit chowdury 09/26/45
+14 shyam saksena 12/12/55
+15   
+16 sudhir Agarwal 07/06/47
+17 j.b. saxena 03/12/45
+18 v.k agrawal 12/31/40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk 'NR==3,NR==6 {print NR,$2,$3,$6}' empn2.lst
+3 sumit chakrobarty 04/19/43
+4 barun sengupta 05/11/47
+5 n.k. gupta 08/30/56
+6 chanchal singhvi 09/03/38
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat empn2.lst
+2233 a.k. shukla g.m sales 12/12/52  90000
+9876 jai sharma director production 03/12/50 130000
+5678 sumit chakrobarty d.g.m marketing 04/19/43  85000
+2365 barun sengupta director personnel 05/11/47 120000
+5423 n.k. gupta chairman admin 08/30/56 160000
+1006 chanchal singhvi director sales 09/03/38 140000
+
+6213 karuna ganguly g.m. accounts 06/05/62 105000 
+1265 s.n. dasgupta manager sales 09/12/63  90000
+
+4290 jayant Choudhury executive production 09/07/50  65000 
+2476 anil aggarwal manager sales 05/01/59 110000
+6521 lalit chowdury director marketing 09/26/45 125000
+3212 shyam saksena d.g.m. accounts 12/12/55  85000
+
+3564 sudhir Agarwal executive personnel 07/06/47  75000
+2345 j.b. saxena g.m. marketing 03/12/45 110000
+0110 v.k agrawal g.m. marketing 12/31/40  95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/ /     /g' empn2.lst | tee empn3.txt
+2233     a.k.     shukla     g.m     sales     12/12/52          90000
+9876     jai     sharma     director     production     03/12/50     130000
+5678     sumit     chakrobarty     d.g.m     marketing     04/19/43          85000
+2365     barun     sengupta     director     personnel     05/11/47     120000
+5423     n.k.     gupta     chairman     admin     08/30/56     160000
+1006     chanchal     singhvi     director     sales     09/03/38     140000
+
+6213     karuna     ganguly     g.m.     accounts     06/05/62     105000     
+1265     s.n.     dasgupta     manager     sales     09/12/63          90000
+
+4290     jayant     Choudhury     executive     production     09/07/50          65000     
+2476     anil     aggarwal     manager     sales     05/01/59     110000
+6521     lalit     chowdury     director     marketing     09/26/45     125000
+3212     shyam     saksena     d.g.m.     accounts     12/12/55          85000
+
+3564     sudhir     Agarwal     executive     personnel     07/06/47          75000
+2345     j.b.     saxena     g.m.     marketing     03/12/45     110000
+0110     v.k     agrawal     g.m.     marketing     12/31/40          95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat empn3.txt 
+2233     a.k.     shukla     g.m     sales     12/12/52          90000
+9876     jai     sharma     director     production     03/12/50     130000
+5678     sumit     chakrobarty     d.g.m     marketing     04/19/43          85000
+2365     barun     sengupta     director     personnel     05/11/47     120000
+5423     n.k.     gupta     chairman     admin     08/30/56     160000
+1006     chanchal     singhvi     director     sales     09/03/38     140000
+
+6213     karuna     ganguly     g.m.     accounts     06/05/62     105000     
+1265     s.n.     dasgupta     manager     sales     09/12/63          90000
+
+4290     jayant     Choudhury     executive     production     09/07/50          65000     
+2476     anil     aggarwal     manager     sales     05/01/59     110000
+6521     lalit     chowdury     director     marketing     09/26/45     125000
+3212     shyam     saksena     d.g.m.     accounts     12/12/55          85000
+
+3564     sudhir     Agarwal     executive     personnel     07/06/47          75000
+2345     j.b.     saxena     g.m.     marketing     03/12/45     110000
+0110     v.k     agrawal     g.m.     marketing     12/31/40          95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk 'NR==3,NR==6 {print NR,$2,$3,$6}' empn2.lst
+3 sumit chakrobarty 04/19/43
+4 barun sengupta 05/11/47
+5 n.k. gupta 08/30/56
+6 chanchal singhvi 09/03/38
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk 'NR==3,NR==6 {print NR,$2,$3,$6}' empn3.lst
+awk: cannot open empn3.lst (No such file or directory)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk 'NR==3,NR==6 {print NR,$2,$3,$6}' empn3.txt 
+3 sumit chakrobarty 04/19/43
+4 barun sengupta 05/11/47
+5 n.k. gupta 08/30/56
+6 chanchal singhvi 09/03/38
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ nano empn3
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls | grep "empn3"
+empn3.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls
+ OAP   a5b             caap     chap07    chapd     'dlist emp1 lst'   emp1.lst       filesys.txt    instr.txt      records.lst       vegetables.txt
+ OBP   abc             cap      chap08    chape      doc.lst           emp1.txt       foo            keywords.txt   sedemp1.lst
+ OCP   allfile         chap01   chap09    chapf      doc2.lst          empn.lst      'foo*'          lmn            sedemp2.lst
+ ODP   animals         chap02   chap10    chapg      done              empn2.lst      foo.txt        map            shortlist
+ a1b   beverages.txt   chap03   chap111   chaph      dubba.lst         empn3.txt      fruit          milltes.pdf    son
+ a2b   bhap1           chap04   chapX     cutlist1   eelist            errflile       fruits.txt     names.lst      studentinfo.lst
+ a3b   caaaap          chap05   chapY     cutlist2   efg               fewlines.txt   geekfile.txt   ourbase.txt    sun
+ a4b   caaap           chap06   chapZ     dlist      emp.lst           filelist.txt   hij            rapgod         veg
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ nano empn3.txt 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat empn3.txt 
+2233 a.k. shukla   g.m   sales     12/12/52          90000
+9876     jai     sharma     director     production     03/12/50     130000
+5678     sumit chakrobarty     d.g.m     marketing     04/19/43          85000
+2365     barun   sengupta     director     personnel     05/11/47     120000
+5423 n.k.     gupta     chairman     admin     08/30/56     160000
+1006   chanchal     singhvi     director     sales     09/03/38     140000
+
+6213     karuna ganguly g.m.     accounts     06/05/62     105000     
+1265     s.n.     dasgupta manager     sales     09/12/63          90000
+
+4290     jayant     Choudhury  executive     production     09/07/50          65000     
+2476     anil     aggarwal manager     sales     05/01/59     110000
+6521     lalit     chowdury  director     marketing     09/26/45     125000
+3212     shyam     saksena d.g.m.     accounts     12/12/55          85000
+
+3564     sudhir     Agarwal executive     personnel     07/06/47          75000
+2345     j.b.     saxena     g.m.            marketing     03/12/45     110000
+0110     v.k     agrawal    g.m.     marketing          12/31/40          95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk 'NR==3,NR==6 {print NR,$2,$3,$6}' empn3.txt 
+3 sumit chakrobarty 04/19/43
+4 barun sengupta 05/11/47
+5 n.k. gupta 08/30/56
+6 chanchal singhvi 09/03/38
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk '{print NR,$2,$3,$6}' empn3.txt 
+1 a.k. shukla 12/12/52
+2 jai sharma 03/12/50
+3 sumit chakrobarty 04/19/43
+4 barun sengupta 05/11/47
+5 n.k. gupta 08/30/56
+6 chanchal singhvi 09/03/38
+7   
+8 karuna ganguly 06/05/62
+9 s.n. dasgupta 09/12/63
+10   
+11 jayant Choudhury 09/07/50
+12 anil aggarwal 05/01/59
+13 lalit chowdury 09/26/45
+14 shyam saksena 12/12/55
+15   
+16 sudhir Agarwal 07/06/47
+17 j.b. saxena 03/12/45
+18 v.k agrawal 12/31/40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/ */ /g' empn3.txt | tee empn4.txt
+ 2 2 3 3 a . k . s h u k l a g . m s a l e s 1 2 / 1 2 / 5 2 9 0 0 0 0 
+ 9 8 7 6 j a i s h a r m a d i r e c t o r p r o d u c t i o n 0 3 / 1 2 / 5 0 1 3 0 0 0 0 
+ 5 6 7 8 s u m i t c h a k r o b a r t y d . g . m m a r k e t i n g 0 4 / 1 9 / 4 3 8 5 0 0 0 
+ 2 3 6 5 b a r u n s e n g u p t a d i r e c t o r p e r s o n n e l 0 5 / 1 1 / 4 7 1 2 0 0 0 0 
+ 5 4 2 3 n . k . g u p t a c h a i r m a n a d m i n 0 8 / 3 0 / 5 6 1 6 0 0 0 0 
+ 1 0 0 6 c h a n c h a l s i n g h v i d i r e c t o r s a l e s 0 9 / 0 3 / 3 8 1 4 0 0 0 0 
+ 
+ 6 2 1 3 k a r u n a g a n g u l y g . m . a c c o u n t s 0 6 / 0 5 / 6 2 1 0 5 0 0 0 
+ 1 2 6 5 s . n . d a s g u p t a m a n a g e r s a l e s 0 9 / 1 2 / 6 3 9 0 0 0 0 
+ 
+ 4 2 9 0 j a y a n t C h o u d h u r y e x e c u t i v e p r o d u c t i o n 0 9 / 0 7 / 5 0 6 5 0 0 0 
+ 2 4 7 6 a n i l a g g a r w a l m a n a g e r s a l e s 0 5 / 0 1 / 5 9 1 1 0 0 0 0 
+ 6 5 2 1 l a l i t c h o w d u r y d i r e c t o r m a r k e t i n g 0 9 / 2 6 / 4 5 1 2 5 0 0 0 
+ 3 2 1 2 s h y a m s a k s e n a d . g . m . a c c o u n t s 1 2 / 1 2 / 5 5 8 5 0 0 0 
+ 
+ 3 5 6 4 s u d h i r A g a r w a l e x e c u t i v e p e r s o n n e l 0 7 / 0 6 / 4 7 7 5 0 0 0 
+ 2 3 4 5 j . b . s a x e n a g . m . m a r k e t i n g 0 3 / 1 2 / 4 5 1 1 0 0 0 0 
+ 0 1 1 0 v . k a g r a w a l g . m . m a r k e t i n g 1 2 / 3 1 / 4 0 9 5 0 0 0 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ sed 's/ * / /g' empn3.txt | tee empn4.txt
+2233 a.k. shukla g.m sales 12/12/52 90000
+9876 jai sharma director production 03/12/50 130000
+5678 sumit chakrobarty d.g.m marketing 04/19/43 85000
+2365 barun sengupta director personnel 05/11/47 120000
+5423 n.k. gupta chairman admin 08/30/56 160000
+1006 chanchal singhvi director sales 09/03/38 140000
+
+6213 karuna ganguly g.m. accounts 06/05/62 105000 
+1265 s.n. dasgupta manager sales 09/12/63 90000
+
+4290 jayant Choudhury executive production 09/07/50 65000 
+2476 anil aggarwal manager sales 05/01/59 110000
+6521 lalit chowdury director marketing 09/26/45 125000
+3212 shyam saksena d.g.m. accounts 12/12/55 85000
+
+3564 sudhir Agarwal executive personnel 07/06/47 75000
+2345 j.b. saxena g.m. marketing 03/12/45 110000
+0110 v.k agrawal g.m. marketing 12/31/40 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ifconfig | grep inet
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        inet 172.17.9.16  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::7e73:3426:a88a:b99d  prefixlen 64  scopeid 0x20<link>
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ifconfig | awk '$1=="inet" {print $2}'
+127.0.0.1
+172.17.9.16
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 9076  bytes 808810 (808.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 9076  bytes 808810 (808.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.9.16  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::7e73:3426:a88a:b99d  prefixlen 64  scopeid 0x20<link>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 150101  bytes 49074844 (49.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 24295  bytes 6395849 (6.3 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ifconfig wlo1 | awk '$1=="inet" {print $2}'
+172.17.9.16
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ 
+
+

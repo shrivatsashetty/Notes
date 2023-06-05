@@ -1,0 +1,378 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ ls
+ OAP   a5b             caap     chap07    chapd     'dlist emp1 lst'   emp1.lst       filelist.txt   hij            rapgod            veg
+ OBP   abc             cap      chap08    chape      doc.lst           emp1.txt       filesys.txt    instr.txt      records.lst       vegetables.txt
+ OCP   allfile         chap01   chap09    chapf      doc2.lst          empn.lst       foo            keywords.txt   sedemp1.lst
+ ODP   animals         chap02   chap10    chapg      done              empn2.lst     'foo*'          lmn            sedemp2.lst
+ a1b   beverages.txt   chap03   chap111   chaph      dubba.lst         empn3.txt      foo.txt        map            shortlist
+ a2b   bhap1           chap04   chapX     cutlist1   eelist            empn4.txt      fruit          milltes.pdf    son
+ a3b   caaaap          chap05   chapY     cutlist2   efg               errflile       fruits.txt     names.lst      studentinfo.lst
+ a4b   caaap           chap06   chapZ     dlist      emp.lst           fewlines.txt   geekfile.txt   ourbase.txt    sun
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk '/director/{ print $0 }' emp1.lst
+9876|jai sharma       |director   |production |03/12/50|130000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F "|" '$3 == "director" || $3 == "chairman" {
+> printf "%-20s %-12s %d\n", $2,$3,$6} empn.lst
+> ^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F "|" '$3 == "director" || $3 == "chairman" {
+printf "%-20s %-12s %d\n", $2,$3,$6}' empn.lst
+jai sharma           director     130000
+barun sengupta       director     120000
+n.k. gupta           chairman     160000
+chanchal singhvi     director     140000
+lalit chowdury       director     125000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F "|" '$3 == "director" || $3 == "chairman" {
+printf "%-20s %-12s %d\n", $2,$3,$6}' empn.lst | sort
+barun sengupta       director     120000
+chanchal singhvi     director     140000
+jai sharma           director     130000
+lalit chowdury       director     125000
+n.k. gupta           chairman     160000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSshrivatsa@shrivatsa-Victus-by-HPshrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$  awk -F"|" '$2 ~ /[cC]ho[wu]dh?ry/' emp1.lst 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F"|" '$2 ~ /[cC]ho[wu]dh?ry/' emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ awk -F "|" '$6 > 90000 $5 ~/52/" {
+
+###################################################################################################################################################################################################
+
+Welcome to fish, the friendly interactive shell
+Type help for instructions on how to use fish
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~ (master)> cd 
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~ (master)> cd Downloads/
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> gawk -F "|" '/director/' emp1.lst
+9876|jai sharma       |director   |production |03/12/50|130000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> gawk -F "|" '/director/ {print $1,$2}' emp1.lst
+9876 jai sharma       
+2365 barun sengupta   
+1006 chanchal singhvi 
+6521 lalit chowdury   
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> gawk -F "|" '/director/ {print $2,$3}' emp1.lst
+jai sharma        director   
+barun sengupta    director   
+chanchal singhvi  director   
+lalit chowdury    director   
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> gawk '/director/ {print $2,$3}' emp1.lst
+sharma |director
+sengupta |director
+singhvi |director
+chowdury |director
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> echo $SHELL
+/usr/bin/fish
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> bash
+saikumar@saikumar-HP-Laptop-14s-dy2xxx:~/Downloads$  gawk '/director/ {print $2,$3}' emp1.lst
+sharma |director
+sengupta |director
+singhvi |director
+chowdury |director
+saikumar@saikumar-HP-Laptop-14s-dy2xxx:~/Downloads$ fish
+Welcome to fish, the friendly interactive shell
+Type help for instructions on how to use fish
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> gawk '/director/ {print $2,$3}' emp1.lst
+sharma |director
+sengupta |director
+singhvi |director
+chowdury |director
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> gawk '/director/sales/ {print $2,$3}' emp1.lst
+gawk: cmd. line:1: /director/sales/ {print $2,$3}
+gawk: cmd. line:1:                  ^ syntax error
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master) [1]> gawk '/director/ {print $2,$3}' emp1.lst
+sharma |director
+sengupta |director
+singhvi |director
+chowdury |director
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/[aA]gg?[ar]+wal/ { printf "%3d %-20s %-12s %d\n", NR, $2, $3, $6 }' emp1.lst
+ 10 anil aggarwal        manager      110000
+ 13 sudhir Agarwal       executive    75000
+ 15 v.k agrawal          g.m.         95002
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$3 == "director" || $3 == "chairman" { printf "%-20s %-12s %d\n", $2, $3, $6}' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> cat emp1.lst
+2233|a.k. shukla      |g.m.       |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+4290|jayant Choudhury |executive  |production |09/07/50| 65001
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95002
+
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$3 == "director" || $3 == "chairman" { printf "%-20s %-12s %d\n",$2,$3,$6}' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$3 == "director" || $3 == "chairman" { printf "%-20s %-12s %d\n",$2,$3,$6}' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F"|" '$3 == "director" || $3 == "chairman" { printf "%-20s %-12s %d\n",$2,$3,$6}' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F"|" '$3 == "director" || $3 == "chairman" { printf "%-20s %-12s %d\n",$2,$3,$6}' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F"|" '$3 == "director" || $3 == "chairman" { printf "%-20s %-12s %d\n",$2,$3,$6}' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$3 == "director" || $3 == "chairman"{ printf "%-20s %-12s %d\n",$2,$3,$6}' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/sa[xs]ena/' emp1.lst 
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/sa[xk]?sena/' emp1.lst
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/sa[xk]?s+ena/' emp1.lst
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" ~ /[cC]ho[wu]dh?ury/ 
+fish: No matches for wildcard '/[cC]ho[wu]dh?ury/'. See `help wildcards-globbing`.
+awk -F "|" ~ /[cC]ho[wu]dh?ury/ 
+             ^~~~~~~~~~~~~~~~~^
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master) [124]> awk -F "|" $2 ~ /[cC]ho[wu]dh?ury/ || $2 ~ /sa[xk]s?ena/' emp1.lst
+
+
+                                                                   ^C
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master) [124]> awk -F "|" ~ /[cC]ho[wu]dh?ury/^C
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master) [124]> awk -F "|" '/sa[xk]s?ena/' emp1.lst
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$6 > 100000 { printf "%-20s %12s %d\n", $2, $3, $6}' empx.lst
+jai sharma            director    130000
+barun sengupta        director    120000
+n.k. gupta            chairman    160000
+chanchal singhvi      director    140000
+karuna ganguly        g.m.        105000
+anil aggarwal         manager     110000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$6 > 100000 && $3 == "director" { printf "%-20s %12s %d\n", $2, $3, $6}' empx.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$6 > 100000 { printf "%-20s %12s %d\n", $2, $3, $6}' empx.lst
+jai sharma            director    130000
+barun sengupta        director    120000
+n.k. gupta            chairman    160000
+chanchal singhvi      director    140000
+karuna ganguly        g.m.        105000
+anil aggarwal         manager     110000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$6 > 100000 || $3 == "director" { printf "%-20s %12s %d\n", $2, $3, $6}' empx.lst
+jai sharma            director    130000
+barun sengupta        director    120000
+n.k. gupta            chairman    160000
+chanchal singhvi      director    140000
+karuna ganguly        g.m.        105000
+anil aggarwal         manager     110000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$6 > 100000 && $3 == "director" { printf "%-20s %12s %d\n", $2, $3, $6}' empx.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$6 > 100000 && $3 == "director" { printf "%-20s %12s %d\n", $2, $3, $6}' empx.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$6 > 100000 && $3! == "director" { printf "%-20s %12s %d\n", $2, $3, $6}' empx.lst
+awk: cmd. line:1: $6 > 100000 && $3! == "director" { printf "%-20s %12s %d\n", $2, $3, $6}
+awk: cmd. line:1:                    ^ syntax error
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master) [1]> awk -F "|" '$6 > 100000 && $3 !== "director" { printf "%-20s %12s %d\n", $2, $3, $6}' empx.lst
+awk: cmd. line:1: $6 > 100000 && $3 !== "director" { printf "%-20s %12s %d\n", $2, $3, $6}
+awk: cmd. line:1:                     ^ syntax error
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master) [1]> awk -
+awk: cmd. line:2: -
+awk: cmd. line:2:  ^ unexpected newline or end of string
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master) [1]> awk -F '/director/ {printf "%-20s %-12s %d\n",$2,$3,$6 }'
+Usage: awk [POSIX or GNU style options] -f progfile [--] file ...
+Usage: awk [POSIX or GNU style options] [--] 'program' file ...
+POSIX options:		GNU long options: (standard)
+	-f progfile		--file=progfile
+	-F fs			--field-separator=fs
+	-v var=val		--assign=var=val
+Short options:		GNU long options: (extensions)
+	-b			--characters-as-bytes
+	-c			--traditional
+	-C			--copyright
+	-d[file]		--dump-variables[=file]
+	-D[file]		--debug[=file]
+	-e 'program-text'	--source='program-text'
+	-E file			--exec=file
+	-g			--gen-pot
+	-h			--help
+	-i includefile		--include=includefile
+	-l library		--load=library
+	-L[fatal|invalid|no-ext]	--lint[=fatal|invalid|no-ext]
+	-M			--bignum
+	-N			--use-lc-numeric
+	-n			--non-decimal-data
+	-o[file]		--pretty-print[=file]
+	-O			--optimize
+	-p[file]		--profile[=file]
+	-P			--posix
+	-r			--re-interval
+	-s			--no-optimize
+	-S			--sandbox
+	-t			--lint-old
+	-V			--version
+
+To report bugs, see node `Bugs' in `gawk.info'
+which is section `Reporting Problems and Bugs' in the
+printed version.  This same information may be found at
+https://www.gnu.org/software/gawk/manual/html_node/Bugs.html.
+PLEASE do NOT try to report bugs by posting in comp.lang.awk,
+or by using a web forum such as Stack Overflow.
+
+gawk is a pattern scanning and processing language.
+By default it reads standard input and writes standard output.
+
+Examples:
+	awk '{ sum += $1 }; END { print sum }' file
+	awk -F: '{ print $1 }' /etc/passwd
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master) [1]> awk -F '/director/ {printf "%-20s %-12s %d\n",$2,$3,$6}'
+Usage: awk [POSIX or GNU style options] -f progfile [--] file ...
+Usage: awk [POSIX or GNU style options] [--] 'program' file ...
+POSIX options:		GNU long options: (standard)
+	-f progfile		--file=progfile
+	-F fs			--field-separator=fs
+	-v var=val		--assign=var=val
+Short options:		GNU long options: (extensions)
+	-b			--characters-as-bytes
+	-c			--traditional
+	-C			--copyright
+	-d[file]		--dump-variables[=file]
+	-D[file]		--debug[=file]
+	-e 'program-text'	--source='program-text'
+	-E file			--exec=file
+	-g			--gen-pot
+	-h			--help
+	-i includefile		--include=includefile
+	-l library		--load=library
+	-L[fatal|invalid|no-ext]	--lint[=fatal|invalid|no-ext]
+	-M			--bignum
+	-N			--use-lc-numeric
+	-n			--non-decimal-data
+	-o[file]		--pretty-print[=file]
+	-O			--optimize
+	-p[file]		--profile[=file]
+	-P			--posix
+	-r			--re-interval
+	-s			--no-optimize
+	-S			--sandbox
+	-t			--lint-old
+	-V			--version
+
+To report bugs, see node `Bugs' in `gawk.info'
+which is section `Reporting Problems and Bugs' in the
+printed version.  This same information may be found at
+https://www.gnu.org/software/gawk/manual/html_node/Bugs.html.
+PLEASE do NOT try to report bugs by posting in comp.lang.awk,
+or by using a web forum such as Stack Overflow.
+
+gawk is a pattern scanning and processing language.
+By default it reads standard input and writes standard output.
+
+Examples:
+	awk '{ sum += $1 }; END { print sum }' file
+	awk -F: '{ print $1 }' /etc/passwd
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master) [1]> awk -F "|" '/director/ {printf "%-20s %-12s %d\n",$2,$3,$6}'
+
+
+
+^C⏎                                                                                                  saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master) [SIGINT]> awk -F "|" '/director/ {printf "%-20s %-12s %d\n",$2,$3,$6}' emp1.lst 
+jai sharma           director     130000
+barun sengupta       director     120000
+chanchal singhvi     director     140000
+lalit chowdury       director     125000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/director/ {print "%-20s %-12s %d\n",$2,$3,$6}' emp1.lst
+%-20s %-12s %d
+ jai sharma        director    130000
+%-20s %-12s %d
+ barun sengupta    director    120000
+%-20s %-12s %d
+ chanchal singhvi  director    140000
+%-20s %-12s %d
+ lalit chowdury    director    125000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/director/ {print $2,$3,$6}' emp1.lst
+jai sharma        director    130000
+barun sengupta    director    120000
+chanchal singhvi  director    140000
+lalit chowdury    director    125000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/sa[kx]s?ena/ {print $2,$3,$6}' emp1.lst
+shyam saksena     d.g.m.       85000
+j.b. saxena       g.m.        110000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '// {print $2,$3,$6}' emp1.lst
+a.k. shukla       g.m.         90000
+jai sharma        director    130000
+sumit chakrobarty d.g.m        85000
+barun sengupta    director    120000
+n.k. gupta        chairman    160000
+chanchal singhvi  director    140000
+karuna ganguly    g.m.        105000 
+s.n. dasgupta     manager      90000
+jayant Choudhury  executive    65001
+anil aggarwal     manager     110000
+lalit chowdury    director    125000
+shyam saksena     d.g.m.       85000
+sudhir Agarwal    executive    75000
+j.b. saxena       g.m.        110000
+v.k agrawal       g.m.         95002
+  
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> cat emp1.lst
+2233|a.k. shukla      |g.m.       |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+4290|jayant Choudhury |executive  |production |09/07/50| 65001
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95002
+
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$3 == "director" && $6 > 100000 { printf "%-20s %-12s %d\n", $2, $3, $6}' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$3 == "director" && $6 > 100000 { printf "%-20s %-12s %d\n",$2,$3,$6}' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk '/manager/ {print}' emp1.lst
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/director/ {print "%-4s %-12s %d\n",$2,$3,$6}' emp1.lst
+%-4s %-12s %d
+ jai sharma        director    130000
+%-4s %-12s %d
+ barun sengupta    director    120000
+%-4s %-12s %d
+ chanchal singhvi  director    140000
+%-4s %-12s %d
+ lalit chowdury    director    125000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/director/ {print "%-24s %-12s %d\n",$2,$3,$6}' emp1.lst
+%-24s %-12s %d
+ jai sharma        director    130000
+%-24s %-12s %d
+ barun sengupta    director    120000
+%-24s %-12s %d
+ chanchal singhvi  director    140000
+%-24s %-12s %d
+ lalit chowdury    director    125000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/director/ {printf "%-5s %-12s %d\n",$2,$3,$6}' emp1.lst 
+jai sharma        director     130000
+barun sengupta    director     120000
+chanchal singhvi  director     140000
+lalit chowdury    director     125000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/director/ {printf "%-15s %-12s %d\n",$2,$3,$6}' emp1.lst
+jai sharma        director     130000
+barun sengupta    director     120000
+chanchal singhvi  director     140000
+lalit chowdury    director     125000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '/director/ {printf "%-45s %-12s %d\n",$2,$3,$6}' emp1.lst
+jai sharma                                    director     130000
+barun sengupta                                director     120000
+chanchal singhvi                              director     140000
+lalit chowdury                                director     125000
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> 
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$3 == "director" && $6 > 90000 { printf "%3d %-20 %-12 %d\n", count,$2,$3,$6 }' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> awk -F "|" '$3 == "director" && $6 > 90000 { printf "%3d %-20s %-12s %d\n", count,$2,$3,$6 }' emp1.lst
+saikumar@saikumar-HP-Laptop-14s-dy2xxx ~/Downloads (master)> 
+

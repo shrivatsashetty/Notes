@@ -1,0 +1,9 @@
+console.log("Hello") // to print on console
+VM94:1 Hello
+undefined
+5+6
+11
+alert('Hi you are using Chrome') // will produce an alert banner
+undefined
+{} is called object literal to initialize an object
+[] is called an array literal used to intialize an array
