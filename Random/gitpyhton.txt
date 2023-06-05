@@ -1,0 +1,164 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Python-Programs$ echo "# Python-Programs" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:shrivatsashetty/Python-Programs.git
+git push -u origin main
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/shrivatsa/Documents/Python-Programs/.git/
+[master (root-commit) fb91e19] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 230 bytes | 230.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:shrivatsashetty/Python-Programs.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Python-Programs$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.idea/
+	Dictionary.py
+	arguments.py
+	basicmath.py
+	boolean.py
+	break_&_cont.py
+	calculator.py
+	complexno1.py
+	demo_class.py
+	employee.py
+	exercise_1.py
+	fnoverload.py
+	function1.py
+	function2.py
+	function3.py
+	hello.py
+	hi_program.py
+	ifelif.py
+	inheritence1.py
+	initmethod1.py
+	initmethod2.py
+	initperson1.py
+	initperson2.py
+	initperson3.py
+	inputting_list.py
+	inputting_set.py
+	kbc.py
+	listAndSet.py
+	listop_rough.py
+	listoperation_2.py
+	lists.py
+	lists1.py
+	method1.py
+	oop1.py
+	oop2.py
+	oop3.py
+	person1.py
+	person2.py
+	person3.py
+	range.py
+	set_op_rough.py
+	stringop.py
+	strings.py
+	student.py
+	sum.py
+	sum_of_natural_no.py
+	swap.py
+	swap_shrtct.py
+	tables.py
+	trails.py
+	tuplelab.py
+	tupleop.py
+	typeconv.py
+	whileloop_1.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Python-Programs$ git add .
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Python-Programs$ git commit -m "Added some python codes"
+[main ec8039f] Added some python codes
+ 58 files changed, 754 insertions(+)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/Python programs.iml
+ create mode 100644 .idea/inspectionProfiles/profiles_settings.xml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 Dictionary.py
+ create mode 100644 arguments.py
+ create mode 100644 basicmath.py
+ create mode 100644 boolean.py
+ create mode 100644 break_&_cont.py
+ create mode 100644 calculator.py
+ create mode 100644 complexno1.py
+ create mode 100644 demo_class.py
+ create mode 100644 employee.py
+ create mode 100644 exercise_1.py
+ create mode 100755 fnoverload.py
+ create mode 100644 function1.py
+ create mode 100644 function2.py
+ create mode 100644 function3.py
+ create mode 100644 hello.py
+ create mode 100644 hi_program.py
+ create mode 100644 ifelif.py
+ create mode 100644 inheritence1.py
+ create mode 100644 initmethod1.py
+ create mode 100644 initmethod2.py
+ create mode 100644 initperson1.py
+ create mode 100644 initperson2.py
+ create mode 100644 initperson3.py
+ create mode 100644 inputting_list.py
+ create mode 100644 inputting_set.py
+ create mode 100644 kbc.py
+ create mode 100644 listAndSet.py
+ create mode 100644 listop_rough.py
+ create mode 100644 listoperation_2.py
+ create mode 100644 lists.py
+ create mode 100644 lists1.py
+ create mode 100644 method1.py
+ create mode 100644 oop1.py
+ create mode 100644 oop2.py
+ create mode 100644 oop3.py
+ create mode 100644 person1.py
+ create mode 100644 person2.py
+ create mode 100644 person3.py
+ create mode 100644 range.py
+ create mode 100644 set_op_rough.py
+ create mode 100644 stringop.py
+ create mode 100644 strings.py
+ create mode 100644 student.py
+ create mode 100644 sum.py
+ create mode 100644 sum_of_natural_no.py
+ create mode 100644 swap.py
+ create mode 100644 swap_shrtct.py
+ create mode 100644 tables.py
+ create mode 100644 trails.py
+ create mode 100644 tuplelab.py
+ create mode 100644 tupleop.py
+ create mode 100644 typeconv.py
+ create mode 100644 whileloop_1.py
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Python-Programs$ git push
+Enumerating objects: 63, done.
+Counting objects: 100% (63/63), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (57/57), done.
+Writing objects: 100% (62/62), 13.21 KiB | 6.60 MiB/s, done.
+Total 62 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:shrivatsashetty/Python-Programs.git
+   fb91e19..ec8039f  main -> main
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Python-Programs$ 
+
+

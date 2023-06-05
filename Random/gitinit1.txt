@@ -1,0 +1,373 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/C-Programs$ git status
+fatal: not a git repository (or any of the parent directories): .git
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/C-Programs$ git status
+fatal: not a git repository (or any of the parent directories): .git
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/C-Programs$ echo "# C-Programs" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:shrivatsashetty/C-Programs.git
+git push -u origin main
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/shrivatsa/Documents/C-Programs/.git/
+[master (root-commit) f55d993] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 223 bytes | 223.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:shrivatsashetty/C-Programs.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/C-Programs$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.vscode/
+	C Problems/
+	C Tutorial/
+	Chapter 1/
+	Chapter 2/
+
+nothing added to commit but untracked files present (use "git add" to track)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/C-Programs$ git add .
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/C-Programs$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .vscode/launch.json
+	new file:   .vscode/tasks.json
+	new file:   C Problems/.vscode/settings.json
+	new file:   C Problems/a.out
+	new file:   C Problems/average-marks.c
+	new file:   C Problems/consonants
+	new file:   C Problems/consonants.c
+	new file:   C Problems/consonants.o
+	new file:   C Problems/factorial.c
+	new file:   C Problems/factorisation.c
+	new file:   C Problems/largest_number
+	new file:   C Problems/largest_number.c
+	new file:   C Problems/largest_number.o
+	new file:   C Problems/nestedloops.c
+	new file:   C Problems/problem_1
+	new file:   C Problems/problem_1.c
+	new file:   C Problems/problem_1.o
+	new file:   C Problems/problem_2
+	new file:   C Problems/problem_2.c
+	new file:   C Problems/problem_2.o
+	new file:   C Problems/vowel
+	new file:   C Problems/vowel.c
+	new file:   C Tutorial/.vscode/launch.json
+	new file:   C Tutorial/.vscode/settings.json
+	new file:   C Tutorial/.vscode/tasks.json
+	new file:   C Tutorial/Assignops.c
+	new file:   C Tutorial/Assignops.exe
+	new file:   C Tutorial/Assignops.o
+	new file:   C Tutorial/Divisibility
+	new file:   C Tutorial/Divisibility.c
+	new file:   C Tutorial/Divisibility.o
+	new file:   C Tutorial/Matrix.c
+	new file:   C Tutorial/Mysteryprog.c
+	new file:   C Tutorial/Operations.c
+	new file:   C Tutorial/Operations.exe
+	new file:   C Tutorial/Operations.o
+	new file:   C Tutorial/Weekdays.c
+	new file:   C Tutorial/a.out
+	new file:   C Tutorial/array
+	new file:   C Tutorial/array-1.c
+	new file:   C Tutorial/array-2.c
+	new file:   C Tutorial/array.c
+	new file:   C Tutorial/array.o
+	new file:   C Tutorial/array_1
+	new file:   C Tutorial/array_1.o
+	new file:   C Tutorial/arrays-2
+	new file:   C Tutorial/arrays-2.c
+	new file:   C Tutorial/arrays-2.o
+	new file:   C Tutorial/arrays-3.c
+	new file:   C Tutorial/bookstructure.c
+	new file:   C Tutorial/break
+	new file:   C Tutorial/break.c
+	new file:   C Tutorial/break.o
+	new file:   C Tutorial/calci
+	new file:   C Tutorial/calci.c
+	new file:   C Tutorial/calci.o
+	new file:   C Tutorial/calculator
+	new file:   C Tutorial/calculator.c
+	new file:   C Tutorial/calculator.o
+	new file:   C Tutorial/continue-1
+	new file:   C Tutorial/continue-1.c
+	new file:   C Tutorial/continue-1.o
+	new file:   C Tutorial/continue-2
+	new file:   C Tutorial/continue-2.c
+	new file:   C Tutorial/days-without-break.c
+	new file:   C Tutorial/days.c
+	new file:   C Tutorial/dowhile
+	new file:   C Tutorial/dowhile.c
+	new file:   C Tutorial/dowhile.o
+	new file:   C Tutorial/flow_1
+	new file:   C Tutorial/flow_1.c
+	new file:   C Tutorial/flow_1.o
+	new file:   C Tutorial/function3.c
+	new file:   C Tutorial/function4.c
+	new file:   C Tutorial/functions1.c
+	new file:   C Tutorial/functions2.c
+	new file:   C Tutorial/goto-1.c
+	new file:   C Tutorial/iterating-variable.c
+	new file:   C Tutorial/loop3
+	new file:   C Tutorial/loop3.c
+	new file:   C Tutorial/loop3.o
+	new file:   C Tutorial/loops1.c
+	new file:   C Tutorial/loops1.exe
+	new file:   C Tutorial/loops1.o
+	new file:   C Tutorial/loops2.c
+	new file:   C Tutorial/loops2.exe
+	new file:   C Tutorial/loops2.o
+	new file:   C Tutorial/negativeno
+	new file:   C Tutorial/negativeno.c
+	new file:   C Tutorial/negativeno.o
+	new file:   C Tutorial/pointers1.c
+	new file:   C Tutorial/post-increment.c
+	new file:   C Tutorial/pre-increment.c
+	new file:   C Tutorial/recursion1.c
+	new file:   C Tutorial/strings-1.c
+	new file:   C Tutorial/structures1.c
+	new file:   C Tutorial/sumbreak
+	new file:   C Tutorial/sumbreak.c
+	new file:   C Tutorial/sumbreak.o
+	new file:   C Tutorial/sumof_n_no
+	new file:   C Tutorial/sumof_n_no.c
+	new file:   C Tutorial/sumof_n_no.o
+	new file:   C Tutorial/tables
+	new file:   C Tutorial/tables.c
+	new file:   C Tutorial/tables.o
+	new file:   C Tutorial/test
+	new file:   C Tutorial/test.c
+	new file:   C Tutorial/test.o
+	new file:   C Tutorial/typeconv.c
+	new file:   C Tutorial/typeconv.exe
+	new file:   C Tutorial/typeconv.o
+	new file:   C Tutorial/whileloop
+	new file:   C Tutorial/whileloop.c
+	new file:   C Tutorial/whileloop.o
+	new file:   Chapter 1/.vscode/settings.json
+	new file:   Chapter 1/Addition
+	new file:   Chapter 1/Addition.c
+	new file:   Chapter 1/Addition.exe
+	new file:   Chapter 1/Addition.o
+	new file:   Chapter 1/Area.C
+	new file:   Chapter 1/Area.exe
+	new file:   Chapter 1/Area.o
+	new file:   Chapter 1/Cube of a no.c
+	new file:   Chapter 1/Cube of a no.exe
+	new file:   Chapter 1/Cube of a no.o
+	new file:   Chapter 1/Data Types.C
+	new file:   Chapter 1/Data Types.exe
+	new file:   Chapter 1/Data Types.o
+	new file:   Chapter 1/Division.C
+	new file:   Chapter 1/Division.exe
+	new file:   Chapter 1/Division.o
+	new file:   Chapter 1/Helloworld.C
+	new file:   Chapter 1/Helloworld.exe
+	new file:   Chapter 1/Helloworld.o
+	new file:   Chapter 1/Instruction.C
+	new file:   Chapter 1/Instruction.exe
+	new file:   Chapter 1/Instruction.o
+	new file:   Chapter 1/Perimeter.c
+	new file:   Chapter 1/Perimeter.exe
+	new file:   Chapter 1/Perimeter.o
+	new file:   Chapter 1/experiments
+	new file:   Chapter 1/experiments.c
+	new file:   Chapter 1/experiments.o
+	new file:   Chapter 2/Arithmetics.c
+	new file:   Chapter 2/Arithmetics.exe
+	new file:   Chapter 2/Arithmetics.o
+	new file:   Chapter 2/Logical op.c
+	new file:   Chapter 2/Logical op.exe
+	new file:   Chapter 2/Logical op.o
+	new file:   Chapter 2/Relational op.c
+	new file:   Chapter 2/Relational op.exe
+	new file:   Chapter 2/Relational op.o
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/C-Programs$ git commit -m "basic programs in C"
+[main 5816750] basic programs in C
+ 152 files changed, 1152 insertions(+)
+ create mode 100644 .vscode/launch.json
+ create mode 100644 .vscode/tasks.json
+ create mode 100644 C Problems/.vscode/settings.json
+ create mode 100755 C Problems/a.out
+ create mode 100644 C Problems/average-marks.c
+ create mode 100755 C Problems/consonants
+ create mode 100644 C Problems/consonants.c
+ create mode 100644 C Problems/consonants.o
+ create mode 100644 C Problems/factorial.c
+ create mode 100644 C Problems/factorisation.c
+ create mode 100755 C Problems/largest_number
+ create mode 100644 C Problems/largest_number.c
+ create mode 100644 C Problems/largest_number.o
+ create mode 100644 C Problems/nestedloops.c
+ create mode 100755 C Problems/problem_1
+ create mode 100644 C Problems/problem_1.c
+ create mode 100644 C Problems/problem_1.o
+ create mode 100755 C Problems/problem_2
+ create mode 100644 C Problems/problem_2.c
+ create mode 100644 C Problems/problem_2.o
+ create mode 100755 C Problems/vowel
+ create mode 100644 C Problems/vowel.c
+ create mode 100644 C Tutorial/.vscode/launch.json
+ create mode 100644 C Tutorial/.vscode/settings.json
+ create mode 100644 C Tutorial/.vscode/tasks.json
+ create mode 100644 C Tutorial/Assignops.c
+ create mode 100644 C Tutorial/Assignops.exe
+ create mode 100644 C Tutorial/Assignops.o
+ create mode 100755 C Tutorial/Divisibility
+ create mode 100644 C Tutorial/Divisibility.c
+ create mode 100644 C Tutorial/Divisibility.o
+ create mode 100644 C Tutorial/Matrix.c
+ create mode 100644 C Tutorial/Mysteryprog.c
+ create mode 100644 C Tutorial/Operations.c
+ create mode 100644 C Tutorial/Operations.exe
+ create mode 100644 C Tutorial/Operations.o
+ create mode 100644 C Tutorial/Weekdays.c
+ create mode 100755 C Tutorial/a.out
+ create mode 100755 C Tutorial/array
+ create mode 100644 C Tutorial/array-1.c
+ create mode 100644 C Tutorial/array-2.c
+ create mode 100644 C Tutorial/array.c
+ create mode 100644 C Tutorial/array.o
+ create mode 100755 C Tutorial/array_1
+ create mode 100644 C Tutorial/array_1.o
+ create mode 100755 C Tutorial/arrays-2
+ create mode 100644 C Tutorial/arrays-2.c
+ create mode 100644 C Tutorial/arrays-2.o
+ create mode 100644 C Tutorial/arrays-3.c
+ create mode 100644 C Tutorial/bookstructure.c
+ create mode 100755 C Tutorial/break
+ create mode 100644 C Tutorial/break.c
+ create mode 100644 C Tutorial/break.o
+ create mode 100755 C Tutorial/calci
+ create mode 100644 C Tutorial/calci.c
+ create mode 100644 C Tutorial/calci.o
+ create mode 100755 C Tutorial/calculator
+ create mode 100644 C Tutorial/calculator.c
+ create mode 100644 C Tutorial/calculator.o
+ create mode 100755 C Tutorial/continue-1
+ create mode 100644 C Tutorial/continue-1.c
+ create mode 100644 C Tutorial/continue-1.o
+ create mode 100755 C Tutorial/continue-2
+ create mode 100644 C Tutorial/continue-2.c
+ create mode 100644 C Tutorial/days-without-break.c
+ create mode 100644 C Tutorial/days.c
+ create mode 100755 C Tutorial/dowhile
+ create mode 100644 C Tutorial/dowhile.c
+ create mode 100644 C Tutorial/dowhile.o
+ create mode 100755 C Tutorial/flow_1
+ create mode 100644 C Tutorial/flow_1.c
+ create mode 100644 C Tutorial/flow_1.o
+ create mode 100644 C Tutorial/function3.c
+ create mode 100644 C Tutorial/function4.c
+ create mode 100644 C Tutorial/functions1.c
+ create mode 100644 C Tutorial/functions2.c
+ create mode 100644 C Tutorial/goto-1.c
+ create mode 100644 C Tutorial/iterating-variable.c
+ create mode 100755 C Tutorial/loop3
+ create mode 100644 C Tutorial/loop3.c
+ create mode 100644 C Tutorial/loop3.o
+ create mode 100644 C Tutorial/loops1.c
+ create mode 100644 C Tutorial/loops1.exe
+ create mode 100644 C Tutorial/loops1.o
+ create mode 100644 C Tutorial/loops2.c
+ create mode 100644 C Tutorial/loops2.exe
+ create mode 100644 C Tutorial/loops2.o
+ create mode 100755 C Tutorial/negativeno
+ create mode 100644 C Tutorial/negativeno.c
+ create mode 100644 C Tutorial/negativeno.o
+ create mode 100644 C Tutorial/pointers1.c
+ create mode 100644 C Tutorial/post-increment.c
+ create mode 100644 C Tutorial/pre-increment.c
+ create mode 100644 C Tutorial/recursion1.c
+ create mode 100644 C Tutorial/strings-1.c
+ create mode 100644 C Tutorial/structures1.c
+ create mode 100755 C Tutorial/sumbreak
+ create mode 100644 C Tutorial/sumbreak.c
+ create mode 100644 C Tutorial/sumbreak.o
+ create mode 100755 C Tutorial/sumof_n_no
+ create mode 100644 C Tutorial/sumof_n_no.c
+ create mode 100644 C Tutorial/sumof_n_no.o
+ create mode 100755 C Tutorial/tables
+ create mode 100644 C Tutorial/tables.c
+ create mode 100644 C Tutorial/tables.o
+ create mode 100755 C Tutorial/test
+ create mode 100644 C Tutorial/test.c
+ create mode 100644 C Tutorial/test.o
+ create mode 100644 C Tutorial/typeconv.c
+ create mode 100644 C Tutorial/typeconv.exe
+ create mode 100644 C Tutorial/typeconv.o
+ create mode 100755 C Tutorial/whileloop
+ create mode 100644 C Tutorial/whileloop.c
+ create mode 100644 C Tutorial/whileloop.o
+ create mode 100644 Chapter 1/.vscode/settings.json
+ create mode 100755 Chapter 1/Addition
+ create mode 100644 Chapter 1/Addition.c
+ create mode 100644 Chapter 1/Addition.exe
+ create mode 100644 Chapter 1/Addition.o
+ create mode 100644 Chapter 1/Area.C
+ create mode 100644 Chapter 1/Area.exe
+ create mode 100644 Chapter 1/Area.o
+ create mode 100644 Chapter 1/Cube of a no.c
+ create mode 100644 Chapter 1/Cube of a no.exe
+ create mode 100644 Chapter 1/Cube of a no.o
+ create mode 100644 Chapter 1/Data Types.C
+ create mode 100644 Chapter 1/Data Types.exe
+ create mode 100644 Chapter 1/Data Types.o
+ create mode 100644 Chapter 1/Division.C
+ create mode 100644 Chapter 1/Division.exe
+ create mode 100644 Chapter 1/Division.o
+ create mode 100644 Chapter 1/Helloworld.C
+ create mode 100644 Chapter 1/Helloworld.exe
+ create mode 100644 Chapter 1/Helloworld.o
+ create mode 100644 Chapter 1/Instruction.C
+ create mode 100644 Chapter 1/Instruction.exe
+ create mode 100644 Chapter 1/Instruction.o
+ create mode 100644 Chapter 1/Perimeter.c
+ create mode 100644 Chapter 1/Perimeter.exe
+ create mode 100644 Chapter 1/Perimeter.o
+ create mode 100755 Chapter 1/experiments
+ create mode 100644 Chapter 1/experiments.c
+ create mode 100644 Chapter 1/experiments.o
+ create mode 100644 Chapter 2/Arithmetics.c
+ create mode 100644 Chapter 2/Arithmetics.exe
+ create mode 100644 Chapter 2/Arithmetics.o
+ create mode 100644 Chapter 2/Logical op.c
+ create mode 100644 Chapter 2/Logical op.exe
+ create mode 100644 Chapter 2/Logical op.o
+ create mode 100644 Chapter 2/Relational op.c
+ create mode 100644 Chapter 2/Relational op.exe
+ create mode 100644 Chapter 2/Relational op.o
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/C-Programs$ git push
+Enumerating objects: 161, done.
+Counting objects: 100% (161/161), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (157/157), done.
+Writing objects: 100% (160/160), 140.35 KiB | 465.00 KiB/s, done.
+Total 160 (delta 67), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (67/67), done.
+To github.com:shrivatsashetty/C-Programs.git
+   f55d993..5816750  main -> main
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/C-Programs$ 
+
+

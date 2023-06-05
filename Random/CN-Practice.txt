@@ -1,0 +1,54 @@
+1942  sudo systemctl stop NetworkManager
+ 1943  sudo ifconfig eno1 192.0.0.40 netmask 255.255.255.0 up
+ 1944  sudo ifconfig
+ 1945  ping 192.0.0.40
+ 1946  ping 192.0.0.10
+ 1947  sudo systemctl systemd resolved.service
+ 1948  sudo systemctl systemd resolved.services
+ 1949  sudo systemctl system resolved.services
+ 1950  sudo systemctl systemd start  resolved
+ 1951  sudo systemctl systemd resolved
+ 1952  sudo systemctl start NetworkManager
+ 1953  ifconfig
+ 1954  bye
+ 1955  exit
+ 1956  sudo systemctl start NetworkManager
+ 1957  sudo systemctl stop NetworkManager
+ 1958  sudo systemctl start NetworkManager
+ 1959  ifconfig -a
+ 1960  sudo apt update
+ 1961  sudo apt-get install proftpd
+ 1962  if config-a
+ 1963  ifconfig -a
+ 1964  sudo ifconfig en01 193.0.0.10 netmask 255.255.255.0 up
+ 1965  sudo ifconfig eno1 193.0.0.10 netmask 255.255.255.0 up
+ 1966  ping 193.0.0.5
+ 1967  sudo systemctl stop NetworkManager
+ 1968  ftp 193.0.0.5
+ 1969  ls
+ 1970  echo "hello" > f1.txt
+ 1971  ftp 193.0.0.5
+ 1972  sudo apt-get install openssh-client openssh-server
+ 1973  ls
+ 1974  cat keyyy.pub >> ~./authorized_keys
+ 1975  nano authorized_keys
+ 1976  cat keyyy.pub >> ~./authorized_keys
+ 1977  nano authorized_keys
+ 1978  ~./
+ 1979  cd ~./
+ 1980  cat keyyy.pub >> ~/.ssh/authorized_keys
+ 1981  cat .ssh/authorized_keys 
+ 1982  config
+ 1983  ifconfig
+ 1984  ifconfig -a
+ 1985  sudo apt-get dnsmaq
+ 1986  sudo apt-get install dnsmaq
+ 1987  sudo apt-get install dnsmasq
+ 1988  sudo ifconfig
+ 1989  sudo ifconfig -a
+ 1990  sudo ifconfig eno1
+ 1991  sudo ifconfig eno1 193.0.0.10 netmask 255.255.255.0 up
+ 1992  sudo dnsmasq -i enpo1 -I lo -a 193.0.0.10 -dhcp-range=193.0.0.11,193.0.0.50 -d -u root -log-dhcp -q
+ 1993  sudo dnsmasq -i enpo1 -I lo -a 193.0.0.10 --dhcp-range=193.0.0.11,193.0.0.50,1h -d -u root --log-dhcp -q -p 5353
+ 1994  history 
+

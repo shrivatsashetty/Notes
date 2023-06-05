@@ -1,0 +1,35 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/JSON$ echo "# JSON-files" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/shrivatsashetty/JSON-files.git
+git push -u origin main
+Reinitialized existing Git repository in /home/shrivatsa/Documents/WEB/JSON/.git/
+[main d2a10be] first commit
+ 1 file changed, 1 insertion(+)
+error: remote origin already exists.
+^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/JSON$ git status
+On branch main
+nothing to commit, working tree clean
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/JSON$ git push -u origin main
+Username for 'https://github.com': ^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/JSON$ git remote add origin git@github.com:shrivatsashetty/JSON-files.git
+git branch -M main
+git push -u origin main
+error: remote origin already exists.
+^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/JSON$ git remote add origin2 git@github.com:shrivatsashetty/JSON-files.git
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/JSON$ git push -u origin2 main
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (14/14), 1.65 KiB | 1.65 MiB/s, done.
+Total 14 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To github.com:shrivatsashetty/JSON-files.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin2'.
+
