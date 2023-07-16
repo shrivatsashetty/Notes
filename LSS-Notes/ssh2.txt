@@ -1,0 +1,676 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig 
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2534  bytes 233742 (233.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2534  bytes 233742 (233.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.232.205  netmask 255.255.255.0  broadcast 192.168.232.255
+        inet6 2401:4900:3314:ffce:2b02:5dd0:9e9c:7699  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::3819:fce9:313a:b234  prefixlen 64  scopeid 0x20<link>
+        inet6 2401:4900:3314:ffce:caee:f6f3:19b:aacb  prefixlen 64  scopeid 0x0<global>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 120439  bytes 119667108 (119.6 MB)
+        RX errors 0  dropped 1294  overruns 0  frame 0
+        TX packets 24826  bytes 5180998 (5.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl start systemd-resolved.service
+[sudo] password for shrivatsa: 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh srijith@127.0.0.1
+ssh: connect to host 127.0.0.1 port 22: Connection refused
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig 
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2620  bytes 246332 (246.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2620  bytes 246332 (246.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.232.205  netmask 255.255.255.0  broadcast 192.168.232.255
+        inet6 2401:4900:3314:ffce:2b02:5dd0:9e9c:7699  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::3819:fce9:313a:b234  prefixlen 64  scopeid 0x20<link>
+        inet6 2401:4900:3314:ffce:caee:f6f3:19b:aacb  prefixlen 64  scopeid 0x0<global>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 121336  bytes 119782480 (119.7 MB)
+        RX errors 0  dropped 1294  overruns 0  frame 0
+        TX packets 25296  bytes 5262454 (5.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh srijith@192.168.232.70
+The authenticity of host '192.168.232.70 (192.168.232.70)' can't be established.
+ED25519 key fingerprint is SHA256:gpr6VeZ8j88x94qkLxBwaftUTJwOuLFwOpbX+tjyCSg.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.232.70' (ED25519) to the list of known hosts.
+srijith@192.168.232.70's password: 
+Welcome to Ubuntu 22.10 (GNU/Linux 5.19.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+60 updates can be applied immediately.
+10 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+srijith@srijith-ThinkPad-X250:~$ ls
+'Cn Project'   Downloads   elistsets.py      Linux    Screenshots   srijith       WAP
+ Desktop       edict.py    estringtuple.py   Python   snap          srijith.pub   WAPProject
+srijith@srijith-ThinkPad-X250:~$ sudo systemctl start systemd-resolved.service
+[sudo] password for srijith: 
+sudo: no password was provided
+sudo: a password is required
+srijith@srijith-ThinkPad-X250:~$ exit
+logout
+Connection to 192.168.232.70 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ man ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ man ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh skanda@192.168.79.91
+The authenticity of host '192.168.79.91 (192.168.79.91)' can't be established.
+ED25519 key fingerprint is SHA256:0AuXvl5FAmb7KjLwLvztYWi1zYKTBY1W/qso9p+JZ/o.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.79.91' (ED25519) to the list of known hosts.
+skanda@192.168.79.91's password: 
+Permission denied, please try again.
+skanda@192.168.79.91's password: 
+Permission denied, please try again.
+skanda@192.168.79.91's password: 
+skanda@192.168.79.91: Permission denied (publickey,password).
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh amit@192.168.79.149
+The authenticity of host '192.168.79.149 (192.168.79.149)' can't be established.
+ED25519 key fingerprint is SHA256:fcYz/cXzmrcYM8NbiHgex0HENABWxu94Qnc8V/w8ftc.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:7: [hashed name]
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.79.149' (ED25519) to the list of known hosts.
+amit@192.168.79.149's password: 
+Permission denied, please try again.
+amit@192.168.79.149's password: 
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh amith@192.168.79.149
+amith@192.168.79.149's password: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+51 updates can be applied immediately.
+11 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+13 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Wed May  3 10:22:48 2023 from 192.168.79.43
+amith@amith-Inspiron-3505:~$ pwd
+/home/amith
+amith@amith-Inspiron-3505:~$ exitt
+exitt: command not found
+amith@amith-Inspiron-3505:~$ exit
+logout
+Connection to 192.168.79.149 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ man ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking ssh amith@192.168.79.149 "top"
+command-line line 0: no argument after keyword "stricthostkeychecking"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking amith@192.168.79.149 "top"
+command-line line 0: no argument after keyword "stricthostkeychecking"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "top"
+amith@192.168.79.149's password: 
+TERM environment variable not set.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "date"
+amith@192.168.79.149's password: 
+Wednesday 03 May 2023 10:29:01 AM IST
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "htop"
+amith@192.168.79.149's password: 
+Permission denied, please try again.
+amith@192.168.79.149's password: 
+bash: line 1: htop: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "top"
+amith@192.168.79.149's password: 
+TERM environment variable not set.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "date;uptime;ls"
+amith@192.168.79.149's password: 
+Wednesday 03 May 2023 10:31:12 AM IST
+ 10:31:12 up 5 min,  1 user,  load average: 0.05, 0.20, 0.11
+A
+ab
+ab.pub
+al.txt
+binary.dat
+bySurya.txt
+c1.txt
+c2.txt
+CNSocket
+Desktop
+djangoenv
+Documents
+Downloads
+fafas.txt
+FinalCopy
+GitHub
+GNS3
+hell.txt
+iff.sh
+imp.py
+initialscript
+lss
+LSS
+LssAssignment
+mod.py
+Music
+new23
+newRec
+newshell
+OOP
+PA
+pgmdelete
+Pictures
+project
+Projects
+Public
+__pycache__
+PycharmProjects
+Python
+remote.sh
+sadath
+sadath.pub
+ser
+shell-scripting-tutorial
+shri
+shri.pub
+snap
+Socket
+Socket-Programming-in-Python
+s.py
+srijith.pub
+surya.pub
+temp
+Templates
+Trying
+Videos
+WAP3
+zip (1)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ man ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt install sshpass
+[sudo] password for shrivatsa: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  gir1.2-gst-plugins-base-1.0 gir1.2-rb-3.0 gir1.2-totem-1.0 gir1.2-totemplparser-1.0 libdmapsharing-3.0-2 libgpod-common libgpod4 liblirc-client0
+  libnetplan0 libsgutils2-2
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  sshpass
+0 upgraded, 1 newly installed, 0 to remove and 14 not upgraded.
+Need to get 11.7 kB of archives.
+After this operation, 35.8 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
+Fetched 11.7 kB in 5s (2240 B/s)    
+Selecting previously unselected package sshpass.
+(Reading database ... 222311 files and directories currently installed.)
+Preparing to unpack .../sshpass_1.09-1_amd64.deb ...
+Unpacking sshpass (1.09-1) ...
+Setting up sshpass (1.09-1) ...
+Processing triggers for man-db (2.10.2-1) ...
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sshpass --version
+sshpass: invalid option -- '-'
+Usage: sshpass [-f|-d|-p|-e] [-hV] command parameters
+   -f filename   Take password to use from file
+   -d number     Use number as file descriptor for getting password
+   -p password   Provide password as argument (security unwise)
+   -e            Password is passed as env-var "SSHPASS"
+   With no parameters - password will be taken from stdin
+
+   -P prompt     Which string should sshpass search for to detect a password prompt
+   -v            Be verbose about what you're doing
+   -h            Show help (this screen)
+   -V            Print version information
+At most one of -f, -d, -p or -e should be used
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sshpass -version
+SSHPASS: -e option given but SSHPASS environment variable not set
+sshpass: invalid option -- 'r'
+Usage: sshpass [-f|-d|-p|-e] [-hV] command parameters
+   -f filename   Take password to use from file
+   -d number     Use number as file descriptor for getting password
+   -p password   Provide password as argument (security unwise)
+   -e            Password is passed as env-var "SSHPASS"
+   With no parameters - password will be taken from stdin
+
+   -P prompt     Which string should sshpass search for to detect a password prompt
+   -v            Be verbose about what you're doing
+   -h            Show help (this screen)
+   -V            Print version information
+At most one of -f, -d, -p or -e should be used
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "date;uptime;pwd"
+amith@192.168.79.149's password: 
+Wednesday 03 May 2023 10:34:18 AM IST
+ 10:34:18 up 9 min,  1 user,  load average: 0.09, 0.16, 0.10
+/home/amith
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sshpass -p "mint" ssh -t -o StrictHostKeyChecking=No amith@192.168.79.43 "date"
+Warning: Permanently added '192.168.79.43' (ED25519) to the list of known hosts.
+Permission denied, please try again.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sshpass -p "Dumma12@" ssh -t -o StrictHostKeyChecking=No amith@192.168.79.43 "date"
+Permission denied, please try again.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.43
+Permission denied, please try again.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.43
+Warning: Permanently added '192.168.79.43' (ED25519) to the list of known hosts.
+Permission denied, please try again.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.149
+Warning: Permanently added '192.168.79.149' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+51 updates can be applied immediately.
+11 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+13 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Wed May  3 10:41:29 2023 from 192.168.79.149
+amith@amith-Inspiron-3505:~$ exit
+logout
+Connection to 192.168.79.149 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.149 "date"
+Wednesday 03 May 2023 10:44:13 AM IST
+Connection to 192.168.79.149 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.149 "date;pwd"
+Wednesday 03 May 2023 10:44:25 AM IST
+/home/amith
+Connection to 192.168.79.149 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.149 "date;pwd;free -m"
+Wednesday 03 May 2023 10:44:48 AM IST
+/home/amith
+               total        used        free      shared  buff/cache   available
+Mem:            5816        1349        2886          49        1580        4168
+Swap:          15624           0       15624
+Connection to 192.168.79.149 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ^[[200~~/Documents/Notes/LSS-Notes$ 
+bash: ~/Documents/Notes/LSS-Notes$: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd ~/Documents/Notes/LSS-Notes
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes/LSS-Notes$ ls
+LSS-April10.txt  LSS-April4.txt  LSSApril11.txt      april9.txt              class2.txt         march28.txt        sed-practice2.txt
+LSS-April18.txt  LSS-april5.txt  Linux-Commands.odt  awk-pattern-search.txt  installingpip.txt  march29.txt        ssh.txt
+LSS-April19.txt  LSS-awk.txt     Softlinks.txt       class1.txt              march22.txt        sed-practice1.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes/LSS-Notes$ gedit sshpassword.sh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes/LSS-Notes$ 
+
+######################################################################## did below in another terminal ############################################################################################
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig 
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2534  bytes 233742 (233.7 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2534  bytes 233742 (233.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.232.205  netmask 255.255.255.0  broadcast 192.168.232.255
+        inet6 2401:4900:3314:ffce:2b02:5dd0:9e9c:7699  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::3819:fce9:313a:b234  prefixlen 64  scopeid 0x20<link>
+        inet6 2401:4900:3314:ffce:caee:f6f3:19b:aacb  prefixlen 64  scopeid 0x0<global>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 120439  bytes 119667108 (119.6 MB)
+        RX errors 0  dropped 1294  overruns 0  frame 0
+        TX packets 24826  bytes 5180998 (5.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl start systemd-resolved.service
+[sudo] password for shrivatsa: 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh srijith@127.0.0.1
+ssh: connect to host 127.0.0.1 port 22: Connection refused
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig 
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2620  bytes 246332 (246.3 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2620  bytes 246332 (246.3 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.232.205  netmask 255.255.255.0  broadcast 192.168.232.255
+        inet6 2401:4900:3314:ffce:2b02:5dd0:9e9c:7699  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::3819:fce9:313a:b234  prefixlen 64  scopeid 0x20<link>
+        inet6 2401:4900:3314:ffce:caee:f6f3:19b:aacb  prefixlen 64  scopeid 0x0<global>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 121336  bytes 119782480 (119.7 MB)
+        RX errors 0  dropped 1294  overruns 0  frame 0
+        TX packets 25296  bytes 5262454 (5.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh srijith@192.168.232.70
+The authenticity of host '192.168.232.70 (192.168.232.70)' can't be established.
+ED25519 key fingerprint is SHA256:gpr6VeZ8j88x94qkLxBwaftUTJwOuLFwOpbX+tjyCSg.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.232.70' (ED25519) to the list of known hosts.
+srijith@192.168.232.70's password: 
+Welcome to Ubuntu 22.10 (GNU/Linux 5.19.0-40-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+60 updates can be applied immediately.
+10 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+srijith@srijith-ThinkPad-X250:~$ ls
+'Cn Project'   Downloads   elistsets.py      Linux    Screenshots   srijith       WAP
+ Desktop       edict.py    estringtuple.py   Python   snap          srijith.pub   WAPProject
+srijith@srijith-ThinkPad-X250:~$ sudo systemctl start systemd-resolved.service
+[sudo] password for srijith: 
+sudo: no password was provided
+sudo: a password is required
+srijith@srijith-ThinkPad-X250:~$ exit
+logout
+Connection to 192.168.232.70 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ man ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ man ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh skanda@192.168.79.91
+The authenticity of host '192.168.79.91 (192.168.79.91)' can't be established.
+ED25519 key fingerprint is SHA256:0AuXvl5FAmb7KjLwLvztYWi1zYKTBY1W/qso9p+JZ/o.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.79.91' (ED25519) to the list of known hosts.
+skanda@192.168.79.91's password: 
+Permission denied, please try again.
+skanda@192.168.79.91's password: 
+Permission denied, please try again.
+skanda@192.168.79.91's password: 
+skanda@192.168.79.91: Permission denied (publickey,password).
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh amit@192.168.79.149
+The authenticity of host '192.168.79.149 (192.168.79.149)' can't be established.
+ED25519 key fingerprint is SHA256:fcYz/cXzmrcYM8NbiHgex0HENABWxu94Qnc8V/w8ftc.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:7: [hashed name]
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.79.149' (ED25519) to the list of known hosts.
+amit@192.168.79.149's password: 
+Permission denied, please try again.
+amit@192.168.79.149's password: 
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh amith@192.168.79.149
+amith@192.168.79.149's password: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+51 updates can be applied immediately.
+11 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+13 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Wed May  3 10:22:48 2023 from 192.168.79.43
+amith@amith-Inspiron-3505:~$ pwd
+/home/amith
+amith@amith-Inspiron-3505:~$ exitt
+exitt: command not found
+amith@amith-Inspiron-3505:~$ exit
+logout
+Connection to 192.168.79.149 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ man ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking ssh amith@192.168.79.149 "top"
+command-line line 0: no argument after keyword "stricthostkeychecking"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking amith@192.168.79.149 "top"
+command-line line 0: no argument after keyword "stricthostkeychecking"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "top"
+amith@192.168.79.149's password: 
+TERM environment variable not set.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "date"
+amith@192.168.79.149's password: 
+Wednesday 03 May 2023 10:29:01 AM IST
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "htop"
+amith@192.168.79.149's password: 
+Permission denied, please try again.
+amith@192.168.79.149's password: 
+bash: line 1: htop: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "top"
+amith@192.168.79.149's password: 
+TERM environment variable not set.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "date;uptime;ls"
+amith@192.168.79.149's password: 
+Wednesday 03 May 2023 10:31:12 AM IST
+ 10:31:12 up 5 min,  1 user,  load average: 0.05, 0.20, 0.11
+A
+ab
+ab.pub
+al.txt
+binary.dat
+bySurya.txt
+c1.txt
+c2.txt
+CNSocket
+Desktop
+djangoenv
+Documents
+Downloads
+fafas.txt
+FinalCopy
+GitHub
+GNS3
+hell.txt
+iff.sh
+imp.py
+initialscript
+lss
+LSS
+LssAssignment
+mod.py
+Music
+new23
+newRec
+newshell
+OOP
+PA
+pgmdelete
+Pictures
+project
+Projects
+Public
+__pycache__
+PycharmProjects
+Python
+remote.sh
+sadath
+sadath.pub
+ser
+shell-scripting-tutorial
+shri
+shri.pub
+snap
+Socket
+Socket-Programming-in-Python
+s.py
+srijith.pub
+surya.pub
+temp
+Templates
+Trying
+Videos
+WAP3
+zip (1)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ man ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt install sshpass
+[sudo] password for shrivatsa: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  gir1.2-gst-plugins-base-1.0 gir1.2-rb-3.0 gir1.2-totem-1.0 gir1.2-totemplparser-1.0 libdmapsharing-3.0-2 libgpod-common libgpod4 liblirc-client0
+  libnetplan0 libsgutils2-2
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  sshpass
+0 upgraded, 1 newly installed, 0 to remove and 14 not upgraded.
+Need to get 11.7 kB of archives.
+After this operation, 35.8 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 sshpass amd64 1.09-1 [11.7 kB]
+Fetched 11.7 kB in 5s (2240 B/s)    
+Selecting previously unselected package sshpass.
+(Reading database ... 222311 files and directories currently installed.)
+Preparing to unpack .../sshpass_1.09-1_amd64.deb ...
+Unpacking sshpass (1.09-1) ...
+Setting up sshpass (1.09-1) ...
+Processing triggers for man-db (2.10.2-1) ...
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sshpass --version
+sshpass: invalid option -- '-'
+Usage: sshpass [-f|-d|-p|-e] [-hV] command parameters
+   -f filename   Take password to use from file
+   -d number     Use number as file descriptor for getting password
+   -p password   Provide password as argument (security unwise)
+   -e            Password is passed as env-var "SSHPASS"
+   With no parameters - password will be taken from stdin
+
+   -P prompt     Which string should sshpass search for to detect a password prompt
+   -v            Be verbose about what you're doing
+   -h            Show help (this screen)
+   -V            Print version information
+At most one of -f, -d, -p or -e should be used
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sshpass -version
+SSHPASS: -e option given but SSHPASS environment variable not set
+sshpass: invalid option -- 'r'
+Usage: sshpass [-f|-d|-p|-e] [-hV] command parameters
+   -f filename   Take password to use from file
+   -d number     Use number as file descriptor for getting password
+   -p password   Provide password as argument (security unwise)
+   -e            Password is passed as env-var "SSHPASS"
+   With no parameters - password will be taken from stdin
+
+   -P prompt     Which string should sshpass search for to detect a password prompt
+   -v            Be verbose about what you're doing
+   -h            Show help (this screen)
+   -V            Print version information
+At most one of -f, -d, -p or -e should be used
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -o StrictHostKeyChecking=No amith@192.168.79.149 "date;uptime;pwd"
+amith@192.168.79.149's password: 
+Wednesday 03 May 2023 10:34:18 AM IST
+ 10:34:18 up 9 min,  1 user,  load average: 0.09, 0.16, 0.10
+/home/amith
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sshpass -p "mint" ssh -t -o StrictHostKeyChecking=No amith@192.168.79.43 "date"
+Warning: Permanently added '192.168.79.43' (ED25519) to the list of known hosts.
+Permission denied, please try again.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sshpass -p "Dumma12@" ssh -t -o StrictHostKeyChecking=No amith@192.168.79.43 "date"
+Permission denied, please try again.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.43
+Permission denied, please try again.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.43
+Warning: Permanently added '192.168.79.43' (ED25519) to the list of known hosts.
+Permission denied, please try again.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.149
+Warning: Permanently added '192.168.79.149' (ED25519) to the list of known hosts.
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to oveutor 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+51 updates can be applied immediately.
+11 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+13 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+Last login: Wed May  3 10:41:29 2023 from 192.168.79.149
+amith@amith-Inspiron-3505:~$ exit
+logout
+Connection to 192.168.79.149 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.149 "date"
+Wednesday 03 May 2023 10:44:13 AM IST
+Connection to 192.168.79.149 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.149 "date;pwd"
+Wednesday 03 May 2023 10:44:25 AM IST
+/home/amith
+Connection to 192.168.79.149 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sshpass -p Dumma12@ ssh -t -o StrictHostKeyChecking=No amith@192.168.79.149 "date;pwd;free -m"
+Wednesday 03 May 2023 10:44:48 AM IST
+/home/amith
+               total        used        free      shared  buff/cache   available
+Mem:            5816        1349        2886          49        1580        4168
+Swap:          15624           0       15624
+Connection to 192.168.79.149 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ^[[200~~/Documents/Notes/LSS-Notes$ 
+bash: ~/Documents/Notes/LSS-Notes$: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd ~/Documents/Notes/LSS-Notes
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes/LSS-Notes$ ls
+LSS-April10.txt  LSS-April4.txt  LSSApril11.txt      april9.txt              class2.txt         march28.txt        sed-practice2.txt
+LSS-April18.txt  LSS-april5.txt  Linux-Commands.odt  awk-pattern-search.txt  installingpip.txt  march29.txt        ssh.txt
+LSS-April19.txt  LSS-awk.txt     Softlinks.txt       class1.txt              march22.txt        sed-practice1.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes/LSS-Notes$ gedit sshpassword.sh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes/LSS-Notes$ 
+# now  execute the ssh shell script that must automate the tasks

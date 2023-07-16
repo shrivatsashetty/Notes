@@ -1,0 +1,122 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/HTML$ echo "# HTML-Codes" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:shrivatsashetty/HTML-Codes.git
+git push -u origin main
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/shrivatsa/Documents/WEB/HTML/.git/
+[master (root-commit) 6bdec92] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 225 bytes | 225.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:shrivatsashetty/HTML-Codes.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/HTML$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Images for web/
+	Shrivatsa_Shetty.html
+	book.html
+	book1.jpg
+	book2.jpg
+	book3.jpg
+	book4.jpg
+	book5.jpg
+	book6.jpg
+	bootstrap1.html
+	forms.html
+	hello.html
+	index.html
+	intermediate.html
+	inventory.html
+	jsonstudents.html
+	list.html
+	page-layout.html
+	tables.html
+	trails.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/HTML$ git add .
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/HTML$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   Images for web/cityscape.jpg
+	new file:   Images for web/thank you.jpg
+	new file:   Shrivatsa_Shetty.html
+	new file:   book.html
+	new file:   book1.jpg
+	new file:   book2.jpg
+	new file:   book3.jpg
+	new file:   book4.jpg
+	new file:   book5.jpg
+	new file:   book6.jpg
+	new file:   bootstrap1.html
+	new file:   forms.html
+	new file:   hello.html
+	new file:   index.html
+	new file:   intermediate.html
+	new file:   inventory.html
+	new file:   jsonstudents.html
+	new file:   list.html
+	new file:   page-layout.html
+	new file:   tables.html
+	new file:   trails.html
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/HTML$ git commit -m "HTML,CSS,Bootstraps files"
+[main 8f02b1b] HTML,CSS,Bootstraps files
+ 21 files changed, 758 insertions(+)
+ create mode 100644 Images for web/cityscape.jpg
+ create mode 100644 Images for web/thank you.jpg
+ create mode 100644 Shrivatsa_Shetty.html
+ create mode 100755 book.html
+ create mode 100755 book1.jpg
+ create mode 100755 book2.jpg
+ create mode 100755 book3.jpg
+ create mode 100755 book4.jpg
+ create mode 100755 book5.jpg
+ create mode 100755 book6.jpg
+ create mode 100644 bootstrap1.html
+ create mode 100644 forms.html
+ create mode 100644 hello.html
+ create mode 100644 index.html
+ create mode 100644 intermediate.html
+ create mode 100644 inventory.html
+ create mode 100644 jsonstudents.html
+ create mode 100644 list.html
+ create mode 100644 page-layout.html
+ create mode 100644 tables.html
+ create mode 100644 trails.html
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/HTML$ git push
+Enumerating objects: 25, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (24/24), 381.46 KiB | 1.22 MiB/s, done.
+Total 24 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:shrivatsashetty/HTML-Codes.git
+   6bdec92..8f02b1b  main -> main
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/WEB/HTML$ 
+
+

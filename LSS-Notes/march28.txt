@@ -1,0 +1,107 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1   chap01   chap02   chap03   chap04   chap111   chapX   chapY   chapZ   foo  'foo*'   names.lst   records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ touch chap[05-07]
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1   chap01   chap02   chap03   chap04  'chap[05-07]'   chap111   chapX   chapY   chapZ   foo  'foo*'   names.lst   records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ rm chap[05-07]
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ touch chap{06..10}
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap02   chap04   chap07   chap09   chap111   chapY   foo     names.lst
+ chap01   chap03   chap06   chap08   chap10   chapX     chapZ  'foo*'   records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ touch chap{11.15}
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap02   chap04   chap07   chap09   chap111       chapX   chapZ  'foo*'       records.lst
+ chap01   chap03   chap06   chap08   chap10   chap{11.15}   chapY   foo     names.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ rm chap{11.15}
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap02   chap04   chap07   chap09   chap111   chapY   foo     names.lst
+ chap01   chap03   chap06   chap08   chap10   chapX     chapZ  'foo*'   records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls chap??
+chap01  chap02  chap03  chap04  chap06  chap07  chap08  chap09  chap10
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ chap[XYZ]
+chapX: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ chap[xyz]
+chap[xyz]: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls chap[XYZ]
+chapX  chapY  chapZ
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls chap[!XYZ]
+ls: cannot access 'chap[!XYZ]': No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls chap[01-10]
+ls: cannot access 'chap[01-10]': No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ touch .ahidden
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ touch .bhidden
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap02   chap04   chap07   chap09   chap111   chapY   foo     names.lst
+ chap01   chap03   chap06   chap08   chap10   chapX     chapZ  'foo*'   records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls -x .?
+Bin  chapters
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls -x .??
+ls: cannot access '.??': No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls -x .?*
+.ahidden  .bhidden
+
+..:
+Bin  chapters
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls -x .01*
+ls: cannot access '.01*': No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls -x 01*
+ls: cannot access '01*': No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls -x 01?*
+ls: cannot access '01?*': No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls -x chap?*
+chap01  chap02  chap03  chap04  chap06  chap07  chap08  chap09  chap10  chap111  chapX  chapY  chapZ
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ touch chap*
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap02   chap04   chap07   chap09   chap111   chapY   foo     names.lst
+ chap01   chap03   chap06   chap08   chap10   chapX     chapZ  'foo*'   records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls -a
+ .    .ahidden   .bhidden   chap02   chap04   chap07   chap09   chap111   chapY   foo     names.lst
+ ..   bhap1      chap01     chap03   chap06   chap08   chap10   chapX     chapZ  'foo*'   records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ touch 'chap*'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap01   chap03   chap06   chap08   chap10    chapX   chapZ  'foo*'       records.lst
+'chap*'   chap02   chap04   chap07   chap09   chap111   chapY   foo     names.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ rm 'chap*'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap02   chap04   chap07   chap09   chap111   chapY   foo     names.lst
+ chap01   chap03   chap06   chap08   chap10   chapX     chapZ  'foo*'   records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ touch "chap*"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap01   chap03   chap06   chap08   chap10    chapX   chapZ  'foo*'       records.lst
+'chap*'   chap02   chap04   chap07   chap09   chap111   chapY   foo     names.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls -ail
+total 12
+5518324 drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar 28 12:58  .
+5518229 drwxrwxr-x 4 shrivatsa shrivatsa 4096 Mar 28 12:21  ..
+5515848 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:44  .ahidden
+5518320 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 09:47  bhap1
+5515861 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:44  .bhidden
+5506776 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:58 'chap*'
+5508292 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap01
+5514879 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap02
+5515565 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap03
+5515568 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap04
+5508312 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap06
+5515857 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap07
+5515858 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap08
+5515859 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap09
+5515860 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap10
+5518319 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chap111
+5514550 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chapX
+5514687 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chapY
+5518318 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 28 12:50  chapZ
+5518327 -rw-rw-r-- 1 shrivatsa shrivatsa   12 Mar 21 10:28  foo
+5518330 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 10:32 'foo*'
+5518323 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 10:14  names.lst
+5508294 -rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 21 10:14  records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ rm "chap*"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap02   chap04   chap07   chap09   chap111   chapY   foo     names.lst
+ chap01   chap03   chap06   chap08   chap10   chapX     chapZ  'foo*'   records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ touch 'chap*'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap01   chap03   chap06   chap08   chap10    chapX   chapZ  'foo*'       records.lst
+'chap*'   chap02   chap04   chap07   chap09   chap111   chapY   foo     names.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls chap\*
+'chap*'
+

@@ -1,0 +1,93 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ mkdir learngit
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ cd learngit/
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git --version
+git version 2.34.1
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git config --list
+user.email=shrivatsa307@gmail.com
+user.name=shrivatsashetty
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/shrivatsa/.ssh/id_rsa): 
+/home/shrivatsa/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/shrivatsa/.ssh/id_rsa
+Your public key has been saved in /home/shrivatsa/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:bkkUQyZyFy9VPrT+kAAscDK+S6VUVRf6mt0NlQCGWu8 shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx
+The key's randomart image is:
++---[RSA 3072]----+
+|    =.=+Xo++*o   |
+|   . B.+.O.= .. .|
+|    o ..= = +  ..|
+|   . + o . = o . |
+|    +   S . = .  |
+|   . . o . E + o |
+|    .   + o . o .|
+|       .         |
+|                 |
++----[SHA256]-----+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ cat /home/shrivatsa/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCVPxAlo7T59+2AtBnkKwbvoSIZFQlcIKHRU02Z23zjjpZdwIf9+MkcboacLUo/4rQa1np9DHF+hDvgquBz6K/7m5ka02ysLmSKji7XOSQkylPCmq4L6dJo60KgMsUGgtnQ1dcPZYP+EtqIMcL09rBccPIfvuP3BeixUFBHl8Z09eOK0EYZQmfxF1K97lHrmeI/SCtfhmQ2n1CsIk7cmSuHxzzFdmWZMA7hCvzeiugTbxM6NxkgvlWez7hfPbeEGDcqqWrgnpOJyl1Fyj5dv45bXYWzX+vSCWN0Qxx3gd9QUxIx+PAK/dRofSAaIqbmYwO8lbElruT6ii1ooCZZzTNpSpznIj9kWmTaTtsh1ZpGe2z8eDpnsGiHzOTvtdo2oAMDHyE2lXmCalJkxR5Ec3xLjJkYm+wtDDrhs9Ub2uZraD2HOR3qYZ/O5ycka3NJMzSLlQVbi21HT9e+qY4NYTgBzGetBksg4r7xOvCcI35QqDl2I1TAwS7Wza3nu1OrW1U= shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git remote add origin "git@github.com:shrivatsashetty/repository1.git"
+fatal: not a git repository (or any of the parent directories): .git
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git remote add origin git@github.com:shrivatsashetty/repository1.git
+fatal: not a git repository (or any of the parent directories): .git
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git remote add origin git@github.com:shrivatsashetty/repository1
+fatal: not a git repository (or any of the parent directories): .git
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git remote add originhttps://github.com/shrivatsashetty/repository1.git
+fatal: not a git repository (or any of the parent directories): .git
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git init -b main
+Initialized empty Git repository in /home/shrivatsa/Documents/learngit/.git/
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git remote add origin git@github.com:shrivatsashetty/repository1.git
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ cd .git/
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit/.git$ ls -l
+total 32
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar 13 01:35 branches
+-rw-rw-r-- 1 shrivatsa shrivatsa  209 Mar 13 01:35 config
+-rw-rw-r-- 1 shrivatsa shrivatsa   73 Mar 13 01:35 description
+-rw-rw-r-- 1 shrivatsa shrivatsa   21 Mar 13 01:35 HEAD
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar 13 01:35 hooks
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar 13 01:35 info
+drwxrwxr-x 4 shrivatsa shrivatsa 4096 Mar 13 01:35 objects
+drwxrwxr-x 4 shrivatsa shrivatsa 4096 Mar 13 01:35 refs
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit/.git$ cd ..
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ nano note.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ ls
+note.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git add .
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git commit -m "I created this quick note file on sunday"
+[main (root-commit) 62270f5] I created this quick note file on sunday
+ 1 file changed, 1 insertion(+)
+ create mode 100644 note.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git log
+commit 62270f56c4e5da658643809de46a9ffc085b87e6 (HEAD -> main)
+Author: shrivatsashetty <shrivatsa307@gmail.com>
+Date:   Mon Mar 13 01:40:05 2023 +0530
+
+    I created this quick note file on sunday
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 280 bytes | 280.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:shrivatsashetty/repository1.git
+ * [new branch]      main -> main
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ nano note.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git add note.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git commit note.txt
+Aborting commit due to empty commit message.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git commit -m "appended a line-"
+[main 068889b] appended a line-
+ 1 file changed, 1 insertion(+)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/learngit$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:shrivatsashetty/repository1.git
+   62270f5..068889b  main -> main
+

@@ -1,0 +1,491 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap01   chap03   chap06   chap08   chap10    chapX   chapZ      emp1.lst   foo     names.lst     shortlist
+'chap*'   chap02   chap04   chap07   chap09   chap111   chapY   cutlist1   emp.lst   'foo*'   records.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ wc emp1.lst
+ 18  81 950 emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ head -n 5 emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ head -n 2 emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ tail -n 4 emp1.lst #lists last 4 lines
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ tail -n 2 emp1.lst # this is an example of filter
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ whatis tail
+tail (1)             - output the last part of files
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ whatis head
+head (1)             - output the first part of files
+HEAD (1p)            - Simple command line user agent
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ man head
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ man head
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ head -c 2 emp1.lst # this is an example of filter
+22shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ tail -c 10 emp1.lst
+40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls /etc/ | tail
+vulkan
+w3m
+wgetrc
+whoopsie
+wpa_supplicant
+X11
+xattr.conf
+xdg
+xml
+zsh_command_not_found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls | tail
+chapY
+chapZ
+cutlist1
+emp1.lst
+emp.lst
+foo
+foo*
+names.lst
+records.lst
+shortlist
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls | tail -n 2
+records.lst
+shortlist
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ tail -n 12 | head 4
+head: cannot open '4' for reading: No such file or directory
+^C  
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ tail -n 12 | head -n 4
+^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ head -n 4 emp1.lst | tail -n 4
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ # | acts as a redirection symbol
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f 2 emp1.lst
+a.k. shukla      
+jai sharma       
+sumit chakrobarty
+barun sengupta   
+n.k. gupta       
+chanchal singhvi 
+
+karuna ganguly   
+s.n. dasgupta    
+
+jayant Choudhury 
+anil aggarwal    
+lalit chowdury   
+shyam saksena    
+
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f 5 emp1.lst
+12/12/52
+03/12/50
+04/19/43
+05/11/47
+08/30/56
+09/03/38
+
+06/05/62
+09/12/63
+
+09/07/50
+05/01/59
+09/26/45
+12/12/55
+
+07/06/47
+03/12/45
+12/31/40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f 1,4 emp1.lst
+2233|sales      
+9876|production 
+5678|marketing  
+2365|personnel  
+5423|admin      
+1006|sales      
+
+6213|accounts   
+1265|sales      
+
+4290|production 
+2476|sales      
+6521|marketing  
+3212|accounts   
+
+3564|personnel  
+2345|marketing  
+0110|marketing  
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f 1-6 emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f 1-6 emp1.lst #cuts im 1-6 column range 
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -c 1-6 emp1.lst 
+cut: an input delimiter may be specified only when operating on fields
+Try 'cut --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -c -10 emp1.lst 
+cut: an input delimiter may be specified only when operating on fields
+Try 'cut --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -c 10 emp1.lst 
+cut: an input delimiter may be specified only when operating on fields
+Try 'cut --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -c 23 emp1.lst 
+|
+|
+|
+|
+|
+|
+
+|
+|
+
+|
+|
+|
+|
+
+|
+|
+|
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -c 5 emp1.lst 
+|
+|
+|
+|
+|
+|
+
+|
+|
+
+|
+|
+|
+|
+
+|
+|
+|
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -c 1-5 emp1.lst 
+2233|
+9876|
+5678|
+2365|
+5423|
+1006|
+
+6213|
+1265|
+
+4290|
+2476|
+6521|
+3212|
+
+3564|
+2345|
+0110|
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -c -5 emp1.lst 
+2233|
+9876|
+5678|
+2365|
+5423|
+1006|
+
+6213|
+1265|
+
+4290|
+2476|
+6521|
+3212|
+
+3564|
+2345|
+0110|
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -c 5- emp1.lst 
+|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+|jai sharma       |director   |production |03/12/50|130000
+|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+|barun sengupta   |director   |personnel  |05/11/47|120000
+|n.k. gupta       |chairman   |admin      |08/30/56|160000
+|chanchal singhvi |director   |sales      |09/03/38|140000
+
+|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+|jayant Choudhury |executive  |production |09/07/50| 65000 
+|anil aggarwal    |manager    |sales      |05/01/59|110000
+|lalit chowdury   |director   |marketing  |09/26/45|125000
+|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ abov cmmd froom 5 till end
+abov: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ #above cmmd froom 5 till end
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -c 5-22 emp1.lst
+|a.k. shukla      
+|jai sharma       
+|sumit chakrobarty
+|barun sengupta   
+|n.k. gupta       
+|chanchal singhvi 
+
+|karuna ganguly   
+|s.n. dasgupta    
+
+|jayant Choudhury 
+|anil aggarwal    
+|lalit chowdury   
+|shyam saksena    
+
+|sudhir Agarwal   
+|j.b. saxena      
+|v.k agrawal      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -c 5-23 emp1.lst
+|a.k. shukla      |
+|jai sharma       |
+|sumit chakrobarty|
+|barun sengupta   |
+|n.k. gupta       |
+|chanchal singhvi |
+
+|karuna ganguly   |
+|s.n. dasgupta    |
+
+|jayant Choudhury |
+|anil aggarwal    |
+|lalit chowdury   |
+|shyam saksena    |
+
+|sudhir Agarwal   |
+|j.b. saxena      |
+|v.k agrawal      |
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f 5 emp1.lst
+12/12/52
+03/12/50
+04/19/43
+05/11/47
+08/30/56
+09/03/38
+
+06/05/62
+09/12/63
+
+09/07/50
+05/01/59
+09/26/45
+12/12/55
+
+07/06/47
+03/12/45
+12/31/40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ # the above command says cut 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -f 5 -d "|" emp1.lst | cut -d '/' -f 3 # gives only yrs on date of jion field
+52
+50
+43
+47
+56
+38
+
+62
+63
+
+50
+59
+45
+55
+
+47
+45
+40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f 2,3 shortlist | tee cutlist1
+a.k. shukla      |g.m        
+jai sharma       |director   
+sumit chakrobarty|d.g.m      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ head -5 emp1.lst | tee shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f 2,3 shortlist | tee cutlist1
+a.k. shukla      |g.m        
+jai sharma       |director   
+sumit chakrobarty|d.g.m      
+barun sengupta   |director   
+n.k. gupta       |chairman   
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f 1,4 shortlist > cutlist2
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat cutlist2
+2233|sales      
+9876|production 
+5678|marketing  
+2365|personnel  
+5423|admin      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ paste cutlist1 cutlist2
+a.k. shukla      |g.m        	2233|sales      
+jai sharma       |director   	9876|production 
+sumit chakrobarty|d.g.m      	5678|marketing  
+barun sengupta   |director   	2365|personnel  
+n.k. gupta       |chairman   	5423|admin      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ paste -d "|" cutlist1 cutlist2
+a.k. shukla      |g.m        |2233|sales      
+jai sharma       |director   |9876|production 
+sumit chakrobarty|d.g.m      |5678|marketing  
+barun sengupta   |director   |2365|personnel  
+n.k. gupta       |chairman   |5423|admin      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat cutlist2
+2233|sales      
+9876|production 
+5678|marketing  
+2365|personnel  
+5423|admin      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat cutlist1
+a.k. shukla      |g.m        
+jai sharma       |director   
+sumit chakrobarty|d.g.m      
+barun sengupta   |director   
+n.k. gupta       |chairman   
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ # obsrv cutlist1,cutlist2 & then obsrv paste cutlist1 cutlist2 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ # paste merges the files in paralell (horizontally)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ nano studentinfo.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ftp
+ftp> exit
+ 1945  nano studentinfo.lst
+ 1946  ls
+ 1947  cat doc.lst
+ 1948  nano doc.lst
+ 1949  cat doc.lst
+ 1950  sort -t "|" -k 2 short
+ 1951  sort -t "|" -k 2 shortlist
+ 1952  cat shortlist
+ 1953  sort -t "|" -k 2 emp1.lst
+ 1954  cat emp1.lst
+ 1955  sort -t "|" -n -k 6 shortlist
+ 1956  man sort
+ 1957  sort -t "|" -k +1 shortlist
+ 1958  sort -t "|" -k +1 emp1.lst
+ 1959  cat emp1.lst
+ 1960  sort -t "|" -k +2 shortlist
+ 1961  sort -t "|" -k +3 shortlist
+ 1962  sort -t "|" -k +4 shortlist
+ 1963  sort -t "|" -k +5 shortlist
+ 1964  sort -t "|" -k +7 shortlist
+ 1965   
+ 1966  sort -t "|" -k +6 shortlist
+ 1967  cat shortlist
+ 1968  zsh
+ 1969  # now lets do it on emp1.lst
+ 1970  cat emp.lst
+ 1971  sort -t "|" -k 3 emp1.lst
+ 1972  sort -t "|" -k 3 -k 4 emp1.lst
+ 1973  cut -d "|" -f 4 emp1.lst | sort | uniq
+ 1974  cut -d "|" -f4 emp1.lst | sort
+ 1975  cut -d "|" -f4 emp1.lst | uniq
+ 1976  nano duba.lst
+ 1977  cat dubba.lst
+ 1978  ls
+ 1979  mv duba.lst dubba.lst
+ 1980  ls
+ 1981  cat dubba.lst
+ 1982  cat dubba.lst | sort | uniq
+ 1983  cat emp1.lst
+ 1984  grep "sales" emp1.lst
+ 1985  grep "accounts" emp1.lst
+ 1986  who
+ 1987  who | grep "shrivatsa"
+ 1988  sudo -i
+ 1989  grep "president" emp1.lst
+ 1990  grep "accounts" emp1.lst emp.lst # giving multiple file names
+ 1991  grep -i 'agarwal' emp1.lst
+ 1992  grep -v 'director' emp1.lst # -v option reverses the search
+ 1993  grep -n 'director' emp1.lst
+ 1994  # in abv cmmd -n displays line number
+ 1995  grep -e "Agarwal" -e "aggarwal" -e "agarwal" emp1.l
+ 1996  grep -e "Agarwal" -e "aggarwal" -e "agarwal" emp1.lst
+ 1997  # grep with -e matches multiple pattern
+

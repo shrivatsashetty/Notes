@@ -1,0 +1,825 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ pwd
+/home/shrivatsa
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls
+Desktop  Directory1  Documents  Downloads  LSS  Music  Pictures  Public  PycharmProjects  snap  Templates  Videos
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd LSS
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS$ ls
+A3  ASEC  BSEC  hardlnprofile  march22  softlink3
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS$ cd march22
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22$ ls
+Bin  chapters
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22$ cd chapters
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ ls
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cat >
+bash: syntax error near unexpected token `newline'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cat > keywords.txt
+1.int
+2.float    
+3.char
+4.double          
+5.str
+6.unsigned int
+7.arr 
+8.main
+9.short
+10.long
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ whatis head
+head (1)             - output the first part of files
+HEAD (1p)            - Simple command line user agent
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ head keywords.txt
+1.int
+2.float
+3.char
+4.double
+5.str
+6.unsigned int
+7.arr
+8.main
+9.short
+10.long
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cat > keywords.txt
+11.func
+12.pointers
+13.struct
+14.class
+15.obj
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cat keywords.txt
+11.func
+12.pointers
+13.struct
+14.class
+15.obj
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/chapters$ cd ~/Downloads
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ ls
+emp1.lst  emp.lst  google-chrome-stable_current_amd64.deb
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ head emp.lst
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ head emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ head -n 3 emp.lst
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ head -n 3 emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ tail -n 5 emp1.lst
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ head -n emp1.lst | tee shortlist
+head: invalid number of lines: ‘emp1.lst’
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ head -n 3 emp1.lst | tee shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cat shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ lsusb
+Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 003: ID 0bda:2852 Realtek Semiconductor Corp. Bluetooth Radio
+Bus 001 Device 002: ID 04f2:b735 Chicony Electronics Co., Ltd HP Wide Vision HD Camera
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ whatis cut
+cut (1)              - remove sections from each line of files
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cut -d "|" -f 1 emp1.lst
+2233
+9876
+5678
+2365
+5423
+1006
+
+6213
+1265
+
+4290
+2476
+6521
+3212
+
+3564
+2345
+0110
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cut -d "|" -f 2 emp1.lst
+a.k. shukla      
+jai sharma       
+sumit chakrobarty
+barun sengupta   
+n.k. gupta       
+chanchal singhvi 
+
+karuna ganguly   
+s.n. dasgupta    
+
+jayant Choudhury 
+anil aggarwal    
+lalit chowdury   
+shyam saksena    
+
+sudhir Agarwal   
+j.b. saxena      
+v.k agrawal      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cut -d "|" -f 1,2 emp1.lst
+2233|a.k. shukla      
+9876|jai sharma       
+5678|sumit chakrobarty
+2365|barun sengupta   
+5423|n.k. gupta       
+1006|chanchal singhvi 
+
+6213|karuna ganguly   
+1265|s.n. dasgupta    
+
+4290|jayant Choudhury 
+2476|anil aggarwal    
+6521|lalit chowdury   
+3212|shyam saksena    
+
+3564|sudhir Agarwal   
+2345|j.b. saxena      
+0110|v.k agrawal      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cut -d "|" -f 1,2,3 emp1.lst
+2233|a.k. shukla      |g.m        
+9876|jai sharma       |director   
+5678|sumit chakrobarty|d.g.m      
+2365|barun sengupta   |director   
+5423|n.k. gupta       |chairman   
+1006|chanchal singhvi |director   
+
+6213|karuna ganguly   |g.m.       
+1265|s.n. dasgupta    |manager    
+
+4290|jayant Choudhury |executive  
+2476|anil aggarwal    |manager    
+6521|lalit chowdury   |director   
+3212|shyam saksena    |d.g.m.     
+
+3564|sudhir Agarwal   |executive  
+2345|j.b. saxena      |g.m.       
+0110|v.k agrawal      |g.m.       
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cut -d "|" -f 1-3 emp1.lst
+2233|a.k. shukla      |g.m        
+9876|jai sharma       |director   
+5678|sumit chakrobarty|d.g.m      
+2365|barun sengupta   |director   
+5423|n.k. gupta       |chairman   
+1006|chanchal singhvi |director   
+
+6213|karuna ganguly   |g.m.       
+1265|s.n. dasgupta    |manager    
+
+4290|jayant Choudhury |executive  
+2476|anil aggarwal    |manager    
+6521|lalit chowdury   |director   
+3212|shyam saksena    |d.g.m.     
+
+3564|sudhir Agarwal   |executive  
+2345|j.b. saxena      |g.m.       
+0110|v.k agrawal      |g.m.       
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cut -d "|" -f 1-4 emp1.lst
+2233|a.k. shukla      |g.m        |sales      
+9876|jai sharma       |director   |production 
+5678|sumit chakrobarty|d.g.m      |marketing  
+2365|barun sengupta   |director   |personnel  
+5423|n.k. gupta       |chairman   |admin      
+1006|chanchal singhvi |director   |sales      
+
+6213|karuna ganguly   |g.m.       |accounts   
+1265|s.n. dasgupta    |manager    |sales      
+
+4290|jayant Choudhury |executive  |production 
+2476|anil aggarwal    |manager    |sales      
+6521|lalit chowdury   |director   |marketing  
+3212|shyam saksena    |d.g.m.     |accounts   
+
+3564|sudhir Agarwal   |executive  |personnel  
+2345|j.b. saxena      |g.m.       |marketing  
+0110|v.k agrawal      |g.m.       |marketing  
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cut -d -f 1-4 emp1.lst # will not work when de-limiter not specified
+cut: the delimiter must be a single character
+Try 'cut --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cut -c 2-4 emp1.lst
+233
+876
+678
+365
+423
+006
+
+213
+265
+
+290
+476
+521
+212
+
+564
+345
+110
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cut -c 51-55 emp1.lst
+12/52
+12/50
+19/43
+11/47
+30/56
+03/38
+
+05/62
+12/63
+
+07/50
+01/59
+26/45
+12/55
+
+06/47
+12/45
+31/40
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cat -d "|" -f 5,6 shortlist | tee cutlist1
+cat: invalid option -- 'd'
+Try 'cat --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cut -d "|" -f 5,6 shortlist | tee cutlist1
+12/12/52| 90000
+03/12/50|130000
+04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cat cutlist1
+12/12/52| 90000
+03/12/50|130000
+04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ paste shortlist cutlist1
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000	12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000	03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000	04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ paste cutlist1 shortlist
+12/12/52| 90000	2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+03/12/50|130000	9876|jai sharma       |director   |production |03/12/50|130000
+04/19/43| 85000	5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ paste -d "|" shortlist cutlist1
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000|12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000|03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000|04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ sort emp1.lst
+
+
+
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ sort -t "|" -k 2 emp1.lst
+
+
+
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ sort -t "|" -r -k 2 emp1.lst # -r for reverse order
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+
+
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ sort -t "|" -k 6r emp1
+sort: cannot read: emp1: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ sort -t "|" -k 6r emp1.lst
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+9876|jai sharma       |director   |production |03/12/50|130000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+
+
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ sort -t "|" -k 6 emp1.lst
+
+
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ sort -t "|" -k 6nr emp1.lst
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+9876|jai sharma       |director   |production |03/12/50|130000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+
+
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ # above cmnd perfectly arrange entries in decending order of salary
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ nano studentinfo.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap01   chap03   chap06   chap08   chap10    chapX   chapZ      cutlist2   emp1.lst   foo     names.lst     shortlist
+'chap*'   chap02   chap04   chap07   chap09   chap111   chapY   cutlist1   doc.lst    emp.lst   'foo*'   records.lst   studentinfo.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat doc.lst
+1|bharath gm |mca048 | tumkur | BCA | 09/05/2002
+2|vishakh    |mca045 | Sirsi  | BSc | 05/04/2001
+3|mohammed anas|mca089 | bangalore | BCA | 02/01/2001
+4|c ranjith | mca036 | bangalore | BCA | 21/04/2003
+5|prajwal r | mca017 | bangalore |BCA | 24/05/2001
+6|aradhya |mca092 | bangalore | BCA | 14/01/2002
+7|goutham | mca033| bangalore | BSc | 02/07/2001
+8|Akshara MV | mca060 | sagar  | BSc | 31/02/2002
+9|Surya dev singh | mca114 | Uttar Khand | BCA | 22/11/2001
+10|Srivastava shetty | mca052 | Bangalore | BE | 02/02/2002
+11|Dilip Singh | mca -072 | Bangalore | BCA | 27/08/2000shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ nano doc.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat doc.lst
+01|bharath gm         | mca048    | tumkur      | BCA | 09/05/2002
+02|vishakh            | mca045    | Sirsi       | BSc | 05/04/2001
+03|mohammed anas      | mca089    | bangalore   | BCA | 02/01/2001
+04|c ranjith          | mca036    | bangalore   | BCA | 21/04/2003
+05|prajwal r          | mca017    | bangalore   | BCA | 24/05/2001
+06|aradhya            | mca092    | bangalore   | BCA | 14/01/2002
+07|goutham            | mca033    | bangalore   | BSc | 02/07/2001
+08|Akshara MV         | mca060    | sagar       | BSc | 31/02/2002
+09|Surya dev singh    | mca114    | Uttar Khand | BCA | 22/11/2001
+10|Srivastava shetty  | mca052    | Bangalore   | BE  | 02/02/2002
+11|Dilip Singh        | mca072    | Bangalore   | BCA | 27/08/2000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k 2 short
+sort: cannot read: short: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k 2 shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k 2 emp1.lst
+
+
+
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+9876|jai sharma       |director   |production |03/12/50|130000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -n -k 6 shortlist
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ man sort
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k +1 shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+9876|jai sharma       |director   |production |03/12/50|130000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k +1 emp1.lst
+
+
+
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+9876|jai sharma       |director   |production |03/12/50|130000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k +2 shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k +3 shortlist
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k +4 shortlist
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k +5 shortlist
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k +7 shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+9876|jai sharma       |director   |production |03/12/50|130000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k +8 shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+9876|jai sharma       |director   |production |03/12/50|130000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k +6 shortlist
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat shortlist
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ zsh
+Command 'zsh' not found, but can be installed with:
+sudo apt install zsh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ # now lets do it on emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat emp.lst
+2233|charles harris   |g.m        |sales      |12/12/52| 90000
+9876|bill johnson     |director   |production |03/12/50|130000
+5678|robert dylan     |d.g.m      |marketing  |04/19/43| 85000
+2365|john woodcock    |director   |personnel  |05/11/47|120000
+5423|barry wood       |chairman   |admin      |08/30/56|160000
+1006|gordon 1ightfoot |director   |sales      |09/03/38|140000 
+6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+1265|p.j. woodhouse   |manager    |sales      |09/12/63| 90000 
+4290|nei1 o'bryan     |executive  |production |09/07/50| 65000 
+2476|jackie wodehouse |manager    |sales      |05/01/59|110000 
+6521|derryk o'brien   |director   |marketing  |09/26/45|125000 
+3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+3564|ronie trueman    |executive  |personnel  |07/06/47| 75000 
+2345|james wilcox     |g.m.       |marketing  |03/12/45|110000 
+0110|julie truman     |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k 3 emp1.lst
+
+
+
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sort -t "|" -k 3 -k 4 emp1.lst
+
+
+
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$  sort -t "|" -k 3,3 -k 2,2 emp1.lst
+
+
+
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+9876|jai sharma       |director   |production |03/12/50|130000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f 4 emp1.lst | sort | uniq
+
+accounts   
+admin      
+marketing  
+personnel  
+production 
+sales      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f4 emp1.lst | sort
+
+
+
+accounts   
+accounts   
+admin      
+marketing  
+marketing  
+marketing  
+marketing  
+personnel  
+personnel  
+production 
+production 
+sales      
+sales      
+sales      
+sales      
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cut -d "|" -f4 emp1.lst | uniq
+sales      
+production 
+marketing  
+personnel  
+admin      
+sales      
+
+accounts   
+sales      
+
+production 
+sales      
+marketing  
+accounts   
+
+personnel  
+marketing  
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ nano duba.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat dubba.lst
+cat: dubba.lst: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap01   chap03   chap06   chap08   chap10    chapX   chapZ      cutlist2   duba.lst   emp.lst  'foo*'       records.lst   studentinfo.lst
+'chap*'   chap02   chap04   chap07   chap09   chap111   chapY   cutlist1   doc.lst    emp1.lst   foo       names.lst   shortlist
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ mv duba.lst dubba.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ ls
+ bhap1    chap01   chap03   chap06   chap08   chap10    chapX   chapZ      cutlist2   dubba.lst   emp.lst  'foo*'       records.lst   studentinfo.lst
+'chap*'   chap02   chap04   chap07   chap09   chap111   chapY   cutlist1   doc.lst    emp1.lst    foo       names.lst   shortlist
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat dubba.lst
+aa
+bb
+cc
+dd
+ee
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat dubba.lst | sort | uniq
+
+aa
+bb
+cc
+dd
+ee
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ grep "sales" emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ grep "accounts" emp1.lst
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ who
+shrivatsa tty2         2023-04-04 08:17 (tty2)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ who | grep "shrivatsa"
+shrivatsa tty2         2023-04-04 08:17 (tty2)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ sudo -i
+[sudo] password for shrivatsa: 
+root@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~# login siri
+Password: 
+
+Login incorrect
+shrivatsa-Victus-by-HP-Laptop-16-e0xxx login:     
+^C
+root@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~# exit
+logout
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ grep "president" emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ grep "accounts" emp1.lst emp.lst # giving multiple file names
+emp1.lst:6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+emp1.lst:3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+emp.lst:6213|michael lennon   |g.m.       |accounts   |06/05/62|105000 
+emp.lst:3212|bi11 wilcocks    |d.g.m.     |accounts   |12/12/55| 85000 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ grep -i 'agarwal' emp1.lst
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ grep -v 'director' emp1.lst # -v option reverses the search
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+5423|n.k. gupta       |chairman   |admin      |08/30/56|160000
+
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ grep -n 'director' emp1.lst
+2:9876|jai sharma       |director   |production |03/12/50|130000
+4:2365|barun sengupta   |director   |personnel  |05/11/47|120000
+6:1006|chanchal singhvi |director   |sales      |09/03/38|140000
+13:6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ # in abv cmmd -n displays line number
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ grep -e "Agarwal" -e "aggarwal" -e "agarwal" emp1.l
+grep: emp1.l: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ grep -e "Agarwal" -e "aggarwal" -e "agarwal" emp1.lst
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ # grep with -e matches multiple pattern
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/LSS/march22/Bin$ 

@@ -1,0 +1,99 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl start NetworkManager 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get update
+Hit:1 https://dl.google.com/linux/chrome/deb stable InRelease                                                                                          
+Hit:2 http://in.archive.ubuntu.com/ubuntu jammy InRelease                                                                                              
+Get:3 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]                                                              
+Hit:4 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy InRelease                                                                           
+Get:5 http://in.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]                                                                           
+Hit:6 https://ppa.launchpadcontent.net/obsproject/obs-studio/ubuntu jammy InRelease                                                                    
+Hit:7 https://deb.nodesource.com/node_18.x jammy InRelease                                                                                             
+Get:8 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]                                                                              
+Fetched 337 kB in 17s (19.7 kB/s)                                                                                                                      
+Reading package lists... Done
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get install netcat
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+netcat is already the newest version (1.218-4ubuntu1).
+The following packages were automatically installed and are no longer required:
+  gir1.2-gst-plugins-base-1.0 gir1.2-rb-3.0 gir1.2-totem-1.0 gir1.2-totemplparser-1.0 libdmapsharing-3.0-2 libgpod-common libgpod4 libnetplan0
+  libsgutils2-2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get update netcat
+E: The update command takes no arguments
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 195.0.0.20  netmask 255.255.255.0  broadcast 195.0.0.255
+        inet6 fe80::7e57:58ff:fe6d:61c4  prefixlen 64  scopeid 0x20<link>
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 15264  bytes 2724088 (2.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 7229  bytes 4519548 (4.5 MB)
+        TX errors 2  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2644  bytes 265030 (265.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2644  bytes 265030 (265.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.133.205  netmask 255.255.255.0  broadcast 192.168.133.255
+        inet6 2401:4900:2721:eba1:63e5:91e8:ff6c:e794  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::3819:fce9:313a:b234  prefixlen 64  scopeid 0x20<link>
+        inet6 2401:4900:2721:eba1:2c98:afe4:1099:503a  prefixlen 64  scopeid 0x0<global>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 12966  bytes 9262927 (9.2 MB)
+        RX errors 0  dropped 376  overruns 0  frame 0
+        TX packets 4487  bytes 714019 (714.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl stop NetworkManager
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ nc -v 195.0.0.5 1234
+nc: connect to 195.0.0.5 port 1234 (tcp) failed: No route to host
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ nc -v 195.0.0.10 1234
+Connection to 195.0.0.10 1234 port [tcp/*] succeeded!
+hi
+wolrd
+Hi this is surya sajwan
+^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ nc -lv 1234
+Listening on 0.0.0.0 1234
+nc: getnameinfo: Temporary failure in name resolution
+hello
+surya sajwan
+ghy
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ nc -l 1234
+hi
+hello
+^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ nc -v 1234
+nc: missing port number
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ nc -lv 1234
+Listening on 0.0.0.0 1234
+^G^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ nc -lv 69
+nc: Permission denied
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ nc -lv 65
+nc: Permission denied
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo nc -lv 65
+Listening on 0.0.0.0 65
+nc: getnameinfo: Temporary failure in name resolution
+hi
+hi
+^C
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ nc -lv 65
+nc: Permission denied
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ nc -lv 675
+nc: Permission denied
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo nc -lv 675
+Listening on 0.0.0.0 675
+nc: getnameinfo: Temporary failure in name resolution
+shr
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ 

@@ -1,0 +1,129 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ pwd
+/home/shrivatsa
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd ~/Documents/
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ ls
+'C Programs'   Git   Github   HTML   Notes  'Python Programs'  'Shell Scripts'  'Study materials'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ touch samplefile.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ ls
+'C Programs'   Git   Github   HTML   Notes  'Python Programs'   samplefile.txt  'Shell Scripts'  'Study materials'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ ls -l
+total 32
+drwxrwxr-x 7 shrivatsa shrivatsa 4096 Feb 28 23:10 'C Programs'
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  1 09:25  Git
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar 12 11:16  Github
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  9 19:01  HTML
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar 12 16:37  Notes
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  8 22:54 'Python Programs'
+-rw-rw-r-- 1 shrivatsa shrivatsa    0 Mar 13 00:40  samplefile.txt
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar  1 11:02 'Shell Scripts'
+drwxrwxr-x 5 shrivatsa shrivatsa 4096 Mar  5 21:10 'Study materials'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ chmod -R 777 samplefile.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ ls -l
+total 32
+drwxrwxr-x 7 shrivatsa shrivatsa 4096 Feb 28 23:10 'C Programs'
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  1 09:25  Git
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar 12 11:16  Github
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  9 19:01  HTML
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar 12 16:37  Notes
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  8 22:54 'Python Programs'
+-rwxrwxrwx 1 shrivatsa shrivatsa    0 Mar 13 00:40  samplefile.txt
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar  1 11:02 'Shell Scripts'
+drwxrwxr-x 5 shrivatsa shrivatsa 4096 Mar  5 21:10 'Study materials'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ chmod ug=w samplefile.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ ls -l
+total 32
+drwxrwxr-x 7 shrivatsa shrivatsa 4096 Feb 28 23:10 'C Programs'
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  1 09:25  Git
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar 12 11:16  Github
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  9 19:01  HTML
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar 12 16:37  Notes
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  8 22:54 'Python Programs'
+--w--w-rwx 1 shrivatsa shrivatsa    0 Mar 13 00:40  samplefile.txt
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar  1 11:02 'Shell Scripts'
+drwxrwxr-x 5 shrivatsa shrivatsa 4096 Mar  5 21:10 'Study materials'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ chmod o=x samplefile.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ ls -l
+total 32
+drwxrwxr-x 7 shrivatsa shrivatsa 4096 Feb 28 23:10 'C Programs'
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  1 09:25  Git
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar 12 11:16  Github
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  9 19:01  HTML
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar 12 16:37  Notes
+drwxrwxr-x 3 shrivatsa shrivatsa 4096 Mar  8 22:54 'Python Programs'
+--w--w---x 1 shrivatsa shrivatsa    0 Mar 13 00:40  samplefile.txt
+drwxrwxr-x 2 shrivatsa shrivatsa 4096 Mar  1 11:02 'Shell Scripts'
+drwxrwxr-x 5 shrivatsa shrivatsa 4096 Mar  5 21:10 'Study materials'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ mkdir test
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ ls
+'C Programs'   Git   Github   HTML   Notes  'Python Programs'   samplefile.txt  'Shell Scripts'  'Study materials'   test
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ cd test
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ ls
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ nano 1file.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ cat 1file.txt
+this is one file dot txtx
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ cd 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ pwd
+/home/shrivatsa
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd ~/Documents/test/
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ pwd
+/home/shrivatsa/Documents/test
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ ls
+1file.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ man ln
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ ln -s 1file.txt file7.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ ls -ail
+total 12
+5507703 drwxrwxr-x  2 shrivatsa shrivatsa 4096 Mar 13 00:51 .
+5374520 drwxr-xr-x 11 shrivatsa shrivatsa 4096 Mar 13 00:47 ..
+5518174 -rw-rw-r--  1 shrivatsa shrivatsa   26 Mar 13 00:48 1file.txt
+5518170 lrwxrwxrwx  1 shrivatsa shrivatsa    9 Mar 13 00:51 file7.txt -> 1file.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ cat file7.txt
+this is one file dot txtx
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ nano hardbase.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ ls 
+1file.txt  file7.txt  hardbase.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ ln hardbase.txt hardchild
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ ls -ail
+total 20
+5507703 drwxrwxr-x  2 shrivatsa shrivatsa 4096 Mar 13 00:54 .
+5374520 drwxr-xr-x 11 shrivatsa shrivatsa 4096 Mar 13 00:47 ..
+5518174 -rw-rw-r--  1 shrivatsa shrivatsa   26 Mar 13 00:48 1file.txt
+5518170 lrwxrwxrwx  1 shrivatsa shrivatsa    9 Mar 13 00:51 file7.txt -> 1file.txt
+5518177 -rw-rw-r--  2 shrivatsa shrivatsa   23 Mar 13 00:53 hardbase.txt
+5518177 -rw-rw-r--  2 shrivatsa shrivatsa   23 Mar 13 00:53 hardchild
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ chmod 111 hardchild.txt
+chmod: cannot access 'hardchild.txt': No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ chmod 111 hardchild
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ ls -l
+total 12
+-rw-rw-r-- 1 shrivatsa shrivatsa 26 Mar 13 00:48 1file.txt
+lrwxrwxrwx 1 shrivatsa shrivatsa  9 Mar 13 00:51 file7.txt -> 1file.txt
+---x--x--x 2 shrivatsa shrivatsa 23 Mar 13 00:53 hardbase.txt
+---x--x--x 2 shrivatsa shrivatsa 23 Mar 13 00:53 hardchild
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ chmod 111 file7.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ ls -ail
+total 20
+5507703 drwxrwxr-x  2 shrivatsa shrivatsa 4096 Mar 13 00:54 .
+5374520 drwxr-xr-x 11 shrivatsa shrivatsa 4096 Mar 13 00:47 ..
+5518174 ---x--x--x  1 shrivatsa shrivatsa   26 Mar 13 00:48 1file.txt
+5518170 lrwxrwxrwx  1 shrivatsa shrivatsa    9 Mar 13 00:51 file7.txt -> 1file.txt
+5518177 ---x--x--x  2 shrivatsa shrivatsa   23 Mar 13 00:53 hardbase.txt
+5518177 ---x--x--x  2 shrivatsa shrivatsa   23 Mar 13 00:53 hardchild
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/test$ cd ..
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ cd .
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ pwd
+/home/shrivatsa/Documents
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents$ cd ..
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ pwd
+/home/shrivatsa
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cat ~/Documents/test/1file.txt
+cat: /home/shrivatsa/Documents/test/1file.txt: Permission denied
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ chmod 777 ~/Documents/test/1file.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cat ~/Documents/test/1file.txt
+this is one file dot txtx
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls ~/Documents/test/*
+/home/shrivatsa/Documents/test/1file.txt  /home/shrivatsa/Documents/test/hardbase.txt
+/home/shrivatsa/Documents/test/file7.txt  /home/shrivatsa/Documents/test/hardchild
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls ~/Documents/test/
+1file.txt  file7.txt  hardbase.txt  hardchild
+

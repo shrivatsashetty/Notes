@@ -1,0 +1,50 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl status dnsmasq
+× dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/lib/systemd/system/dnsmasq.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2023-05-20 18:05:47 IST; 2min 17s ago
+    Process: 15599 ExecStartPre=/etc/init.d/dnsmasq checkconfig (code=exited, status=0/SUCCESS)
+    Process: 15607 ExecStart=/etc/init.d/dnsmasq systemd-exec (code=exited, status=2)
+        CPU: 15ms
+
+May 20 18:05:47 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+May 20 18:05:47 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[15607]: dnsmasq: failed to create listening socket for port 53: Address already in use
+May 20 18:05:47 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: dnsmasq.service: Control process exited, code=exited, status=2/INVALIDARGUMENT
+May 20 18:05:47 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[15607]: failed to create listening socket for port 53: Address already in use
+May 20 18:05:47 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: dnsmasq.service: Failed with result 'exit-code'.
+May 20 18:05:47 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[15607]: FAILED to start up
+May 20 18:05:47 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Failed to start dnsmasq - A lightweight DHCP and caching DNS server.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl restart dnsmasq
+Job for dnsmasq.service failed because the control process exited with error code.
+See "systemctl status dnsmasq.service" and "journalctl -xeu dnsmasq.service" for details.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo lsof -i:53
+COMMAND   PID            USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+systemd-r 558 systemd-resolve   11u  IPv4 144660      0t0  UDP 192.168.133.205:49319->192.168.133.252:domain 
+systemd-r 558 systemd-resolve   13u  IPv4    959      0t0  UDP localhost:domain 
+systemd-r 558 systemd-resolve   14u  IPv4    960      0t0  TCP localhost:domain (LISTEN)
+systemd-r 558 systemd-resolve   18u  IPv4 144661      0t0  UDP 192.168.133.205:54591->192.168.133.252:domain 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl stop systemd-resolved
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo lsof -i:53
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl restart dnsmasq
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl status dnsmasq
+● dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/lib/systemd/system/dnsmasq.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2023-05-20 18:12:19 IST; 12s ago
+    Process: 15690 ExecStartPre=/etc/init.d/dnsmasq checkconfig (code=exited, status=0/SUCCESS)
+    Process: 15698 ExecStart=/etc/init.d/dnsmasq systemd-exec (code=exited, status=0/SUCCESS)
+    Process: 15707 ExecStartPost=/etc/init.d/dnsmasq systemd-start-resolvconf (code=exited, status=0/SUCCESS)
+   Main PID: 15706 (dnsmasq)
+      Tasks: 1 (limit: 8642)
+     Memory: 612.0K
+        CPU: 23ms
+     CGroup: /system.slice/dnsmasq.service
+             └─15706 /usr/sbin/dnsmasq -x /run/dnsmasq/dnsmasq.pid -u dnsmasq -7 /etc/dnsmasq.d,.dpkg-dist,.dpkg-old,.dpkg-new --local-service --trust->
+
+May 20 18:12:19 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+May 20 18:12:19 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[15706]: started, version 2.86 cachesize 150
+May 20 18:12:19 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[15706]: DNS service limited to local subnets
+May 20 18:12:19 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[15706]: compile time options: IPv6 GNU-getopt DBus no-UBus i18n IDN2 DHCP DHCPv6 no-Lua >
+May 20 18:12:19 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[15706]: reading /etc/resolv.conf
+May 20 18:12:19 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[15706]: using nameserver 127.0.0.53#53
+May 20 18:12:19 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[15706]: read /etc/hosts - 7 addresses
+May 20 18:12:19 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Started dnsmasq - A lightweight DHCP and caching DNS server.
+

@@ -1,0 +1,135 @@
+1866  sudo useradd demo1
+ 1867  cat ~/etc/usr
+ 1868  cat ~/etc/passwd
+ 1869  clear
+ 1870  cat /etc/psswd
+ 1871  cd ..
+ 1872  pwd
+ 1873  ls
+ 1874  ls ./bin/
+ 1875  clear
+ 1876  cat /etc/passwd
+ 1877  cat /bin/etc
+ 1878  cat /bin/
+ 1879  cat /etc/
+ 1880  ls /etc/
+ 1881  cat /etc/passwd
+ 1882  sudo passwd demo1
+ 1883  is shrivatsa
+ 1884  id shrivatsa
+ 1885  sudo usermod -l demo1 demo
+ 1886  sudo usermod -l demo demo1
+ 1887  sudo passwd demo1
+ 1888  cat /etc/psswd
+ 1889  cat /etc/passwd
+ 1890  user -c "This is a demo user" demo
+ 1891  usermod -c "This is a demo user" demo
+ 1892  sudo usermod -c "This is a demo user" demo
+ 1893  cat /etc/
+ 1894  passwd
+ 1895  cat /etc/passwd
+ 1896  grep "*.pdf" LSS
+ 1897  ls
+ 1898  grep'lss.pdf' LSS
+ 1899  grep'lss.pdf'
+ 1900  clear
+ 1901  ls 
+ 1902  ls ?2
+ 1903  ls *?2
+ 1904  ls *.lst
+ 1905  cat 
+ 1906  lsw
+ 1907  ls
+ 1908  ls ?hap??
+ 1909  ls ?hap
+ 1910  ls ?hap?
+ 1911  touch rapgod
+ 1912  ls rapgod
+ 1913  ls rap
+ 1914  ls ?ap?
+ 1915  ls *?ap?
+ 1916  ls .txt
+ 1917  ls ?.txt
+ 1918  ls *.txt
+ 1919  ls @.txt
+ 1920  ls c**p
+ 1921  ls c**p??
+ 1922  ls c**?
+ 1923  ls c*?
+ 1924  ls c*
+ 1925  ls f*
+ 1926  touch son
+ 1927  touch {son done none}
+ 1928  ls
+ 1929  touch {son}
+ 1930  ls
+ 1931  touch son
+ 1932  ls
+ 1933  rm {son none}
+ 1934  ls
+ 1935  rm {son}
+ 1936  ls
+ 1937  touch son sun map cap nice ice
+ 1938  ls
+ 1939  ls *ce
+ 1940  touch dice slice
+ 1941  touch rice
+ 1942  ls
+ 1943  touch fruits.txt vegetables.txt beverages.txt milltes.pdf
+ 1944  ls
+ 1945  rm *ce
+ 1946  ls
+ 1947  ls *ap
+ 1948  ls chap[1..7]
+ 1949  ls chap[1-7]
+ 1950  ls chap[01-07]
+ 1951  ls chap0[1-0]7
+ 1952  ls [[:lower]]
+ 1953  ls [![:lower:]]*
+ 1954  ll ?hap??
+ 1955  ls c*p
+ 1956  touch caap caaap caaaap 
+ 1957  ls c*p
+ 1958  ls c**p
+ 1959  touch a1b a2b a3b a4b a5b
+ 1960  ls
+ 1961  ls a[1-3]b
+ 1962  ls chap0[1-7]
+ 1963  ls chap[01-07]
+ 1964  touch OAP OBP OCP ODP
+ 1965  ls
+ 1966  ls O[A-D]P
+ 1967  ls *[0-5]
+ 1968  ls #.txt
+ 1969  ls #
+ 1970  ls .txt#
+ 1971  ls ls O[ABCD]P
+ 1972  ls  O[A-D]P
+ 1973  ls O[ABCD]P
+ 1974  ls | grep 'chap01'
+ 1975  ls | grep 'chap'
+ 1976  touch filelist.txt
+ 1977  ls > filelist.txt
+ 1978  cat filelist.txt
+ 1979  nano filelist.txt
+ 1980  cat filelist.txt
+ 1981  ls *.txt | filelist.txt
+ 1982  ls *.txt > filelist.txt
+ 1983  cat filelist.txt
+ 1984  nano filelist.txt
+ 1985  cat filelist.txt
+ 1986  ls chap?? > filelist.txt
+ 1987  cat filelist.txt
+ 1988  nano filelist.txt
+ 1989  ls *.txt >> filelist.txt
+ 1990  cat filelist.txt
+ 1991  cat < filelist.txt
+ 1992  sort filelist.txt
+ 1993  sort -r < filelist.txt
+ 1994  Calculator
+ 1995  calculator
+ 1996  galculator
+ 1997  firefox
+ 1998  &firefox
+ 1999  firefox&
+
