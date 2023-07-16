@@ -1,0 +1,18 @@
+sudo apt update
+sudo apt install -y libc6-x32 libc6-i386
+wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.deb
+sudo dpkg -i jdk-17_linux-x64_bin.deb
+cd /usr/lib/jvm
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-17/bin/java 1
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-17/bin/javac 1
+java --version
+javac --version
+sudo update-alternatives --config java 
+sudo nano /etc/environment # append this line JAVA_HOME="/usr/lib/jvm/jdk-17" at the end of the file
+source /etc/environment # to refresh environment variables
+echo $JAVA_HOME # this should show: /usr/lib/jvm/jdk-17
+
+# add jshell's path to path environment variables usng below command
+export PATH=$PATH:"/usr/lib/jvm/jdk-17/bin"
+
+

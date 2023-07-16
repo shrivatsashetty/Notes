@@ -1,0 +1,94 @@
+shrivatsa@HP-Victus:~$ cd DevOps/
+shrivatsa@HP-Victus:~/DevOps$ ls
+dockerfile
+shrivatsa@HP-Victus:~/DevOps$ cat dockerfile 
+# Date : 12/07/23
+# First docker-file
+
+# syntax below
+# INSTRUCTION1 command1
+# INSTRUCTION2 command2
+
+# creation of docker file
+
+FROM ubuntu:23.10
+LABEL author "Shrivatsa A Shetty shrivatsa307@gmail.com"
+LABEL description "This is a Dockerfile"
+RUN apt-get update
+CMD ["echo","Hello Devops "] 
+shrivatsa@HP-Victus:~/DevOps$ sudo docker build -t devopsb:2.0 .
+[sudo] password for shrivatsa: 
+[+] Building 0.9s (3/3) FINISHED                                                                                                                                        docker:default
+ => [internal] load build definition from dockerfile                                                                                                                              0.0s
+ => => transferring dockerfile: 334B                                                                                                                                              0.0s
+ => [internal] load .dockerignore                                                                                                                                                 0.0s
+ => => transferring context: 2B                                                                                                                                                   0.0s
+ => ERROR [internal] load metadata for docker.io/library/ubuntu:23.10                                                                                                             0.8s
+------
+ > [internal] load metadata for docker.io/library/ubuntu:23.10:
+------
+dockerfile:10
+--------------------
+   8 |     # creation of docker file
+   9 |     
+  10 | >>> FROM ubuntu:23.10
+  11 |     LABEL author "Shrivatsa A Shetty shrivatsa307@gmail.com"
+  12 |     LABEL description "This is a Dockerfile"
+--------------------
+ERROR: failed to solve: ubuntu:23.10: failed to do request: Head "https://registry-1.docker.io/v2/library/ubuntu/manifests/23.10": tls: failed to verify certificate: x509: certificate is not valid for any names, but wanted to match registry-1.docker.io
+shrivatsa@HP-Victus:~/DevOps$ sudo docker build -t devopsb:2.0 .
+[+] Building 120.0s (6/6) FINISHED                                                                                                                                      docker:default
+ => [internal] load .dockerignore                                                                                                                                                 0.0s
+ => => transferring context: 2B                                                                                                                                                   0.0s
+ => [internal] load build definition from dockerfile                                                                                                                              0.0s
+ => => transferring dockerfile: 334B                                                                                                                                              0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:23.10                                                                                                                  21.9s
+ => [1/2] FROM docker.io/library/ubuntu:23.10@sha256:8abf9cea172b86fe77d65ef1abbdb186d06d1b44858efe09a16de7e2c43f645a                                                            71.0s
+ => => resolve docker.io/library/ubuntu:23.10@sha256:8abf9cea172b86fe77d65ef1abbdb186d06d1b44858efe09a16de7e2c43f645a                                                             0.0s
+ => => sha256:8abf9cea172b86fe77d65ef1abbdb186d06d1b44858efe09a16de7e2c43f645a 1.13kB / 1.13kB                                                                                    0.0s
+ => => sha256:266cbca633bcb1356b9be281efe251782d30830cee0c0cf6a3c952a3a655f040 424B / 424B                                                                                        0.0s
+ => => sha256:3732473f881aa819c8754dc83b3bc7afc00361ea6090c135c72ccd38c9fd3637 2.30kB / 2.30kB                                                                                    0.0s
+ => => sha256:4221febb096369c46cecc96ff4b3504b9ee19e25c6524e5da970ef0b30ee1b20 26.95MB / 26.95MB                                                                                 70.5s
+ => => extracting sha256:4221febb096369c46cecc96ff4b3504b9ee19e25c6524e5da970ef0b30ee1b20                                                                                         0.4s
+ => [2/2] RUN apt-get update                                                                                                                                                     26.9s
+ => exporting to image                                                                                                                                                            0.1s
+ => => exporting layers                                                                                                                                                           0.1s
+ => => writing image sha256:384d21112ff8ef72e5dda43c205059bd3c93e4f3b7ca0fff40fcb8fac667edd0                                                                                      0.0s 
+ => => naming to docker.io/library/devopsb:2.0                                                                                                                                    0.0s 
+                                                                                                                                                                                       
+What's Next?                                                                                                                                                                           
+  View summary of image vulnerabilities and recommendations → docker scout quickview
+shrivatsa@HP-Victus:~/DevOps$ 
+
+shrivatsa@HP-Victus:~/DevOps$ sudo docker run images
+Unable to find image 'images:latest' locally
+^Cshrivatsa@HP-Victus:~/DevOps$ sudo docker images
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+devopsb       2.0       384d21112ff8   7 minutes ago   105MB
+hello-world   latest    9c7a54a9a43c   2 months ago    13.3kB
+shrivatsa@HP-Victus:~/DevOps$ sudo docker run devopsb:2.0
+Hello Devops 
+shrivatsa@HP-Victus:~/DevOps$ sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+shrivatsa@HP-Victus:~/DevOps$ sudo docker container ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+shrivatsa@HP-Victus:~/DevOps$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+shrivatsa@HP-Victus:~/DevOps$ sudo docker ps -aq
+66b7a01845d0
+573da2b79eeb
+shrivatsa@HP-Victus:~/DevOps$ sudo docker rmi devopsb:2.0
+Error response from daemon: conflict: unable to remove repository reference "devopsb:2.0" (must force) - container 66b7a01845d0 is using its referenced image 384d21112ff8
+shrivatsa@HP-Victus:~/DevOps$ sudo docker ps -aq
+66b7a01845d0
+573da2b79eeb
+shrivatsa@HP-Victus:~/DevOps$ sudo docker images 
+REPOSITORY    TAG       IMAGE ID       CREATED          SIZE
+devopsb       2.0       384d21112ff8   13 minutes ago   105MB
+hello-world   latest    9c7a54a9a43c   2 months ago     13.3kB
+shrivatsa@HP-Victus:~/DevOps$ sudo docker ps -aq
+66b7a01845d0
+573da2b79eeb
+shrivatsa@HP-Victus:~/DevOps$ 
+
+

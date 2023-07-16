@@ -1,0 +1,44 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ pip3 --version
+pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt update
+[sudo] password for shrivatsa: 
+Hit:1 https://dl.google.com/linux/chrome/deb stable InRelease                                                                                          
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]                                                                              
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get install python3-pygame
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  gir1.2-gst-plugins-base-1.0 gir1.2-rb-3.0 gir1.2-totem-1.0 gir1.2-totemplparser-1.0 libdmapsharing-3.0-2 libgpod-common libgpod4 libnetplan0
+  libsgutils2-2
+  
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ python3
+Python 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pygame
+pygame 2.1.2 (SDL 2.0.20, Python 3.10.6)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>> exit()
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ pip install pyttsx3
+Defaulting to user installation because normal site-packages is not writeable
+Collecting pyttsx3
+  Downloading pyttsx3-2.90-py3-none-any.whl (39 kB)
+Installing collected packages: pyttsx3
+Successfully installed pyttsx3-2.90
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt install libespeak1
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  gir1.2-gst-plugins-base-1.0 gir1.2-rb-3.0 gir1.2-totem-1.0 gir1.2-totemplparser-1.0 libdmapsharing-3.0-2 libgpod-common libgpod4 libnetplan0
+  libsgutils2-2
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt install libespeak-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+
