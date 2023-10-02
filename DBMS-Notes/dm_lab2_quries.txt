@@ -1,0 +1,76 @@
+-- 1
+SELECT Vendors.TIN, Vendors.vendor_name,
+COUNT(*) AS total_installations
+FROM Installs
+JOIN Vendors ON Installs.TIN = Vendors.TIN
+JOIN Users ON Installs.House_no = Users.House_no
+WHERE Installs.usage_type = 'domestic'
+GROUP BY Vendors.TIN, Vendors.vendor_name
+ORDER BY total_installations DESC
+LIMIT 1;
+
+
+-- 2
+SELECT Place,
+SUM(pannel_capacity) AS total_capacity
+FROM Installs
+GROUP BY Place
+ORDER BY total_capacity DESC
+LIMIT 1;
+
+
+-- 3
+SELECT DISTINCT I.Place
+FROM Installs AS I
+JOIN SolarPanels AS SP ON I.PV_module = SP.PV_module
+WHERE SP.Type = 'Mono';
+
+
+-- 4
+SELECT SP.Type AS panel_type,
+SUM(SP.install_charge) AS total_installation_charges
+FROM Installs AS I
+JOIN SolarPanels AS SP ON I.PV_module = SP.PV_module
+WHERE I.Place = "Mysore"
+GROUP BY SP.Type;
+
+    
+-- 5
+SELECT V.TIN, V.vendor_name, SP.PV_module, SP.Type AS panel_type,
+I.install_date AS installation_date
+FROM Installs AS I
+JOIN Vendors AS V ON I.TIN = V.TIN
+JOIN SolarPanels AS SP ON I.PV_module = SP.PV_module
+ORDER BY I.install_date ASC
+LIMIT 1;
+
+
+-- 6
+SELECT SP.Type AS panel_type,
+AVG(I.pannel_capacity) AS average_panel_capacity
+FROM Installs AS I
+JOIN SolarPanels AS SP ON I.PV_module = SP.PV_module
+JOIN Users AS U ON I.House_no = U.House_no
+WHERE I.usage_type = 'commercial'
+GROUP BY SP.Type;
+
+
+-- for each area 
+SELECT
+I.Place AS area,
+SP.Type AS panel_type,
+SUM(SP.install_charge) AS total_installation_charges
+FROM
+Installs AS I
+JOIN
+SolarPanels AS SP ON I.PV_module = SP.PV_module
+GROUP BY
+I.Place, SP.Type;
+
+
+
+
+
+
+
+

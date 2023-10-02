@@ -1,0 +1,1543 @@
+shrivatsa@Victus-HP:~$ mongosh
+Current Mongosh Log ID:	651470a537d16e2140928419
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.0
+Using MongoDB:		7.0.1
+Using Mongosh:		2.0.0
+mongosh 2.0.1 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-09-27T23:41:31.001+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-09-27T23:41:31.274+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2023-09-27T23:41:31.274+05:30: vm.max_map_count is too low
+------
+
+test> shows dbs
+Uncaught:
+SyntaxError: Missing semicolon. (1:5)
+
+> 1 | shows dbs
+    |      ^
+  2 |
+
+test> show dbs
+admin       40.00 KiB
+config      84.00 KiB
+lab5        72.00 KiB
+local       88.00 KiB
+university  72.00 KiB
+test> use lab5
+switched to db lab5
+lab5> show collections
+mycollection
+lab5> use exam_marks
+switched to db exam_marks
+exam_marks> db.createCollection("subjects")
+{ ok: 1 }
+exam_marks> show collection
+MongoshInvalidInputError: [COMMON-10001] 'collection' is not a valid argument for "show".
+exam_marks> show collections
+subjects
+exam_marks> db.createCollection("sub_m")
+{ ok: 1 }
+exam_marks> use musicdb
+switched to db musicdb
+musicdb> db.musician.insertMany([
+...   {
+...     ssn: 'M001',
+...     name: 'Alice',
+...     address: 'Bangalore',
+...     phone: 8745214523,
+...     iuin: [ 1, 5, 8 ],
+...     sid: [ 'S005', 'S004' ]
+...   },
+...   {
+...     ssn: 'M002',
+...     name: 'Bob',
+...     address: 'Chennai',
+...     phone: 9874532145,
+...     iuin: [ 3, 8 ],
+...     sid: [ 'S002', 'S001', 'S006' ]
+...   },
+...   {
+...     ssn: 'M003',
+...     name: 'Tommy',
+...     address: 'Mysore',
+...     phone: 8745632145,
+...     iuin: [ 1 ],
+...     sid: [ 'S001', 'S002' ]
+...   },
+...   {
+...     ssn: 'M004',
+...     name: 'Krish',
+...     address: 'Trichy',
+...     phone: 9874521456,
+...     iuin: [ 5, 3, 8, 1 ],
+...     sid: [ 'S002', 'S001', 'S003' ]
+...   }
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6514774d37d16e214092841a"),
+    '1': ObjectId("6514774d37d16e214092841b"),
+    '2': ObjectId("6514774d37d16e214092841c"),
+    '3': ObjectId("6514774d37d16e214092841d")
+  }
+}
+musicdb> db.album.insertMany([
+...   {
+...     auin: 'A001',
+...     title: 'Album 1',
+...     date: '2001-5-23',
+...     format: 'CD',
+...     sid: [ 'S001', 'S002', 'S006' ],
+...     producer: 'M004'
+...   },
+...   {
+...     auin: 'A002',
+...     title: 'Album 2',
+...     date: '2010-9-13',
+...     format: 'MC',
+...     sid: [ 'S003', 'S004', 'S005' ],
+...     producer: 'M001'
+...   }
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6514776437d16e214092841e"),
+    '1': ObjectId("6514776437d16e214092841f")
+  }
+}
+musicdb> db.song.insertMany([
+...   {
+...     sid: 'S001',
+...     stitle: 'Title 1',
+...     author: 'author 1'
+...   },
+...   {
+...     sid: 'S002',
+...     stitle: 'Title 2',
+...     author: 'author 2'
+...   },
+...   {
+...     sid: 'S003',
+...     stitle: 'Title 3',
+...     author: 'author 3'
+...   },
+...   {
+...     sid: 'S004',
+...     stitle: 'Title 4',
+...     author: 'author 4'
+...   },
+...   {
+...     sid: 'S005',
+...     stitle: 'Title 5',
+...     author: 'author 5'
+...   }
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6514777337d16e2140928420"),
+    '1': ObjectId("6514777337d16e2140928421"),
+    '2': ObjectId("6514777337d16e2140928422"),
+    '3': ObjectId("6514777337d16e2140928423"),
+    '4': ObjectId("6514777337d16e2140928424")
+  }
+}
+musicdb> db.instrument.insertMany([
+...   {
+...     iuin: 1,
+...     name: 'guitar',
+...     key: 'CDGA'
+...   },
+...   {
+...     iuin: 3,
+...     name: 'piano',
+...     key: 'CDGF'
+...   },
+...   {
+...     iuin: 5,
+...     name: 'drums',
+...     key: 'CDG'
+...   },
+...   {
+...     iuin: 8,
+...     name: 'flute',
+...     key: 'CDG'
+...   }
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("6514777f37d16e2140928425"),
+    '1': ObjectId("6514777f37d16e2140928426"),
+    '2': ObjectId("6514777f37d16e2140928427"),
+    '3': ObjectId("6514777f37d16e2140928428")
+  }
+}
+musicdb> show collections
+album
+instrument
+musician
+song
+musicdb> bd.album.find()
+ReferenceError: bd is not defined
+musicdb> 
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+musicdb> db.musician.find()
+[
+  {
+    _id: ObjectId("6514774d37d16e214092841a"),
+    ssn: 'M001',
+    name: 'Alice',
+    address: 'Bangalore',
+    phone: 8745214523,
+    iuin: [ 1, 5, 8 ],
+    sid: [ 'S005', 'S004' ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841b"),
+    ssn: 'M002',
+    name: 'Bob',
+    address: 'Chennai',
+    phone: 9874532145,
+    iuin: [ 3, 8 ],
+    sid: [ 'S002', 'S001', 'S006' ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841c"),
+    ssn: 'M003',
+    name: 'Tommy',
+    address: 'Mysore',
+    phone: 8745632145,
+    iuin: [ 1 ],
+    sid: [ 'S001', 'S002' ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841d"),
+    ssn: 'M004',
+    name: 'Krish',
+    address: 'Trichy',
+    phone: 9874521456,
+    iuin: [ 5, 3, 8, 1 ],
+    sid: [ 'S002', 'S001', 'S003' ]
+  }
+]
+musicdb> db.song.find(0
+... )
+MongoInvalidArgumentError: Query filter must be a plain object or ObjectId
+musicdb> db.song.find()
+[
+  {
+    _id: ObjectId("6514777337d16e2140928420"),
+    sid: 'S001',
+    stitle: 'Title 1',
+    author: 'author 1'
+  },
+  {
+    _id: ObjectId("6514777337d16e2140928421"),
+    sid: 'S002',
+    stitle: 'Title 2',
+    author: 'author 2'
+  },
+  {
+    _id: ObjectId("6514777337d16e2140928422"),
+    sid: 'S003',
+    stitle: 'Title 3',
+    author: 'author 3'
+  },
+  {
+    _id: ObjectId("6514777337d16e2140928423"),
+    sid: 'S004',
+    stitle: 'Title 4',
+    author: 'author 4'
+  },
+  {
+    _id: ObjectId("6514777337d16e2140928424"),
+    sid: 'S005',
+    stitle: 'Title 5',
+    author: 'author 5'
+  }
+]
+musicdb> db.song.find().count()
+5
+musicdb> show dbs
+admin        40.00 KiB
+config      108.00 KiB
+exam_marks   16.00 KiB
+lab5         72.00 KiB
+local        88.00 KiB
+musicdb     160.00 KiB
+university   72.00 KiB
+musicdb> use exam_marks
+switched to db exam_marks
+exam_marks> db.exm.insertMany([{sub_name:"maths", sub_code:"1",theory:60,practical:20},
+... {sub_name:"sciemce", sub_code:"2",theory:65,practical:22},
+... {sub_name:"social", sub_code:"3",theory:50,practical:23},
+... {sub_name:"english", sub_code:"4",theory:66,practical:18},
+... {sub_name:"kannada", sub_code:"5",theory:52,practical:21}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("65147a7c37d16e2140928429"),
+    '1': ObjectId("65147a7c37d16e214092842a"),
+    '2': ObjectId("65147a7c37d16e214092842b"),
+    '3': ObjectId("65147a7c37d16e214092842c"),
+    '4': ObjectId("65147a7c37d16e214092842d")
+  }
+}
+exam_marks> db.exm.find()
+[
+  {
+    _id: ObjectId("65147a7c37d16e2140928429"),
+    sub_name: 'maths',
+    sub_code: '1',
+    theory: 60,
+    practical: 20
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_name: 'sciemce',
+    sub_code: '2',
+    theory: 65,
+    practical: 22
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842b"),
+    sub_name: 'social',
+    sub_code: '3',
+    theory: 50,
+    practical: 23
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842c"),
+    sub_name: 'english',
+    sub_code: '4',
+    theory: 66,
+    practical: 18
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842d"),
+    sub_name: 'kannada',
+    sub_code: '5',
+    theory: 52,
+    practical: 21
+  }
+]
+exam_marks> db.posts.aggregate([
+... 
+...   {
+...     $match: { theory: { $gt: 55 } }
+...   },
+... 
+...   {
+...     $group: { _id: "sub_name", totalLikes: { $sum: "$theory" } }
+...   }
+... ])
+
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: "sub_name", totalLikes: { $sum: "$theory" } } }] )
+[ { _id: 'sub_name', totalLikes: 191 } ]
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: "sub_name", totalmarks: { $sum: "$theory" } } }] )
+[ { _id: 'sub_name', totalmarks: 191 } ]
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: "sub_name", totalmarks: { $avg: "$theory" } } }] )
+[ { _id: 'sub_name', totalmarks: 63.666666666666664 } ]
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: "sub_name", totalmarks: { $min: "$theory" } } }] )
+[ { _id: 'sub_name', totalmarks: 60 } ]
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: "sub_name", totalmarks: { $max: "$theory" } } }] )
+[ { _id: 'sub_name', totalmarks: 66 } ]
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: "$sub_name", totalmarks: { $max: "$theory" } } }] )
+[
+  { _id: 'sciemce', totalmarks: 65 },
+  { _id: 'english', totalmarks: 66 },
+  { _id: 'maths', totalmarks: 60 }
+]
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: "sub_name", totalmarks: { $max: "$theory" } } }] )
+[ { _id: 'sub_name', totalmarks: 66 } ]
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: $sub_name, totalmarks: { $max: "$theory" } } }] )
+ReferenceError: $sub_name is not defined
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: '$sub_name", totalmarks: { $max: "$theory" } } }] )
+Uncaught:
+SyntaxError: Unterminated string constant. (1:73)
+
+> 1 | db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: '$sub_name", totalmarks: { $max: "$theory" } } }] )
+    |                                                                          ^
+  2 |
+
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: "$sub_name", totalmarks: { $max: "$theory" } } }] )
+[
+  { _id: 'sciemce', totalmarks: 65 },
+  { _id: 'maths', totalmarks: 60 },
+  { _id: 'english', totalmarks: 66 }
+]
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: "sub_name", totalmarks: { $max: "$theory" } } }] )
+[ { _id: 'sub_name', totalmarks: 66 } ]
+exam_marks> db.exm.aggregate([ { $limit: 2 } ])
+[
+  {
+    _id: ObjectId("65147a7c37d16e2140928429"),
+    sub_name: 'maths',
+    sub_code: '1',
+    theory: 60,
+    practical: 20
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_name: 'sciemce',
+    sub_code: '2',
+    theory: 65,
+    practical: 22
+  }
+]
+exam_marks> db.exm.aggregate()
+[
+  {
+    _id: ObjectId("65147a7c37d16e2140928429"),
+    sub_name: 'maths',
+    sub_code: '1',
+    theory: 60,
+    practical: 20
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_name: 'sciemce',
+    sub_code: '2',
+    theory: 65,
+    practical: 22
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842b"),
+    sub_name: 'social',
+    sub_code: '3',
+    theory: 50,
+    practical: 23
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842c"),
+    sub_name: 'english',
+    sub_code: '4',
+    theory: 66,
+    practical: 18
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842d"),
+    sub_name: 'kannada',
+    sub_code: '5',
+    theory: 52,
+    practical: 21
+  }
+]
+exam_marks> db.exm.aggregate([ { $limit: 2 },find({subject:'maths'})])
+ReferenceError: find is not defined
+exam_marks> db.exm.aggregate([ { $limit: 2 },find({sub_name:'maths'})])
+ReferenceError: find is not defined
+exam_marks> db.exm.aggregate([ { $limit: 2 },{sub_name:'maths'}])
+MongoServerError: Unrecognized pipeline stage name: 'sub_name'
+exam_marks> db.exm.aggregate([ { $limit: 2 },{$sub_name:'maths'}])
+MongoServerError: Unrecognized pipeline stage name: '$sub_name'
+exam_marks> db.exm.aggregate([ { $limit: 2 }])
+[
+  {
+    _id: ObjectId("65147a7c37d16e2140928429"),
+    sub_name: 'maths',
+    sub_code: '1',
+    theory: 60,
+    practical: 20
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_name: 'sciemce',
+    sub_code: '2',
+    theory: 65,
+    practical: 22
+  }
+]
+exam_marks> db.exm.aggregate([ { $limit: 2 },{$group:{sub_name:'sciemce'}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:61)
+
+> 1 | db.exm.aggregate([ { $limit: 2 },{$group:{sub_name:'sciemce'}])
+    |                                                              ^
+  2 |
+
+exam_marks> db.exm.aggregate([ { $limit: 2 },{$group:{$sub_name:'sciemce'}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:62)
+
+> 1 | db.exm.aggregate([ { $limit: 2 },{$group:{$sub_name:'sciemce'}])
+    |                                                               ^
+  2 |
+
+exam_marks> db.exm.aggregate([ { $limit: 2 },{$group:{_id:'sub_name'}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:57)
+
+> 1 | db.exm.aggregate([ { $limit: 2 },{$group:{_id:'sub_name'}])
+    |                                                          ^
+  2 |
+
+exam_marks> db.exm.aggregate([ { $limit: 2 },{$group: {_id:'sub-name'},{$match:{sub_name:'sciemce'}])
+Uncaught:
+SyntaxError: Unexpected token (1:59)
+
+> 1 | db.exm.aggregate([ { $limit: 2 },{$group: {_id:'sub-name'},{$match:{sub_name:'sciemce'}])
+    |                                                            ^
+  2 |
+
+exam_marks> db.exm.aggregate([ { $limit: 2 },{$group: {_id:'sub-name'},{$match:{sub_name:'sciemce'}}])
+Uncaught:
+SyntaxError: Unexpected token (1:59)
+
+> 1 | db.exm.aggregate([ { $limit: 2 },{$group: {_id:'sub-name'},{$match:{sub_name:'sciemce'}}])
+    |                                                            ^
+  2 |
+
+exam_marks> db.exm.aggregate([ {{ $limit: 2 },{$group: {_id:'sub-name'},{$match:{sub_name:'sciemce'}}}])
+Uncaught:
+SyntaxError: Unexpected token (1:20)
+
+> 1 | db.exm.aggregate([ {{ $limit: 2 },{$group: {_id:'sub-name'},{$match:{sub_name:'sciemce'}}}])
+    |                     ^
+  2 |
+
+exam_marks> db.exm.aggregate([ {{ $limit: 2 },{$match:{sub_name:'sciemce'}}}])
+Uncaught:
+SyntaxError: Unexpected token (1:20)
+
+> 1 | db.exm.aggregate([ {{ $limit: 2 },{$match:{sub_name:'sciemce'}}}])
+    |                     ^
+  2 |
+
+exam_marks> db.exm.aggregate([{{ $limit: 2 },{$match:{sub_name:'sciemce'},{$group:{_id:'sub-name'}}}}])
+Uncaught:
+SyntaxError: Unexpected token (1:19)
+
+> 1 | db.exm.aggregate([{{ $limit: 2 },{$match:{sub_name:'sciemce'},{$group:{_id:'sub-name'}}}}])
+    |                    ^
+  2 |
+
+exam_marks> db.exm.aggregate({$match:{sub_name:'sciemce'},{$group:{_id:'sub-name'}}})
+Uncaught:
+SyntaxError: Unexpected token (1:46)
+
+> 1 | db.exm.aggregate({$match:{sub_name:'sciemce'},{$group:{_id:'sub-name'}}})
+    |                                               ^
+  2 |
+
+exam_marks> db.exm.aggregate({$match:{sub_name:'sciemce'},{$group:{_id:'sub-name'}}})
+exam_marks> db.exm.aggregate([
+...   {
+...     $limit: 2
+...   },
+...   {
+...     $match: {
+...       sub_name: 'science'
+...     }
+...   }
+... ])
+
+exam_marks> db.exm.aggregate([ { $limit: 2 }, { $match: { sub_name: 'sciemce' } }] )
+[
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_name: 'sciemce',
+    sub_code: '2',
+    theory: 65,
+    practical: 22
+  }
+]
+exam_marks> db.exm.aggregate({$group:{
+... ;
+Uncaught:
+SyntaxError: Unexpected token (2:0)
+
+  1 | db.exm.aggregate({$group:{
+> 2 | ;
+    | ^
+  3 |
+
+exam_marks> db.exm.find()
+[
+  {
+    _id: ObjectId("65147a7c37d16e2140928429"),
+    sub_name: 'maths',
+    sub_code: '1',
+    theory: 60,
+    practical: 20
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_name: 'sciemce',
+    sub_code: '2',
+    theory: 65,
+    practical: 22
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842b"),
+    sub_name: 'social',
+    sub_code: '3',
+    theory: 50,
+    practical: 23
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842c"),
+    sub_name: 'english',
+    sub_code: '4',
+    theory: 66,
+    practical: 18
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842d"),
+    sub_name: 'kannada',
+    sub_code: '5',
+    theory: 52,
+    practical: 21
+  }
+]
+exam_marks> db.exm.aggregate({$group:{ _id"$sub_name"}})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:30)
+
+> 1 | db.exm.aggregate({$group:{ _id"$sub_name"}})
+    |                               ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{ _id:"$sub_name"}})
+[
+  { _id: 'sciemce' },
+  { _id: 'maths' },
+  { _id: 'english' },
+  { _id: 'social' },
+  { _id: 'kannada' }
+]
+exam_marks> db.exm.aggregate({$group:{ _id:"$sub_code"}})
+[
+  { _id: '3' },
+  { _id: '1' },
+  { _id: '2' },
+  { _id: '4' },
+  { _id: '5' }
+]
+exam_marks> db.exm.aggregate({$group:{ _id:"$sub_code"},$avg{})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:48)
+
+> 1 | db.exm.aggregate({$group:{ _id:"$sub_code"},$avg{})
+    |                                                 ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{ _id:"$sub_code"},{$avg:sub_code})
+Uncaught:
+SyntaxError: Unexpected token (1:44)
+
+> 1 | db.exm.aggregate({$group:{ _id:"$sub_code"},{$avg:sub_code})
+    |                                             ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{ _id:"$sub_code"},{$avg:"sub_code"})
+Uncaught:
+SyntaxError: Unexpected token (1:44)
+
+> 1 | db.exm.aggregate({$group:{ _id:"$sub_code"},{$avg:"sub_code"})
+    |                                             ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{ _id:"$sub_code"},$avg:"sub_code")
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:59)
+
+> 1 | db.exm.aggregate({$group:{ _id:"$sub_code"},$avg:"sub_code")
+    |                                                            ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{ _id:"$sub_code"},$avg:"sub_code"})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{ _id:"sub_code"},$avg:"sub_code"})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{ _id:"sub_name"},$avg:"sub_code"})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{ _id:"sub_name"},$avg:"$sub_code"})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{ _id:"sub_code"},$avg:"$sub_code"})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{ _id:""},$avg:"$sub_code"})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{ _id:""},total:{$avg:"$sub_code"}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{ _id:"sub_code"},$sum:"$sub_code"})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{ _id:"sub_code"})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:42)
+
+> 1 | db.exm.aggregate({$group:{ _id:"sub_code"})
+    |                                           ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{ _id:"sub_code"}})
+[ { _id: 'sub_code' } ]
+exam_marks> db.exm.aggregate({$group:{ _id:"sub_code"},{$avg:{})
+Uncaught:
+SyntaxError: Unexpected token (1:43)
+
+> 1 | db.exm.aggregate({$group:{ _id:"sub_code"},{$avg:{})
+    |                                            ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{ _id:"sub_code"},{$avg:})
+Uncaught:
+SyntaxError: Unexpected token (1:43)
+
+> 1 | db.exm.aggregate({$group:{ _id:"sub_code"},{$avg:})
+    |                                            ^
+  2 |
+
+exam_marks> db.posts.aggregate([
+... 
+...   {
+...     $match: { theory: { $gt: 55 } }
+...   },
+... 
+...   {
+... 	    $group: { _id: "sub_name", totalLikes: { $sum: "$theory" } }
+...   }
+... ])
+
+exam_marks> db.exm.aggregate([ { $match: { theory: { $gt: 55 } } }, { $group: { _id: "sub_name", totalLikes: { $sum: "$theory" } } }] )
+[ { _id: 'sub_name', totalLikes: 191 } ]
+exam_marks> db.posts.aggrdb.exm.aggregate({$group:{ _id:"sub_code"},{$avg:{})
+Uncaught:
+SyntaxError: Unexpected token (1:56)
+
+> 1 | db.posts.aggrdb.exm.aggregate({$group:{ _id:"sub_code"},{$avg:{})
+    |                                                         ^
+  2 |
+
+exam_marks> db.posts.aggrdb.exm.aggregate({$group:{ _id:"sub_code"})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:55)
+
+> 1 | db.posts.aggrdb.exm.aggregate({$group:{ _id:"sub_code"})
+    |                                                        ^
+  2 |
+
+exam_marks> db.posts.aggrdb.exm.aggregate({$group:{ _id:"sub_code"}})
+
+exam_marks> db.exm.aggregate({$group:{_id:"subject"}})
+[ { _id: 'subject' } ]
+exam_marks> db.exm.aggregate({$group:{_id:"subject"},{$sum:"theory"}})
+Uncaught:
+SyntaxError: Unexpected token (1:41)
+
+> 1 | db.exm.aggregate({$group:{_id:"subject"},{$sum:"theory"}})
+    |                                          ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{_id:"subject",$sum:"theory"}})
+MongoServerError: The field '$sum' must be an accumulator object
+exam_marks> db.exm.aggregate({$group:{_id:"subject"},s:{$sum:"theory"}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{_id:"subject"},s:{$sum:"$theory"}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{_id:"subject"},s:{$sum:'$theory.})
+Uncaught:
+SyntaxError: Unterminated string constant. (1:49)
+
+> 1 | db.exm.aggregate({$group:{_id:"subject"},s:{$sum:'$theory.})
+    |                                                  ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{_id:"subject"},s:{$sum:'$theory'}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{_id:"subject"},s:{$sum:'$theory'}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{_id:"subject"},s:{$sum:'theory'}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{_id:"sub_code"},s:{$sum:'theory'}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{_id:"sub_code"},$s:{$sum:'theory'}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{_id:"$sub_code"},$s:{$sum:'theory'}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{_id:"$sub_code"},$sum:{$sum:'theory'}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:{_id:"$sub_code"},sum:{$sum:'theory'}})
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+exam_marks> db.exm.aggregate({$group:_id:"$sub_code",sum:{$sum:'theory'}})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:28)
+
+> 1 | db.exm.aggregate({$group:_id:"$sub_code",sum:{$sum:'theory'}})
+    |                             ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{_id:"$sub_code",sum:{$sum:'theory'}}})
+[
+  { _id: '1', sum: 0 },
+  { _id: '2', sum: 0 },
+  { _id: '3', sum: 0 },
+  { _id: '4', sum: 0 },
+  { _id: '5', sum: 0 }
+]
+exam_marks> db.exm.aggregate({$group:{_id:"sub_code",sum:{$sum:'theory'}}})
+[ { _id: 'sub_code', sum: 0 } ]
+exam_marks> db.exm.aggregate({$group:{_id:"sub_code",sum:{$sum:'$theory'}}})
+[ { _id: 'sub_code', sum: 293 } ]
+exam_marks> db.exm.aggregate({$group:{_idsum:{$sum:'$theory'}}})
+MongoServerError: a group specification must include an _id
+exam_marks> db.exm.aggregate({$group:{_id:,sum:{$sum:'$theory'}}})
+Uncaught:
+SyntaxError: Unexpected token (1:30)
+
+> 1 | db.exm.aggregate({$group:{_id:,sum:{$sum:'$theory'}}})
+    |                               ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{_id:"",sum:{$sum:'$theory'}}})
+[ { _id: '', sum: 293 } ]
+exam_marks> db.exm.aggregate({$group:{_id:"$sub_name"})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:42)
+
+> 1 | db.exm.aggregate({$group:{_id:"$sub_name"})
+    |                                           ^
+  2 |
+
+exam_marks> db.exm.aggregate({$group:{_id:"$sub_name"}})
+[
+  { _id: 'english' },
+  { _id: 'maths' },
+  { _id: 'kannada' },
+  { _id: 'social' },
+  { _id: 'sciemce' }
+]
+exam_marks> db.exm.aggregate({$project:{"name":2}})
+[
+  { _id: ObjectId("65147a7c37d16e2140928429") },
+  { _id: ObjectId("65147a7c37d16e214092842a") },
+  { _id: ObjectId("65147a7c37d16e214092842b") },
+  { _id: ObjectId("65147a7c37d16e214092842c") },
+  { _id: ObjectId("65147a7c37d16e214092842d") }
+]
+exam_marks> db.exm.aggregate({$project:{"sub_name":2}})
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' },
+  { _id: ObjectId("65147a7c37d16e214092842c"), sub_name: 'english' },
+  { _id: ObjectId("65147a7c37d16e214092842d"), sub_name: 'kannada' }
+]
+exam_marks> db.exm.aggregate({$project:{"sub_name":3}})
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' },
+  { _id: ObjectId("65147a7c37d16e214092842c"), sub_name: 'english' },
+  { _id: ObjectId("65147a7c37d16e214092842d"), sub_name: 'kannada' }
+]
+exam_marks> db.exm.aggregate({$project:{"sub_name":'3'}})
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: '3' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: '3' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: '3' },
+  { _id: ObjectId("65147a7c37d16e214092842c"), sub_name: '3' },
+  { _id: ObjectId("65147a7c37d16e214092842d"), sub_name: '3' }
+]
+exam_marks> db.exm.aggregate({$project:{"sub_name":3}})
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' },
+  { _id: ObjectId("65147a7c37d16e214092842c"), sub_name: 'english' },
+  { _id: ObjectId("65147a7c37d16e214092842d"), sub_name: 'kannada' }
+]
+exam_marks> db.exm.aggregate({$project:{"sub_name":1}})
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' },
+  { _id: ObjectId("65147a7c37d16e214092842c"), sub_name: 'english' },
+  { _id: ObjectId("65147a7c37d16e214092842d"), sub_name: 'kannada' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":1}},{limit:1}])
+MongoServerError: Unrecognized pipeline stage name: 'limit'
+exam_marks> db.exm.aggregate([{$project:{"sub_name":1}},{$limit:1}])
+[ { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' } ]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":1}},{$limit:2}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":1}},{$limit:3}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":0}},{$limit:3}])
+[
+  {
+    _id: ObjectId("65147a7c37d16e2140928429"),
+    sub_code: '1',
+    theory: 60,
+    practical: 20
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_code: '2',
+    theory: 65,
+    practical: 22
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842b"),
+    sub_code: '3',
+    theory: 50,
+    practical: 23
+  }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":1}},{$limit:3}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":2}},{$limit:3}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":3}},{$limit:3}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":4}},{$limit:3}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":4}},{$limit:4}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' },
+  { _id: ObjectId("65147a7c37d16e214092842c"), sub_name: 'english' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":}},{$limit:4}])
+Uncaught:
+SyntaxError: Unexpected token (1:40)
+
+> 1 | db.exm.aggregate([{$project:{"sub_name":}},{$limit:4}])
+    |                                         ^
+  2 |
+
+exam_marks> db.exm.aggregate([{$project:{"sub_name":""}},{$limit:4}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: '' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: '' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: '' },
+  { _id: ObjectId("65147a7c37d16e214092842c"), sub_name: '' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":2}},{$limit:4}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' },
+  { _id: ObjectId("65147a7c37d16e214092842c"), sub_name: 'english' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":1,"theroy":1}},{$limit:4}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' },
+  { _id: ObjectId("65147a7c37d16e214092842c"), sub_name: 'english' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":1,"theroy":1},{$limit:4}])
+Uncaught:
+SyntaxError: Unexpected token (1:54)
+
+> 1 | db.exm.aggregate([{$project:{"sub_name":1,"theroy":1},{$limit:4}])
+    |                                                       ^
+  2 |
+
+exam_marks> db.exm.aggregate([{$project:{"sub_name":1,"theroy":1}},{$limit:4}])
+[
+  { _id: ObjectId("65147a7c37d16e2140928429"), sub_name: 'maths' },
+  { _id: ObjectId("65147a7c37d16e214092842a"), sub_name: 'sciemce' },
+  { _id: ObjectId("65147a7c37d16e214092842b"), sub_name: 'social' },
+  { _id: ObjectId("65147a7c37d16e214092842c"), sub_name: 'english' }
+]
+exam_marks> db.exm.aggregate([{$project:{"sub_name":1,"theory":1}},{$limit:4}])
+[
+  {
+    _id: ObjectId("65147a7c37d16e2140928429"),
+    sub_name: 'maths',
+    theory: 60
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_name: 'sciemce',
+    theory: 65
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842b"),
+    sub_name: 'social',
+    theory: 50
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842c"),
+    sub_name: 'english',
+    theory: 66
+  }
+]
+exam_marks> 
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+exam_marks> db.listingsAndReviews.aggregate([ 
+...   { 
+...     $sort: { "accommodates": -1 } 
+...   }
+...   ])
+
+exam_marks> db.exm.aggregate([ { $sort: { "accommodates": -1 } }] )
+[
+  {
+    _id: ObjectId("65147a7c37d16e2140928429"),
+    sub_name: 'maths',
+    sub_code: '1',
+    theory: 60,
+    practical: 20
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_name: 'sciemce',
+    sub_code: '2',
+    theory: 65,
+    practical: 22
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842b"),
+    sub_name: 'social',
+    sub_code: '3',
+    theory: 50,
+    practical: 23
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842c"),
+    sub_name: 'english',
+    sub_code: '4',
+    theory: 66,
+    practical: 18
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842d"),
+    sub_name: 'kannada',
+    sub_code: '5',
+    theory: 52,
+    practical: 21
+  }
+]
+exam_marks> db.exm.aggregate([ { $sort: { "theory": -1 } }] )
+[
+  {
+    _id: ObjectId("65147a7c37d16e214092842c"),
+    sub_name: 'english',
+    sub_code: '4',
+    theory: 66,
+    practical: 18
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_name: 'sciemce',
+    sub_code: '2',
+    theory: 65,
+    practical: 22
+  },
+  {
+    _id: ObjectId("65147a7c37d16e2140928429"),
+    sub_name: 'maths',
+    sub_code: '1',
+    theory: 60,
+    practical: 20
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842d"),
+    sub_name: 'kannada',
+    sub_code: '5',
+    theory: 52,
+    practical: 21
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842b"),
+    sub_name: 'social',
+    sub_code: '3',
+    theory: 50,
+    practical: 23
+  }
+]
+exam_marks> db.exm.aggregate([ { $sort: { "theory": 1 } }] )
+[
+  {
+    _id: ObjectId("65147a7c37d16e214092842b"),
+    sub_name: 'social',
+    sub_code: '3',
+    theory: 50,
+    practical: 23
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842d"),
+    sub_name: 'kannada',
+    sub_code: '5',
+    theory: 52,
+    practical: 21
+  },
+  {
+    _id: ObjectId("65147a7c37d16e2140928429"),
+    sub_name: 'maths',
+    sub_code: '1',
+    theory: 60,
+    practical: 20
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842a"),
+    sub_name: 'sciemce',
+    sub_code: '2',
+    theory: 65,
+    practical: 22
+  },
+  {
+    _id: ObjectId("65147a7c37d16e214092842c"),
+    sub_name: 'english',
+    sub_code: '4',
+    theory: 66,
+    practical: 18
+  }
+]
+exam_marks> show dbs
+admin        40.00 KiB
+config      108.00 KiB
+exam_marks   56.00 KiB
+lab5         72.00 KiB
+local        88.00 KiB
+musicdb     160.00 KiB
+university   72.00 KiB
+exam_marks> use muiscdb
+switched to db muiscdb
+muiscdb> use musicdb
+switched to db musicdb
+musicdb> show collections
+album
+instrument
+musician
+song
+musicdb> db.album.find()
+[
+  {
+    _id: ObjectId("6514776437d16e214092841e"),
+    auin: 'A001',
+    title: 'Album 1',
+    date: '2001-5-23',
+    format: 'CD',
+    sid: [ 'S001', 'S002', 'S006' ],
+    producer: 'M004'
+  },
+  {
+    _id: ObjectId("6514776437d16e214092841f"),
+    auin: 'A002',
+    title: 'Album 2',
+    date: '2010-9-13',
+    format: 'MC',
+    sid: [ 'S003', 'S004', 'S005' ],
+    producer: 'M001'
+  }
+]
+musicdb> db.instrumwnt.find()
+
+musicdb> db.instrument.find()
+[
+  {
+    _id: ObjectId("6514777f37d16e2140928425"),
+    iuin: 1,
+    name: 'guitar',
+    key: 'CDGA'
+  },
+  {
+    _id: ObjectId("6514777f37d16e2140928426"),
+    iuin: 3,
+    name: 'piano',
+    key: 'CDGF'
+  },
+  {
+    _id: ObjectId("6514777f37d16e2140928427"),
+    iuin: 5,
+    name: 'drums',
+    key: 'CDG'
+  },
+  {
+    _id: ObjectId("6514777f37d16e2140928428"),
+    iuin: 8,
+    name: 'flute',
+    key: 'CDG'
+  }
+]
+musicdb> db.musician.find()
+[
+  {
+    _id: ObjectId("6514774d37d16e214092841a"),
+    ssn: 'M001',
+    name: 'Alice',
+    address: 'Bangalore',
+    phone: 8745214523,
+    iuin: [ 1, 5, 8 ],
+    sid: [ 'S005', 'S004' ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841b"),
+    ssn: 'M002',
+    name: 'Bob',
+    address: 'Chennai',
+    phone: 9874532145,
+    iuin: [ 3, 8 ],
+    sid: [ 'S002', 'S001', 'S006' ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841c"),
+    ssn: 'M003',
+    name: 'Tommy',
+    address: 'Mysore',
+    phone: 8745632145,
+    iuin: [ 1 ],
+    sid: [ 'S001', 'S002' ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841d"),
+    ssn: 'M004',
+    name: 'Krish',
+    address: 'Trichy',
+    phone: 9874521456,
+    iuin: [ 5, 3, 8, 1 ],
+    sid: [ 'S002', 'S001', 'S003' ]
+  }
+]
+musicdb> db.orders.aggregate([
+...   {
+...     $lookup: {
+...       from: "customers",
+...       localField: "customerId",
+...       foreignField: "_id",
+...       as: "customer"
+...     }
+...   }
+... )
+Uncaught:
+SyntaxError: Unexpected token, expected "," (10:0)
+
+   8 |     }
+   9 |   }
+> 10 | )
+     | ^
+  11 |
+
+musicdb> db.musician.aggregate([ { $lookup: { from: "instrument", localField: "ivin", foreignField: "ivin", as: "customer" } } )
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:118)
+
+> 1 | db.musician.aggregate([ { $lookup: { from: "instrument", localField: "ivin", foreignField: "ivin", as: "customer" } } )
+    |                                                                                                                       ^
+  2 |
+
+musicdb> db.musician.aggregate([ { $lookup: { from: "instrument", localField: "ivin", foreignField: "ivin", as: "customer" } }] )
+[
+  {
+    _id: ObjectId("6514774d37d16e214092841a"),
+    ssn: 'M001',
+    name: 'Alice',
+    address: 'Bangalore',
+    phone: 8745214523,
+    iuin: [ 1, 5, 8 ],
+    sid: [ 'S005', 'S004' ],
+    customer: [
+      {
+        _id: ObjectId("6514777f37d16e2140928425"),
+        iuin: 1,
+        name: 'guitar',
+        key: 'CDGA'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928426"),
+        iuin: 3,
+        name: 'piano',
+        key: 'CDGF'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928427"),
+        iuin: 5,
+        name: 'drums',
+        key: 'CDG'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928428"),
+        iuin: 8,
+        name: 'flute',
+        key: 'CDG'
+      }
+    ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841b"),
+    ssn: 'M002',
+    name: 'Bob',
+    address: 'Chennai',
+    phone: 9874532145,
+    iuin: [ 3, 8 ],
+    sid: [ 'S002', 'S001', 'S006' ],
+    customer: [
+      {
+        _id: ObjectId("6514777f37d16e2140928425"),
+        iuin: 1,
+        name: 'guitar',
+        key: 'CDGA'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928426"),
+        iuin: 3,
+        name: 'piano',
+        key: 'CDGF'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928427"),
+        iuin: 5,
+        name: 'drums',
+        key: 'CDG'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928428"),
+        iuin: 8,
+        name: 'flute',
+        key: 'CDG'
+      }
+    ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841c"),
+    ssn: 'M003',
+    name: 'Tommy',
+    address: 'Mysore',
+    phone: 8745632145,
+    iuin: [ 1 ],
+    sid: [ 'S001', 'S002' ],
+    customer: [
+      {
+        _id: ObjectId("6514777f37d16e2140928425"),
+        iuin: 1,
+        name: 'guitar',
+        key: 'CDGA'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928426"),
+        iuin: 3,
+        name: 'piano',
+        key: 'CDGF'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928427"),
+        iuin: 5,
+        name: 'drums',
+        key: 'CDG'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928428"),
+        iuin: 8,
+        name: 'flute',
+        key: 'CDG'
+      }
+    ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841d"),
+    ssn: 'M004',
+    name: 'Krish',
+    address: 'Trichy',
+    phone: 9874521456,
+    iuin: [ 5, 3, 8, 1 ],
+    sid: [ 'S002', 'S001', 'S003' ],
+    customer: [
+      {
+        _id: ObjectId("6514777f37d16e2140928425"),
+        iuin: 1,
+        name: 'guitar',
+        key: 'CDGA'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928426"),
+        iuin: 3,
+        name: 'piano',
+        key: 'CDGF'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928427"),
+        iuin: 5,
+        name: 'drums',
+        key: 'CDG'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928428"),
+        iuin: 8,
+        name: 'flute',
+        key: 'CDG'
+      }
+    ]
+  }
+]
+musicdb> db.musician.aggregate([ { $lookup: { from: "instrument", localField: "ivin", foreignField: "ivin", as: "customer" } }] ).pretty()
+[
+  {
+    _id: ObjectId("6514774d37d16e214092841a"),
+    ssn: 'M001',
+    name: 'Alice',
+    address: 'Bangalore',
+    phone: 8745214523,
+    iuin: [ 1, 5, 8 ],
+    sid: [ 'S005', 'S004' ],
+    customer: [
+      {
+        _id: ObjectId("6514777f37d16e2140928425"),
+        iuin: 1,
+        name: 'guitar',
+        key: 'CDGA'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928426"),
+        iuin: 3,
+        name: 'piano',
+        key: 'CDGF'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928427"),
+        iuin: 5,
+        name: 'drums',
+        key: 'CDG'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928428"),
+        iuin: 8,
+        name: 'flute',
+        key: 'CDG'
+      }
+    ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841b"),
+    ssn: 'M002',
+    name: 'Bob',
+    address: 'Chennai',
+    phone: 9874532145,
+    iuin: [ 3, 8 ],
+    sid: [ 'S002', 'S001', 'S006' ],
+    customer: [
+      {
+        _id: ObjectId("6514777f37d16e2140928425"),
+        iuin: 1,
+        name: 'guitar',
+        key: 'CDGA'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928426"),
+        iuin: 3,
+        name: 'piano',
+        key: 'CDGF'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928427"),
+        iuin: 5,
+        name: 'drums',
+        key: 'CDG'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928428"),
+        iuin: 8,
+        name: 'flute',
+        key: 'CDG'
+      }
+    ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841c"),
+    ssn: 'M003',
+    name: 'Tommy',
+    address: 'Mysore',
+    phone: 8745632145,
+    iuin: [ 1 ],
+    sid: [ 'S001', 'S002' ],
+    customer: [
+      {
+        _id: ObjectId("6514777f37d16e2140928425"),
+        iuin: 1,
+        name: 'guitar',
+        key: 'CDGA'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928426"),
+        iuin: 3,
+        name: 'piano',
+        key: 'CDGF'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928427"),
+        iuin: 5,
+        name: 'drums',
+        key: 'CDG'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928428"),
+        iuin: 8,
+        name: 'flute',
+        key: 'CDG'
+      }
+    ]
+  },
+  {
+    _id: ObjectId("6514774d37d16e214092841d"),
+    ssn: 'M004',
+    name: 'Krish',
+    address: 'Trichy',
+    phone: 9874521456,
+    iuin: [ 5, 3, 8, 1 ],
+    sid: [ 'S002', 'S001', 'S003' ],
+    customer: [
+      {
+        _id: ObjectId("6514777f37d16e2140928425"),
+        iuin: 1,
+        name: 'guitar',
+        key: 'CDGA'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928426"),
+        iuin: 3,
+        name: 'piano',
+        key: 'CDGF'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928427"),
+        iuin: 5,
+        name: 'drums',
+        key: 'CDG'
+      },
+      {
+        _id: ObjectId("6514777f37d16e2140928428"),
+        iuin: 8,
+        name: 'flute',
+        key: 'CDG'
+      }
+    ]
+  }
+]
+musicdb> 
+
+

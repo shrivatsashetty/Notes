@@ -1,0 +1,80 @@
+hrivatsa@Victus-HP:~$ cd Downloads/
+shrivatsa@Victus-HP:~/Downloads$ ls
+MongoDB-Online-Course.pdf  mongodb-org-server_7.0.1_amd64.deb
+shrivatsa@Victus-HP:~/Downloads$ sudo dpkg -i mongodb-org-server_7.0.1_amd64.deb 
+[sudo] password for shrivatsa: 
+Selecting previously unselected package mongodb-org-server.
+(Reading database ... 276613 files and directories currently installed.)
+Preparing to unpack mongodb-org-server_7.0.1_amd64.deb ...
+Unpacking mongodb-org-server (7.0.1) ...
+Setting up mongodb-org-server (7.0.1) ...
+Adding system user `mongodb' (UID 131) ...
+Adding new user `mongodb' (UID 131) with group `nogroup' ...
+Not creating home directory `/home/mongodb'.
+Adding group `mongodb' (GID 140) ...
+Done.
+Adding user `mongodb' to group `mongodb' ...
+Adding user mongodb to group mongodb
+Done.
+Processing triggers for man-db (2.10.2-1) ...
+shrivatsa@Victus-HP:~/Downloads$ sudo systemctl status mongod
+○ mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; disabled; vendor preset: enabled)
+     Active: inactive (dead)
+       Docs: https://docs.mongodb.org/manual
+shrivatsa@Victus-HP:~/Downloads$ sudo systemctl start mongod
+shrivatsa@Victus-HP:~/Downloads$ sudo systemctl status mongod
+● mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; disabled; vendor preset: enabled)
+     Active: active (running) since Wed 2023-09-13 00:44:39 IST; 2s ago
+       Docs: https://docs.mongodb.org/manual
+   Main PID: 17668 (mongod)
+     Memory: 73.0M
+        CPU: 187ms
+     CGroup: /system.slice/mongod.service
+             └─17668 /usr/bin/mongod --config /etc/mongod.conf
+
+Sep 13 00:44:39 Victus-HP systemd[1]: Started MongoDB Database Server.
+Sep 13 00:44:39 Victus-HP mongod[17668]: {"t":{"$date":"2023-09-12T19:14:39.869Z"},"s":"I",  "c":"CONTROL",  "id":7484500, "ctx":"main","msg":"Environme>
+shrivatsa@Victus-HP:~/Downloads$ ld
+ld: no input files
+shrivatsa@Victus-HP:~/Downloads$ ls
+mongodb-mongosh_2.0.0_amd64.deb  mongodb-org-server_7.0.1_amd64.deb
+shrivatsa@Victus-HP:~/Downloads$ sudo dpkg -i mongodb-mongosh_2.0.0_amd64.deb
+Selecting previously unselected package mongodb-mongosh.
+(Reading database ... 276625 files and directories currently installed.)
+Preparing to unpack mongodb-mongosh_2.0.0_amd64.deb ...
+Unpacking mongodb-mongosh (2.0.0) ...
+Setting up mongodb-mongosh (2.0.0) ...
+Processing triggers for man-db (2.10.2-1) ...
+shrivatsa@Victus-HP:~/Downloads$ mongosh
+Current Mongosh Log ID:	6500b95a584a9c6af1c4c1d9
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.0
+Using MongoDB:		7.0.1
+Using Mongosh:		2.0.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+------
+   The server generated these startup warnings when booting
+   2023-09-13T00:44:39.947+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-09-13T00:44:40.092+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2023-09-13T00:44:40.092+05:30: vm.max_map_count is too low
+------
+
+test> show dbs;
+admin   40.00 KiB
+config  12.00 KiB
+local   40.00 KiB
+test> exit;
+shrivatsa@Victus-HP:~/Downloads$ ls
+mongodb-compass_1.39.4_amd64.deb  mongodb-mongosh_2.0.0_amd64.deb  mongodb-org-server_7.0.1_amd64.deb
+shrivatsa@Victus-HP:~/Downloads$ sudo lsof -i:27017
+[sudo] password for shrivatsa: 
+COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+mongod  17668 mongodb   14u  IPv4 163675      0t0  TCP localhost:27017 (LISTEN)
+

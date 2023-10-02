@@ -1,0 +1,612 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig 
+[sudo] password for shrivatsa: 
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 415  bytes 40890 (40.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 415  bytes 40890 (40.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.12.52  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::bf8a:b74e:b4dd:1afc  prefixlen 64  scopeid 0x20<link>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 4392  bytes 4058527 (4.0 MB)
+        RX errors 0  dropped 51  overruns 0  frame 0
+        TX packets 1919  bytes 278195 (278.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig -a
+eno1: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 420  bytes 41411 (41.4 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 420  bytes 41411 (41.4 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.17.12.52  netmask 255.255.240.0  broadcast 172.17.15.255
+        inet6 fe80::bf8a:b74e:b4dd:1afc  prefixlen 64  scopeid 0x20<link>
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 5804  bytes 4210034 (4.2 MB)
+        RX errors 0  dropped 165  overruns 0  frame 0
+        TX packets 1975  bytes 283632 (283.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl stop NetworkManager
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig 
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 428  bytes 42225 (42.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 428  bytes 42225 (42.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig eno1  165.0.0.20 netamsk 2555.255.0.0 up
+netamsk: Host name lookup failure
+ifconfig: `--help' gives usage information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig eno1 165.0.0.20 netamsk 2555.255.0.0 up
+netamsk: Host name lookup failure
+ifconfig: `--help' gives usage information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig eno1 165.0.0.20 netmask 2555.255.0.0 up
+2555.255.0.0: Unknown host
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig -a
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 165.0.0.20  netmask 255.255.0.0  broadcast 165.0.255.255
+        inet6 fe80::7e57:58ff:fe6d:61c4  prefixlen 64  scopeid 0x20<link>
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 91  bytes 16963 (16.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 52  bytes 6718 (6.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 438  bytes 42879 (42.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 438  bytes 42879 (42.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 6138  bytes 4247852 (4.2 MB)
+        RX errors 0  dropped 201  overruns 0  frame 0
+        TX packets 1997  bytes 285787 (285.7 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ping 165.0.0.10
+PING 165.0.0.10 (165.0.0.10) 56(84) bytes of data.
+64 bytes from 165.0.0.10: icmp_seq=1 ttl=64 time=1.10 ms
+64 bytes from 165.0.0.10: icmp_seq=2 ttl=64 time=0.852 ms
+64 bytes from 165.0.0.10: icmp_seq=3 ttl=64 time=0.951 ms
+64 bytes from 165.0.0.10: icmp_seq=4 ttl=64 time=0.896 ms
+64 bytes from 165.0.0.10: icmp_seq=5 ttl=64 time=0.934 ms
+64 bytes from 165.0.0.10: icmp_seq=6 ttl=64 time=0.832 ms
+64 bytes from 165.0.0.10: icmp_seq=7 ttl=64 time=0.907 ms
+^C
+--- 165.0.0.10 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6055ms
+rtt min/avg/max/mdev = 0.832/0.925/1.104/0.082 ms
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls
+ Desktop   Documents   Downloads   Music   Packet-Tracer   Pictures   Projects   Public   Templates   Trails   Videos   pt   snap  'web project'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls -a
+ .               .bashrc   .gitconfig   .local               .packettracer     .ssh                        .vscode-cli   Music           Public      pt
+ ..              .cache    .gnupg       .mozilla             .pki              .sudo_as_admin_successful   Desktop       Packet-Tracer   Templates   snap
+ .bash_history   .config   .java        .node_repl_history   .profile          .thunderbird                Documents     Pictures        Trails     'web project'
+ .bash_logout    .dotnet   .lesshst     .npm                 .python_history   .vscode                     Downloads     Projects        Videos
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls -l
+total 56
+drwxr-xr-x  3 shrivatsa shrivatsa 4096 Apr 22 22:04  Desktop
+drwxr-xr-x 11 shrivatsa shrivatsa 4096 May 16 17:54  Documents
+drwxr-xr-x  3 shrivatsa shrivatsa 4096 May 20 00:41  Downloads
+drwxr-xr-x  2 shrivatsa shrivatsa 4096 May  4 23:40  Music
+drwxrwxr-x  2 shrivatsa shrivatsa 4096 May 16 20:35  Packet-Tracer
+drwxr-xr-x  3 shrivatsa shrivatsa 4096 Mar 19 00:04  Pictures
+drwxrwxr-x  4 shrivatsa shrivatsa 4096 May 16 18:19  Projects
+drwxr-xr-x  2 shrivatsa shrivatsa 4096 Feb  9 09:49  Public
+drwxr-xr-x  2 shrivatsa shrivatsa 4096 Feb  9 09:49  Templates
+drwxrwxr-x  5 shrivatsa shrivatsa 4096 May 19 17:31  Trails
+drwxr-xr-x  3 shrivatsa shrivatsa 4096 May  7 12:52  Videos
+drwxrwxr-x  6 shrivatsa shrivatsa 4096 May 16 20:35  pt
+drwx------ 10 shrivatsa shrivatsa 4096 May  4 18:59  snap
+drwxrwxr-x  2 shrivatsa shrivatsa 4096 May 18 10:41 'web project'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd Downloads/
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ nano f11.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ ls
+ CN   Library.jpg  'RVCE -logo.png'   bookfavicon.png   dark.jpeg   f11.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ ls
+ CN   Library.jpg  'RVCE -logo.png'   bookfavicon.png   dark.jpeg   f11.txt   hello
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ ftp 165.0.0.10
+Connected to 165.0.0.10.
+220 ProFTPD Server (Debian) [::ffff:165.0.0.10]
+Name (165.0.0.10:shrivatsa): surya
+331 Password required for surya
+Password: 
+230 User surya logged in
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+229 Entering Extended Passive Mode (|||10973|)
+150 Opening ASCII mode data connection for file list
+-rw-rw-r--   1 surya    surya           0 Apr 19 03:46 19th
+-rw-rw-r--   1 surya    surya    101594500 May  1 08:03 2023-05-01 13-27-41.mp4
+-rw-rw-r--   1 surya    surya    118826610 May  1 08:10 2023-05-01 13-33-46.mp4
+-rw-rw-r--   1 surya    surya    253884489 May  1 08:27 2023-05-01 13-44-22.mp4
+-rw-rw-r--   1 surya    surya      431040 May  2 20:54 2023-05-03 02-24-20.mp4
+-rw-rw-r--   1 surya    surya      185959 May  4 18:59 2023-05-05 00-29-00.mkv
+-rw-rw-r--   1 surya    surya      116747 May  4 19:49 2023-05-05 01-19-32.mkv
+-rw-rw-r--   1 surya    surya    85112157 May  5 14:25 20230505_193303-30fps.mp4
+-rwxr-----   1 surya    surya    41425490 May  5 14:03 20230505_193303.mp4
+drwxrwxr-x   2 surya    surya        4096 Mar 21 04:17 21_march
+-rw-rw-r--   1 surya    surya           0 Apr 25 06:36 25April,2023
+drwxrwxr-x   2 surya    surya        4096 Mar 28 07:28 28mar
+-rw-rw-r--   1 surya    surya           0 Apr 19 03:46 April,2023
+drwxrwxr-x   2 surya    surya        4096 May 14 12:46 D3.js
+drwxr-xr-x   5 surya    surya        4096 May 18 16:27 Desktop
+drwxr-xr-x  10 surya    surya        4096 May 18 08:52 Documents
+drwxr-xr-x   3 surya    surya        4096 May 18 10:39 Downloads
+-rw-rw-r--   1 surya    surya          23 May 20 06:05 f11.txt
+-rw-rw-r--   1 surya    surya          24 Feb 28 07:38 file.txt
+drwxrwxr-x   2 surya    surya        4096 May 19 07:33 final_wap_lab
+-rw-rw-r--   1 surya    surya           0 Mar 11 20:35 fruits
+drwxrwxr-x   3 surya    surya        4096 Mar 10 20:28 gitclass
+-rw-rw-r--   1 surya    surya         300 Mar  1 05:27 Git copy
+drwxrwxr-x   3 surya    surya        4096 Mar 10 17:45 gitexamples
+drwxrwxr-x   3 surya    surya        4096 Mar 12 20:07 gitlearn
+-rw-rw-r--   1 surya    surya           0 Mar 12 20:06 gitLearn
+-rw-rw-r--   1 surya    surya          24 Mar 12 20:15 gitLearn.txt
+-rw-rw-r--   1 surya    surya          41 Mar 20 19:04 git-tokken.txt
+-rw-rw-r--   1 surya    surya    93811132 Jan 31 21:53 google-chrome-stable_current_amd64.deb
+-rw-rw-r--   1 surya    surya           3 Feb 22 03:57 hello
+-rw-rw-r--   1 surya    surya           6 Feb 15 05:18 hi
+drwxrwxr-x   2 surya    surya        4096 Mar  1 19:51 HTML program
+-rw-rw-r--   1 surya    surya         173 Mar 14 17:58 if_else.sh
+drwxrwxr-x   2 surya    surya        4096 Apr 29 18:03 Jai Shree Ram
+drwxrwxr-x   2 surya    surya        4096 Mar 31 13:48 json
+drwxrwxr-x   2 surya    surya        4096 May 13 20:30 JS _practice
+-rw-rw-r--   1 surya    surya          73 Mar 29 03:50 keywords.txt
+drwxrwxr-x   5 surya    surya        4096 Apr  8 03:50 linux
+drwxrwxr-x   4 surya    surya        4096 Mar  7 06:46 LSS
+-rw-rw-r--   1 surya    surya           0 Apr  4 05:07 lss_database.txt
+--wxr--r--   1 surya    surya           9 Mar 12 19:08 lssexam
+-rw-r--r--   1 surya    surya    14284987 May  4 15:51 LSS  final Audio.m4a
+-rw-r--r--   1 surya    surya     7644356 May  4 15:51 LSS Final Video.webm
+drwxr-xr-x   2 surya    surya        4096 Feb  9 01:10 Music
+drwxrwxr-x   3 surya    surya        4096 May 11 13:25 Mysql
+-rw-rw-r--   1 surya    surya          23 Mar 14 19:03 Namess
+drwxr-xr-x   4 surya    surya        4096 Mar  1 03:54 Pictures
+drwxrwxr-x   2 surya    surya       12288 Apr 10 08:07 practiceLssND
+-rw-rw-r--   1 surya    surya         246 Feb 12 09:55 prime.cpp
+drwxrwxr-x   6 surya    surya        4096 Apr 28 10:06 pt
+drwxr-xr-x   2 surya    surya        4096 Feb  9 01:10 Public
+drwxrwxr-x   7 surya    surya        4096 Apr 23 15:02 PycharmProjects
+drwxrwxr-x   2 surya    surya        4096 Mar 26 18:06 python
+drwxrwxr-x   3 surya    surya        4096 May 19 20:15 python_cie_lab_prac
+drwxrwxr-x   2 surya    surya        4096 May 18 09:10 python_experiencial_learning
+drwxrwxr-x   3 surya    surya        4096 Apr 22 19:48 Python file_handling
+drwxrwxr-x   3 surya    surya        4096 May  7 19:38 python_labPrograms
+drwxrwxr-x   4 surya    surya        4096 May  7 17:45 Python Program
+drwxrwxr-x   2 surya    surya        4096 May  9 07:55 rem.files_wap_project
+drwxrwxr-x   4 surya    surya        4096 Apr 10 07:14 shell-scripting-tutorial
+drwx------   8 surya    surya        4096 Apr 29 19:16 snap
+lrwxrwxrwx   1 surya    surya          29 Mar 12 19:04 softlink1 -> /home/surya/LSS/Asec/list.txt
+drwxrwxr-x   4 surya    surya        4096 Mar 12 20:36 temp
+drwxr-xr-x   2 surya    surya        4096 Feb  9 01:10 Templates
+-rw-rw-r--   1 surya    surya         208 May  3 05:20 test22.sh
+-rw-rw-r--   1 surya    surya         305 May  3 05:30 test22.sh.save
+drwxrwxr-x   2 surya    surya        4096 Mar 12 19:24 testing
+drwxrwxr-x   2 surya    surya        4096 Feb  9 04:36 tut1
+drwxrwxrwx   3 surya    surya        4096 Apr 28 11:20 tut1.txt
+-rwxrwxrwx   1 surya    surya         447 Feb 21 18:14 tutt1.html
+-r--r--rw-   1 surya    surya          82 Feb 10 08:04 tut.txt
+-rw-rw-r--   1 surya    surya          17 Mar 11 20:29 veg
+drwxr-xr-x   4 surya    surya        4096 May  5 16:36 Videos
+drwxrwxr-x   2 surya    surya        4096 May 18 21:32 wap CIE LAB
+drwxrwxr-x   2 surya    surya        4096 May  9 07:55 WAP_E_commerce_project
+drwxrwxr-x   2 surya    surya        4096 May 19 04:29 wap_lab_prac
+drwxrwxr-x   3 surya    surya        4096 Apr 28 13:11 WAP programs
+-rwxrwxrwx   1 surya    surya          17 Mar 11 20:31 why
+drwxrwxr-x   2 surya    surya        4096 Mar 28 17:36 XML
+226 Transfer complete
+ftp> cd Dow
+550 Dow: No such file or directory
+ftp> cd Downloads
+250 CWD command successful
+ftp> pwd
+Remote directory: /home/surya/Downloads
+ftp> ls
+229 Entering Extended Passive Mode (|||58975|)
+150 Opening ASCII mode data connection for file list
+-rw-rw-r--   1 surya    surya        1474 May 14 17:35 4 (1).html
+-rw-rw-r--   1 surya    surya        1474 Apr 26 23:09 4.html
+-rw-rw-r--   1 surya    surya     4633146 Apr  8 05:43 5ebacd600cf21f91cadf29aa_original (1).pdf
+-rw-rw-r--   1 surya    surya      191768 Apr 18 06:37 66d74e33-a7d8-4c54-8e41-6e139c8122a8.jpeg
+-rw-rw-r--   1 surya    surya    16118162 Mar 29 18:40 Andrew S. Tanenbaum ( PDFDrive ).pdf
+-rw-rw-r--   1 surya    surya     1492633 Apr  6 17:30 annual-enterprise-survey-2021-financial-year-provisional-size-bands-csv.csv
+-rw-rw-r--   1 surya    surya     1475601 Apr  6 17:31 annual-enterprise-survey-2021-financial-year-provisional-size-bands-csv.lst.csv
+-rw-rw-r--   1 surya    surya      207013 Mar 29 05:19 antiragging.docx
+-rw-rw-r--   1 surya    surya      793650 May 17 16:13 APznzaarQkvPA5iHKPOLn84blkqtpASkGbnmve3zxS7WQjZvtgXOWvQuKH2VgDrsxjD6Wf7YRaTvXabGMR36vhGNbc3FQ4LuPR_MsXkIfXpCGvYyUsaj5b9QtA89OtCJd9Tr-fxiuXGUAnAlDQ1Tez4j_u5C5BCzuK8MM_qxSu2FHHi46Uf8ue07TjYgBC6sR71dKHEupJSoRBaUVWit2XoXPNtwVJ71DRenljHzM06Lg78VTZaYnv9wXqc.pdf
+-rw-rw-r--   1 surya    surya         101 Apr 25 08:03 awk.lst
+-rw-rw-r--   1 surya    surya      211299 May 18 06:25 Benifits of Docker.pptx
+-rw-rw-r--   1 surya    surya     3027844 May 18 06:25 Blue Modern Technology Business Presentation (1).pdf
+-rw-rw-r--   1 surya    surya         127 Apr 19 03:44 celist
+-rw-rw-r--   1 surya    surya     3146081 Mar 29 05:19 Chapter 1.pdf
+-rw-r--r--   1 surya    surya    323186034 Mar 26 18:31 CiscoPacketTracer_821_Ubuntu_64bit.deb
+-rw-rw-r--   1 surya    surya       59189 Apr 11 15:53 cnmarks.pdf
+-rw-rw-r--   1 surya    surya    94824048 Mar 29 05:19 code_1.76.2-1678817801_amd64.deb
+-rw-rw-r--   1 surya    surya     6897431 Mar 29 18:56 Computer networks ( PDFDrive ).pdf
+-rw-rw-r--   1 surya    surya      299235 Apr 10 19:38 Computer Networks  Problem Solutions (4th Ed 2003)  - Andrew Tanenbaum PRENTICE HALL (1).pdf
+-rw-rw-r--   1 surya    surya      299235 Mar 29 19:02 Computer Networks  Problem Solutions (4th Ed 2003)  - Andrew Tanenbaum PRENTICE HALL.pdf
+-rw-rw-r--   1 surya    surya       22171 Mar 29 05:19 CSS Properties (1).docx
+-rw-rw-r--   1 surya    surya       22171 Mar 29 05:19 CSS Properties (2).docx
+-rw-rw-r--   1 surya    surya       22171 Mar 29 05:19 CSS Properties (3).docx
+-rw-rw-r--   1 surya    surya       22171 Mar 29 05:19 CSS Properties.docx
+-rw-rw-r--   1 surya    surya         235 Apr  4 04:47 cutlist
+-rw-rw-r--   1 surya    surya           0 Mar 29 05:19 cutlist1
+-rw-rw-r--   1 surya    surya         165 Apr  4 04:48 cutlist2
+-rw-rw-r--   1 surya    surya       16818 May 14 18:01 D3.zip
+-rw-rw-r--   1 surya    surya        1324 Mar 29 05:19 dict.py
+-rw-rw-r--   1 surya    surya         252 May 10 18:22 Directors.txt
+-rw-rw-r--   1 surya    surya         252 Apr 18 07:30 dlist
+-rw-rw-r--   1 surya    surya         224 Apr  4 05:18 doc (1) (copy).lst
+-rw-rw-r--   1 surya    surya         224 Apr  4 05:18 doc (1).lst
+-rw-rw-r--   1 surya    surya         224 Apr  4 05:19 doc (2) (copy).lst
+-rw-rw-r--   1 surya    surya         224 Apr  4 05:19 doc (2).lst
+-rw-rw-r--   1 surya    surya         224 Apr  4 05:20 doc (3).lst
+-rw-rw-r--   1 surya    surya         296 Apr  5 05:22 doc (4).lst
+-rw-rw-r--   1 surya    surya          61 Apr  4 05:13 doc (copy).lst
+-rw-rw-r--   1 surya    surya       40626 Apr 30 14:00 docker_h.jpg
+-rw-rw-r--   1 surya    surya       12528 May 18 07:17 DOCKER INTRO.docx
+-rw-rw-r--   1 surya    surya          61 Apr  4 05:13 doc.lst
+-rw-rw-r--   1 surya    surya        6371 Apr 22 16:42 download.jpeg
+-rw-rw-r--   1 surya    surya     1313554 Apr 25 17:58 drive-download-20230422T112518Z-001.zip
+-rw-rw-r--   1 surya    surya          25 Apr  4 07:31 dubba.txt
+-rw-rw-r--   1 surya    surya         127 Apr 18 07:31 elist
+-rw-rw-r--   1 surya    surya         947 May 10 18:21 emp1.lst
+-rw-rw-r--   1 surya    surya         954 Apr  6 18:19 emp.lst
+-rw-rw-r--   1 surya    surya           0 Apr 25 07:30 empn1.lst
+-rw-rw-r--   1 surya    surya         351 May 18 08:51 emul.py
+-rw-rw-r--   1 surya    surya      666307 May 10 13:55 Enhancing Soft Skills and Personality.jpg
+-rw-rw-r--   1 surya    surya        2821 May 18 08:51 estringtuple.py
+-rw-rw-r--   1 surya    surya           0 Apr  6 18:10 faltu.lst
+-rw-rw-r--   1 surya    surya     1111608 May 18 10:39 Final Docker Report-1-14 (1).pdf
+-rw-rw-r--   1 surya    surya     1111608 May 18 10:39 Final Docker Report-1-14.pdf
+-rw-rw-r--   1 surya    surya          60 Apr  8 19:59 finallist
+-rw-rw-r--   1 surya    surya           0 Apr  6 18:10 hello txt
+-rw-rw-r--   1 surya    surya    936649014 Apr 13 17:07 ideaIC-2023.1.tar.gz
+-rw-rw-r--   1 surya    surya          15 Apr 18 07:05 instr
+-rw-rw-r--   1 surya    surya    208426745 May  5 14:33 Intro to docker (1).mp4
+-rw-rw-r--   1 surya    surya    208426745 May  5 17:06 Intro to docker (2).mp4
+-rw-rw-r--   1 surya    surya    208426745 May  5 14:19 Intro to docker.mp4
+-rw-rw-r--   1 surya    surya       57480 Apr 27 02:15 IOS.odp
+-rw-rw-r--   1 surya    surya    189938218 Apr 13 17:06 jdk-20_linux-aarch64_bin.tar.gz
+-rw-rw-r--   1 surya    surya      430359 Apr  2 19:49 Lab Programs (1).zip
+-rw-rw-r--   1 surya    surya        7288 Mar 29 05:19 linux_commands.xlsx
+-rw-rw-r--   1 surya    surya           0 Apr  4 07:06 lss_extra_class
+-rw-rw-r--   1 surya    surya     7072656 Mar 29 05:19 lss notes 1st unit.pdf
+-rw-rw-r--   1 surya    surya     2562417 Mar 29 05:19 lss.pdf
+-rw-rw-r--   1 surya    surya      117325 May  5 15:11 lss_video_Project.kdenlive
+-rw-rw-r--   1 surya    surya         528 Apr 25 17:58 main (1).py
+-rw-rw-r--   1 surya    surya       20066 Apr 25 17:50 main.py
+-rw-rw-r--   1 surya    surya        5835 Apr 25 17:58 millonare.py
+-rw-rw-r--   1 surya    surya         126 Apr 18 07:31 mlist
+-rw-rw-r--   1 surya    surya        6547 Apr 30 17:36 NGINX-logo-rgb-large.png
+-rw-rw-r--   1 surya    surya      487312 Apr 21 15:48 noc23-hs30.pdf
+-rw-rw-r--   1 surya    surya      147748 Apr 30 17:36 node.js-logo-image.png
+-rw-rw-r--   1 surya    surya    17668473 Apr 25 14:01 OnlineMovieTicketBS-PHP.zip
+-rw-rw-r--   1 surya    surya      181649 Mar 29 05:19 Payment Status.pdf
+-rw-r--r--   1 surya    surya        3166 Apr  6 18:26 ( PDFDrive )q
+-rw-rw-r--   1 surya    surya      672985 Apr  8 12:12 python_oops.pdf
+-rw-rw-r--   1 surya    surya      164449 Apr 16 20:36 RESUME (1).pdf
+-rw-rw-r--   1 surya    surya      156956 Apr 16 08:02 Resume.pdf
+-rw-rw-r--   1 surya    surya      164449 Apr 16 20:34 RESUME.pdf
+-rw-rw-r--   1 surya    surya       11563 May  9 17:14 RVCE _ Test - 1.xlsx
+-rw-rw-r--   1 surya    surya         947 Apr 19 03:48 sedemp1.lst
+-rw-rw-r--   1 surya    surya         315 Apr  4 04:43 shortlist
+-rw-rw-r--   1 surya    surya           0 Mar 29 05:19 short.lst
+-rwxr-----   1 surya    surya      250984 May  4 19:45 Standard Recording 10.mp3
+-rwxr-----   1 surya    surya     7828712 May  1 06:13 Standard Recording 1.mp3
+-rwxr-----   1 surya    surya     3475096 May  1 06:27 Standard Recording 2.mp3
+-rwxr-----   1 surya    surya     2763463 May  1 06:32 Standard Recording 3.mp3
+-rwxr-----   1 surya    surya     7209863 May  1 06:39 Standard Recording 4.mp3
+-rwxr-----   1 surya    surya     1342429 May  1 06:43 Standard Recording 5.mp3
+-rwxr-----   1 surya    surya     8847983 May  1 06:53 Standard Recording 6.mp3
+-rwxr-----   1 surya    surya    17868280 May  1 07:30 Standard Recording 7.mp3
+-rwxr-----   1 surya    surya    25041525 May  1 08:13 Standard Recording 8.mp3
+-rwxr-----   1 surya    surya      494328 May  4 18:20 Standard Recording 9.mp3
+-rw-rw-r--   1 surya    surya       51365 Apr 16 19:59 swot.pdf
+-rw-rw-r--   1 surya    surya           0 Mar 29 05:19 top4.txt
+-rw-rw-r--   1 surya    surya       12566 Apr 30 17:42 transfer-files-from-pc-to-pc.png
+-rw-rw-r--   1 surya    surya     2678571 Mar 29 05:19 Unit-1 (1).pptx
+-rw-rw-r--   1 surya    surya     2678571 Mar 29 05:19 Unit-1 (2).pptx
+-rw-rw-r--   1 surya    surya     2678571 Mar 29 05:19 Unit-1.pptx
+-rw-rw-r--   1 surya    surya      502784 May 17 18:53 Untitled-1.ppt
+-rw-rw-r--   1 surya    surya     2356870 May  5 15:05 Upbeat - Corporate _ Free Download.mp3
+drwxrwxr-x   2 surya    surya        4096 Apr 25 14:35 Uttarakhand Tourism Site
+-rw-rw-r--   1 surya    surya    28588145 Apr 25 14:34 Uttarakhand Tourism Site.zip
+-rw-rw-r--   1 surya    surya    27546713 Mar 29 05:19 VID20230304210834 (1).mp4
+-rw-rw-r--   1 surya    surya    27546713 Mar 29 05:19 VID20230304210834.mp4
+-rw-rw-r--   1 surya    surya     1839991 Apr 27 16:36 W1-U1-L1.Intro1-Highlights of Devpg SS-1-24.pdf
+-rw-rw-r--   1 surya    surya     2292615 Apr 27 16:38 W1-U2-L2.Intro-2-Highlights of Devpg SS-25-48.pdf
+-rw-rw-r--   1 surya    surya     2105930 Apr 27 16:40 W1-U3-L3. Mindset1-Definitions & Types.pdf
+-rw-rw-r--   1 surya    surya     2217021 Apr 27 16:43 W1-U5-L5. Mindset3.pdf
+-rw-rw-r--   1 surya    surya          12 Apr  8 21:31 world.txt
+226 Transfer complete
+ftp> touch vatsa.txt
+?Invalid command.
+ftp> ls -a | grep test.txt
+usage: ls [remote-path [local-file]]
+ftp> get test.txt
+local: test.txt remote: test.txt
+229 Entering Extended Passive Mode (|||25357|)
+150 Opening BINARY mode data connection for test.txt
+     0        0.00 KiB/s 
+226 Transfer complete
+ftp> put dark.jpeg
+local: dark.jpeg remote: dark.jpeg
+229 Entering Extended Passive Mode (|||62579|)
+150 Opening BINARY mode data connection for dark.jpeg
+100% |******************************************************************************************************************************************|  7905      274.33 KiB/s    00:00 ETA
+226 Transfer complete
+7905 bytes sent in 00:00 (255.90 KiB/s)
+ftp> mput > Library.jpeg bookfavicon.png
+mput > [anpqy?]? y
+ftp: Can't open `>': No such file or directory
+mput Library.jpeg [anpqy?]? y
+ftp: Can't open `Library.jpeg': No such file or directory
+mput bookfavicon.png [anpqy?]? y
+229 Entering Extended Passive Mode (|||30749|)
+150 Opening BINARY mode data connection for bookfavicon.png
+100% |******************************************************************************************************************************************|  2730       96.00 KiB/s    00:00 ETA
+226 Transfer complete
+2730 bytes sent in 00:00 (90.31 KiB/s)
+ftp> mput > Library.jpg bookfavicon.png
+mput > [anpqy?]? y
+ftp: Can't open `>': No such file or directory
+mput Library.jpg [anpqy?]? y
+229 Entering Extended Passive Mode (|||49955|)
+150 Opening BINARY mode data connection for Library.jpg
+100% |******************************************************************************************************************************************|  3739 KiB   11.64 MiB/s    00:00 ETA
+226 Transfer complete
+3829586 bytes sent in 00:00 (11.17 MiB/s)
+mput bookfavicon.png [anpqy?]? y
+229 Entering Extended Passive Mode (|||29700|)
+150 Opening BINARY mode data connection for bookfavicon.png
+100% |******************************************************************************************************************************************|  2730       24.79 MiB/s    00:00 ETA
+226 Transfer complete
+2730 bytes sent in 00:00 (1.39 MiB/s)
+ftp> ls
+229 Entering Extended Passive Mode (|||33322|)
+150 Opening ASCII mode data connection for file list
+-rw-rw-r--   1 surya    surya        1474 May 14 17:35 4 (1).html
+-rw-rw-r--   1 surya    surya        1474 Apr 26 23:09 4.html
+-rw-rw-r--   1 surya    surya     4633146 Apr  8 05:43 5ebacd600cf21f91cadf29aa_original (1).pdf
+-rw-rw-r--   1 surya    surya      191768 Apr 18 06:37 66d74e33-a7d8-4c54-8e41-6e139c8122a8.jpeg
+-rw-rw-r--   1 surya    surya    16118162 Mar 29 18:40 Andrew S. Tanenbaum ( PDFDrive ).pdf
+-rw-rw-r--   1 surya    surya     1492633 Apr  6 17:30 annual-enterprise-survey-2021-financial-year-provisional-size-bands-csv.csv
+-rw-rw-r--   1 surya    surya     1475601 Apr  6 17:31 annual-enterprise-survey-2021-financial-year-provisional-size-bands-csv.lst.csv
+-rw-rw-r--   1 surya    surya      207013 Mar 29 05:19 antiragging.docx
+-rw-rw-r--   1 surya    surya      793650 May 17 16:13 APznzaarQkvPA5iHKPOLn84blkqtpASkGbnmve3zxS7WQjZvtgXOWvQuKH2VgDrsxjD6Wf7YRaTvXabGMR36vhGNbc3FQ4LuPR_MsXkIfXpCGvYyUsaj5b9QtA89OtCJd9Tr-fxiuXGUAnAlDQ1Tez4j_u5C5BCzuK8MM_qxSu2FHHi46Uf8ue07TjYgBC6sR71dKHEupJSoRBaUVWit2XoXPNtwVJ71DRenljHzM06Lg78VTZaYnv9wXqc.pdf
+-rw-rw-r--   1 surya    surya         101 Apr 25 08:03 awk.lst
+-rw-rw-r--   1 surya    surya      211299 May 18 06:25 Benifits of Docker.pptx
+-rw-rw-r--   1 surya    surya     3027844 May 18 06:25 Blue Modern Technology Business Presentation (1).pdf
+-rw-r--r--   1 surya    surya        2730 May 20 06:15 bookfavicon.png
+-rw-rw-r--   1 surya    surya         127 Apr 19 03:44 celist
+-rw-rw-r--   1 surya    surya     3146081 Mar 29 05:19 Chapter 1.pdf
+-rw-r--r--   1 surya    surya    323186034 Mar 26 18:31 CiscoPacketTracer_821_Ubuntu_64bit.deb
+-rw-rw-r--   1 surya    surya       59189 Apr 11 15:53 cnmarks.pdf
+-rw-rw-r--   1 surya    surya    94824048 Mar 29 05:19 code_1.76.2-1678817801_amd64.deb
+-rw-rw-r--   1 surya    surya     6897431 Mar 29 18:56 Computer networks ( PDFDrive ).pdf
+-rw-rw-r--   1 surya    surya      299235 Apr 10 19:38 Computer Networks  Problem Solutions (4th Ed 2003)  - Andrew Tanenbaum PRENTICE HALL (1).pdf
+-rw-rw-r--   1 surya    surya      299235 Mar 29 19:02 Computer Networks  Problem Solutions (4th Ed 2003)  - Andrew Tanenbaum PRENTICE HALL.pdf
+-rw-rw-r--   1 surya    surya       22171 Mar 29 05:19 CSS Properties (1).docx
+-rw-rw-r--   1 surya    surya       22171 Mar 29 05:19 CSS Properties (2).docx
+-rw-rw-r--   1 surya    surya       22171 Mar 29 05:19 CSS Properties (3).docx
+-rw-rw-r--   1 surya    surya       22171 Mar 29 05:19 CSS Properties.docx
+-rw-rw-r--   1 surya    surya         235 Apr  4 04:47 cutlist
+-rw-rw-r--   1 surya    surya           0 Mar 29 05:19 cutlist1
+-rw-rw-r--   1 surya    surya         165 Apr  4 04:48 cutlist2
+-rw-rw-r--   1 surya    surya       16818 May 14 18:01 D3.zip
+-rw-r--r--   1 surya    surya        7905 May 20 06:11 dark.jpeg
+-rw-rw-r--   1 surya    surya        1324 Mar 29 05:19 dict.py
+-rw-rw-r--   1 surya    surya         252 May 10 18:22 Directors.txt
+-rw-rw-r--   1 surya    surya         252 Apr 18 07:30 dlist
+-rw-rw-r--   1 surya    surya         224 Apr  4 05:18 doc (1) (copy).lst
+-rw-rw-r--   1 surya    surya         224 Apr  4 05:18 doc (1).lst
+-rw-rw-r--   1 surya    surya         224 Apr  4 05:19 doc (2) (copy).lst
+-rw-rw-r--   1 surya    surya         224 Apr  4 05:19 doc (2).lst
+-rw-rw-r--   1 surya    surya         224 Apr  4 05:20 doc (3).lst
+-rw-rw-r--   1 surya    surya         296 Apr  5 05:22 doc (4).lst
+-rw-rw-r--   1 surya    surya          61 Apr  4 05:13 doc (copy).lst
+-rw-rw-r--   1 surya    surya       40626 Apr 30 14:00 docker_h.jpg
+-rw-rw-r--   1 surya    surya       12528 May 18 07:17 DOCKER INTRO.docx
+-rw-rw-r--   1 surya    surya          61 Apr  4 05:13 doc.lst
+-rw-rw-r--   1 surya    surya        6371 Apr 22 16:42 download.jpeg
+-rw-rw-r--   1 surya    surya     1313554 Apr 25 17:58 drive-download-20230422T112518Z-001.zip
+-rw-rw-r--   1 surya    surya          25 Apr  4 07:31 dubba.txt
+-rw-rw-r--   1 surya    surya         127 Apr 18 07:31 elist
+-rw-rw-r--   1 surya    surya         947 May 10 18:21 emp1.lst
+-rw-rw-r--   1 surya    surya         954 Apr  6 18:19 emp.lst
+-rw-rw-r--   1 surya    surya           0 Apr 25 07:30 empn1.lst
+-rw-rw-r--   1 surya    surya         351 May 18 08:51 emul.py
+-rw-rw-r--   1 surya    surya      666307 May 10 13:55 Enhancing Soft Skills and Personality.jpg
+-rw-rw-r--   1 surya    surya        2821 May 18 08:51 estringtuple.py
+-rw-rw-r--   1 surya    surya          35 May 20 06:10 f12.txt
+-rw-rw-r--   1 surya    surya           0 Apr  6 18:10 faltu.lst
+-rw-rw-r--   1 surya    surya     1111608 May 18 10:39 Final Docker Report-1-14 (1).pdf
+-rw-rw-r--   1 surya    surya     1111608 May 18 10:39 Final Docker Report-1-14.pdf
+-rw-rw-r--   1 surya    surya          60 Apr  8 19:59 finallist
+-rw-rw-r--   1 surya    surya           0 Apr  6 18:10 hello txt
+-rw-rw-r--   1 surya    surya    936649014 Apr 13 17:07 ideaIC-2023.1.tar.gz
+-rw-rw-r--   1 surya    surya          15 Apr 18 07:05 instr
+-rw-rw-r--   1 surya    surya    208426745 May  5 14:33 Intro to docker (1).mp4
+-rw-rw-r--   1 surya    surya    208426745 May  5 17:06 Intro to docker (2).mp4
+-rw-rw-r--   1 surya    surya    208426745 May  5 14:19 Intro to docker.mp4
+-rw-rw-r--   1 surya    surya       57480 Apr 27 02:15 IOS.odp
+-rw-rw-r--   1 surya    surya    189938218 Apr 13 17:06 jdk-20_linux-aarch64_bin.tar.gz
+-rw-rw-r--   1 surya    surya      430359 Apr  2 19:49 Lab Programs (1).zip
+-rw-r--r--   1 surya    surya     3829586 May 20 06:15 Library.jpg
+-rw-rw-r--   1 surya    surya        7288 Mar 29 05:19 linux_commands.xlsx
+-rw-rw-r--   1 surya    surya           0 Apr  4 07:06 lss_extra_class
+-rw-rw-r--   1 surya    surya     7072656 Mar 29 05:19 lss notes 1st unit.pdf
+-rw-rw-r--   1 surya    surya     2562417 Mar 29 05:19 lss.pdf
+-rw-rw-r--   1 surya    surya      117325 May  5 15:11 lss_video_Project.kdenlive
+-rw-rw-r--   1 surya    surya         528 Apr 25 17:58 main (1).py
+-rw-rw-r--   1 surya    surya       20066 Apr 25 17:50 main.py
+-rw-rw-r--   1 surya    surya        5835 Apr 25 17:58 millonare.py
+-rw-rw-r--   1 surya    surya         126 Apr 18 07:31 mlist
+-rw-rw-r--   1 surya    surya        6547 Apr 30 17:36 NGINX-logo-rgb-large.png
+-rw-rw-r--   1 surya    surya      487312 Apr 21 15:48 noc23-hs30.pdf
+-rw-rw-r--   1 surya    surya      147748 Apr 30 17:36 node.js-logo-image.png
+-rw-rw-r--   1 surya    surya    17668473 Apr 25 14:01 OnlineMovieTicketBS-PHP.zip
+-rw-rw-r--   1 surya    surya      181649 Mar 29 05:19 Payment Status.pdf
+-rw-r--r--   1 surya    surya        3166 Apr  6 18:26 ( PDFDrive )q
+-rw-rw-r--   1 surya    surya      672985 Apr  8 12:12 python_oops.pdf
+-rw-rw-r--   1 surya    surya      164449 Apr 16 20:36 RESUME (1).pdf
+-rw-rw-r--   1 surya    surya      156956 Apr 16 08:02 Resume.pdf
+-rw-rw-r--   1 surya    surya      164449 Apr 16 20:34 RESUME.pdf
+-rw-rw-r--   1 surya    surya       11563 May  9 17:14 RVCE _ Test - 1.xlsx
+-rw-rw-r--   1 surya    surya         947 Apr 19 03:48 sedemp1.lst
+-rw-rw-r--   1 surya    surya         315 Apr  4 04:43 shortlist
+-rw-rw-r--   1 surya    surya           0 Mar 29 05:19 short.lst
+-rwxr-----   1 surya    surya      250984 May  4 19:45 Standard Recording 10.mp3
+-rwxr-----   1 surya    surya     7828712 May  1 06:13 Standard Recording 1.mp3
+-rwxr-----   1 surya    surya     3475096 May  1 06:27 Standard Recording 2.mp3
+-rwxr-----   1 surya    surya     2763463 May  1 06:32 Standard Recording 3.mp3
+-rwxr-----   1 surya    surya     7209863 May  1 06:39 Standard Recording 4.mp3
+-rwxr-----   1 surya    surya     1342429 May  1 06:43 Standard Recording 5.mp3
+-rwxr-----   1 surya    surya     8847983 May  1 06:53 Standard Recording 6.mp3
+-rwxr-----   1 surya    surya    17868280 May  1 07:30 Standard Recording 7.mp3
+-rwxr-----   1 surya    surya    25041525 May  1 08:13 Standard Recording 8.mp3
+-rwxr-----   1 surya    surya      494328 May  4 18:20 Standard Recording 9.mp3
+-rw-rw-r--   1 surya    surya       51365 Apr 16 19:59 swot.pdf
+-rw-rw-r--   1 surya    surya           0 May 20 06:10 test.txt
+-rw-rw-r--   1 surya    surya           0 Mar 29 05:19 top4.txt
+-rw-rw-r--   1 surya    surya       12566 Apr 30 17:42 transfer-files-from-pc-to-pc.png
+-rw-rw-r--   1 surya    surya     2678571 Mar 29 05:19 Unit-1 (1).pptx
+-rw-rw-r--   1 surya    surya     2678571 Mar 29 05:19 Unit-1 (2).pptx
+-rw-rw-r--   1 surya    surya     2678571 Mar 29 05:19 Unit-1.pptx
+-rw-rw-r--   1 surya    surya      502784 May 17 18:53 Untitled-1.ppt
+-rw-rw-r--   1 surya    surya     2356870 May  5 15:05 Upbeat - Corporate _ Free Download.mp3
+drwxrwxr-x   2 surya    surya        4096 Apr 25 14:35 Uttarakhand Tourism Site
+-rw-rw-r--   1 surya    surya    28588145 Apr 25 14:34 Uttarakhand Tourism Site.zip
+-rw-rw-r--   1 surya    surya    27546713 Mar 29 05:19 VID20230304210834 (1).mp4
+-rw-rw-r--   1 surya    surya    27546713 Mar 29 05:19 VID20230304210834.mp4
+-rw-rw-r--   1 surya    surya     1839991 Apr 27 16:36 W1-U1-L1.Intro1-Highlights of Devpg SS-1-24.pdf
+-rw-rw-r--   1 surya    surya     2292615 Apr 27 16:38 W1-U2-L2.Intro-2-Highlights of Devpg SS-25-48.pdf
+-rw-rw-r--   1 surya    surya     2105930 Apr 27 16:40 W1-U3-L3. Mindset1-Definitions & Types.pdf
+-rw-rw-r--   1 surya    surya     2217021 Apr 27 16:43 W1-U5-L5. Mindset3.pdf
+-rw-rw-r--   1 surya    surya          12 Apr  8 21:31 world.txt
+226 Transfer complete
+ftp> 
+ftp> bye
+221 Goodbye.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ sudo adduser demo --gecos demo
+[sudo] password for shrivatsa: 
+Adding user `demo' ...
+Adding new group `demo' (1002) ...
+Adding new user `demo' (1001) with group `demo' ...
+Creating home directory `/home/demo' ...
+Copying files from `/etc/skel' ...
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: password updated successfully
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cat etc/passwd
+cat: etc/passwd: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:102:105::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:103:106:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+tss:x:106:112:TPM software stack,,,:/var/lib/tpm:/bin/false
+uuidd:x:107:115::/run/uuidd:/usr/sbin/nologin
+systemd-oom:x:108:116:systemd Userspace OOM Killer,,,:/run/systemd:/usr/sbin/nologin
+tcpdump:x:109:117::/nonexistent:/usr/sbin/nologin
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/usr/sbin/nologin
+usbmux:x:111:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+kernoops:x:113:65534:Kernel Oops Tracking Daemon,,,:/:/usr/sbin/nologin
+avahi:x:114:121:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
+cups-pk-helper:x:115:122:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+rtkit:x:116:123:RealtimeKit,,,:/proc:/usr/sbin/nologin
+whoopsie:x:117:124::/nonexistent:/bin/false
+sssd:x:118:125:SSSD system user,,,:/var/lib/sss:/usr/sbin/nologin
+speech-dispatcher:x:119:29:Speech Dispatcher,,,:/run/speech-dispatcher:/bin/false
+nm-openvpn:x:120:126:NetworkManager OpenVPN,,,:/var/lib/openvpn/chroot:/usr/sbin/nologin
+saned:x:121:128::/var/lib/saned:/usr/sbin/nologin
+colord:x:122:129:colord colour management daemon,,,:/var/lib/colord:/usr/sbin/nologin
+geoclue:x:123:130::/var/lib/geoclue:/usr/sbin/nologin
+pulse:x:124:131:PulseAudio daemon,,,:/run/pulse:/usr/sbin/nologin
+gnome-initial-setup:x:125:65534::/run/gnome-initial-setup/:/bin/false
+hplip:x:126:7:HPLIP system user,,,:/run/hplip:/bin/false
+gdm:x:127:133:Gnome Display Manager:/var/lib/gdm3:/bin/false
+shrivatsa:x:1000:1000:Shrivatsa A Shetty,,,:/home/shrivatsa:/bin/bash
+fwupd-refresh:x:128:136:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+proftpd:x:129:65534::/run/proftpd:/usr/sbin/nologin
+ftp:x:130:65534::/srv/ftp:/usr/sbin/nologin
+sshd:x:131:65534::/run/sshd:/usr/sbin/nologin
+demo:x:1001:1002:demo,,,:/home/demo:/bin/bash
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ su demo
+Password: 
+demo@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/home/shrivatsa/Downloads$ pwd
+/home/shrivatsa/Downloads
+demo@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/home/shrivatsa/Downloads$ su shrivatsa
+Password: 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ ls 
+ CN   Library.jpg  'RVCE -logo.png'   bookfavicon.png   dark.jpeg   f11.txt   hello   test.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Downloads$ ftp 165.0.0.10
+Connected to 165.0.0.10.
+220 ProFTPD Server (Debian) [::ffff:165.0.0.10]
+Name (165.0.0.10:shrivatsa): dummy
+331 Password required for dummy
+Password: 
+230 User dummy logged in
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> put test.txt
+local: test.txt remote: test.txt
+229 Entering Extended Passive Mode (|||46754|)
+150 Opening BINARY mode data connection for test.txt
+     0        0.00 KiB/s 
+226 Transfer complete
+ftp> bye
+221 Goodbye.
+

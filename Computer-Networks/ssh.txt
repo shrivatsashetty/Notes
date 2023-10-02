@@ -1,0 +1,451 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo sys statu Net
+sysctl                          systemd-cgls                    systemd-inhibit                 systemd-sysext
+system-config-printer           systemd-cgtop                   systemd-machine-id-setup        systemd-sysusers
+system-config-printer-applet    systemd-cryptenroll             systemd-mount                   systemd-tmpfiles
+systemctl                       systemd-delta                   systemd-notify                  systemd-tty-ask-password-agent
+systemd                         systemd-detect-virt             systemd-path                    systemd-umount
+systemd-analyze                 systemd-escape                  systemd-run                     
+systemd-ask-password            systemd-hwdb                    systemd-socket-activate         
+systemd-cat                     systemd-id128                   systemd-stdio-bridge            
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl status NetworkManager
+[sudo] password for shrivatsa: 
+Sorry, try again.
+[sudo] password for shrivatsa: 
+○ NetworkManager.service - Network Manager
+     Loaded: loaded (/lib/systemd/system/NetworkManager.service; enabled; vendor preset: enabled)
+     Active: inactive (dead) since Sat 2023-05-20 11:29:36 IST; 45min ago
+       Docs: man:NetworkManager(8)
+    Process: 666 ExecStart=/usr/sbin/NetworkManager --no-daemon (code=exited, status=0/SUCCESS)
+   Main PID: 666 (code=exited, status=0/SUCCESS)
+        CPU: 646ms
+
+May 20 11:29:36 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[666]: <info>  [1684562376.2838] device (wlo1): state change: activated -> deactiv>
+May 20 11:29:36 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[666]: <info>  [1684562376.2840] manager: NetworkManager state is now DISCONNECTING
+May 20 11:29:36 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[666]: <info>  [1684562376.2940] device (wlo1): state change: deactivating -> unma>
+May 20 11:29:36 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[666]: <info>  [1684562376.3340] dhcp4 (wlo1): canceled DHCP transaction
+May 20 11:29:36 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[666]: <info>  [1684562376.3341] dhcp4 (wlo1): activation: beginning transaction (>
+May 20 11:29:36 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[666]: <info>  [1684562376.3341] dhcp4 (wlo1): state changed no lease
+May 20 11:29:36 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[666]: <info>  [1684562376.4423] manager: NetworkManager state is now DISCONNECTED
+May 20 11:29:36 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[666]: <info>  [1684562376.4532] exiting (success)
+May 20 11:29:36 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: NetworkManager.service: Deactivated successfully.
+May 20 11:29:36 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Stopped Network Manager.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl start NetworkManager
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl status NetworkManager
+● NetworkManager.service - Network Manager
+     Loaded: loaded (/lib/systemd/system/NetworkManager.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2023-05-20 12:15:22 IST; 3s ago
+       Docs: man:NetworkManager(8)
+   Main PID: 7577 (NetworkManager)
+      Tasks: 4 (limit: 8642)
+     Memory: 3.6M
+        CPU: 201ms
+     CGroup: /system.slice/NetworkManager.service
+             └─7577 /usr/sbin/NetworkManager --no-daemon
+
+May 20 12:15:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[7577]: <info>  [1684565122.5799] device (eno1): carrier: link connected
+May 20 12:15:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[7577]: <info>  [1684565122.5801] manager: (eno1): new Ethernet device (/org/freed>
+May 20 12:15:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[7577]: <info>  [1684565122.5805] device (wlo1): driver supports Access Point (AP)>
+May 20 12:15:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[7577]: <info>  [1684565122.5808] manager: (wlo1): new 802.11 Wi-Fi device (/org/f>
+May 20 12:15:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[7577]: <info>  [1684565122.5810] device (wlo1): state change: unmanaged -> unavai>
+May 20 12:15:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[7577]: <info>  [1684565122.7374] failed to open /run/network/ifstate
+May 20 12:15:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[7577]: <info>  [1684565122.7515] modem-manager: ModemManager available
+May 20 12:15:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[7577]: <info>  [1684565122.7533] agent-manager: agent[7a32a4d8910b400f,:1.85/org.>
+May 20 12:15:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[7577]: <info>  [1684565122.8045] device (wlo1): supplicant interface state: inter>
+May 20 12:15:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx NetworkManager[7577]: <info>  [1684565122.8046] device (wlo1): state change: unavailable -> disc>
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get install openssh-client openssh-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+openssh-client is already the newest version (1:8.9p1-3ubuntu0.1).
+openssh-server is already the newest version (1:8.9p1-3ubuntu0.1).
+The following packages were automatically installed and are no longer required:
+  gir1.2-gst-plugins-base-1.0 gir1.2-rb-3.0 gir1.2-totem-1.0 gir1.2-totemplparser-1.0 libdmapsharing-3.0-2 libgpod-common libgpod4 libnetplan0
+  libsgutils2-2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get update
+Hit:1 http://in.archive.ubuntu.com/ubuntu jammy InRelease                                                                                              
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]                                                          
+Hit:3 https://dl.google.com/linux/chrome/deb stable InRelease                                               
+Get:4 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]                                                                             
+Hit:5 https://deb.nodesource.com/node_18.x jammy InRelease                                                                                             
+Hit:6 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy InRelease                                                                           
+Get:7 http://in.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Hit:8 https://ppa.launchpadcontent.net/obsproject/obs-studio/ubuntu jammy InRelease              
+Fetched 337 kB in 5s (70.8 kB/s)
+Reading package lists... Done
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get install openssh-client openssh-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+openssh-client is already the newest version (1:8.9p1-3ubuntu0.1).
+openssh-server is already the newest version (1:8.9p1-3ubuntu0.1).
+The following packages were automatically installed and are no longer required:
+  gir1.2-gst-plugins-base-1.0 gir1.2-rb-3.0 gir1.2-totem-1.0 gir1.2-totemplparser-1.0 libdmapsharing-3.0-2 libgpod-common libgpod4 libnetplan0
+  libsgutils2-2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl stop NetworkManager
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo if
+if        ifconfig  
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig -a
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 165.0.0.20  netmask 255.255.0.0  broadcast 165.0.255.255
+        inet6 fe80::7e57:58ff:fe6d:61c4  prefixlen 64  scopeid 0x20<link>
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 4592  bytes 776010 (776.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3518  bytes 4105905 (4.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 929  bytes 102517 (102.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 929  bytes 102517 (102.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlo1: flags=4098<BROADCAST,MULTICAST>  mtu 1500
+        ether 20:2b:20:a1:d8:e9  txqueuelen 1000  (Ethernet)
+        RX packets 7441  bytes 4897450 (4.8 MB)
+        RX errors 0  dropped 248  overruns 0  frame 0
+        TX packets 2687  bytes 411661 (411.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig 
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 165.0.0.20  netmask 255.255.0.0  broadcast 165.0.255.255
+        inet6 fe80::7e57:58ff:fe6d:61c4  prefixlen 64  scopeid 0x20<link>
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 5091  bytes 884943 (884.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3607  bytes 4115359 (4.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 933  bytes 103155 (103.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 933  bytes 103155 (103.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo ifconfig eno1 195.0.0.20 netmask 255.255.255.0 up
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig 
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 195.0.0.20  netmask 255.255.255.0  broadcast 195.0.0.255
+        inet6 fe80::7e57:58ff:fe6d:61c4  prefixlen 64  scopeid 0x20<link>
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 5115  bytes 889577 (889.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3619  bytes 4117546 (4.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 933  bytes 103155 (103.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 933  bytes 103155 (103.1 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ping 195.0.0.20
+PING 195.0.0.20 (195.0.0.20) 56(84) bytes of data.
+64 bytes from 195.0.0.20: icmp_seq=1 ttl=64 time=0.051 ms
+64 bytes from 195.0.0.20: icmp_seq=2 ttl=64 time=0.057 ms
+64 bytes from 195.0.0.20: icmp_seq=3 ttl=64 time=0.059 ms
+^C
+--- 195.0.0.20 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2045ms
+rtt min/avg/max/mdev = 0.051/0.055/0.059/0.003 ms
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ping 195.0.0.10
+PING 195.0.0.10 (195.0.0.10) 56(84) bytes of data.
+64 bytes from 195.0.0.10: icmp_seq=1 ttl=64 time=0.755 ms
+64 bytes from 195.0.0.10: icmp_seq=2 ttl=64 time=0.761 ms
+64 bytes from 195.0.0.10: icmp_seq=3 ttl=64 time=0.890 ms
+64 bytes from 195.0.0.10: icmp_seq=4 ttl=64 time=0.913 ms
+^C
+--- 195.0.0.10 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3037ms
+rtt min/avg/max/mdev = 0.755/0.829/0.913/0.072 ms
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls
+ Desktop     Downloads   Packet-Tracer   Projects   Templates   Videos       pt    'web project'
+ Documents   Music       Pictures        Public     Trails      lenovo.pub   snap
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cat lenovo.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEs2wflF+1pXNYZyy/JAKOBbFcXed6OtIR7C1gCpupVDPtf51YJHiBu2gBR+y5JNU94t20nXj9VnLorZeriThATNy6qm4RFGCdf7K9xpkE4hjFaNbNh9SHgIvz+V9ibShJEIKx/I6C+ozWSOXYM1q3bJHvifjbZurZ7i4Y13SJxT2JvfPKzizsNv5nmm8OKP0i6WzjS68T5BTogzxyti73Vr7JfZ7lQCsAEt9AF7vdzOU2QdqxA+77eyCju0QHawIniTR0K2VNYmtyGKzeumJKBaLxR2xtfDIX0SpSERhMDoK8TPVM7C3bE8DSCyZ8uEPdliiy3DKF2OLfm2L/1YQ+hIrum4jFEfmw+6MdeSbr73LFTO2dvUhtCeacQjttJjdBce3p9Skd3RCW+EFvzbo9xMHEFDXrjnVLmfiMwQ4uzcJ4A0XAK5RJxSEZmablCBFEELMkRS3Ag0M+yFkDkzdyDDKUqxOQDMT0O/5zNSGy7xUJErOfYNwK5O3/rqsrpv8= surya@surya-ThinkPad-T440s
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cat authorized_keys
+cat: authorized_keys: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls ~/.ssh/authorized_keys 
+/home/shrivatsa/.ssh/authorized_keys
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd ~/.ssh/authorized_keys 
+bash: cd: /home/shrivatsa/.ssh/authorized_keys: Not a directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls
+ Desktop     Downloads   Packet-Tracer   Projects   Templates   Videos       pt    'web project'
+ Documents   Music       Pictures        Public     Trails      lenovo.pub   snap
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd  ~/.ssh/authorized_keys 
+bash: cd: /home/shrivatsa/.ssh/authorized_keys: Not a directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd  .ssh/authorized_keys 
+bash: cd: .ssh/authorized_keys: Not a directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd  ~/.ssh/ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts  known_hosts.old  surya  surya.pub
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ cat authorized_keys 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8ozIWiKZHtgplJRoZ6IhnDkFst+FSQqORH59HY64Oe6iFD9buopbxmWoKVHBQRN/xOt9FB2NHe5yLcEt8hfw4B7MkW4OV21b6WMyvyjTVzNr0Pz+b203bM4JJyDyNQPY+hb2BDb416F1p3Rps1kos0TL/3xAvE8ox0LX5Ip3I9hZLaKqbHsPismCrCE6dNYrz5JEX2QwjJqx8j9yeIPSiiAidUI4m2Utqip732/arfhOJkMhkfemBRwXG7HOCUTqk8KNRNSHeS+ch6HTWWnbu82ST3x07fUlTkLWcVj2z1RGDFjSBB1Xm0GCg0o5zqvpIVSW6HVJ+eO07YTiMnVYxiG4FN1QHZiW0qXvIVXLf1tZK2u6sOvMC8w/rVNzADpu6AOG7buE5d7OUInMnJwcDeZVlkNG81TcUZF+LKZMyv7acIgBNDWoHO7Q26SBtT+JRGG3xVdV3UDUa5w2ggHyCRggDIouxYC674pCpe2Z31hnKlY5MKXmdvprB+YQSmfk= shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDVDg5FLCekMIDmsl7rCcUk6TPKWln3ocq4IKDnPn2k1D9OCE+CLtBsBPWiYeAilnJMbm0Y+aLPBwGysac5+EI9WtowPINoLhULzvzuUiH3KzPdbGb0bv6fJEKYMEoYXsisu3FMnnImOXE/epd8YEgPwJmK1LnLEJkg50uU1fMEAFdgP1YRas9CDRMnQB64yrrYQyydZDHzqP/zcW8qNX0MqOmDrAqpJAKRaYD+N3oWLUfkH6mGWA0Fnf/y5EQfLlwZnukhvnrKjnWezxv+1lO8qqdG55eu7Q2cEtKWK4C4THSNkUt6I5oJaU3ZQjtRb5QnhDnIC+E/x8z2dnqYJmuYniJPcDPJ6AeKtUdAr2g9uRRG0Z6W6Y91Q4XiAKvFO5KPCrZduLNGS3/IVL4NstS+TYFlcjoPzrOlzakms7njAvjA5JGbQIWOsgOztV6O2xZJ6ZT4eC5gjnEM4YztLFgL3FsHX+UX++GrVpI6b06rpJVpU3h0jWREzS99qXeLqU= shashant@shashant-X556UQK
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ cd
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cat lenovo.pub >> ~/.ssh/authorized_keys
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd  ~/.ssh/ 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts  known_hosts.old  surya  surya.pub
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ cat authorized_keys 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8ozIWiKZHtgplJRoZ6IhnDkFst+FSQqORH59HY64Oe6iFD9buopbxmWoKVHBQRN/xOt9FB2NHe5yLcEt8hfw4B7MkW4OV21b6WMyvyjTVzNr0Pz+b203bM4JJyDyNQPY+hb2BDb416F1p3Rps1kos0TL/3xAvE8ox0LX5Ip3I9hZLaKqbHsPismCrCE6dNYrz5JEX2QwjJqx8j9yeIPSiiAidUI4m2Utqip732/arfhOJkMhkfemBRwXG7HOCUTqk8KNRNSHeS+ch6HTWWnbu82ST3x07fUlTkLWcVj2z1RGDFjSBB1Xm0GCg0o5zqvpIVSW6HVJ+eO07YTiMnVYxiG4FN1QHZiW0qXvIVXLf1tZK2u6sOvMC8w/rVNzADpu6AOG7buE5d7OUInMnJwcDeZVlkNG81TcUZF+LKZMyv7acIgBNDWoHO7Q26SBtT+JRGG3xVdV3UDUa5w2ggHyCRggDIouxYC674pCpe2Z31hnKlY5MKXmdvprB+YQSmfk= shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDVDg5FLCekMIDmsl7rCcUk6TPKWln3ocq4IKDnPn2k1D9OCE+CLtBsBPWiYeAilnJMbm0Y+aLPBwGysac5+EI9WtowPINoLhULzvzuUiH3KzPdbGb0bv6fJEKYMEoYXsisu3FMnnImOXE/epd8YEgPwJmK1LnLEJkg50uU1fMEAFdgP1YRas9CDRMnQB64yrrYQyydZDHzqP/zcW8qNX0MqOmDrAqpJAKRaYD+N3oWLUfkH6mGWA0Fnf/y5EQfLlwZnukhvnrKjnWezxv+1lO8qqdG55eu7Q2cEtKWK4C4THSNkUt6I5oJaU3ZQjtRb5QnhDnIC+E/x8z2dnqYJmuYniJPcDPJ6AeKtUdAr2g9uRRG0Z6W6Y91Q4XiAKvFO5KPCrZduLNGS3/IVL4NstS+TYFlcjoPzrOlzakms7njAvjA5JGbQIWOsgOztV6O2xZJ6ZT4eC5gjnEM4YztLFgL3FsHX+UX++GrVpI6b06rpJVpU3h0jWREzS99qXeLqU= shashant@shashant-X556UQK
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEs2wflF+1pXNYZyy/JAKOBbFcXed6OtIR7C1gCpupVDPtf51YJHiBu2gBR+y5JNU94t20nXj9VnLorZeriThATNy6qm4RFGCdf7K9xpkE4hjFaNbNh9SHgIvz+V9ibShJEIKx/I6C+ozWSOXYM1q3bJHvifjbZurZ7i4Y13SJxT2JvfPKzizsNv5nmm8OKP0i6WzjS68T5BTogzxyti73Vr7JfZ7lQCsAEt9AF7vdzOU2QdqxA+77eyCju0QHawIniTR0K2VNYmtyGKzeumJKBaLxR2xtfDIX0SpSERhMDoK8TPVM7C3bE8DSCyZ8uEPdliiy3DKF2OLfm2L/1YQ+hIrum4jFEfmw+6MdeSbr73LFTO2dvUhtCeacQjttJjdBce3p9Skd3RCW+EFvzbo9xMHEFDXrjnVLmfiMwQ4uzcJ4A0XAK5RJxSEZmablCBFEELMkRS3Ag0M+yFkDkzdyDDKUqxOQDMT0O/5zNSGy7xUJErOfYNwK5O3/rqsrpv8= surya@surya-ThinkPad-T440s
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ cd
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls
+ Desktop     Downloads   Packet-Tracer   Projects   Templates   Videos       pt     victus.txt
+ Documents   Music       Pictures        Public     Trails      lenovo.pub   snap  'web project'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ whoami
+shrivatsa
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls
+ Desktop     Downloads   Packet-Tracer   Projects   Templates   Videos       pt     victus.txt
+ Documents   Music       Pictures        Public     Trails      lenovo.pub   snap  'web project'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get install openssh-server openssh-client
+[sudo] password for shrivatsa: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+openssh-client is already the newest version (1:8.9p1-3ubuntu0.1).
+openssh-server is already the newest version (1:8.9p1-3ubuntu0.1).
+The following packages were automatically installed and are no longer required:
+  gir1.2-gst-plugins-base-1.0 gir1.2-rb-3.0 gir1.2-totem-1.0 gir1.2-totemplparser-1.0 libdmapsharing-3.0-2 libgpod-common libgpod4 libnetplan0
+  libsgutils2-2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ifconfig 
+eno1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 195.0.0.20  netmask 255.255.255.0  broadcast 195.0.0.255
+        inet6 fe80::7e57:58ff:fe6d:61c4  prefixlen 64  scopeid 0x20<link>
+        ether 7c:57:58:6d:61:c4  txqueuelen 1000  (Ethernet)
+        RX packets 6786  bytes 1187047 (1.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4068  bytes 4178659 (4.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1029  bytes 110590 (110.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1029  bytes 110590 (110.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ping 195.0.0.10
+PING 195.0.0.10 (195.0.0.10) 56(84) bytes of data.
+64 bytes from 195.0.0.10: icmp_seq=1 ttl=64 time=1.02 ms
+64 bytes from 195.0.0.10: icmp_seq=2 ttl=64 time=0.945 ms
+64 bytes from 195.0.0.10: icmp_seq=3 ttl=64 time=0.796 ms
+^C
+--- 195.0.0.10 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 0.796/0.920/1.020/0.093 ms
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/shrivatsa/.ssh/id_rsa): shrikey
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in shrikey
+Your public key has been saved in shrikey.pub
+The key fingerprint is:
+SHA256:bG4WeF0TolJ09NmR0OAbDLa9VFgq2s9AmoL6ITBQrQU shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx
+The key's randomart image is:
++---[RSA 3072]----+
+|  Eo   .o.* +*+. |
+| .  o  . + O.*o. |
+|.  o  . . + % .  |
+|. .  . + B + =   |
+|o   . o S + o    |
+| o .   = . +     |
+|  o .   +   o    |
+|   o . o         |
+|    .            |
++----[SHA256]-----+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls
+ Desktop     Downloads   Packet-Tracer   Projects   Templates   Videos       pt        shrikey.pub   victus.txt
+ Documents   Music       Pictures        Public     Trails      lenovo.pub   shrikey   snap         'web project'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cat shrikey
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+LTE2LWUweHh4AQID
+-----END OPENSSH PRIVATE KEY-----
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ scp shrikey.pub surya@195.0.0.10:/home/surya/
+The authenticity of host '195.0.0.10 (195.0.0.10)' can't be established.
+ED25519 key fingerprint is SHA256:3MvgVJOl7x7tW+6HznNqPZ+PY06gCImT2pQOPK6ZQp0.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '195.0.0.10' (ED25519) to the list of known hosts.
+surya@195.0.0.10's password: 
+shrikey.pub                                                                                                           100%  602   452.7KB/s   00:00    
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd .ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts  known_hosts.old  surya  surya.pub
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ cd
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -i ~/shrikey.pub surya@195.0.0.10
+surya@195.0.0.10's password: 
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -i ~/shrikey surya@195.0.0.10
+surya@195.0.0.10's password: 
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.19.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+219 updates can be applied immediately.
+29 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+Last login: Mon May 15 23:54:52 2023 from 192.0.0.10
+surya@surya-ThinkPad-T440s:~$ ls
+ 19th                        f11.txt                                  json                    pt                             test22.sh.save
+'2023-05-01 13-27-41.mp4'    file.txt                                'JS _practice'           Public                         testing
+'2023-05-01 13-33-46.mp4'    final_wap_lab                            keywords.txt            PycharmProjects                tut1
+'2023-05-01 13-44-22.mp4'    fruits                                   lenovo                  python                         tut1.txt
+'2023-05-03 02-24-20.mp4'    gitclass                                 lenovo.pub              python_cie_lab_prac            tutt1.html
+'2023-05-05 00-29-00.mkv'   'Git copy'                                linux                   python_experiencial_learning   tut.txt
+'2023-05-05 01-19-32.mkv'    gitexamples                              LSS                    'Python file_handling'          veg
+ 20230505_193303-30fps.mp4   gitlearn                                 lss_database.txt        python_labPrograms             Videos
+ 20230505_193303.mp4         gitLearn                                 lssexam                'Python Program'               'wap CIE LAB'
+ 21_march                    gitLearn.txt                            'LSS  final Audio.m4a'   rem.files_wap_project          WAP_E_commerce_project
+ 25April,2023                git-tokken.txt                          'LSS Final Video.webm'   shell-scripting-tutorial       wap_lab_prac
+ 28mar                       google-chrome-stable_current_amd64.deb   Music                   shrikey.pub                   'WAP programs'
+ April,2023                  hello                                    Mysql                   snap                           why
+ D3.js                       hi                                       Namess                  softlink1                      XML
+ Desktop                    'HTML program'                            Pictures                temp
+ Documents                   if_else.sh                               practiceLssND           Templates
+ Downloads                  'Jai Shree Ram'                           prime.cpp               test22.sh
+surya@surya-ThinkPad-T440s:~$ cd .ssh
+surya@surya-ThinkPad-T440s:~/.ssh$ ls
+id_rsa  id_rsa.pub  known_hosts  known_hosts.old
+surya@surya-ThinkPad-T440s:~/.ssh$ ls -a
+.  ..  id_rsa  id_rsa.pub  known_hosts  known_hosts.old
+surya@surya-ThinkPad-T440s:~/.ssh$ exit
+logout
+Connection to 195.0.0.10 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd .ss
+bash: cd: .ss: No such file or directory
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd .ssh/
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts  known_hosts.old  surya  surya.pub
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ ssh -i ~/shrikey surya@195.0.0.10
+surya@195.0.0.10's password: 
+Permission denied, please try again.
+surya@195.0.0.10's password: 
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.19.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+219 updates can be applied immediately.
+29 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+Last login: Sat May 20 13:10:13 2023 from 195.0.0.20
+surya@surya-ThinkPad-T440s:~$ exit
+logout
+Connection to 195.0.0.10 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ cd
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -i ~/shrikey surya@195.0.0.10
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.19.0-41-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+219 updates can be applied immediately.
+29 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+Last login: Sat May 20 13:14:07 2023 from 195.0.0.20
+surya@surya-ThinkPad-T440s:~$ exit
+logout
+Connection to 195.0.0.10 closed.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ssh -i ~/shrikey.pub surya@195.0.0.10
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '/home/shrivatsa/shrikey.pub' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/home/shrivatsa/shrikey.pub": bad permissions
+surya@195.0.0.10's password: 
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls
+ Desktop     Downloads   Packet-Tracer   Projects   Templates   Videos       pt        shrikey.pub   victus.txt
+ Documents   Music       Pictures        Public     Trails      lenovo.pub   shrikey   snap         'web project'
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls
+ Desktop     Downloads   Packet-Tracer   Projects   Templates   Videos       mykey.pub   shrikey       snap        'web project'
+ Documents   Music       Pictures        Public     Trails      lenovo.pub   pt          shrikey.pub   victus.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd .ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ ls
+authorized_keys  id_rsa  id_rsa.pub  known_hosts  known_hosts.old  surya  surya.pub
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ cd
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cat mykey.pub >> ~/.ssh/authorized_keys
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd ~/.ssh
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ cat authorized_keys
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8ozIWiKZHtgplJRoZ6IhnDkFst+FSQqORH59HY64Oe6iFD9buopbxmWoKVHBQRN/xOt9FB2NHe5yLcEt8hfw4B7MkW4OV21b6WMyvyjTVzNr0Pz+b203bM4JJyDyNQPY+hb2BDb416F1p3Rps1kos0TL/3xAvE8ox0LX5Ip3I9hZLaKqbHsPismCrCE6dNYrz5JEX2QwjJqx8j9yeIPSiiAidUI4m2Utqip732/arfhOJkMhkfemBRwXG7HOCUTqk8KNRNSHeS+ch6HTWWnbu82ST3x07fUlTkLWcVj2z1RGDFjSBB1Xm0GCg0o5zqvpIVSW6HVJ+eO07YTiMnVYxiG4FN1QHZiW0qXvIVXLf1tZK2u6sOvMC8w/rVNzADpu6AOG7buE5d7OUInMnJwcDeZVlkNG81TcUZF+LKZMyv7acIgBNDWoHO7Q26SBtT+JRGG3xVdV3UDUa5w2ggHyCRggDIouxYC674pCpe2Z31hnKlY5MKXmdvprB+YQSmfk= shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDVDg5FLCekMIDmsl7rCcUk6TPKWln3ocq4IKDnPn2k1D9OCE+CLtBsBPWiYeAilnJMbm0Y+aLPBwGysac5+EI9WtowPINoLhULzvzuUiH3KzPdbGb0bv6fJEKYMEoYXsisu3FMnnImOXE/epd8YEgPwJmK1LnLEJkg50uU1fMEAFdgP1YRas9CDRMnQB64yrrYQyydZDHzqP/zcW8qNX0MqOmDrAqpJAKRaYD+N3oWLUfkH6mGWA0Fnf/y5EQfLlwZnukhvnrKjnWezxv+1lO8qqdG55eu7Q2cEtKWK4C4THSNkUt6I5oJaU3ZQjtRb5QnhDnIC+E/x8z2dnqYJmuYniJPcDPJ6AeKtUdAr2g9uRRG0Z6W6Y91Q4XiAKvFO5KPCrZduLNGS3/IVL4NstS+TYFlcjoPzrOlzakms7njAvjA5JGbQIWOsgOztV6O2xZJ6ZT4eC5gjnEM4YztLFgL3FsHX+UX++GrVpI6b06rpJVpU3h0jWREzS99qXeLqU= shashant@shashant-X556UQK
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEs2wflF+1pXNYZyy/JAKOBbFcXed6OtIR7C1gCpupVDPtf51YJHiBu2gBR+y5JNU94t20nXj9VnLorZeriThATNy6qm4RFGCdf7K9xpkE4hjFaNbNh9SHgIvz+V9ibShJEIKx/I6C+ozWSOXYM1q3bJHvifjbZurZ7i4Y13SJxT2JvfPKzizsNv5nmm8OKP0i6WzjS68T5BTogzxyti73Vr7JfZ7lQCsAEt9AF7vdzOU2QdqxA+77eyCju0QHawIniTR0K2VNYmtyGKzeumJKBaLxR2xtfDIX0SpSERhMDoK8TPVM7C3bE8DSCyZ8uEPdliiy3DKF2OLfm2L/1YQ+hIrum4jFEfmw+6MdeSbr73LFTO2dvUhtCeacQjttJjdBce3p9Skd3RCW+EFvzbo9xMHEFDXrjnVLmfiMwQ4uzcJ4A0XAK5RJxSEZmablCBFEELMkRS3Ag0M+yFkDkzdyDDKUqxOQDMT0O/5zNSGy7xUJErOfYNwK5O3/rqsrpv8= surya@surya-ThinkPad-T440s
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCs/ubSyCXp4CGmiHYvQ6UH+SQ6srDN4cvi+WDFm4AJ3MgRDSZPFRAzBziY6rSA7D4oTx5H5Qz4dJucH2MMnQwkrJUjZBMRF1C2bIYoChM954mImQeHqO+cgaFQKv3frrhJInPj71KVGyHryKQUgyIc1uptiULV5qDnNonj+OT42WfzV3Q8acNHEBSwm6gyTuvDzn1jvRKw2nNQAshbGQWjN4GvZkvvTY1zW0ouk84wkZYhk14vrOMFB0R/A2wez8SLHsJlPn8j/Xc72Ytz5p3ALJU5e1nfs0TFW6FPDTj/QpdY3s7/FchGWqmRBZsD6kmvoNlkshglxC9FN8yI8n9MOSnh24iH3Bh8cOdzem7z1BFKbUGCMGb9nlPqzFtXoAxuMSMBri7t4bw3DR1tg/PGrvuxPb5vZwP0a0CULVj+BA7EMpMylEP4RwmDUOIqFHBLvFf08vbLTWF4w8NTHdDnIaWluoflL1RWvX4yxxf7G/t5nHcVSI4dO+o5j2YJQWE= surya@surya-ThinkPad-T440s
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/.ssh$ cd
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ls
+ Desktop     Downloads   Packet-Tracer   Projects   Templates   Videos       mykey.pub      pt        shrikey.pub   victus.txt
+ Documents   Music       Pictures        Public     Trails      lenovo.pub   protocol.txt   shrikey   snap         'web project'
+

@@ -1,0 +1,231 @@
+-- Set up MySQL
+sudo mysql -u root -p
+
+--After entering the MySQL prompt
+sudo mysql -u root -p
+-- Or you can also use 
+sudo mysql -u root -i
+
+-- Grant all permissions and previlleges on the databases to root user
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
+
+-- Cretae a new database user
+CREATE USER 'username'@'host' IDENTIFIED BY 'password';
+
+--Syntax to grant permision 
+GRANT PRIVILEGES ON database_name.table_name TO 'username'@'host'; 
+
+-- See all the users list
+SELECT user, host FROM mysql.user;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SELECT COUNT(Country) FROM Customers;
+
+SELECT COUNT(DISTINCT Country) FROM Customers;
+
+SELECT COUNT(customer_id) FROM Customers;
+
+SELECT first_name, last_name, age
+FROM Customers 
+WHERE first_name = "John";
+
+SELECT COUNT(DISTINCT specialty) FROM doctors;
+
+SELECT * FROM patients
+WHERE height>180 AND weight > 75 AND allergies IS NOT NULL;
+
+SELECT * FROM patients
+WHERE height>180 AND weight > 75 AND allergies IS NOT NULL;
+
+SELECT * FROM customers
+WHERE country IS NOT 'USA';
+
+SELECT * FROM customers
+WHERE country <> 'USA' AND country <> 'UK';
+-- consise way :
+SELECT * FROM customers
+WHERE country NOT IN ('USA', 'UK', 'Germany');
+
+-- the ORDER BY clause
+SELECT * FROM patients
+WHERE gender = 'F' AND allergies IS NOT NULL
+ORDER BY height DESC;
+
+SELECT * FROM patients
+ORDER BY height, birth_date DESC;
+
+SELECT patient_id, first_name, last_name FROM patients
+ORDER BY first_name, last_name;
+
+INSERT INTO Customers(last_name, customer_id, first_name, country, age)
+VALUES ("Shetty", 6, "Shailesh", "India", 29);
+--(6	Shailesh	Shetty	29	India)
+
+DELETE FROM Customers WHERE first_name = 'Shailesh';
+
+UPDATE patients
+SET allergies = 'Pollens', height = 164, weight = 70
+WHERE patient_id = 1;
+
+-- UPDATE without the WHERE clause will update all the values in the cloumn 
+UPDATE Customers
+SET country = 'India';
+
+SELECT * FROM patients
+WHERE gender = 'F' AND allergies IS NOT NULL
+ORDER BY height DESC
+LIMIT 3;
+
+-- LIKE operator to search pattern
+SELECT COUNT(*) FROM admissions
+WHERE admission_date LIKE '____-09-__';
+
+
+SELECT * FROM patients
+WHERE first_name LIKE '___';
+
+SELECT * FROM patients
+WHERE city IN ('Hamilton', 'Ancaster', 'Ottawa	');
+
+SELECT patient_id, first_name, height, weight FROM patients
+WHERE (height BETWEEN 140 AND 180) AND (weight BETWEEN 80 and 1000)
+ORDER BY height DESC;
+
+SELECT * FROM patients
+WHERE first_name between 'Fiz' AND 'Lucinda';
+
+-- alias 
+SELECT first_name AS fname, last_name AS lname, *
+FROM patients
+ORDER BY fname,lname;
+
+-- CONCAT( ) function
+select patient_id, CONCAT(first_name,' ', last_name) AS full_name,
+CONCAT(city,' ', province_id) AS place,
+CONCAT(height, ' : ', weight) AS 'ht-wt' -- string values enclosed in ' '
+FROM patients;
+
+-- combining two tables 
+SELECT p.first_name, p.last_name, a.admission_date, a.diagnosis
+FROM patients AS p, admissions AS a 
+WHERE last_name = 'Sharma' AND p.patient_id = a.patient_id;
+-- result of the above query:
+Jiji	Sharma	2018-10-21	Congestive Heart Failure
+Jiji	Sharma	2019-01-24	Cardiac Arrest
+Didi	Sharma	2019-04-11	Cardiac Arrest
+Linda	Sharma	2019-03-04	Depression
+Kim	Sharma	2019-01-15	Stroke
+Lyan	Sharma	2018-11-10	Chronic Obstructive Pulmonary Disease
+Lyan	Sharma	2019-02-11	Myocardial Infarction
+
+
+SELECT patient_id, CONCAT(first_name, ' ', last_name) AS name
+FROM patients
+WHERE name = 'Jiji Sharma';
+
+-- INNER JOIN
+SELECT 
+patients.patient_id, patients.first_name, patients.last_name,
+admissions.diagnosis
+FROM patients
+INNER JOIN admissions ON patients.patient_id = admissions.patient_id;
+
+-- INNER JOIN along with CONCAT() operation
+SELECT patients.patient_id,
+    CONCAT(patients.first_name, ' ', patients.last_name) AS patient_name,
+    CONCAT('from ', admissions.admission_date,' upto ', admissions.discharge_date) AS stay_period
+FROM patients
+INNER JOIN admissions ON patients.patient_id = admissions.patient_id;
+
+SELECT CONCAT(patients.first_name, ' ', patients.last_name) AS patient_name,
+admissions.diagnosis
+FROM patients
+INNER JOIN admissions
+ON patients.patient_id = admissions.patient_id;
+-- the commutative property of INNER JOIN
+SELECT CONCAT(patients.first_name, ' ', patients.last_name) AS patient_name,
+admissions.diagnosis
+FROM admissions
+INNER JOIN patients
+ON patients.patient_id = admissions.patient_id  ;
+
+
+SELECT products.product_name, order_details.quantity, orders.required_date
+FROM ((products
+INNER JOIN order_details ON products.product_id = order_details.order_id)
+INNER JOIN orders ON products.product_id = orders.order_id);
+
+-- complex INNER JOIN
+SELECT DISTINCT patients.patient_id, 
+CONCAT(patients.first_name, ' ', patients.last_name) AS patient_name,
+admissions.admission_date,
+CONCAT(doctors.first_name, ' ', doctors.last_name) AS doctor_name
+FROM ((patients
+INNER JOIN admissions ON patients.patient_id = admissions.patient_id)
+INNER JOIN doctors ON admissions.attending_doctor_id = doctors.doctor_id);
+
+
+SELECT p.product_id,p.product_name, 
+order_details.quantity, orders.required_date
+FROM ((products AS p
+INNER JOIN order_details ON p.product_id = order_details.product_id
+INNER JOIN orders ON order_details.order_id = orders.order_id));
+-- shorhand using the Alias 
+SELECT p.product_id,p.product_name, 
+od.quantity, o.required_date
+FROM ((products AS p
+INNER JOIN order_details AS od ON p.product_id = od.product_id
+INNER JOIN orders AS o ON od.order_id = o.order_id));
+
+-- LEFT JOIN example
+SELECT CONCAT(p.first_name, ' ', p.last_name) AS patient_name,
+a.admission_date
+FROM patients AS p
+LEFT JOIN admissions AS a ON p.patient_id = a.patient_id;
+-- without alias
+SELECT CONCAT(patients.first_name, ' ', patients.last_name) AS patient_name,
+admissions.admission_date
+FROM admissions
+LEFT JOIN patients ON patients.patient_id = admissions.patient_id;
+
+
+-- Finding the average height of patients province wise
+SELECT pr.province_name, AVG(pat.height)
+FROM patients AS pat 
+INNER JOIN province_names AS pr on pr.province_id = pat.province_id 
+GROUP BY pr.province_id;
+
+-- List full name, province_name of patients living in 'British Columbia', 'Alberta'
+SELECT first_name, last_name, province_name  FROM patients AS pat 
+INNER JOIN province_names AS pr_names 
+ON pat.province_id = pr_names.province_id
+where pr_names.province_name IN ('British Columbia', 'Alberta');
+
+
+-- Count of patients from each province and display only those province names having patient count > 50 using HAVING clause
+SELECT pr_names.province_name, COUNT(pat.patient_id) AS patient_population
+FROM province_names as pr_names
+INNER JOIN patients AS pat 
+ON pat.province_id = pr_names.province_id
+GROUP BY pr_names.province_id
+HAVING COUNT(pat.patient_id) > 50; 
+--there are no patients from some province at all
+
+-- names of distinct provinces
+SELECT COUNT(DISTINCT province_name) FROM province_names 
+
+-- Using subqueiries
+SELECT first_name, specialty FROM doctors 
+WHERE specialty IN (SELECT DISTINCT specialty FROM doctors LIMIT 4);
+
+
+
+
+
+
+
+
+
+

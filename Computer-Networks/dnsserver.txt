@@ -1,0 +1,337 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl start NetworkManager
+[sudo] password for shrivatsa: 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get update
+Hit:1 http://in.archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu jammy-backports InRelease [108 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [601 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [392 kB]                                                                    
+Get:6 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [102 kB]                                                            
+Get:7 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [906 kB]                                                               
+Get:8 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [613 kB]                                                                
+Hit:9 https://deb.nodesource.com/node_18.x jammy InRelease                                                                                             
+Hit:10 https://dl.google.com/linux/chrome/deb stable InRelease                                                                                         
+Get:11 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]                                                                             
+Hit:12 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy InRelease                                                                          
+Get:13 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [269 kB]                                                       
+Hit:14 https://ppa.launchpadcontent.net/obsproject/obs-studio/ubuntu jammy InRelease                                                                   
+Get:15 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [41.5 kB]                                                           
+Get:16 http://in.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]                                                      
+Get:17 http://in.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [7996 B]                                                         
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [18.5 kB]                                                       
+Get:19 http://in.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [12.9 kB]                                                    
+Fetched 3301 kB in 12s (268 kB/s)                                                                                                                      
+Reading package lists... Done
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get install dnsmasq
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+dnsmasq is already the newest version (2.86-1.1ubuntu0.3).
+The following packages were automatically installed and are no longer required:
+  gir1.2-gst-plugins-base-1.0 gir1.2-rb-3.0 gir1.2-totem-1.0 gir1.2-totemplparser-1.0 libdmapsharing-3.0-2 libgpod-common libgpod4 libnetplan0
+  libsgutils2-2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo apt-get install dnsutils
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+dnsutils is already the newest version (1:9.18.12-0ubuntu0.22.04.1).
+The following packages were automatically installed and are no longer required:
+  gir1.2-gst-plugins-base-1.0 gir1.2-rb-3.0 gir1.2-totem-1.0 gir1.2-totemplparser-1.0 libdmapsharing-3.0-2 libgpod-common libgpod4 libnetplan0
+  libsgutils2-2
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 35 not upgraded.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl stop NetworkManager
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl status dnsmasq
+× dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/lib/systemd/system/dnsmasq.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2023-05-20 18:33:22 IST; 1h 5min ago
+    Process: 17660 ExecStartPre=/etc/init.d/dnsmasq checkconfig (code=exited, status=0/SUCCESS)
+    Process: 17668 ExecStart=/etc/init.d/dnsmasq systemd-exec (code=exited, status=2)
+        CPU: 17ms
+
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[17668]: dnsmasq: failed to create listening socket for port 53: Address already in use
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: dnsmasq.service: Control process exited, code=exited, status=2/INVALIDARGUMENT
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[17668]: failed to create listening socket for port 53: Address already in use
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: dnsmasq.service: Failed with result 'exit-code'.
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[17668]: FAILED to start up
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Failed to start dnsmasq - A lightweight DHCP and caching DNS server.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo lsof:53
+sudo: lsof:53: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo lsof -i:53
+COMMAND     PID            USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+chrome    18072       shrivatsa   21u  IPv4 212236      0t0  UDP localhost:49520->localhost:domain 
+chrome    18072       shrivatsa   25u  IPv4 212238      0t0  UDP localhost:36847->localhost:domain 
+chrome    18072       shrivatsa   26u  IPv4 207482      0t0  UDP localhost:46503->localhost:domain 
+chrome    18072       shrivatsa   32u  IPv4 205216      0t0  UDP localhost:41627->localhost:domain 
+chrome    18072       shrivatsa   34u  IPv4 212234      0t0  UDP localhost:33895->localhost:domain 
+systemd-r 20463 systemd-resolve   13u  IPv4 206002      0t0  UDP localhost:domain 
+systemd-r 20463 systemd-resolve   14u  IPv4 206003      0t0  TCP localhost:domain (LISTEN)
+systemd-r 20463 systemd-resolve   17u  IPv4 208628      0t0  UDP 10.10.10.5:54967->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   18u  IPv4 208618      0t0  UDP 10.10.10.5:56148->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   19u  IPv4 208619      0t0  UDP 10.10.10.5:35917->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   20u  IPv4 213786      0t0  UDP 10.10.10.5:57114->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   21u  IPv4 208629      0t0  UDP 10.10.10.5:40584->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   22u  IPv4 208630      0t0  UDP 10.10.10.5:47852->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   23u  IPv4 208624      0t0  UDP 10.10.10.5:36514->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   24u  IPv4 213794      0t0  UDP 10.10.10.5:33372->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   25u  IPv4 208614      0t0  UDP 10.10.10.5:47318->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   26u  IPv4 213798      0t0  UDP 10.10.10.5:51811->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   27u  IPv4 208620      0t0  UDP 10.10.10.5:57023->192.168.0.1:domain 
+systemd-r 20463 systemd-resolve   29u  IPv4 212222      0t0  UDP 10.10.10.5:35268->192.168.0.1:domain 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl stop systemd-resolved
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo lsof -i:53
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl status dnsmasq.service 
+× dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/lib/systemd/system/dnsmasq.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2023-05-20 18:33:22 IST; 1h 10min ago
+    Process: 17660 ExecStartPre=/etc/init.d/dnsmasq checkconfig (code=exited, status=0/SUCCESS)
+    Process: 17668 ExecStart=/etc/init.d/dnsmasq systemd-exec (code=exited, status=2)
+        CPU: 17ms
+
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[17668]: dnsmasq: failed to create listening socket for port 53: Address already in use
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: dnsmasq.service: Control process exited, code=exited, status=2/INVALIDARGUMENT
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[17668]: failed to create listening socket for port 53: Address already in use
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: dnsmasq.service: Failed with result 'exit-code'.
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[17668]: FAILED to start up
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Failed to start dnsmasq - A lightweight DHCP and caching DNS server.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl stop dnsmasq.service 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl status dnsmasq.service 
+× dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/lib/systemd/system/dnsmasq.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2023-05-20 18:33:22 IST; 1h 10min ago
+    Process: 17660 ExecStartPre=/etc/init.d/dnsmasq checkconfig (code=exited, status=0/SUCCESS)
+    Process: 17668 ExecStart=/etc/init.d/dnsmasq systemd-exec (code=exited, status=2)
+        CPU: 17ms
+
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[17668]: dnsmasq: failed to create listening socket for port 53: Address already in use
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: dnsmasq.service: Control process exited, code=exited, status=2/INVALIDARGUMENT
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[17668]: failed to create listening socket for port 53: Address already in use
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: dnsmasq.service: Failed with result 'exit-code'.
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[17668]: FAILED to start up
+May 20 18:33:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Failed to start dnsmasq - A lightweight DHCP and caching DNS server.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl start dnsmasq.service 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo systemctl status dnsmasq.service 
+● dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/lib/systemd/system/dnsmasq.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2023-05-20 19:43:56 IST; 6s ago
+    Process: 21959 ExecStartPre=/etc/init.d/dnsmasq checkconfig (code=exited, status=0/SUCCESS)
+    Process: 21967 ExecStart=/etc/init.d/dnsmasq systemd-exec (code=exited, status=0/SUCCESS)
+    Process: 21976 ExecStartPost=/etc/init.d/dnsmasq systemd-start-resolvconf (code=exited, status=0/SUCCESS)
+   Main PID: 21975 (dnsmasq)
+      Tasks: 1 (limit: 8642)
+     Memory: 616.0K
+        CPU: 1.071s
+     CGroup: /system.slice/dnsmasq.service
+             └─21975 /usr/sbin/dnsmasq -x /run/dnsmasq/dnsmasq.pid -u dnsmasq -7 /etc/dnsmasq.d,.dpkg-dist,.dpkg-old,.dpkg-new --local-service --trust->
+
+May 20 19:43:56 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+May 20 19:43:56 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: started, version 2.86 cachesize 150
+May 20 19:43:56 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: DNS service limited to local subnets
+May 20 19:43:56 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: compile time options: IPv6 GNU-getopt DBus no-UBus i18n IDN2 DHCP DHCPv6 no-Lua >
+May 20 19:43:56 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: reading /etc/resolv.conf
+May 20 19:43:56 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: using nameserver 127.0.0.53#53
+May 20 19:43:56 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: read /etc/hosts - 7 addresses
+May 20 19:43:56 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Started dnsmasq - A lightweight DHCP and caching DNS server.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ cd /etc/
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ ls
+ImageMagick-6                  cracklib             gdm3             ld.so.conf      network        rc3.d              sudoers.d
+ModemManager                   cron.d               geoclue          ld.so.conf.d    networks       rc4.d              sysctl.conf
+NetworkManager                 cron.daily           ghostscript      ldap            newt           rc5.d              sysctl.d
+ODBCDataSources                cron.hourly          glvnd            legal           nftables.conf  rc6.d              systemd
+PackageKit                     cron.monthly         gnome            libao.conf      nsswitch.conf  rcS.d              terminfo
+UPower                         cron.weekly          groff            libaudit.conf   odbc.ini       resolv.conf        thermald
+X11                            crontab              group            libblockdev     odbcinst.ini   resolvconf         thunderbird
+acpi                           cups                 group-           libnl-3         openal         rmt                timezone
+adduser.conf                   cupshelpers          grub.d           libpaper.d      openni2        rpc                timidity
+alsa                           dbus-1               gshadow          libreoffice     openvpn        rsyslog.conf       tmpfiles.d
+alternatives                   dconf                gshadow-         lighttpd        opt            rsyslog.d          ts.conf
+anacrontab                     debconf.conf         gss              locale.alias    os-release     rygel.conf         ubuntu-advantage
+apache2                        debian_version       gtk-2.0          locale.gen      pam.conf       sane.d             ucf.conf
+apg.conf                       default              gtk-3.0          localtime       pam.d          security           udev
+apm                            deluser.conf         hdparm.conf      logcheck        papersize      selinux            udisks2
+apparmor                       depmod.d             host.conf        login.defs      passwd         sensors.d          ufw
+apparmor.d                     dhcp                 hostid           logrotate.conf  passwd-        sensors3.conf      update-manager
+apport                         dictionaries-common  hostname         logrotate.d     pcmcia         services           update-motd.d
+appstream.conf                 dnsmasq.conf         hosts            lsb-release     perl           sgml               update-notifier
+apt                            dnsmasq.d            hosts.allow      lynx            pki            shadow             usb_modeswitch.conf
+avahi                          dpkg                 hosts.deny       machine-id      pm             shadow-            usb_modeswitch.d
+bash.bashrc                    e2scrub.conf         hp               magic           pnm2ppa.conf   shells             vdpau_wrapper.cfg
+bash_completion                emacs                ifplugd          magic.mime      polkit-1       signon-ui          vim
+bash_completion.d              environment          init             mailcap         ppp            skel               vtrgb
+bindresvport.blacklist         environment.d        init.d           mailcap.order   profile        snmp               vulkan
+binfmt.d                       ethertypes           initramfs-tools  manpath.config  profile.d      speech-dispatcher  w3m
+bluetooth                      firefox              inputrc          mime.types      proftpd        squid              wgetrc
+brlapi.key                     fonts                insserv.conf.d   mke2fs.conf     protocols      ssh                whoopsie
+brltty                         fprintd.conf         ipp-usb          modprobe.d      pulse          ssl                wpa_supplicant
+brltty.conf                    fstab                iproute2         modules         python2.7      subgid             xattr.conf
+ca-certificates                ftpusers             issue            modules-load.d  python3        subgid-            xdg
+ca-certificates.conf           fuse.conf            issue.net        mtab            python3.10     subuid             xml
+ca-certificates.conf.dpkg-old  fwupd                kernel           mysql           python3.11     subuid-            zsh_command_not_found
+catdocrc                       gai.conf             kernel-img.conf  nanorc          rc0.d          sudo.conf
+chatscripts                    gamin                kerneloops.conf  netconfig       rc1.d          sudo_logsrvd.conf
+console-setup                  gdb                  ld.so.cache      netplan         rc2.d          sudoers
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ nano dnsmasq.conf 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ nano dnsmasq.d
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ cd dnsmasq.d/
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc/dnsmasq.d$ ls
+README
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc/dnsmasq.d$ cd ..
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ ls
+ImageMagick-6                  cracklib             gdm3             ld.so.conf      network        rc3.d              sudoers.d
+ModemManager                   cron.d               geoclue          ld.so.conf.d    networks       rc4.d              sysctl.conf
+NetworkManager                 cron.daily           ghostscript      ldap            newt           rc5.d              sysctl.d
+ODBCDataSources                cron.hourly          glvnd            legal           nftables.conf  rc6.d              systemd
+PackageKit                     cron.monthly         gnome            libao.conf      nsswitch.conf  rcS.d              terminfo
+UPower                         cron.weekly          groff            libaudit.conf   odbc.ini       resolv.conf        thermald
+X11                            crontab              group            libblockdev     odbcinst.ini   resolvconf         thunderbird
+acpi                           cups                 group-           libnl-3         openal         rmt                timezone
+adduser.conf                   cupshelpers          grub.d           libpaper.d      openni2        rpc                timidity
+alsa                           dbus-1               gshadow          libreoffice     openvpn        rsyslog.conf       tmpfiles.d
+alternatives                   dconf                gshadow-         lighttpd        opt            rsyslog.d          ts.conf
+anacrontab                     debconf.conf         gss              locale.alias    os-release     rygel.conf         ubuntu-advantage
+apache2                        debian_version       gtk-2.0          locale.gen      pam.conf       sane.d             ucf.conf
+apg.conf                       default              gtk-3.0          localtime       pam.d          security           udev
+apm                            deluser.conf         hdparm.conf      logcheck        papersize      selinux            udisks2
+apparmor                       depmod.d             host.conf        login.defs      passwd         sensors.d          ufw
+apparmor.d                     dhcp                 hostid           logrotate.conf  passwd-        sensors3.conf      update-manager
+apport                         dictionaries-common  hostname         logrotate.d     pcmcia         services           update-motd.d
+appstream.conf                 dnsmasq.conf         hosts            lsb-release     perl           sgml               update-notifier
+apt                            dnsmasq.d            hosts.allow      lynx            pki            shadow             usb_modeswitch.conf
+avahi                          dpkg                 hosts.deny       machine-id      pm             shadow-            usb_modeswitch.d
+bash.bashrc                    e2scrub.conf         hp               magic           pnm2ppa.conf   shells             vdpau_wrapper.cfg
+bash_completion                emacs                ifplugd          magic.mime      polkit-1       signon-ui          vim
+bash_completion.d              environment          init             mailcap         ppp            skel               vtrgb
+bindresvport.blacklist         environment.d        init.d           mailcap.order   profile        snmp               vulkan
+binfmt.d                       ethertypes           initramfs-tools  manpath.config  profile.d      speech-dispatcher  w3m
+bluetooth                      firefox              inputrc          mime.types      proftpd        squid              wgetrc
+brlapi.key                     fonts                insserv.conf.d   mke2fs.conf     protocols      ssh                whoopsie
+brltty                         fprintd.conf         ipp-usb          modprobe.d      pulse          ssl                wpa_supplicant
+brltty.conf                    fstab                iproute2         modules         python2.7      subgid             xattr.conf
+ca-certificates                ftpusers             issue            modules-load.d  python3        subgid-            xdg
+ca-certificates.conf           fuse.conf            issue.net        mtab            python3.10     subuid             xml
+ca-certificates.conf.dpkg-old  fwupd                kernel           mysql           python3.11     subuid-            zsh_command_not_found
+catdocrc                       gai.conf             kernel-img.conf  nanorc          rc0.d          sudo.conf
+chatscripts                    gamin                kerneloops.conf  netconfig       rc1.d          sudo_logsrvd.conf
+console-setup                  gdb                  ld.so.cache      netplan         rc2.d          sudoers
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo cp dnsmasq.conf dnsmasq.conf.org
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ ls
+ImageMagick-6                  cracklib             gdb              ld.so.cache     netplan        rc2.d              sudoers
+ModemManager                   cron.d               gdm3             ld.so.conf      network        rc3.d              sudoers.d
+NetworkManager                 cron.daily           geoclue          ld.so.conf.d    networks       rc4.d              sysctl.conf
+ODBCDataSources                cron.hourly          ghostscript      ldap            newt           rc5.d              sysctl.d
+PackageKit                     cron.monthly         glvnd            legal           nftables.conf  rc6.d              systemd
+UPower                         cron.weekly          gnome            libao.conf      nsswitch.conf  rcS.d              terminfo
+X11                            crontab              groff            libaudit.conf   odbc.ini       resolv.conf        thermald
+acpi                           cups                 group            libblockdev     odbcinst.ini   resolvconf         thunderbird
+adduser.conf                   cupshelpers          group-           libnl-3         openal         rmt                timezone
+alsa                           dbus-1               grub.d           libpaper.d      openni2        rpc                timidity
+alternatives                   dconf                gshadow          libreoffice     openvpn        rsyslog.conf       tmpfiles.d
+anacrontab                     debconf.conf         gshadow-         lighttpd        opt            rsyslog.d          ts.conf
+apache2                        debian_version       gss              locale.alias    os-release     rygel.conf         ubuntu-advantage
+apg.conf                       default              gtk-2.0          locale.gen      pam.conf       sane.d             ucf.conf
+apm                            deluser.conf         gtk-3.0          localtime       pam.d          security           udev
+apparmor                       depmod.d             hdparm.conf      logcheck        papersize      selinux            udisks2
+apparmor.d                     dhcp                 host.conf        login.defs      passwd         sensors.d          ufw
+apport                         dictionaries-common  hostid           logrotate.conf  passwd-        sensors3.conf      update-manager
+appstream.conf                 dnsmasq.conf         hostname         logrotate.d     pcmcia         services           update-motd.d
+apt                            dnsmasq.conf.org     hosts            lsb-release     perl           sgml               update-notifier
+avahi                          dnsmasq.d            hosts.allow      lynx            pki            shadow             usb_modeswitch.conf
+bash.bashrc                    dpkg                 hosts.deny       machine-id      pm             shadow-            usb_modeswitch.d
+bash_completion                e2scrub.conf         hp               magic           pnm2ppa.conf   shells             vdpau_wrapper.cfg
+bash_completion.d              emacs                ifplugd          magic.mime      polkit-1       signon-ui          vim
+bindresvport.blacklist         environment          init             mailcap         ppp            skel               vtrgb
+binfmt.d                       environment.d        init.d           mailcap.order   profile        snmp               vulkan
+bluetooth                      ethertypes           initramfs-tools  manpath.config  profile.d      speech-dispatcher  w3m
+brlapi.key                     firefox              inputrc          mime.types      proftpd        squid              wgetrc
+brltty                         fonts                insserv.conf.d   mke2fs.conf     protocols      ssh                whoopsie
+brltty.conf                    fprintd.conf         ipp-usb          modprobe.d      pulse          ssl                wpa_supplicant
+ca-certificates                fstab                iproute2         modules         python2.7      subgid             xattr.conf
+ca-certificates.conf           ftpusers             issue            modules-load.d  python3        subgid-            xdg
+ca-certificates.conf.dpkg-old  fuse.conf            issue.net        mtab            python3.10     subuid             xml
+catdocrc                       fwupd                kernel           mysql           python3.11     subuid-            zsh_command_not_found
+chatscripts                    gai.conf             kernel-img.conf  nanorc          rc0.d          sudo.conf
+console-setup                  gamin                kerneloops.conf  netconfig       rc1.d          sudo_logsrvd.conf
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo nano dnsmasq.conf
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo nano dnsmasq.conf.org 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo echo "hi" >> dnsmasq.conf 
+bash: dnsmasq.conf: Permission denied
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo cat "hi" >> dnsmasq.conf
+bash: dnsmasq.conf: Permission denied
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo nano dnsmasq.conf 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo nano hosts
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo nano dnsmasq.conf 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo nano hosts
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo systemctl status dnsmasq.service 
+● dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/lib/systemd/system/dnsmasq.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2023-05-20 19:43:56 IST; 19min ago
+    Process: 21959 ExecStartPre=/etc/init.d/dnsmasq checkconfig (code=exited, status=0/SUCCESS)
+    Process: 21967 ExecStart=/etc/init.d/dnsmasq systemd-exec (code=exited, status=0/SUCCESS)
+    Process: 21976 ExecStartPost=/etc/init.d/dnsmasq systemd-start-resolvconf (code=exited, status=0/SUCCESS)
+   Main PID: 21975 (dnsmasq)
+      Tasks: 1 (limit: 8642)
+     Memory: 976.0K
+        CPU: 19min 49.217s
+     CGroup: /system.slice/dnsmasq.service
+             └─21975 /usr/sbin/dnsmasq -x /run/dnsmasq/dnsmasq.pid -u dnsmasq -7 /etc/dnsmasq.d,.dpkg-dist,.dpkg-old,.dpkg-new --local-service --trust->
+
+May 20 19:58:50 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: Maximum number of concurrent DNS queries reached (max: 150)
+May 20 19:58:58 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: Maximum number of concurrent DNS queries reached (max: 150)
+May 20 20:03:02 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: Maximum number of concurrent DNS queries reached (max: 150)
+May 20 20:03:08 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: Maximum number of concurrent DNS queries reached (max: 150)
+May 20 20:03:16 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: Maximum number of concurrent DNS queries reached (max: 150)
+May 20 20:03:22 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: Maximum number of concurrent DNS queries reached (max: 150)
+May 20 20:03:28 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: Maximum number of concurrent DNS queries reached (max: 150)
+May 20 20:03:34 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: Maximum number of concurrent DNS queries reached (max: 150)
+May 20 20:03:40 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: Maximum number of concurrent DNS queries reached (max: 150)
+May 20 20:03:46 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[21975]: Maximum number of concurrent DNS queries reached (max: 150)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo systemctl restart dnsmasq.service 
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ sudo systemctl status dnsmasq.service 
+● dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/lib/systemd/system/dnsmasq.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2023-05-20 20:04:04 IST; 1s ago
+    Process: 22945 ExecStartPre=/etc/init.d/dnsmasq checkconfig (code=exited, status=0/SUCCESS)
+    Process: 22953 ExecStart=/etc/init.d/dnsmasq systemd-exec (code=exited, status=0/SUCCESS)
+    Process: 22962 ExecStartPost=/etc/init.d/dnsmasq systemd-start-resolvconf (code=exited, status=0/SUCCESS)
+   Main PID: 22961 (dnsmasq)
+      Tasks: 1 (limit: 8642)
+     Memory: 648.0K
+        CPU: 19ms
+     CGroup: /system.slice/dnsmasq.service
+             └─22961 /usr/sbin/dnsmasq -x /run/dnsmasq/dnsmasq.pid -u dnsmasq -7 /etc/dnsmasq.d,.dpkg-dist,.dpkg-old,.dpkg-new --local-service --trust->
+
+May 20 20:04:04 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+May 20 20:04:04 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[22961]: started, version 2.86 cachesize 150
+May 20 20:04:04 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[22961]: DNS service limited to local subnets
+May 20 20:04:04 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[22961]: compile time options: IPv6 GNU-getopt DBus no-UBus i18n IDN2 DHCP DHCPv6 no-Lua >
+May 20 20:04:04 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[22961]: warning: using interface eno1 instead
+May 20 20:04:04 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[22961]: reading /etc/resolv.conf
+May 20 20:04:04 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[22961]: using nameserver 127.0.0.53#53
+May 20 20:04:04 shrivatsa-Victus-by-HP-Laptop-16-e0xxx dnsmasq[22961]: read /etc/hosts - 8 addresses
+May 20 20:04:04 shrivatsa-Victus-by-HP-Laptop-16-e0xxx systemd[1]: Started dnsmasq - A lightweight DHCP and caching DNS server.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:/etc$ dig a shrivatsa.in @localhost
+
+; <<>> DiG 9.18.12-0ubuntu0.22.04.1-Ubuntu <<>> a shrivatsa.in @localhost
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59686
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;shrivatsa.in.			IN	A
+
+;; ANSWER SECTION:
+shrivatsa.in.		0	IN	A	195.10.10.10
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.1#53(localhost) (UDP)
+;; WHEN: Sat May 20 20:05:24 IST 2023
+;; MSG SIZE  rcvd: 57
+

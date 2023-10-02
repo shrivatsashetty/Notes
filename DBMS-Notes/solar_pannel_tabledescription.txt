@@ -1,0 +1,98 @@
+mysql> desc INSTALLED_BY;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| PVM         | int         | NO   | PRI | NULL    |       |
+| HNUM        | int         | NO   | PRI | NULL    |       |
+| TIN         | int         | NO   | PRI | NULL    |       |
+| CHARGES     | float       | YES  |     | NULL    |       |
+| INSTALLDATE | date        | YES  |     | NULL    |       |
+| TYPE        | varchar(20) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+mysql> desc PANEL;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| PVM      | int         | NO   | PRI | NULL    |       |
+| PTYPE    | varchar(20) | NO   |     | NULL    |       |
+| CAPACITY | float       | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc PROJECT;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| Pname      | varchar(20) | NO   |     | NULL    |       |
+| Pnumber    | int         | NO   | PRI | NULL    |       |
+| Plocation  | varchar(15) | YES  |     | NULL    |       |
+| Dnum       | int         | YES  | MUL | NULL    |       |
+| STATUS     | varchar(20) | YES  |     | NULL    |       |
+| WORTH      | int         | YES  |     | NULL    |       |
+| START_DATE | date        | YES  |     | NULL    |       |
+| END_DATE   | date        | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> desc PROJECT_LOCATION;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| PNUMBER   | int         | NO   | PRI | NULL    |       |
+| PLOCATION | varchar(20) | NO   | PRI | NULL    |       |
+| DNUM      | int         | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> desc PURCHASED_BY;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| PVM   | int  | NO   | PRI | NULL    |       |
+| HNUM  | int  | NO   | PRI | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> desc SOLDBY;
++-------+------+------+-----+---------+-------+
+| Field | Type | Null | Key | Default | Extra |
++-------+------+------+-----+---------+-------+
+| PVM   | int  | NO   | PRI | NULL    |       |
+| TIN   | int  | NO   | PRI | NULL    |       |
++-------+------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> desc USER;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| HNUM     | int          | NO   | PRI | NULL    |       |
+| UADDRESS | varchar(100) | YES  |     | NULL    |       |
+| UPHONE   | bigint       | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc VENDOR;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| TIN      | int          | NO   | PRI | NULL    |       |
+| FNAME    | varchar(20)  | NO   |     | NULL    |       |
+| LNAME    | varchar(20)  | YES  |     | NULL    |       |
+| VADDRESS | varchar(100) | YES  |     | NULL    |       |
+| VPHONE   | bigint       | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+mysql> desc WORKS_ON;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| ESSN  | int         | NO   | PRI | NULL    |       |
+| Pno   | int         | NO   | PRI | NULL    |       |
+| HOURS | varchar(10) | NO   |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+

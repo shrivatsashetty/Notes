@@ -1,0 +1,15 @@
+sudo apt update
+sudo apt install -y libc6-x32 libc6-i386
+wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.deb
+sudo dpkg -i jdk-17_linux-x64_bin.deb
+cd /usr/lib/jvm
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-17/bin/java 1
+sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk-17/bin/javac 1
+java --version
+javac --version
+sudo update-alternatives --config java # Then copy this path /usr/lib/jvm/jdk-17
+sudo nano /etc/environment # add this line JAVA_HOME="/usr/lib/jvm/jdk-17"
+source /etc/environment # to refresh environment variables
+echo $JAVA_HOME # this should show: /usr/lib/jvm/jdk-17
+# set up java 
+

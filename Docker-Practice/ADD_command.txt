@@ -1,0 +1,63 @@
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-9$ cat Dockerfile 
+FROM ubuntu:23.10
+LABEL author Shrivatsa A Shetty 
+LABEL description this "simple test image"
+RUN apt update
+ADD my-folder.tar.gz .
+CMD ["echo", "Hello from ubuntu"]
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-9$ docker build -t zf-img .
+[+] Building 15.9s (8/8) FINISHED                                                                                                         docker:default
+ => [internal] load .dockerignore                                                                                                                   0.0s
+ => => transferring context: 2B                                                                                                                     0.0s
+ => [internal] load build definition from Dockerfile                                                                                                0.0s
+ => => transferring dockerfile: 205B                                                                                                                0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:23.10                                                                                     0.8s
+ => CACHED [1/3] FROM docker.io/library/ubuntu:23.10@sha256:4ece736cc64e12426819d31e82f17f81555148adc3093474908ca1df00222d62                        0.0s
+ => [internal] load build context                                                                                                                   0.0s
+ => => transferring context: 38B                                                                                                                    0.0s
+ => [2/3] RUN apt update                                                                                                                           14.9s
+ => [3/3] ADD my-folder.tar.gz .                                                                                                                    0.0s
+ => exporting to image                                                                                                                              0.1s
+ => => exporting layers                                                                                                                             0.1s
+ => => writing image sha256:9ddc628d2c9adbdd31242df2a220d58452cf3ab1f8117084d0955765c4c5259f                                                        0.0s 
+ => => naming to docker.io/library/zf-img                                                                                                           0.0s 
+                                                                                                                                                         
+What's Next?
+  View summary of image vulnerabilities and recommendations → docker scout quickview
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-9$ docker images
+REPOSITORY                        TAG           IMAGE ID       CREATED         SIZE
+zf-img                            latest        9ddc628d2c9a   8 seconds ago   106MB
+shrivatsashetty/practice-images   remote_copy   180db491aa88   2 hours ago     9.98MB
+photon_app                        v1            5bb5d33aa0bc   23 hours ago    56.6MB
+photon                            latest        058e730fd593   3 days ago      39.5MB
+alpine                            3.18.3        7e01a0d0a1dc   2 weeks ago     7.34MB
+greetings                         v1            9c7a54a9a43c   3 months ago    13.3kB
+hello-world                       latest        9c7a54a9a43c   3 months ago    13.3kB
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-9$ sudo docker run -it zf-img /bin
+[sudo] password for shrivatsa: 
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "/bin": permission denied: unknown.
+ERRO[0000] error waiting for container:                 
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-9$ sudo docker run -it zf-img /bin/bash
+root@8c506e02b8d4:/# ls
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@8c506e02b8d4:/# pwd
+/
+root@8c506e02b8d4:/# cat /etc/os-release
+PRETTY_NAME="Ubuntu Mantic Minotaur (development branch)"
+NAME="Ubuntu"
+VERSION_ID="23.10"
+VERSION="23.10 (Mantic Minotaur)"
+VERSION_CODENAME=mantic
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=mantic
+LOGO=ubuntu-logo
+root@8c506e02b8d4:/# exit
+exit
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-9$ sudo docker run -it zf-img 
+Hello from ubuntu
+

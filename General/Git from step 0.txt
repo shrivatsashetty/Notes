@@ -1,0 +1,243 @@
+..............................................................................................................
+step 0: Install Git with apt on Ubuntu
+		sudo apt update
+		sudo apt install git
+		verify: git --version
+
+step 1:Setting your Git username for every repository on your computer.
+		$ git config --global user.name "User_name"
+		$ git config --global user.email "email@address.com"
+		verify: $ git config --list
+
+step 2: Create SSH key
+		generate ssh key
+		$ ssh-keygen
+		
+		
+		copy and save the "PUBLIC" key --> path is avilable on your terminal , look for it
+		
+		cat /home/<user>/.ssh/id_rsa.pub
+		
+step 3: Add SSH key to your github account
+		go to settings
+		choose add SSH key menu
+		paste the public key
+		
+		
+		
+		
+step 4: Initialize the local directory as a Git repository. And Specify the working branch
+
+		$git init -b main
+
+step 5: Add remote URL for your Git repository(Origin):
+		An SSH URL, like : git@github.com:user/repo.git
+		copy it.
+		
+		enter command
+		$git remote add origin <REMOTE_SSH>
+		where remote ssh is the URL you have copied
+		
+step 6: Add the files in your new local repository. 
+
+		$ git add .
+
+step 7: Commit
+		$ git commit -m "commit message"
+
+step 8: push to origin
+		$ git push origin main
+		
+----------------------------------------------------------------------------------------	
+		
+for 2nd time and regular commits :
+
+step 1: Add the files in your new local repository. 
+
+		$ git add .
+
+step 2: Commit
+		$ git commit -m "commit message"
+
+step 3: push to origin
+		$ git push origin main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+
+
+
+References:
+
+
+
+
+Method 1: Install Git with apt on Ubuntu
+Using the apt package management tool is the easiest way to install Git. However, the version in the default repository is often not the latest release. If you want to install the latest release, skip down to install from the source.
+
+1. Start by updating the system package index. Launch a terminal window (Ctrl+Alt+T) and run the following command:
+
+sudo apt update
+
+Updating the package index ensures you’re working with the latest software versions.
+
+Updating the system package index on Ubuntu.
+2. Install Git from the default Ubuntu repository by running:
+
+sudo apt install git
+
+Installing Git on Ubuntu using the apt package manager.
+Allow the process to complete.
+
+3. Verify the installation and version by running:
+
+git --version
+
+Checking Git version in Ubuntu.
+The output states the program version if it has been installed correctly.
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+================================================================================================================
+Configuring Git on Ubuntu After Installation
+Git contains a basic configuration file that holds crucial information. Setting your username and email address is essential.
+
+1. In a terminal window, enter the following and replace your_name with your name, and email@address.com with your email address.:
+
+git config --global user.name "your_name"
+
+git config --global user.email "email@address.com"
+
+2. Verify configuration changes with the command:
+
+git config --list
+
+The system should display the name and email address you just entered.
+
+Configuring the global Git settings.
+
+===============================================================================================================
+Setting your Git username for every repository on your computer
+Open Terminal.
+
+Set a Git username:
+
+$ git config --global user.name "Mona Lisa"
+Confirm that you have set the Git username correctly:
+
+$ git config --global user.name
+> Mona Lisa
+Setting your Git username for a single repository
+Open Terminal.
+
+Change the current working directory to the local repository where you want to configure the name that is associated with your Git commits.
+
+Set a Git username:
+
+$ git config user.name "Mona Lisa"
+Confirm that you have set the Git username correctly:
+
+$ git config user.name
+> Mona Lisa
+===============================================================================================================
+A remote URL is Git's fancy way of saying "the place where your code is stored." That URL could be your repository on GitHub, or another user's fork, or even on a completely different server.
+
+You can only push to two types of URL addresses:
+
+An HTTPS URL like https://github.com/user/repo.git
+An SSH URL, like git@github.com:user/repo.git
+Git associates a remote URL with a name, and your default remote is usually called origin.
+
+-------
+Creating remote repositories(SSH)
+You can use the git remote add command to match a remote SSH with a name. For example, you'd type the following in the command line:
+
+git remote add origin <REMOTE_SSH>
+This associates the name origin with the REMOTE_URL.
+
+
+
+===================================================================================================================
+Adding a local repository to GitHub with GitHub CLI
+In the command line, navigate to the root directory of your project.
+
+Initialize the local directory as a Git repository.
+
+git init -b main
+Stage and commit all the files in your project.
+
+git add . && git commit -m "initial commit"
+To create a repository for your project on GitHub, use the gh repo create subcommand. When prompted, select Push an existing local repository to GitHub and enter the desired name for your repository. If you want your project to belong to an organization instead of your user account, specify the organization name and project name with organization-name/project-name.
+
+Follow the interactive prompts. To add the remote and push the repository, confirm yes when asked to add the remote and push the commits to the current branch.
+
+Alternatively, to skip all the prompts, supply the path to the repository with the --source flag and pass a visibility flag (--public, --private, or --internal). For example, gh repo create --source=. --public. Specify a remote with the --remote flag. To push your commits, pass the --push flag. For more information about possible arguments, see the GitHub CLI manual.
+
+Adding a local repository to GitHub using Git
+Create a new repository on GitHub.com. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
+Create New Repository drop-down
+
+Open Terminal.
+
+Change the current working directory to your local project.
+
+Use the init command to initialize the local directory as a Git repository. By default, the initial branch is called main.
+
+If you’re using Git 2.28.0 or a later version, you can set the name of the default branch using -b.
+
+$ git init -b main
+If you’re using Git 2.27.1 or an earlier version, you can set the name of the default branch using && git symbolic-ref HEAD refs/heads/main.
+
+$ git init && git symbolic-ref HEAD refs/heads/main
+Add the files in your new local repository. This stages them for the first commit.
+
+$ git add .
+# Adds the files in the local repository and stages them for commit. To unstage a file, use 'git reset HEAD YOUR-FILE'.
+Commit the files that you've staged in your local repository.
+
+$ git commit -m "First commit"
+# Commits the tracked changes and prepares them to be pushed to a remote repository. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+At the top of your repository on GitHub.com's Quick Setup page, click  to copy the remote repository URL.
+Copy remote repository URL field
+
+In Terminal, add the URL for the remote repository where your local repository will be pushed.
+
+$ git remote add origin <REMOTE_URL>
+# Sets the new remote
+$ git remote -v
+# Verifies the new remote URL
+Push the changes in your local repository to GitHub.com.
+
+$ git push origin main
+# Pushes the changes in your local repository up to the remote repository you specified as the origin

@@ -1,0 +1,74 @@
+shrivatsa@Victus-HP:~$ git config --global user.name "shrivatsashetty"
+shrivatsa@Victus-HP:~$ git config --global user.email "shrivatsa307@gmail.com"
+shrivatsa@Victus-HP:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Program-Files  Public  snap  Templates  Trails  Videos
+shrivatsa@Victus-HP:~$ cd Trails/
+shrivatsa@Victus-HP:~/Trails$ mkdir Git-Practice
+shrivatsa@Victus-HP:~/Trails$ ls
+DevOps  Git-Practice  LSS
+shrivatsa@Victus-HP:~/Trails$ cd Git-Practice/
+shrivatsa@Victus-HP:~/Trails/Git-Practice$ ls
+shrivatsa@Victus-HP:~/Trails/Git-Practice$ git init 
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/shrivatsa/Trails/Git-Practice/.git/
+shrivatsa@Victus-HP:~/Trails/Git-Practice$ git clone https://github.com/shrivatsashetty/learngit/
+Cloning into 'learngit'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+shrivatsa@Victus-HP:~/Trails/Git-Practice$ ls
+learngit
+shrivatsa@Victus-HP:~/Trails/Git-Practice$ git status 
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	learngit/
+
+nothing added to commit but untracked files present (use "git add" to track)
+shrivatsa@Victus-HP:~/Trails/Git-Practice$ cd learngit/
+shrivatsa@Victus-HP:~/Trails/Git-Practice/learngit$ ls
+README.md  sample1.txt
+shrivatsa@Victus-HP:~/Trails/Git-Practice/learngit$ nano sample1.txt 
+shrivatsa@Victus-HP:~/Trails/Git-Practice/learngit$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   sample1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+shrivatsa@Victus-HP:~/Trails/Git-Practice/learngit$ git add sample1.txt 
+shrivatsa@Victus-HP:~/Trails/Git-Practice/learngit$ git commit -m "added some text"
+[main 0ccb010] added some text
+ 1 file changed, 1 insertion(+)
+shrivatsa@Victus-HP:~/Trails/Git-Practice/learngit$ git push 
+Username for 'https://github.com': shrivatsashetty
+Password for 'https://shrivatsashetty@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/shrivatsashetty/learngit/'
+shrivatsa@Victus-HP:~/Trails/Git-Practice/learngit$ git push https://github.com/shrivatsashetty/learngit/
+Username for 'https://github.com': shrivatsashetty    
+Password for 'https://shrivatsashetty@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/shrivatsashetty/learngit/'
+shrivatsa@Victus-HP:~/Trails/Git-Practice/learngit$ 
+
+

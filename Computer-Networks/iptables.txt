@@ -1,0 +1,183 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j ACCEPT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j DROP
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j ACCEPT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j DROP
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j REJECT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j ACCEPT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j REJECT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j REJECT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ iptable -I
+bash: iptable: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ iptable - I
+bash: iptable: command not found
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ iptables - I
+Bad argument `-'
+Try `iptables -h' or 'iptables --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ iptables -I
+iptables v1.8.7 (nf_tables): option "-I" requires an argument
+Try `iptables -h' or 'iptables --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+REJECT     all  --  195.0.0.10           anywhere             reject-with icmp-port-unreachable
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ iptables -L
+iptables v1.8.7 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+REJECT     all  --  195.0.0.10           anywhere             reject-with icmp-port-unreachable
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j DROP
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j ACCEPT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     all  --  195.0.0.10           anywhere            
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j DROP
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j REJECT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     all  --  195.0.0.10           anywhere            
+DROP       all  --  195.0.0.10           anywhere            
+REJECT     all  --  195.0.0.10           anywhere             reject-with icmp-port-unreachable
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L -3
+iptables v1.8.7 (nf_tables): unknown option "-3"
+Try `iptables -h' or 'iptables --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L 3
+iptables v1.8.7 (nf_tables): chain `3' in table `filter' is incompatible, use 'nft' tool.
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F -1
+iptables v1.8.7 (nf_tables): unknown option "-1"
+Try `iptables -h' or 'iptables --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L -line-numbers
+iptables v1.8.7 (nf_tables): unknown option "-L"
+Try `iptables -h' or 'iptables --help' for more information.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j DROP
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j DROP
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j ACCEPT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+DROP       all  --  195.0.0.10           anywhere            
+ACCEPT     all  --  195.0.0.10           anywhere            
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -m iprange --src-range 195.0.0.5-195.0.0.15 -j REJECT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ping 195.0.0.20
+PING 195.0.0.20 (195.0.0.20) 56(84) bytes of data.
+64 bytes from 195.0.0.20: icmp_seq=1 ttl=64 time=0.026 ms
+64 bytes from 195.0.0.20: icmp_seq=2 ttl=64 time=0.065 ms
+64 bytes from 195.0.0.20: icmp_seq=3 ttl=64 time=0.085 ms
+64 bytes from 195.0.0.20: icmp_seq=4 ttl=64 time=0.078 ms
+64 bytes from 195.0.0.20: icmp_seq=5 ttl=64 time=0.065 ms
+64 bytes from 195.0.0.20: icmp_seq=6 ttl=64 time=0.065 ms
+64 bytes from 195.0.0.20: icmp_seq=7 ttl=64 time=0.063 ms
+^C
+--- 195.0.0.20 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6143ms
+rtt min/avg/max/mdev = 0.026/0.063/0.085/0.017 ms
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ping 195.0.0.10
+PING 195.0.0.10 (195.0.0.10) 56(84) bytes of data.
+^C
+--- 195.0.0.10 ping statistics ---
+5 packets transmitted, 0 received, 100% packet loss, time 4102ms
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ping 195.0.0.10
+PING 195.0.0.10 (195.0.0.10) 56(84) bytes of data.
+64 bytes from 195.0.0.10: icmp_seq=1 ttl=64 time=0.545 ms
+64 bytes from 195.0.0.10: icmp_seq=2 ttl=64 time=0.875 ms
+64 bytes from 195.0.0.10: icmp_seq=3 ttl=64 time=0.856 ms
+64 bytes from 195.0.0.10: icmp_seq=4 ttl=64 time=0.779 ms
+64 bytes from 195.0.0.10: icmp_seq=5 ttl=64 time=0.759 ms
+^C
+--- 195.0.0.10 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4026ms
+rtt min/avg/max/mdev = 0.545/0.762/0.875/0.117 ms
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j DROP
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ ping 195.0.0.10
+PING 195.0.0.10 (195.0.0.10) 56(84) bytes of data.
+^C
+--- 195.0.0.10 ping statistics ---
+29 packets transmitted, 0 received, 100% packet loss, time 28675ms
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j ACCEPT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j REJECT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -L
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j ACCEPT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j REJECT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j DROP
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT -s 195.0.0.10 -j ACCEPT
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -F
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~$ sudo iptables -A INPUT 
+
+

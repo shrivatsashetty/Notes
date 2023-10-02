@@ -1,0 +1,58 @@
+shrivatsa@Victus-HP:~$ sudo docker images
+[sudo] password for shrivatsa: 
+REPOSITORY             TAG       IMAGE ID       CREATED          SIZE
+updated_alpine_image   1.0       4918a7fbe06f   36 minutes ago   9.98MB
+alpine                 latest    7e01a0d0a1dc   2 weeks ago      7.34MB
+hello-world            latest    9c7a54a9a43c   3 months ago     13.3kB
+shrivatsa@Victus-HP:~$ sudo docker tag alpine:latest alpine:3.18.3 
+[sudo] password for shrivatsa: 
+shrivatsa@Victus-HP:~$ sudo docker images
+REPOSITORY             TAG       IMAGE ID       CREATED          SIZE
+updated_alpine_image   1.0       4918a7fbe06f   54 minutes ago   9.98MB
+alpine                 3.18.3    7e01a0d0a1dc   2 weeks ago      7.34MB
+alpine                 latest    7e01a0d0a1dc   2 weeks ago      7.34MB
+hello-world            latest    9c7a54a9a43c   3 months ago     13.3kB
+shrivatsa@Victus-HP:~$ sudo docker tag 4918a7fbe06f updated_alpine_image
+shrivatsa@Victus-HP:~$ sudo docker images
+REPOSITORY             TAG       IMAGE ID       CREATED             SIZE
+updated_alpine_image   1.0       4918a7fbe06f   About an hour ago   9.98MB
+updated_alpine_image   latest    4918a7fbe06f   About an hour ago   9.98MB
+alpine                 3.18.3    7e01a0d0a1dc   2 weeks ago         7.34MB
+alpine                 latest    7e01a0d0a1dc   2 weeks ago         7.34MB
+hello-world            latest    9c7a54a9a43c   3 months ago        13.3kB
+shrivatsa@Victus-HP:~$ sudo docker rmi 4918a7fbe06f
+Error response from daemon: conflict: unable to delete 4918a7fbe06f (must be forced) - image is referenced in multiple repositories
+shrivatsa@Victus-HP:~$ sudo docker rmi -f 4918a7fbe06f
+Untagged: updated_alpine_image:1.0
+Untagged: updated_alpine_image:latest
+Deleted: sha256:4918a7fbe06fccaf4b5c417f2520369e77a0a60deb261368e8e2e66141ac2155
+shrivatsa@Victus-HP:~$ sudo docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+alpine        3.18.3    7e01a0d0a1dc   2 weeks ago    7.34MB
+alpine        latest    7e01a0d0a1dc   2 weeks ago    7.34MB
+hello-world   latest    9c7a54a9a43c   3 months ago   13.3kB
+shrivatsa@Victus-HP:~$ sudo docker rmi alpine:latest
+Untagged: alpine:latest
+shrivatsa@Victus-HP:~$ sudo docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+alpine        3.18.3    7e01a0d0a1dc   2 weeks ago    7.34MB
+hello-world   latest    9c7a54a9a43c   3 months ago   13.3kB
+shrivatsa@Victus-HP:~$ sudo docker tag hello-world:latest greetings:v1
+shrivatsa@Victus-HP:~$ sudo docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+alpine        3.18.3    7e01a0d0a1dc   2 weeks ago    7.34MB
+greetings     v1        9c7a54a9a43c   3 months ago   13.3kB
+hello-world   latest    9c7a54a9a43c   3 months ago   13.3kB
+shrivatsa@Victus-HP:~$ sudo docker tag alpine:3.18.3 v2
+shrivatsa@Victus-HP:~$ sudo docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+v2            latest    7e01a0d0a1dc   2 weeks ago    7.34MB
+alpine        3.18.3    7e01a0d0a1dc   2 weeks ago    7.34MB
+greetings     v1        9c7a54a9a43c   3 months ago   13.3kB
+hello-world   latest    9c7a54a9a43c   3 months ago   13.3kB
+shrivatsa@Victus-HP:~$ sudo docker hello-world:latest :new
+docker: 'hello-world:latest' is not a docker command.
+See 'docker --help'
+shrivatsa@Victus-HP:~$ sudo docker tag hello-world:latest :new
+Error parsing reference: ":new" is not a valid repository/tag: invalid reference format
+

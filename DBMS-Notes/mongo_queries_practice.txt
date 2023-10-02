@@ -1,0 +1,8 @@
+db.exm.aggregate([ { $limit: 2 }, { $match: { sub_name: 'sciemce' } }] )
+
+exam_marks> db.exm.aggregate({$group:{ _id:"sub_code",sum:{$sum:"$theory"}}})
+
+exam_marks> db.exm.aggregate([{$project:{"sub_name":1,"theory":1}},{$limit:4}])
+
+exam_marks> db.exm.aggregate([ { $sort: { "theory": 1 } }] )
+

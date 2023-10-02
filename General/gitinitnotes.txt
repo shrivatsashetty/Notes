@@ -1,0 +1,216 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ echo "# Notes" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:shrivatsashetty/Notes.git
+git push -u origin main
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/shrivatsa/Documents/Notes/.git/
+[master (root-commit) f4e56d4] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 221 bytes | 221.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:shrivatsashetty/Notes.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ ls
+Computer-Networks  LSS-Notes  README.md  Random  WEB  quicknote.odt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ ls -a
+.  ..  .git  Computer-Networks  LSS-Notes  README.md  Random  WEB  quicknote.odt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Computer-Networks/
+	LSS-Notes/
+	Random/
+	WEB/
+	quicknote.odt
+
+nothing added to commit but untracked files present (use "git add" to track)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git add Random/
+CN-Practice.txt               gitinit1.txt                  installing-pygame-pttxs.txt   jsonsshgit.txt                
+Packettracerinstallation.txt  gitpyhton.txt                 installingpip.txt             mysql-change-username.txt     
+githtml.txt                   installing-mysql.txt          jsongit.txt                   mysqllogin.txt                
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git add Random/
+CN-Practice.txt               gitinit1.txt                  installing-pygame-pttxs.txt   jsonsshgit.txt                
+Packettracerinstallation.txt  gitpyhton.txt                 installingpip.txt             mysql-change-username.txt     
+githtml.txt                   installing-mysql.txt          jsongit.txt                   mysqllogin.txt                
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git add Random/
+CN-Practice.txt               gitinit1.txt                  installing-pygame-pttxs.txt   jsonsshgit.txt                
+Packettracerinstallation.txt  gitpyhton.txt                 installingpip.txt             mysql-change-username.txt     
+githtml.txt                   installing-mysql.txt          jsongit.txt                   mysqllogin.txt                
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git add Random/
+CN-Practice.txt               gitinit1.txt                  installing-pygame-pttxs.txt   jsonsshgit.txt                
+Packettracerinstallation.txt  gitpyhton.txt                 installingpip.txt             mysql-change-username.txt     
+githtml.txt                   installing-mysql.txt          jsongit.txt                   mysqllogin.txt                
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git add Random
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   Random/CN-Practice.txt
+	new file:   Random/Packettracerinstallation.txt
+	new file:   Random/githtml.txt
+	new file:   Random/gitinit1.txt
+	new file:   Random/gitpyhton.txt
+	new file:   Random/installing-mysql.txt
+	new file:   Random/installing-pygame-pttxs.txt
+	new file:   Random/installingpip.txt
+	new file:   Random/jsongit.txt
+	new file:   Random/jsonsshgit.txt
+	new file:   Random/mysql-change-username.txt
+	new file:   Random/mysqllogin.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Computer-Networks/
+	LSS-Notes/
+	WEB/
+	quicknote.odt
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git commit -m "Random topic notes"
+[main c42ee6d] Random topic notes
+ 12 files changed, 1882 insertions(+)
+ create mode 100644 Random/CN-Practice.txt
+ create mode 100644 Random/Packettracerinstallation.txt
+ create mode 100644 Random/githtml.txt
+ create mode 100644 Random/gitinit1.txt
+ create mode 100644 Random/gitpyhton.txt
+ create mode 100644 Random/installing-mysql.txt
+ create mode 100644 Random/installing-pygame-pttxs.txt
+ create mode 100644 Random/installingpip.txt
+ create mode 100644 Random/jsongit.txt
+ create mode 100644 Random/jsonsshgit.txt
+ create mode 100644 Random/mysql-change-username.txt
+ create mode 100644 Random/mysqllogin.txt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git push
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 19.29 KiB | 9.64 MiB/s, done.
+Total 15 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To github.com:shrivatsashetty/Notes.git
+   f4e56d4..c42ee6d  main -> main
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	Computer-Networks/
+	LSS-Notes/
+	WEB/
+	quicknote.odt
+
+nothing added to commit but untracked files present (use "git add" to track)
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git add .
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git status 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   Computer-Networks/CNlab6.txt
+	new file:   Computer-Networks/fix-en01.txt
+	new file:   Computer-Networks/resolving-dnsmasq.txt
+	new file:   LSS-Notes/.~lock.Untitled 1.odt#
+	new file:   LSS-Notes/LSS-April10.txt
+	new file:   LSS-Notes/LSS-April19.txt
+	new file:   LSS-Notes/LSS-April4.txt
+	new file:   LSS-Notes/LSS-april5.txt
+	new file:   LSS-Notes/LSSApril11.txt
+	new file:   LSS-Notes/Softlinks.txt
+	new file:   LSS-Notes/april9.txt
+	new file:   LSS-Notes/awk-class.txt
+	new file:   LSS-Notes/awk-pattern-search.txt
+	new file:   LSS-Notes/class1.txt
+	new file:   LSS-Notes/class2.txt
+	new file:   LSS-Notes/march22.txt
+	new file:   LSS-Notes/march28.txt
+	new file:   LSS-Notes/march29.txt
+	new file:   LSS-Notes/remote-server-command-execution.txt
+	new file:   LSS-Notes/sed-class.txt
+	new file:   LSS-Notes/sed-practice1.txt
+	new file:   LSS-Notes/sed-practice2.txt
+	new file:   LSS-Notes/see-practice.txt
+	new file:   LSS-Notes/ssh.txt
+	new file:   LSS-Notes/ssh2.txt
+	new file:   LSS-Notes/sshpassword.sh
+	new file:   WEB/JSnotes.txt
+	new file:   quicknote.odt
+
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git commit -m "Notes"
+[main 3a4a968] Notes
+ 28 files changed, 8192 insertions(+)
+ create mode 100644 Computer-Networks/CNlab6.txt
+ create mode 100644 Computer-Networks/fix-en01.txt
+ create mode 100644 Computer-Networks/resolving-dnsmasq.txt
+ create mode 100644 LSS-Notes/.~lock.Untitled 1.odt#
+ create mode 100644 LSS-Notes/LSS-April10.txt
+ create mode 100644 LSS-Notes/LSS-April19.txt
+ create mode 100644 LSS-Notes/LSS-April4.txt
+ create mode 100644 LSS-Notes/LSS-april5.txt
+ create mode 100644 LSS-Notes/LSSApril11.txt
+ create mode 100644 LSS-Notes/Softlinks.txt
+ create mode 100644 LSS-Notes/april9.txt
+ create mode 100644 LSS-Notes/awk-class.txt
+ create mode 100644 LSS-Notes/awk-pattern-search.txt
+ create mode 100644 LSS-Notes/class1.txt
+ create mode 100644 LSS-Notes/class2.txt
+ create mode 100644 LSS-Notes/march22.txt
+ create mode 100644 LSS-Notes/march28.txt
+ create mode 100644 LSS-Notes/march29.txt
+ create mode 100755 LSS-Notes/remote-server-command-execution.txt
+ create mode 100644 LSS-Notes/sed-class.txt
+ create mode 100644 LSS-Notes/sed-practice1.txt
+ create mode 100644 LSS-Notes/sed-practice2.txt
+ create mode 100644 LSS-Notes/see-practice.txt
+ create mode 100644 LSS-Notes/ssh.txt
+ create mode 100644 LSS-Notes/ssh2.txt
+ create mode 100644 LSS-Notes/sshpassword.sh
+ create mode 100644 WEB/JSnotes.txt
+ create mode 100644 quicknote.odt
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git push
+Enumerating objects: 34, done.
+Counting objects: 100% (34/34), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (33/33), 76.91 KiB | 9.61 MiB/s, done.
+Total 33 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), done.
+To github.com:shrivatsashetty/Notes.git
+   c42ee6d..3a4a968  main -> main
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ cat README.md 
+# Notes
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git config --global user.name
+shrivatsashetty
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ git config --global user.email
+shrivatsa307@gmail.com
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Documents/Notes$ 
+
+

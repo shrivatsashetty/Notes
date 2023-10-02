@@ -1,0 +1,94 @@
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-10$ ls
+Dockerfile
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-10$ cat Dockerfile 
+
+
+FROM debian
+
+LABEL description "to demonstrate img rebuild without cache"
+
+RUN apt-get update
+
+RUN mkdir /home/Test-Folder
+
+WORKDIR /home/Test-Folder/
+
+RUN date >> timestamp.txt
+
+CMD ["cat", "timestamp.txt"]
+
+
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-10$ docker build -t debian-img:1.0 .
+[+] Building 10.7s (9/9) FINISHED                                                                                                         docker:default
+ => [internal] load build definition from Dockerfile                                                                                                0.0s
+ => => transferring dockerfile: 251B                                                                                                                0.0s
+ => [internal] load .dockerignore                                                                                                                   0.0s
+ => => transferring context: 2B                                                                                                                     0.0s
+ => [internal] load metadata for docker.io/library/debian:latest                                                                                    3.1s
+ => [1/5] FROM docker.io/library/debian@sha256:b91baba9c2cae5edbe3b0ff50ae8f05157e3ae6f018372dcfc3aba224acb392b                                     0.0s
+ => => resolve docker.io/library/debian@sha256:b91baba9c2cae5edbe3b0ff50ae8f05157e3ae6f018372dcfc3aba224acb392b                                     0.0s
+ => => sha256:b91baba9c2cae5edbe3b0ff50ae8f05157e3ae6f018372dcfc3aba224acb392b 1.85kB / 1.85kB                                                      0.0s
+ => => sha256:9008de19fcf0f476fd2e6b43e16c33332afac4e9d7b95d8ae032e5fb4dead37a 529B / 529B                                                          0.0s
+ => => sha256:3a37950934ff78e5f461c2318039f92351885c61bf86d1fa4cc8e9a11eb903f6 1.46kB / 1.46kB                                                      0.0s
+ => [2/5] RUN apt-get update                                                                                                                        6.7s
+ => [3/5] RUN mkdir /home/Test-Folder                                                                                                               0.4s 
+ => [4/5] WORKDIR /home/Test-Folder/                                                                                                                0.0s 
+ => [5/5] RUN date >> timestamp.txt                                                                                                                 0.4s 
+ => exporting to image                                                                                                                              0.1s 
+ => => exporting layers                                                                                                                             0.1s 
+ => => writing image sha256:4f2cb11d5fb7539a6e7c14b0bfffd4edef7bc69a0139b6b3160537b653a92c04                                                        0.0s 
+ => => naming to docker.io/library/debian-img:1.0                                                                                                   0.0s
+
+What's Next?
+  View summary of image vulnerabilities and recommendations → docker scout quickview
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-10$ docker images
+REPOSITORY                        TAG           IMAGE ID       CREATED         SIZE
+debian-img                        1.0           4f2cb11d5fb7   6 seconds ago   136MB
+zf-img                            latest        9ddc628d2c9a   19 hours ago    106MB
+shrivatsashetty/practice-images   remote_copy   180db491aa88   20 hours ago    9.98MB
+photon_app                        v1            5bb5d33aa0bc   42 hours ago    56.6MB
+photon                            latest        058e730fd593   4 days ago      39.5MB
+alpine                            3.18.3        7e01a0d0a1dc   2 weeks ago     7.34MB
+greetings                         v1            9c7a54a9a43c   3 months ago    13.3kB
+hello-world                       latest        9c7a54a9a43c   3 months ago    13.3kB
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-10$ docker run --name debian-container debian-img:1.0
+Fri Aug 25 19:48:59 UTC 2023
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-10$ docker build -t debian-img:2.0 .
+[+] Building 0.8s (9/9) FINISHED                                                                                                          docker:default
+ => [internal] load .dockerignore                                                                                                                   0.0s
+ => => transferring context: 2B                                                                                                                     0.0s
+ => [internal] load build definition from Dockerfile                                                                                                0.0s
+ => => transferring dockerfile: 251B                                                                                                                0.0s
+ => [internal] load metadata for docker.io/library/debian:latest                                                                                    0.8s
+ => [1/5] FROM docker.io/library/debian@sha256:b91baba9c2cae5edbe3b0ff50ae8f05157e3ae6f018372dcfc3aba224acb392b                                     0.0s
+ => CACHED [2/5] RUN apt-get update                                                                                                                 0.0s
+ => CACHED [3/5] RUN mkdir /home/Test-Folder                                                                                                        0.0s
+ => CACHED [4/5] WORKDIR /home/Test-Folder/                                                                                                         0.0s
+ => CACHED [5/5] RUN date >> timestamp.txt                                                                                                          0.0s
+ => exporting to image                                                                                                                              0.0s
+ => => exporting layers                                                                                                                             0.0s
+ => => writing image sha256:4f2cb11d5fb7539a6e7c14b0bfffd4edef7bc69a0139b6b3160537b653a92c04                                                        0.0s
+ => => naming to docker.io/library/debian-img:2.0                                                                                                   0.0s
+
+What's Next?
+  View summary of image vulnerabilities and recommendations → docker scout quickview
+shrivatsa@Victus-HP:~/Trails/DevOps/Project-10$ docker build --no-cache -t debian-img:3.0 .
+[+] Building 9.2s (9/9) FINISHED                                                                                                          docker:default
+ => [internal] load .dockerignore                                                                                                                   0.0s
+ => => transferring context: 2B                                                                                                                     0.0s
+ => [internal] load build definition from Dockerfile                                                                                                0.0s
+ => => transferring dockerfile: 251B                                                                                                                0.0s
+ => [internal] load metadata for docker.io/library/debian:latest                                                                                    2.4s
+ => CACHED [1/5] FROM docker.io/library/debian@sha256:b91baba9c2cae5edbe3b0ff50ae8f05157e3ae6f018372dcfc3aba224acb392b                              0.0s
+ => [2/5] RUN apt-get update                                                                                                                        6.0s
+ => [3/5] RUN mkdir /home/Test-Folder                                                                                                               0.4s
+ => [4/5] WORKDIR /home/Test-Folder/                                                                                                                0.1s 
+ => [5/5] RUN date >> timestamp.txt                                                                                                                 0.3s 
+ => exporting to image                                                                                                                              0.1s 
+ => => exporting layers                                                                                                                             0.1s 
+ => => writing image sha256:cfcd6d9f7c84f46f286a4ec94708c8910a6c59a957ba90a890be2ba768c4e24b                                                        0.0s 
+ => => naming to docker.io/library/debian-img:3.0                                                                                                   0.0s
+
+What's Next?
+  View summary of image vulnerabilities and recommendations → docker scout quickview
+

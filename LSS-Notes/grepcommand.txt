@@ -1,0 +1,144 @@
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k gupta        |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep -h "sales" emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat emp1.lst | grep sales
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep -c "sales" emp1.lst
+4
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep -n "sales" emp1.lst
+1:2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+6:1006|chanchal singhvi |director   |sales      |09/03/38|140000
+8:1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+10:2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep -v "sales" emp1.lst
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k gupta        |chairman   |admin      |08/30/56|160000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep -o "sales" emp1.lst
+sales
+sales
+sales
+sales
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep  -e "sales" "production" emp1.lst
+grep: production: No such file or directory
+emp1.lst:2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+emp1.lst:1006|chanchal singhvi |director   |sales      |09/03/38|140000
+emp1.lst:1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+emp1.lst:2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep  -e "sales" -e "production" emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep  -e "sales" -e "manager" emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep  00$  emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k gupta        |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep  000$  emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k gupta        |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep ^2345 emp1.lst
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ nano emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k gupta        |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |SALES      |09/12/63| 90000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep -h "sales" emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ grep -i "sales" emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+1265|s.n. dasgupta    |manager    |SALES      |09/12/63| 90000
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ nano emp1.lst
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ cat emp1.lst
+2233|a.k. shukla      |g.m        |sales      |12/12/52| 90000
+9876|jai sharma       |director   |production |03/12/50|130000
+5678|sumit chakrobarty|d.g.m      |marketing  |04/19/43| 85000
+2365|barun sengupta   |director   |personnel  |05/11/47|120000
+5423|n.k gupta        |chairman   |admin      |08/30/56|160000
+1006|chanchal singhvi |director   |sales      |09/03/38|140000
+6213|karuna ganguly   |g.m.       |accounts   |06/05/62|105000 
+1265|s.n. dasgupta    |manager    |sales      |09/12/63| 90000
+4290|jayant Choudhury |executive  |production |09/07/50| 65000 
+2476|anil aggarwal    |manager    |sales      |05/01/59|110000
+6521|lalit chowdury   |director   |marketing  |09/26/45|125000
+3212|shyam saksena    |d.g.m.     |accounts   |12/12/55| 85000
+3564|sudhir Agarwal   |executive  |personnel  |07/06/47| 75000
+2345|j.b. saxena      |g.m.       |marketing  |03/12/45|110000
+0110|v.k agrawal      |g.m.       |marketing  |12/31/40| 95000
+shrivatsa@shrivatsa-Victus-by-HP-Laptop-16-e0xxx:~/Trails/LSS/Practice-files$ 
+
+

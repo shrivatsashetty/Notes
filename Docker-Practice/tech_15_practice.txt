@@ -1,0 +1,110 @@
+shrivatsa@Victus-HP:~$ sudo docker pull alpine
+Using default tag: latest
+latest: Pulling from library/alpine
+7264a8db6415: Pull complete 
+Digest: sha256:7144f7bab3d4c2648d7e59409f15ec52a18006a128c733fcff20d3a4a54ba44a
+Status: Downloaded newer image for alpine:latest
+docker.io/library/alpine:latest
+
+What's Next?
+  View summary of image vulnerabilities and recommendations → docker scout quickview alpine
+shrivatsa@Victus-HP:~$ sudo docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+alpine        latest    7e01a0d0a1dc   2 weeks ago    7.34MB
+hello-world   latest    9c7a54a9a43c   3 months ago   13.3kB
+shrivatsa@Victus-HP:~$ sudo docker run --name alpine_container -it alpine bin/bash
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "bin/bash": stat bin/bash: no such file or directory: unknown.
+ERRO[0000] error waiting for container:                 
+shrivatsa@Victus-HP:~$ sudo docker run --name alpine_container -it alpine
+docker: Error response from daemon: Conflict. The container name "/alpine_container" is already in use by container "aba5442aa07cd57a89459a530194fc977d91d03a64049cd248a83de73205a0e8". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+shrivatsa@Victus-HP:~$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+shrivatsa@Victus-HP:~$ sudo docker ps -a
+CONTAINER ID   IMAGE     COMMAND      CREATED          STATUS    PORTS     NAMES
+aba5442aa07c   alpine    "bin/bash"   35 seconds ago   Created             alpine_container
+shrivatsa@Victus-HP:~$ sudo docker start -it aba5442aa07c
+unknown shorthand flag: 't' in -t
+See 'docker start --help'.
+shrivatsa@Victus-HP:~$ sudo docker start -it alpine_container 
+unknown shorthand flag: 't' in -t
+See 'docker start --help'.
+shrivatsa@Victus-HP:~$ sudo docker start -i alpine_container 
+Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "bin/bash": stat bin/bash: no such file or directory: unknown
+shrivatsa@Victus-HP:~$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+shrivatsa@Victus-HP:~$ sudo docker rm alpine_container
+alpine_container
+shrivatsa@Victus-HP:~$ sudo docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+shrivatsa@Victus-HP:~$ 
+shrivatsa@Victus-HP:~$ sudo docker images
+REPOSITORY    TAG       IMAGE ID       CREATED        SIZE
+alpine        latest    7e01a0d0a1dc   2 weeks ago    7.34MB
+hello-world   latest    9c7a54a9a43c   3 months ago   13.3kB
+shrivatsa@Victus-HP:~$ sudo docker run -it alpine
+/ # ls
+bin    dev    etc    home   lib    media  mnt    opt    proc   root   run    sbin   srv    sys    tmp    usr    var
+/ # cd home/
+/home # ls
+/home # mkdir Docs
+/home # ls
+Docs
+/home # cd Docs/
+/home/Docs # ls
+/home/Docs # nano testfile.txt
+/bin/sh: nano: not found
+/home/Docs # apk add nano 
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.18/community/x86_64/APKINDEX.tar.gz
+(1/3) Installing ncurses-terminfo-base (6.4_p20230506-r0)
+(2/3) Installing libncursesw (6.4_p20230506-r0)
+(3/3) Installing nano (7.2-r1)
+Executing busybox-1.36.1-r2.trigger
+OK: 8 MiB in 18 packages
+/home/Docs # nano --version
+ GNU nano, version 7.2
+ (C) 2023 the Free Software Foundation and various contributors
+ Compiled options: --disable-libmagic --disable-nls --enable-utf8
+/home/Docs # nano testfile.txt
+/home/Docs # ls
+testfile.txt
+/home/Docs # cd 
+~ # ls
+~ # pwd
+/root
+~ # exit
+shrivatsa@Victus-HP:~$ sudo docker ps 
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+shrivatsa@Victus-HP:~$ sudo docker ps -a
+[sudo] password for shrivatsa: 
+CONTAINER ID   IMAGE     COMMAND     CREATED         STATUS                          PORTS     NAMES
+2f2731cecde1   alpine    "/bin/sh"   5 minutes ago   Exited (0) About a minute ago             frosty_zhukovsky
+shrivatsa@Victus-HP:~$ sudo docker rename frosty_zhukovsky alpine_container
+shrivatsa@Victus-HP:~$ sudo docker ps -a
+CONTAINER ID   IMAGE     COMMAND     CREATED         STATUS                     PORTS     NAMES
+2f2731cecde1   alpine    "/bin/sh"   6 minutes ago   Exited (0) 2 minutes ago             alpine_container
+shrivatsa@Victus-HP:~$ sudo docker commit alpine_container updated_alpine_image:1.0
+sha256:4918a7fbe06fccaf4b5c417f2520369e77a0a60deb261368e8e2e66141ac2155
+shrivatsa@Victus-HP:~$ sudo docker images
+REPOSITORY             TAG       IMAGE ID       CREATED         SIZE
+updated_alpine_image   1.0       4918a7fbe06f   7 seconds ago   9.98MB
+alpine                 latest    7e01a0d0a1dc   2 weeks ago     7.34MB
+hello-world            latest    9c7a54a9a43c   3 months ago    13.3kB
+shrivatsa@Victus-HP:~$ sudo docker run -it --name alpine_container_2  updated_alpine_image sh
+Unable to find image 'updated_alpine_image:latest' locally
+docker: Error response from daemon: pull access denied for updated_alpine_image, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+shrivatsa@Victus-HP:~$ sudo docker run -it updated_alpine_image:1.0 sh
+/ # ls
+bin    dev    etc    home   lib    media  mnt    opt    proc   root   run    sbin   srv    sys    tmp    usr    var
+/ # cd home
+/home # ls
+Docs
+/home # cd Docs/
+/home/Docs # ls
+testfile.txt
+/home/Docs # nano testfile.txt 
+/home/Docs # exit
+
