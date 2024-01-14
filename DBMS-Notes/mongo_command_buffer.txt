@@ -1,0 +1,10 @@
+  {
+    _id: ObjectId("6516a1457c0054b0af11bf49"),
+    title: 'Post 1',
+    body: 'Body of post.',
+    category: 'News',
+    likes: 3,
+    tags: [ 'news', 'events' ],
+    date: 'Fri Sep 29 2023 15:34:53 GMT+0530 (India Standard Time)'
+  },
+

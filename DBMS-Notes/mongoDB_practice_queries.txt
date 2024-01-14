@@ -1,0 +1,119 @@
+db.myCollection.insertOne({x:2,y:3})
+// insering multiple records 
+db.people.insertMany( [
+	{name:"anil", age:47, isEmployed:true, status:"D", intrests:["cycling", "coding"]},
+	{name:"aradhya", age:33, isEmployed:false, status:"A", intrests:["hiking", "movies"]}
+	])
+	
+Date() // To see the current date
+
+Date("2023-02-21") // parse a new date
+
+const date = new Date("2022-05-02") // To create a new Date object
+
+// updating single record
+db.posts.updateOne({"title":"Post 1"}, {$set : {"likes":3}})
+
+// updating multiple records wherever a certain condition is true
+db.posts.updateMany({likes:3},{$set:{likes:0}})
+
+// updateing using the increment operator 
+db.posts.updateMany({"likes":0}, {$inc:{likes:1}}) // incrementing the likes by one wherever its currently 0
+
+// now checking the records affected by the above query
+db.posts.find({"likes":1}, {title:1})  
+
+// updating an array inside a document
+db.posts.updateMany({tags:['news', 'events']},{$set:{tags:["travel", "photography"]}})
+
+
+// Aggregation functions
+db.posts.aggregate({$limit:2})
+
+db.posts.aggregate([{$limit:2}, {$match:{likes:2}}])
+
+db.posts.aggregate([{$project:{"title":1, likes:1}}, {$count:"likes"}]) // shows the number of entries under likes column
+
+db.posts.aggregate([{$sort:{likes:-1}}, {$project:{likes:1, title:1, _id:0, category:1}}])
+
+db.posts.aggregate([{$sort:{likes:-1}}, {$project:{ _id:0, title:1, body:1, likes:1}}, {$match:{likes:1}}])
+
+/* working with shop database */
+// items costlier than 1000
+db.products.find({price:{$gt:1000}}) 
+
+// along with project
+db.products.findOne({$and:[{price:{$gt:1000}}, {isFeatured:true}]}, {price:1, name:1, _id:0})
+
+// sum quantity of data grouped by price
+db.sales.aggregate([
+
+	{$group:{
+		_id:"$price",
+		total_items : {$sum:"$quantity"}
+	
+		}	
+	}
+])
+
+// sum of total entries in each group
+db.sales.aggregate([
+
+	{$group:{
+		_id:"$price",
+		total_items : {$sum:1}
+	
+		}	
+	}
+])
+
+// count of total entries
+db.sales.aggregate([
+
+	{$group:{
+		_id:"$price",
+		total_items : {$sum:1}
+	
+		}	
+	},
+	
+	{$count:"TotalPriceCategories"}
+])
+
+
+//project and lookup
+
+db.album.aggregate([
+
+	{
+	
+	$lookup:{from:"musician", localField:"producer", foreignField:"ssn", as:"artist_info"}	
+		
+	},
+	
+	{$project:{ _id:0, title:1, artist_info:1 }}
+	
+])
+
+
+db.album.aggregate([
+
+	{
+	
+	$lookup:{from:"musician", localField:"producer", foreignField:"ssn", as:"artist_info"}	
+		
+	},
+	
+	{$project:{ _id:0, title:1, artist_info:1 }},
+	
+	{ $match: { title : "Album2" } }
+	
+])
+
+
+// unwind operator
+db.musician.aggregate([{$match:{ssn:'M004'}}, {$unwind:"$sid"}, {$unwind:"$iuin"} ,{$count:"rec_after_unwind"}])
+
+
+
+
