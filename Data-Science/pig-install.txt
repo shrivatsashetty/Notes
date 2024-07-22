@@ -1,0 +1,28 @@
+1370  sudo update-alternatives --config java
+ 1371  clear
+ 1372  gedit .bashrc
+ 1373  cd hadoop-3.3.6/
+ 1374  ls
+ 1375  cd bin/
+ 1376  ls
+ 1377  cd hadoop
+ 1378  source ~/.bashrc 
+ 1379  pig -x local
+ 1380  ls
+ 1381  tar -xvf pig-0.17.0.tar.gz 
+ 1382  ls
+ 1383  mv pig-0.17.0 ~
+ 1384  ls
+ 1385  cd ..
+ 1386  ls
+ 1387  cd hadoop-3.3.6/
+ 1388  mv ~/pig-0.17.0 ~/hadoop-3.3.6/
+ 1389  ls
+ 1390  clear
+ 1391  ls
+ 1392  code .bashrc
+ 1393  nano ~/.bashrc
+ 1394  source ~/.bashrc
+ 1395  nano ~/.bashrc
+ 1396  source ~/.bashrc
+
